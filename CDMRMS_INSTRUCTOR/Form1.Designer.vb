@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CDMRMS_Instructor_Login
     Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,37 +20,39 @@ Partial Class CDMRMS_Instructor_Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.BG_Picture = New System.Windows.Forms.PictureBox()
-        Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.MetroRadioButton1 = New MetroFramework.Controls.MetroRadioButton()
+        Me.FN_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.MN_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.LN_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.FN_Label = New System.Windows.Forms.Label()
+        Me.MN_Label = New System.Windows.Forms.Label()
+        Me.LN_Label = New System.Windows.Forms.Label()
+        Me.Institute_Label = New System.Windows.Forms.Label()
+        Me.ICS_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MetroRadioButton3 = New MetroFramework.Controls.MetroRadioButton()
-        Me.MetroRadioButton2 = New MetroFramework.Controls.MetroRadioButton()
-        Me.MetroTextBox4 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.MetroTextBox5 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.MetroTextBox6 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.MetroTextBox7 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.MetroTextBox8 = New MetroFramework.Controls.MetroTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Registration_Label = New System.Windows.Forms.Label()
+        Me.Register_Btn = New System.Windows.Forms.Button()
+        Me.Password2_Label = New System.Windows.Forms.Label()
+        Me.Password2_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.Password_Label = New System.Windows.Forms.Label()
+        Me.Password_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.Contact_Label = New System.Windows.Forms.Label()
+        Me.Contact_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.Email_Label = New System.Windows.Forms.Label()
+        Me.Email_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.Institute_Panel = New System.Windows.Forms.Panel()
+        Me.IOB_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
+        Me.ITE_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
+        Me.InstructorID_Label = New System.Windows.Forms.Label()
+        Me.InstructorID_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.SystemTitle_PictureBox = New System.Windows.Forms.PictureBox()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.Institute_Panel.SuspendLayout()
+        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BG_Picture
@@ -62,468 +64,484 @@ Partial Class CDMRMS_Instructor_Login
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
-        'MetroTextBox1
+        'FN_Input
         '
         '
         '
         '
-        Me.MetroTextBox1.CustomButton.Image = Nothing
-        Me.MetroTextBox1.CustomButton.Location = New System.Drawing.Point(100, 2)
-        Me.MetroTextBox1.CustomButton.Name = ""
-        Me.MetroTextBox1.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox1.CustomButton.TabIndex = 1
-        Me.MetroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox1.CustomButton.UseSelectable = True
-        Me.MetroTextBox1.CustomButton.Visible = False
-        Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox1.Lines = New String(-1) {}
-        Me.MetroTextBox1.Location = New System.Drawing.Point(55, 152)
-        Me.MetroTextBox1.MaxLength = 32767
-        Me.MetroTextBox1.Name = "MetroTextBox1"
-        Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox1.SelectedText = ""
-        Me.MetroTextBox1.SelectionLength = 0
-        Me.MetroTextBox1.SelectionStart = 0
-        Me.MetroTextBox1.ShortcutsEnabled = True
-        Me.MetroTextBox1.Size = New System.Drawing.Size(138, 40)
-        Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox1.TabIndex = 0
-        Me.MetroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox1.UseSelectable = True
-        Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.FN_Input.CustomButton.Image = Nothing
+        Me.FN_Input.CustomButton.Location = New System.Drawing.Point(100, 2)
+        Me.FN_Input.CustomButton.Name = ""
+        Me.FN_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.FN_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.FN_Input.CustomButton.TabIndex = 1
+        Me.FN_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.FN_Input.CustomButton.UseSelectable = True
+        Me.FN_Input.CustomButton.Visible = False
+        Me.FN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.FN_Input.Lines = New String(-1) {}
+        Me.FN_Input.Location = New System.Drawing.Point(55, 152)
+        Me.FN_Input.MaxLength = 32767
+        Me.FN_Input.Name = "FN_Input"
+        Me.FN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.FN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.FN_Input.SelectedText = ""
+        Me.FN_Input.SelectionLength = 0
+        Me.FN_Input.SelectionStart = 0
+        Me.FN_Input.ShortcutsEnabled = True
+        Me.FN_Input.Size = New System.Drawing.Size(138, 40)
+        Me.FN_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.FN_Input.TabIndex = 0
+        Me.FN_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.FN_Input.UseSelectable = True
+        Me.FN_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FN_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroTextBox2
-        '
-        '
-        '
-        '
-        Me.MetroTextBox2.CustomButton.Image = Nothing
-        Me.MetroTextBox2.CustomButton.Location = New System.Drawing.Point(100, 2)
-        Me.MetroTextBox2.CustomButton.Name = ""
-        Me.MetroTextBox2.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox2.CustomButton.TabIndex = 1
-        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox2.CustomButton.UseSelectable = True
-        Me.MetroTextBox2.CustomButton.Visible = False
-        Me.MetroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox2.Lines = New String(-1) {}
-        Me.MetroTextBox2.Location = New System.Drawing.Point(199, 152)
-        Me.MetroTextBox2.MaxLength = 32767
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox2.SelectedText = ""
-        Me.MetroTextBox2.SelectionLength = 0
-        Me.MetroTextBox2.SelectionStart = 0
-        Me.MetroTextBox2.ShortcutsEnabled = True
-        Me.MetroTextBox2.Size = New System.Drawing.Size(138, 40)
-        Me.MetroTextBox2.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox2.TabIndex = 2
-        Me.MetroTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox2.UseSelectable = True
-        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'MetroTextBox3
+        'MN_Input
         '
         '
         '
         '
-        Me.MetroTextBox3.CustomButton.Image = Nothing
-        Me.MetroTextBox3.CustomButton.Location = New System.Drawing.Point(100, 2)
-        Me.MetroTextBox3.CustomButton.Name = ""
-        Me.MetroTextBox3.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox3.CustomButton.TabIndex = 1
-        Me.MetroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox3.CustomButton.UseSelectable = True
-        Me.MetroTextBox3.CustomButton.Visible = False
-        Me.MetroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox3.Lines = New String(-1) {}
-        Me.MetroTextBox3.Location = New System.Drawing.Point(343, 152)
-        Me.MetroTextBox3.MaxLength = 32767
-        Me.MetroTextBox3.Name = "MetroTextBox3"
-        Me.MetroTextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox3.SelectedText = ""
-        Me.MetroTextBox3.SelectionLength = 0
-        Me.MetroTextBox3.SelectionStart = 0
-        Me.MetroTextBox3.ShortcutsEnabled = True
-        Me.MetroTextBox3.Size = New System.Drawing.Size(138, 40)
-        Me.MetroTextBox3.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox3.TabIndex = 3
-        Me.MetroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox3.UseSelectable = True
-        Me.MetroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox3.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.MN_Input.CustomButton.Image = Nothing
+        Me.MN_Input.CustomButton.Location = New System.Drawing.Point(100, 2)
+        Me.MN_Input.CustomButton.Name = ""
+        Me.MN_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.MN_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MN_Input.CustomButton.TabIndex = 1
+        Me.MN_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MN_Input.CustomButton.UseSelectable = True
+        Me.MN_Input.CustomButton.Visible = False
+        Me.MN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.MN_Input.Lines = New String(-1) {}
+        Me.MN_Input.Location = New System.Drawing.Point(199, 152)
+        Me.MN_Input.MaxLength = 32767
+        Me.MN_Input.Name = "MN_Input"
+        Me.MN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.MN_Input.SelectedText = ""
+        Me.MN_Input.SelectionLength = 0
+        Me.MN_Input.SelectionStart = 0
+        Me.MN_Input.ShortcutsEnabled = True
+        Me.MN_Input.Size = New System.Drawing.Size(138, 40)
+        Me.MN_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.MN_Input.TabIndex = 2
+        Me.MN_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MN_Input.UseSelectable = True
+        Me.MN_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.MN_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'Label2
+        'LN_Input
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(51, 133)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 20)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "First Name"
         '
-        'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(195, 133)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 20)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Middle Name"
         '
-        'Label3
+        Me.LN_Input.CustomButton.Image = Nothing
+        Me.LN_Input.CustomButton.Location = New System.Drawing.Point(100, 2)
+        Me.LN_Input.CustomButton.Name = ""
+        Me.LN_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.LN_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.LN_Input.CustomButton.TabIndex = 1
+        Me.LN_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.LN_Input.CustomButton.UseSelectable = True
+        Me.LN_Input.CustomButton.Visible = False
+        Me.LN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.LN_Input.Lines = New String(-1) {}
+        Me.LN_Input.Location = New System.Drawing.Point(343, 152)
+        Me.LN_Input.MaxLength = 32767
+        Me.LN_Input.Name = "LN_Input"
+        Me.LN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.LN_Input.SelectedText = ""
+        Me.LN_Input.SelectionLength = 0
+        Me.LN_Input.SelectionStart = 0
+        Me.LN_Input.ShortcutsEnabled = True
+        Me.LN_Input.Size = New System.Drawing.Size(138, 40)
+        Me.LN_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.LN_Input.TabIndex = 3
+        Me.LN_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.LN_Input.UseSelectable = True
+        Me.LN_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.LN_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(339, 133)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 20)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Last Name"
+        'FN_Label
         '
-        'Label5
+        Me.FN_Label.AutoSize = True
+        Me.FN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FN_Label.Location = New System.Drawing.Point(51, 133)
+        Me.FN_Label.Name = "FN_Label"
+        Me.FN_Label.Size = New System.Drawing.Size(92, 20)
+        Me.FN_Label.TabIndex = 4
+        Me.FN_Label.Text = "First Name"
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(51, 273)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 20)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Institute"
+        'MN_Label
         '
-        'MetroRadioButton1
+        Me.MN_Label.AutoSize = True
+        Me.MN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MN_Label.Location = New System.Drawing.Point(195, 133)
+        Me.MN_Label.Name = "MN_Label"
+        Me.MN_Label.Size = New System.Drawing.Size(107, 20)
+        Me.MN_Label.TabIndex = 5
+        Me.MN_Label.Text = "Middle Name"
         '
-        Me.MetroRadioButton1.AutoSize = True
-        Me.MetroRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MetroRadioButton1.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.MetroRadioButton1.Location = New System.Drawing.Point(39, 9)
-        Me.MetroRadioButton1.Name = "MetroRadioButton1"
-        Me.MetroRadioButton1.Size = New System.Drawing.Size(46, 20)
-        Me.MetroRadioButton1.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroRadioButton1.TabIndex = 10
-        Me.MetroRadioButton1.Text = "ICS"
-        Me.MetroRadioButton1.UseSelectable = True
+        'LN_Label
+        '
+        Me.LN_Label.AutoSize = True
+        Me.LN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LN_Label.Location = New System.Drawing.Point(339, 133)
+        Me.LN_Label.Name = "LN_Label"
+        Me.LN_Label.Size = New System.Drawing.Size(91, 20)
+        Me.LN_Label.TabIndex = 6
+        Me.LN_Label.Text = "Last Name"
+        '
+        'Institute_Label
+        '
+        Me.Institute_Label.AutoSize = True
+        Me.Institute_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Institute_Label.Location = New System.Drawing.Point(51, 267)
+        Me.Institute_Label.Name = "Institute_Label"
+        Me.Institute_Label.Size = New System.Drawing.Size(68, 20)
+        Me.Institute_Label.TabIndex = 9
+        Me.Institute_Label.Text = "Institute"
+        '
+        'ICS_RadioBtn
+        '
+        Me.ICS_RadioBtn.AutoSize = True
+        Me.ICS_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ICS_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.ICS_RadioBtn.Location = New System.Drawing.Point(39, 9)
+        Me.ICS_RadioBtn.Name = "ICS_RadioBtn"
+        Me.ICS_RadioBtn.Size = New System.Drawing.Size(46, 20)
+        Me.ICS_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
+        Me.ICS_RadioBtn.TabIndex = 10
+        Me.ICS_RadioBtn.Text = "ICS"
+        Me.ICS_RadioBtn.UseSelectable = True
         '
         'Registration_Panel
         '
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Registration_Panel.Controls.Add(Me.Label10)
-        Me.Registration_Panel.Controls.Add(Me.Button1)
-        Me.Registration_Panel.Controls.Add(Me.Label9)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox8)
-        Me.Registration_Panel.Controls.Add(Me.Label8)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox7)
-        Me.Registration_Panel.Controls.Add(Me.Label7)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox6)
-        Me.Registration_Panel.Controls.Add(Me.Label6)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox5)
-        Me.Registration_Panel.Controls.Add(Me.Label5)
-        Me.Registration_Panel.Controls.Add(Me.Panel1)
-        Me.Registration_Panel.Controls.Add(Me.Label4)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox4)
-        Me.Registration_Panel.Controls.Add(Me.Label3)
-        Me.Registration_Panel.Controls.Add(Me.Label1)
-        Me.Registration_Panel.Controls.Add(Me.Label2)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox3)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox2)
-        Me.Registration_Panel.Controls.Add(Me.MetroTextBox1)
+        Me.Registration_Panel.Controls.Add(Me.Registration_Label)
+        Me.Registration_Panel.Controls.Add(Me.Register_Btn)
+        Me.Registration_Panel.Controls.Add(Me.Password2_Label)
+        Me.Registration_Panel.Controls.Add(Me.Password2_Input)
+        Me.Registration_Panel.Controls.Add(Me.Password_Label)
+        Me.Registration_Panel.Controls.Add(Me.Password_Input)
+        Me.Registration_Panel.Controls.Add(Me.Contact_Label)
+        Me.Registration_Panel.Controls.Add(Me.Contact_Input)
+        Me.Registration_Panel.Controls.Add(Me.Email_Label)
+        Me.Registration_Panel.Controls.Add(Me.Email_Input)
+        Me.Registration_Panel.Controls.Add(Me.Institute_Label)
+        Me.Registration_Panel.Controls.Add(Me.Institute_Panel)
+        Me.Registration_Panel.Controls.Add(Me.InstructorID_Label)
+        Me.Registration_Panel.Controls.Add(Me.InstructorID_Input)
+        Me.Registration_Panel.Controls.Add(Me.LN_Label)
+        Me.Registration_Panel.Controls.Add(Me.MN_Label)
+        Me.Registration_Panel.Controls.Add(Me.FN_Label)
+        Me.Registration_Panel.Controls.Add(Me.LN_Input)
+        Me.Registration_Panel.Controls.Add(Me.MN_Input)
+        Me.Registration_Panel.Controls.Add(Me.FN_Input)
         Me.Registration_Panel.Location = New System.Drawing.Point(-1, 31)
         Me.Registration_Panel.Name = "Registration_Panel"
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 830)
         Me.Registration_Panel.TabIndex = 1
         '
-        'Panel1
+        'Registration_Label
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.MetroRadioButton1)
-        Me.Panel1.Controls.Add(Me.MetroRadioButton2)
-        Me.Panel1.Controls.Add(Me.MetroRadioButton3)
-        Me.Panel1.Location = New System.Drawing.Point(55, 292)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(426, 40)
-        Me.Panel1.TabIndex = 13
+        Me.Registration_Label.AutoSize = True
+        Me.Registration_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Registration_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Registration_Label.Location = New System.Drawing.Point(87, 28)
+        Me.Registration_Label.Name = "Registration_Label"
+        Me.Registration_Label.Size = New System.Drawing.Size(346, 81)
+        Me.Registration_Label.TabIndex = 23
+        Me.Registration_Label.Text = "Registration"
         '
-        'MetroRadioButton3
+        'Register_Btn
         '
-        Me.MetroRadioButton3.AutoSize = True
-        Me.MetroRadioButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MetroRadioButton3.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.MetroRadioButton3.Location = New System.Drawing.Point(325, 9)
-        Me.MetroRadioButton3.Name = "MetroRadioButton3"
-        Me.MetroRadioButton3.Size = New System.Drawing.Size(45, 20)
-        Me.MetroRadioButton3.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroRadioButton3.TabIndex = 12
-        Me.MetroRadioButton3.Text = "ITE"
-        Me.MetroRadioButton3.UseSelectable = True
+        Me.Register_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Register_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Register_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Register_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Register_Btn.ForeColor = System.Drawing.Color.Black
+        Me.Register_Btn.Location = New System.Drawing.Point(381, 629)
+        Me.Register_Btn.Name = "Register_Btn"
+        Me.Register_Btn.Size = New System.Drawing.Size(100, 40)
+        Me.Register_Btn.TabIndex = 22
+        Me.Register_Btn.Text = "Register"
+        Me.Register_Btn.UseVisualStyleBackColor = False
         '
-        'MetroRadioButton2
+        'Password2_Label
         '
-        Me.MetroRadioButton2.AutoSize = True
-        Me.MetroRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MetroRadioButton2.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.MetroRadioButton2.Location = New System.Drawing.Point(182, 9)
-        Me.MetroRadioButton2.Name = "MetroRadioButton2"
-        Me.MetroRadioButton2.Size = New System.Drawing.Size(49, 20)
-        Me.MetroRadioButton2.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroRadioButton2.TabIndex = 11
-        Me.MetroRadioButton2.Text = "IOB"
-        Me.MetroRadioButton2.UseSelectable = True
+        Me.Password2_Label.AutoSize = True
+        Me.Password2_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Password2_Label.Location = New System.Drawing.Point(51, 543)
+        Me.Password2_Label.Name = "Password2_Label"
+        Me.Password2_Label.Size = New System.Drawing.Size(153, 20)
+        Me.Password2_Label.TabIndex = 21
+        Me.Password2_Label.Text = "Re-enter Password"
         '
-        'MetroTextBox4
-        '
-        '
-        '
-        '
-        Me.MetroTextBox4.CustomButton.Image = Nothing
-        Me.MetroTextBox4.CustomButton.Location = New System.Drawing.Point(388, 2)
-        Me.MetroTextBox4.CustomButton.Name = ""
-        Me.MetroTextBox4.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox4.CustomButton.TabIndex = 1
-        Me.MetroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox4.CustomButton.UseSelectable = True
-        Me.MetroTextBox4.CustomButton.Visible = False
-        Me.MetroTextBox4.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox4.Lines = New String(-1) {}
-        Me.MetroTextBox4.Location = New System.Drawing.Point(55, 222)
-        Me.MetroTextBox4.MaxLength = 32767
-        Me.MetroTextBox4.Name = "MetroTextBox4"
-        Me.MetroTextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox4.SelectedText = ""
-        Me.MetroTextBox4.SelectionLength = 0
-        Me.MetroTextBox4.SelectionStart = 0
-        Me.MetroTextBox4.ShortcutsEnabled = True
-        Me.MetroTextBox4.Size = New System.Drawing.Size(426, 40)
-        Me.MetroTextBox4.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox4.TabIndex = 7
-        Me.MetroTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox4.UseSelectable = True
-        Me.MetroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox4.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(51, 203)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(179, 20)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Instructor's ID Number"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(51, 345)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 20)
-        Me.Label6.TabIndex = 15
-        Me.Label6.Text = "Email"
-        '
-        'MetroTextBox5
+        'Password2_Input
         '
         '
         '
         '
-        Me.MetroTextBox5.CustomButton.Image = Nothing
-        Me.MetroTextBox5.CustomButton.Location = New System.Drawing.Point(388, 2)
-        Me.MetroTextBox5.CustomButton.Name = ""
-        Me.MetroTextBox5.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox5.CustomButton.TabIndex = 1
-        Me.MetroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox5.CustomButton.UseSelectable = True
-        Me.MetroTextBox5.CustomButton.Visible = False
-        Me.MetroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox5.Lines = New String(-1) {}
-        Me.MetroTextBox5.Location = New System.Drawing.Point(55, 364)
-        Me.MetroTextBox5.MaxLength = 32767
-        Me.MetroTextBox5.Name = "MetroTextBox5"
-        Me.MetroTextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox5.SelectedText = ""
-        Me.MetroTextBox5.SelectionLength = 0
-        Me.MetroTextBox5.SelectionStart = 0
-        Me.MetroTextBox5.ShortcutsEnabled = True
-        Me.MetroTextBox5.Size = New System.Drawing.Size(426, 40)
-        Me.MetroTextBox5.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox5.TabIndex = 14
-        Me.MetroTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox5.UseSelectable = True
-        Me.MetroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox5.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Password2_Input.CustomButton.Image = Nothing
+        Me.Password2_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.Password2_Input.CustomButton.Name = ""
+        Me.Password2_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.Password2_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.Password2_Input.CustomButton.TabIndex = 1
+        Me.Password2_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.Password2_Input.CustomButton.UseSelectable = True
+        Me.Password2_Input.CustomButton.Visible = False
+        Me.Password2_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.Password2_Input.Lines = New String(-1) {}
+        Me.Password2_Input.Location = New System.Drawing.Point(55, 562)
+        Me.Password2_Input.MaxLength = 32767
+        Me.Password2_Input.Name = "Password2_Input"
+        Me.Password2_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.Password2_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.Password2_Input.SelectedText = ""
+        Me.Password2_Input.SelectionLength = 0
+        Me.Password2_Input.SelectionStart = 0
+        Me.Password2_Input.ShortcutsEnabled = True
+        Me.Password2_Input.Size = New System.Drawing.Size(426, 40)
+        Me.Password2_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.Password2_Input.TabIndex = 20
+        Me.Password2_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Password2_Input.UseSelectable = True
+        Me.Password2_Input.UseSystemPasswordChar = True
+        Me.Password2_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.Password2_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'Label7
+        'Password_Label
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(51, 417)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(131, 20)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Contact Number"
+        Me.Password_Label.AutoSize = True
+        Me.Password_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Password_Label.Location = New System.Drawing.Point(51, 473)
+        Me.Password_Label.Name = "Password_Label"
+        Me.Password_Label.Size = New System.Drawing.Size(83, 20)
+        Me.Password_Label.TabIndex = 19
+        Me.Password_Label.Text = "Password"
         '
-        'MetroTextBox6
-        '
-        '
-        '
-        '
-        Me.MetroTextBox6.CustomButton.Image = Nothing
-        Me.MetroTextBox6.CustomButton.Location = New System.Drawing.Point(388, 2)
-        Me.MetroTextBox6.CustomButton.Name = ""
-        Me.MetroTextBox6.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox6.CustomButton.TabIndex = 1
-        Me.MetroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox6.CustomButton.UseSelectable = True
-        Me.MetroTextBox6.CustomButton.Visible = False
-        Me.MetroTextBox6.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox6.Lines = New String(-1) {}
-        Me.MetroTextBox6.Location = New System.Drawing.Point(55, 436)
-        Me.MetroTextBox6.MaxLength = 32767
-        Me.MetroTextBox6.Name = "MetroTextBox6"
-        Me.MetroTextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox6.SelectedText = ""
-        Me.MetroTextBox6.SelectionLength = 0
-        Me.MetroTextBox6.SelectionStart = 0
-        Me.MetroTextBox6.ShortcutsEnabled = True
-        Me.MetroTextBox6.Size = New System.Drawing.Size(426, 40)
-        Me.MetroTextBox6.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox6.TabIndex = 16
-        Me.MetroTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox6.UseSelectable = True
-        Me.MetroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox6.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(51, 489)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 20)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Password"
-        '
-        'MetroTextBox7
+        'Password_Input
         '
         '
         '
         '
-        Me.MetroTextBox7.CustomButton.Image = Nothing
-        Me.MetroTextBox7.CustomButton.Location = New System.Drawing.Point(388, 2)
-        Me.MetroTextBox7.CustomButton.Name = ""
-        Me.MetroTextBox7.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox7.CustomButton.TabIndex = 1
-        Me.MetroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox7.CustomButton.UseSelectable = True
-        Me.MetroTextBox7.CustomButton.Visible = False
-        Me.MetroTextBox7.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox7.Lines = New String(-1) {}
-        Me.MetroTextBox7.Location = New System.Drawing.Point(55, 508)
-        Me.MetroTextBox7.MaxLength = 32767
-        Me.MetroTextBox7.Name = "MetroTextBox7"
-        Me.MetroTextBox7.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox7.SelectedText = ""
-        Me.MetroTextBox7.SelectionLength = 0
-        Me.MetroTextBox7.SelectionStart = 0
-        Me.MetroTextBox7.ShortcutsEnabled = True
-        Me.MetroTextBox7.Size = New System.Drawing.Size(426, 40)
-        Me.MetroTextBox7.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox7.TabIndex = 18
-        Me.MetroTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox7.UseSelectable = True
-        Me.MetroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox7.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Password_Input.CustomButton.Image = Nothing
+        Me.Password_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.Password_Input.CustomButton.Name = ""
+        Me.Password_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.Password_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.Password_Input.CustomButton.TabIndex = 1
+        Me.Password_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.Password_Input.CustomButton.UseSelectable = True
+        Me.Password_Input.CustomButton.Visible = False
+        Me.Password_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.Password_Input.Lines = New String(-1) {}
+        Me.Password_Input.Location = New System.Drawing.Point(55, 492)
+        Me.Password_Input.MaxLength = 32767
+        Me.Password_Input.Name = "Password_Input"
+        Me.Password_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.Password_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.Password_Input.SelectedText = ""
+        Me.Password_Input.SelectionLength = 0
+        Me.Password_Input.SelectionStart = 0
+        Me.Password_Input.ShortcutsEnabled = True
+        Me.Password_Input.Size = New System.Drawing.Size(426, 40)
+        Me.Password_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.Password_Input.TabIndex = 18
+        Me.Password_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Password_Input.UseSelectable = True
+        Me.Password_Input.UseSystemPasswordChar = True
+        Me.Password_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.Password_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'Label9
+        'Contact_Label
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(51, 563)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(153, 20)
-        Me.Label9.TabIndex = 21
-        Me.Label9.Text = "Re-enter Password"
+        Me.Contact_Label.AutoSize = True
+        Me.Contact_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Contact_Label.Location = New System.Drawing.Point(51, 404)
+        Me.Contact_Label.Name = "Contact_Label"
+        Me.Contact_Label.Size = New System.Drawing.Size(131, 20)
+        Me.Contact_Label.TabIndex = 17
+        Me.Contact_Label.Text = "Contact Number"
         '
-        'MetroTextBox8
-        '
-        '
+        'Contact_Input
         '
         '
-        Me.MetroTextBox8.CustomButton.Image = Nothing
-        Me.MetroTextBox8.CustomButton.Location = New System.Drawing.Point(388, 2)
-        Me.MetroTextBox8.CustomButton.Name = ""
-        Me.MetroTextBox8.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox8.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox8.CustomButton.TabIndex = 1
-        Me.MetroTextBox8.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox8.CustomButton.UseSelectable = True
-        Me.MetroTextBox8.CustomButton.Visible = False
-        Me.MetroTextBox8.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox8.Lines = New String(-1) {}
-        Me.MetroTextBox8.Location = New System.Drawing.Point(55, 582)
-        Me.MetroTextBox8.MaxLength = 32767
-        Me.MetroTextBox8.Name = "MetroTextBox8"
-        Me.MetroTextBox8.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox8.SelectedText = ""
-        Me.MetroTextBox8.SelectionLength = 0
-        Me.MetroTextBox8.SelectionStart = 0
-        Me.MetroTextBox8.ShortcutsEnabled = True
-        Me.MetroTextBox8.Size = New System.Drawing.Size(426, 40)
-        Me.MetroTextBox8.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox8.TabIndex = 20
-        Me.MetroTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox8.UseSelectable = True
-        Me.MetroTextBox8.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox8.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(381, 666)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 40)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Register"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Contact_Input.CustomButton.Image = Nothing
+        Me.Contact_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.Contact_Input.CustomButton.Name = ""
+        Me.Contact_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.Contact_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.Contact_Input.CustomButton.TabIndex = 1
+        Me.Contact_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.Contact_Input.CustomButton.UseSelectable = True
+        Me.Contact_Input.CustomButton.Visible = False
+        Me.Contact_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.Contact_Input.Lines = New String(-1) {}
+        Me.Contact_Input.Location = New System.Drawing.Point(55, 423)
+        Me.Contact_Input.MaxLength = 32767
+        Me.Contact_Input.Name = "Contact_Input"
+        Me.Contact_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Contact_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.Contact_Input.SelectedText = ""
+        Me.Contact_Input.SelectionLength = 0
+        Me.Contact_Input.SelectionStart = 0
+        Me.Contact_Input.ShortcutsEnabled = True
+        Me.Contact_Input.Size = New System.Drawing.Size(426, 40)
+        Me.Contact_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.Contact_Input.TabIndex = 16
+        Me.Contact_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Contact_Input.UseSelectable = True
+        Me.Contact_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.Contact_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'Label10
+        'Email_Label
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Bernard MT Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(87, 28)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(346, 81)
-        Me.Label10.TabIndex = 23
-        Me.Label10.Text = "Registration"
+        Me.Email_Label.AutoSize = True
+        Me.Email_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Email_Label.Location = New System.Drawing.Point(51, 336)
+        Me.Email_Label.Name = "Email_Label"
+        Me.Email_Label.Size = New System.Drawing.Size(51, 20)
+        Me.Email_Label.TabIndex = 15
+        Me.Email_Label.Text = "Email"
+        '
+        'Email_Input
+        '
+        '
+        '
+        '
+        Me.Email_Input.CustomButton.Image = Nothing
+        Me.Email_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.Email_Input.CustomButton.Name = ""
+        Me.Email_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.Email_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.Email_Input.CustomButton.TabIndex = 1
+        Me.Email_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.Email_Input.CustomButton.UseSelectable = True
+        Me.Email_Input.CustomButton.Visible = False
+        Me.Email_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.Email_Input.Lines = New String(-1) {}
+        Me.Email_Input.Location = New System.Drawing.Point(55, 355)
+        Me.Email_Input.MaxLength = 32767
+        Me.Email_Input.Name = "Email_Input"
+        Me.Email_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Email_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.Email_Input.SelectedText = ""
+        Me.Email_Input.SelectionLength = 0
+        Me.Email_Input.SelectionStart = 0
+        Me.Email_Input.ShortcutsEnabled = True
+        Me.Email_Input.Size = New System.Drawing.Size(426, 40)
+        Me.Email_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.Email_Input.TabIndex = 14
+        Me.Email_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Email_Input.UseSelectable = True
+        Me.Email_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.Email_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'Institute_Panel
+        '
+        Me.Institute_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Institute_Panel.Controls.Add(Me.ICS_RadioBtn)
+        Me.Institute_Panel.Controls.Add(Me.IOB_RadioBtn)
+        Me.Institute_Panel.Controls.Add(Me.ITE_RadioBtn)
+        Me.Institute_Panel.Location = New System.Drawing.Point(55, 286)
+        Me.Institute_Panel.Name = "Institute_Panel"
+        Me.Institute_Panel.Size = New System.Drawing.Size(426, 40)
+        Me.Institute_Panel.TabIndex = 13
+        '
+        'IOB_RadioBtn
+        '
+        Me.IOB_RadioBtn.AutoSize = True
+        Me.IOB_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IOB_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.IOB_RadioBtn.Location = New System.Drawing.Point(182, 9)
+        Me.IOB_RadioBtn.Name = "IOB_RadioBtn"
+        Me.IOB_RadioBtn.Size = New System.Drawing.Size(49, 20)
+        Me.IOB_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
+        Me.IOB_RadioBtn.TabIndex = 11
+        Me.IOB_RadioBtn.Text = "IOB"
+        Me.IOB_RadioBtn.UseSelectable = True
+        '
+        'ITE_RadioBtn
+        '
+        Me.ITE_RadioBtn.AutoSize = True
+        Me.ITE_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITE_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.ITE_RadioBtn.Location = New System.Drawing.Point(325, 9)
+        Me.ITE_RadioBtn.Name = "ITE_RadioBtn"
+        Me.ITE_RadioBtn.Size = New System.Drawing.Size(45, 20)
+        Me.ITE_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
+        Me.ITE_RadioBtn.TabIndex = 12
+        Me.ITE_RadioBtn.Text = "ITE"
+        Me.ITE_RadioBtn.UseSelectable = True
+        '
+        'InstructorID_Label
+        '
+        Me.InstructorID_Label.AutoSize = True
+        Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InstructorID_Label.Location = New System.Drawing.Point(51, 200)
+        Me.InstructorID_Label.Name = "InstructorID_Label"
+        Me.InstructorID_Label.Size = New System.Drawing.Size(179, 20)
+        Me.InstructorID_Label.TabIndex = 8
+        Me.InstructorID_Label.Text = "Instructor's ID Number"
+        '
+        'InstructorID_Input
+        '
+        '
+        '
+        '
+        Me.InstructorID_Input.CustomButton.Image = Nothing
+        Me.InstructorID_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.InstructorID_Input.CustomButton.Name = ""
+        Me.InstructorID_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.InstructorID_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.InstructorID_Input.CustomButton.TabIndex = 1
+        Me.InstructorID_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.InstructorID_Input.CustomButton.UseSelectable = True
+        Me.InstructorID_Input.CustomButton.Visible = False
+        Me.InstructorID_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.InstructorID_Input.Lines = New String(-1) {}
+        Me.InstructorID_Input.Location = New System.Drawing.Point(55, 219)
+        Me.InstructorID_Input.MaxLength = 32767
+        Me.InstructorID_Input.Name = "InstructorID_Input"
+        Me.InstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.InstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.InstructorID_Input.SelectedText = ""
+        Me.InstructorID_Input.SelectionLength = 0
+        Me.InstructorID_Input.SelectionStart = 0
+        Me.InstructorID_Input.ShortcutsEnabled = True
+        Me.InstructorID_Input.Size = New System.Drawing.Size(426, 40)
+        Me.InstructorID_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.InstructorID_Input.TabIndex = 7
+        Me.InstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.InstructorID_Input.UseSelectable = True
+        Me.InstructorID_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.InstructorID_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'SystemTitle_PictureBox
+        '
+        Me.SystemTitle_PictureBox.Image = CType(resources.GetObject("SystemTitle_PictureBox.Image"), System.Drawing.Image)
+        Me.SystemTitle_PictureBox.Location = New System.Drawing.Point(665, 139)
+        Me.SystemTitle_PictureBox.Name = "SystemTitle_PictureBox"
+        Me.SystemTitle_PictureBox.Size = New System.Drawing.Size(931, 603)
+        Me.SystemTitle_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.SystemTitle_PictureBox.TabIndex = 2
+        Me.SystemTitle_PictureBox.TabStop = False
         '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1700, 860)
+        Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
         Me.Controls.Add(Me.Registration_Panel)
         Me.MaximizeBox = False
@@ -533,39 +551,41 @@ Partial Class CDMRMS_Instructor_Login
         Me.Name = "CDMRMS_Instructor_Login"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.White
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Registration_Panel.ResumeLayout(False)
         Me.Registration_Panel.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.Institute_Panel.ResumeLayout(False)
+        Me.Institute_Panel.PerformLayout()
+        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents BG_Picture As PictureBox
-    Friend WithEvents MetroTextBox1 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox3 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents MetroRadioButton1 As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents FN_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MN_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents LN_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents FN_Label As Label
+    Friend WithEvents MN_Label As Label
+    Friend WithEvents LN_Label As Label
+    Friend WithEvents Institute_Label As Label
+    Friend WithEvents ICS_RadioBtn As MetroFramework.Controls.MetroRadioButton
     Friend WithEvents Registration_Panel As Panel
-    Friend WithEvents MetroRadioButton3 As MetroFramework.Controls.MetroRadioButton
-    Friend WithEvents MetroRadioButton2 As MetroFramework.Controls.MetroRadioButton
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents MetroTextBox4 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents MetroTextBox5 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents MetroTextBox6 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents MetroTextBox8 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents MetroTextBox7 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label10 As Label
+    Friend WithEvents ITE_RadioBtn As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents IOB_RadioBtn As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents Institute_Panel As Panel
+    Friend WithEvents InstructorID_Label As Label
+    Friend WithEvents InstructorID_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Email_Label As Label
+    Friend WithEvents Email_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Contact_Label As Label
+    Friend WithEvents Contact_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Password2_Label As Label
+    Friend WithEvents Password2_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Password_Label As Label
+    Friend WithEvents Password_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Register_Btn As Button
+    Friend WithEvents Registration_Label As Label
+    Friend WithEvents SystemTitle_PictureBox As PictureBox
 End Class
