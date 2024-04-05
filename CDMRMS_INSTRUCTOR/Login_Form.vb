@@ -77,11 +77,10 @@ Public Class CDMRMS_Instructor_Login
                 institute = ITE_RadioBtn.Text
             ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
                 MsgBox("Please select your institute.", MessageBoxIcon.Warning)
-            Else
-                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
 
             End If
 
+            InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
         End If
     End Sub
 
@@ -91,7 +90,7 @@ Public Class CDMRMS_Instructor_Login
         Dim hashedPassword As String = HashPassword(password)
 
         ' Insert Data to database
-        Dim regInsert As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @institute, @email, @contact#, @password)"
+        Dim regInsert As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @institute, @email, @contact, @password) "
 
         Try
             Using connection As New MySqlConnection(ConnectionString)
@@ -104,7 +103,7 @@ Public Class CDMRMS_Instructor_Login
                     regInsertCommand.Parameters.AddWithValue("@instructorid", instructorID)
                     regInsertCommand.Parameters.AddWithValue("@institute", institute)
                     regInsertCommand.Parameters.AddWithValue("@email", email)
-                    regInsertCommand.Parameters.AddWithValue("@contact#", contact)
+                    regInsertCommand.Parameters.AddWithValue("@contact", contact)
                     regInsertCommand.Parameters.AddWithValue("@password", hashedPassword)
 
                     connection.Open()
