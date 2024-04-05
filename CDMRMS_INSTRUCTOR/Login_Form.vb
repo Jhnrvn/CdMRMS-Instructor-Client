@@ -1,10 +1,12 @@
 ﻿Public Class CDMRMS_Instructor_Login
+
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     ' DATABASE CONNECTION
 
+    ' PASWORD HASHING 
 
     ' REGISTRATION 
     Private Sub Register_Btn_Click(sender As Object, e As EventArgs) Handles Register_Btn.Click
@@ -14,15 +16,16 @@
         Dim middleName As String = MN_Input.Text.Trim
         Dim lastName As String = LN_Input.Text.Trim
         Dim instructorID As String = InstructorID_Input.Text.Trim
-        Dim institute As String = ""
+        Dim institute As String
+        Dim email As String = Email_Input.Text.Trim
         Dim contact As String = Contact_Input.Text.Trim
         Dim password As String = Password_Input.Text.Trim
         Dim password2 As String = Password2_Input.Text.Trim
 
         ' Check if all needed information are fill-out
-        If String.IsNullOrEmpty(firstName) And String.IsNullOrEmpty(middleName) And String.IsNullOrEmpty(lastName) And String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(contact) And String.IsNullOrEmpty(password) And String.IsNullOrEmpty(password2) Then
+        If String.IsNullOrEmpty(firstName) And String.IsNullOrEmpty(middleName) And String.IsNullOrEmpty(lastName) And String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(contact) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) And String.IsNullOrEmpty(password2) Then
             MsgBox("Please enter all needed information", MessageBoxIcon.Warning)
-        ElseIf String.IsNullOrEmpty(firstName) Or String.IsNullOrEmpty(middleName) Or String.IsNullOrEmpty(lastName) Or String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(contact) Or String.IsNullOrEmpty(password) Or String.IsNullOrEmpty(password2) Then
+        ElseIf String.IsNullOrEmpty(firstName) Or String.IsNullOrEmpty(middleName) Or String.IsNullOrEmpty(lastName) Or String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(contact) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Or String.IsNullOrEmpty(password2) Then
             MsgBox("Please fill all missing information", MessageBoxIcon.Warning)
         ElseIf password <> password2 Then
             MsgBox("Password does'nt match.", MessageBoxIcon.Information)
@@ -34,8 +37,11 @@
                 institute = IOB_RadioBtn.Text
             ElseIf ITE_RadioBtn.Checked Then
                 institute = ITE_RadioBtn.Text
-            Else
+            ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
                 MsgBox("Please select your institute.", MessageBoxIcon.Warning)
+            Else
+                ' insert
+
             End If
 
         End If

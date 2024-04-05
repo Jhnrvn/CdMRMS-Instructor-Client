@@ -208,7 +208,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.ICS_RadioBtn.AutoSize = True
         Me.ICS_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ICS_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.ICS_RadioBtn.Location = New System.Drawing.Point(39, 9)
+        Me.ICS_RadioBtn.Location = New System.Drawing.Point(39, 8)
         Me.ICS_RadioBtn.Name = "ICS_RadioBtn"
         Me.ICS_RadioBtn.Size = New System.Drawing.Size(46, 20)
         Me.ICS_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
@@ -462,7 +462,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.IOB_RadioBtn.AutoSize = True
         Me.IOB_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.IOB_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.IOB_RadioBtn.Location = New System.Drawing.Point(182, 9)
+        Me.IOB_RadioBtn.Location = New System.Drawing.Point(182, 8)
         Me.IOB_RadioBtn.Name = "IOB_RadioBtn"
         Me.IOB_RadioBtn.Size = New System.Drawing.Size(49, 20)
         Me.IOB_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
@@ -475,7 +475,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.ITE_RadioBtn.AutoSize = True
         Me.ITE_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITE_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.ITE_RadioBtn.Location = New System.Drawing.Point(325, 9)
+        Me.ITE_RadioBtn.Location = New System.Drawing.Point(325, 8)
         Me.ITE_RadioBtn.Name = "ITE_RadioBtn"
         Me.ITE_RadioBtn.Size = New System.Drawing.Size(45, 20)
         Me.ITE_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
