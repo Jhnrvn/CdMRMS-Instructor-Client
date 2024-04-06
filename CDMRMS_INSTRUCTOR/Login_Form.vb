@@ -4,13 +4,15 @@ Imports System.Text
 
 Public Class CDMRMS_Instructor_Login
 
-    ' FORM LOAD
+    ' FORM LOAD - START
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DatabaseConnection()
         Registration_Panel.Hide()
     End Sub
+    ' FORM LOAD - END
 
-    ' DATABASE CONNECTION
+
+    ' DATABASE CONNECTION - START
     Private Shared ConnectionString As String = "server=localhost; port=3306; database=cdmregistrarmanagementsystem; uid=root; password=;"
     Private Shared connection As New MySqlConnection(ConnectionString)
 
@@ -29,8 +31,10 @@ Public Class CDMRMS_Instructor_Login
     Public Shared Function GetConnection() As MySqlConnection
         Return connection
     End Function
+    ' DATABASE CONNECTION - END
 
-    ' PASSWORD HASHING 
+
+    ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
         ' Create a new instance of SHA256
         Using SHA256 As SHA256 = SHA256.Create()
@@ -47,8 +51,10 @@ Public Class CDMRMS_Instructor_Login
         End Using
 
     End Function
+    ' PASSWORD HASHING - END
 
-    ' REGISTRATION 
+
+    ' REGISTRATION - START
     Private Sub Register_Btn_Click(sender As Object, e As EventArgs) Handles Register_Btn.Click
 
         ' Variable declaration for registration
@@ -96,25 +102,45 @@ Public Class CDMRMS_Instructor_Login
         Dim hashedPassword As String = HashPassword(password)
 
         ' Insert Data to database
-        Dim regInsert As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @institute, @email, @contact, @password) "
+        Dim query As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @institute, @email, @contact, @password) "
 
         Try
             Using connection As New MySqlConnection(ConnectionString)
-                Using regInsertCommand As New MySqlCommand(regInsert, connection)
+                Using command As New MySqlCommand(query, connection)
 
                     ' Store all user Data to Database
-                    regInsertCommand.Parameters.AddWithValue("@firstname", firstName)
-                    regInsertCommand.Parameters.AddWithValue("@middlename", middleName)
-                    regInsertCommand.Parameters.AddWithValue("@lastname", lastName)
-                    regInsertCommand.Parameters.AddWithValue("@instructorid", instructorID)
-                    regInsertCommand.Parameters.AddWithValue("@institute", institute)
-                    regInsertCommand.Parameters.AddWithValue("@email", email)
-                    regInsertCommand.Parameters.AddWithValue("@contact", contact)
-                    regInsertCommand.Parameters.AddWithValue("@password", hashedPassword)
+                    command.Parameters.AddWithValue("@firstname", firstName)
+                    command.Parameters.AddWithValue("@middlename", middleName)
+                    command.Parameters.AddWithValue("@lastname", lastName)
+                    command.Parameters.AddWithValue("@instructorid", instructorID)
+                    command.Parameters.AddWithValue("@institute", institute)
+                    command.Parameters.AddWithValue("@email", email)
+                    command.Parameters.AddWithValue("@contact", contact)
+                    command.Parameters.AddWithValue("@password", hashedPassword)
 
                     connection.Open()
-                    Dim count As Integer = Convert.ToInt32(regInsertCommand.ExecuteScalar())
+                    Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
                     MsgBox("Register Successfully!.", MessageBoxIcon.Information)
+                    Login_Panel.Show()
+                    Registration_Panel.Hide()
+
+
+                    ' Clear all registrtion input fields
+                    FN_Input.Clear()
+                    MN_Input.Clear()
+                    LN_Input.Clear()
+                    InstructorID_Input.Clear()
+                    If ICS_RadioBtn.Checked Then
+                        ICS_RadioBtn.Checked = False
+                    ElseIf IOB_RadioBtn.Checked Then
+                        IOB_RadioBtn.Checked = False
+                    ElseIf ITE_RadioBtn.Checked Then
+                        ITE_RadioBtn.Checked = False
+                    End If
+                    Email_Input.Clear()
+                    Contact_Input.Clear()
+                    Password_Input.Clear()
+                    Password2_Input.Clear()
 
                 End Using
             End Using
@@ -128,9 +154,61 @@ Public Class CDMRMS_Instructor_Login
         Registration_Panel.Show()
         Login_Panel.Hide()
     End Sub
+    ' REGISTRATION - END
+
+
+    ' LOGIN - START
+    Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
+
+        Dim instructorID As String = LoginInstructorID_Input.Text.Trim
+        Dim email As String = LoginEmail_Input.Text.Trim
+        Dim password As String = LoginPassword_Input.Text.Trim
+
+        If String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) Then
+            MsgBox("login invalid.", MessageBoxIcon.Warning)
+        ElseIf String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Then
+            MsgBox("Please fill in all neded information.", MessageBoxIcon.Warning)
+        Else
+            Dim isValidLogin As Boolean = validateLogin(instructorID, email, password)
+
+            If isValidLogin Then
+                MsgBox("Login successful!.", MessageBoxIcon.Information)
+                LoginInstructorID_Input.Clear()
+                LoginEmail_Input.Clear()
+                LoginPassword_Input.Clear()
+
+            Else
+                MsgBox("Login failed.", MessageBoxIcon.Error)
+            End If
+        End If
+
+    End Sub
+
+    Private Function validateLogin(instructorID As String, email As String, password As String) As String
+
+        Dim hashedPassword As String = HashPassword(password)
+        Dim isAuthenticated As Boolean = False
+
+        Dim query As String = "SELECT * FROM `instructors` WHERE instructorid = @instructorID AND email = @email AND password = @password"
+        Using connection As New MySqlConnection(ConnectionString)
+            Using command As New MySqlCommand(query, connection)
+
+                command.Parameters.AddWithValue("@instructorID", instructorID)
+                command.Parameters.AddWithValue("@email", email)
+                command.Parameters.AddWithValue("@password", hashedPassword)
+
+                connection.Open()
+                Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+                isAuthenticated = count > 0
+            End Using
+        End Using
+        Return isAuthenticated
+
+    End Function
 
     Private Sub Login_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Login_Link.LinkClicked
         Login_Panel.Show()
         Registration_Panel.Hide()
     End Sub
+    ' LOGIN - END
 End Class

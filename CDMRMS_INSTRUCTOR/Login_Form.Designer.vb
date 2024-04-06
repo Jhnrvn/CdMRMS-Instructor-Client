@@ -646,7 +646,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.Location = New System.Drawing.Point(56, 492)
         Me.LoginPassword_Input.MaxLength = 32767
         Me.LoginPassword_Input.Name = "LoginPassword_Input"
-        Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.LoginPassword_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginPassword_Input.SelectedText = ""
         Me.LoginPassword_Input.SelectionLength = 0
@@ -657,6 +657,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.TabIndex = 28
         Me.LoginPassword_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginPassword_Input.UseSelectable = True
+        Me.LoginPassword_Input.UseSystemPasswordChar = True
         Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
