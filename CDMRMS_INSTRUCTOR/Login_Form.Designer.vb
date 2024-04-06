@@ -542,7 +542,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.InstructorID_Input.Lines = New String(-1) {}
         Me.InstructorID_Input.Location = New System.Drawing.Point(55, 219)
-        Me.InstructorID_Input.MaxLength = 32767
+        Me.InstructorID_Input.MaxLength = 8
         Me.InstructorID_Input.Name = "InstructorID_Input"
         Me.InstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.InstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -644,7 +644,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.LoginPassword_Input.Lines = New String(-1) {}
         Me.LoginPassword_Input.Location = New System.Drawing.Point(56, 492)
-        Me.LoginPassword_Input.MaxLength = 32767
+        Me.LoginPassword_Input.MaxLength = 50
         Me.LoginPassword_Input.Name = "LoginPassword_Input"
         Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.LoginPassword_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -678,7 +678,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginEmail_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.LoginEmail_Input.Lines = New String(-1) {}
         Me.LoginEmail_Input.Location = New System.Drawing.Point(56, 423)
-        Me.LoginEmail_Input.MaxLength = 32767
+        Me.LoginEmail_Input.MaxLength = 50
         Me.LoginEmail_Input.Name = "LoginEmail_Input"
         Me.LoginEmail_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.LoginEmail_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -711,7 +711,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.LoginInstructorID_Input.Lines = New String(-1) {}
         Me.LoginInstructorID_Input.Location = New System.Drawing.Point(56, 355)
-        Me.LoginInstructorID_Input.MaxLength = 32767
+        Me.LoginInstructorID_Input.MaxLength = 8
         Me.LoginInstructorID_Input.Name = "LoginInstructorID_Input"
         Me.LoginInstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.LoginInstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None

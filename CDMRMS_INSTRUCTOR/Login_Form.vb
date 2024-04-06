@@ -1,9 +1,9 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports MetroFramework.Controls
+Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
 
 Public Class CDMRMS_Instructor_Login
-
 
 
     ' FORM LOAD - START
@@ -12,7 +12,6 @@ Public Class CDMRMS_Instructor_Login
         Registration_Panel.Hide()
     End Sub
     ' FORM LOAD - END
-
 
 
     ' DATABASE CONNECTION - START
@@ -37,7 +36,6 @@ Public Class CDMRMS_Instructor_Login
     ' DATABASE CONNECTION - END
 
 
-
     ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
         ' Create a new instance of SHA256
@@ -58,7 +56,6 @@ Public Class CDMRMS_Instructor_Login
     ' PASSWORD HASHING - END
 
 
-
     ' REGISTRATION - START
     Private Sub Register_Btn_Click(sender As Object, e As EventArgs) Handles Register_Btn.Click
 
@@ -67,7 +64,7 @@ Public Class CDMRMS_Instructor_Login
         Dim middleName As String = MN_Input.Text.Trim
         Dim lastName As String = LN_Input.Text.Trim
         Dim instructorID As String = InstructorID_Input.Text.Trim
-        Dim institute As String = ""
+        Dim institute As String
         Dim email As String = Email_Input.Text.Trim
         Dim contact As String = Contact_Input.Text.Trim
         Dim password As String = Password_Input.Text.Trim
@@ -84,7 +81,11 @@ Public Class CDMRMS_Instructor_Login
 
             If ICS_RadioBtn.Checked Then
                 institute = ICS_RadioBtn.Text
-                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                If Not IsDataExists(instructorID) Then
+                    InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                Else
+                    MsgBox("Data already exists in the database.")
+                End If
 
             ElseIf IOB_RadioBtn.Checked Then
                 institute = IOB_RadioBtn.Text
@@ -100,6 +101,35 @@ Public Class CDMRMS_Instructor_Login
             End If
         End If
     End Sub
+
+    ' Only accept number and dash
+    Private Sub InstructorID_Input_KeyPress(sender As Object, e As KeyPressEventArgs) Handles InstructorID_Input.KeyPress
+
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "-"c Then
+            If Not Char.IsControl(e.KeyChar) Then
+                e.Handled = True
+
+            End If
+        ElseIf e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
+            e.Handled = True
+
+        End If
+    End Sub
+
+    ' Check if the data is already existing in database
+    Private Function IsDataExists(instructorID As String) As Boolean
+
+        Dim query As String = "SELECT COUNT(*) FROM `instructors` WHERE instructorID = @instructorID"
+        Dim command As New MySqlCommand(query, connection)
+        command.Parameters.AddWithValue("@instructorID", instructorID)
+
+        connection.Open()
+        Dim count As String = CInt(command.ExecuteScalar())
+        connection.Close()
+
+        Return count > 0
+
+    End Function
 
     ' Insertion of validated Data to database
     Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, institute As String, email As String, contact As String, password As String)
@@ -162,7 +192,6 @@ Public Class CDMRMS_Instructor_Login
     ' REGISTRATION - END
 
 
-
     ' LOGIN - START
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
@@ -193,6 +222,20 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
 
+    ' Only accept number and dash
+    Private Sub LoginInstructorID_Input_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LoginInstructorID_Input.KeyPress
+
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "-"c Then
+            If Not Char.IsControl(e.KeyChar) Then
+                e.Handled = True
+
+            End If
+        ElseIf e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
+            e.Handled = True
+
+        End If
+    End Sub
+
     ' Validate login information
     Private Function ValidateLogin(instructorID As String, email As String, password As String) As String
 
@@ -220,8 +263,8 @@ Public Class CDMRMS_Instructor_Login
         Login_Panel.Show()
         Registration_Panel.Hide()
     End Sub
-    ' LOGIN - END
 
+    ' LOGIN - END
 
 
 End Class
