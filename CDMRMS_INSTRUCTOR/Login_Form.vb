@@ -4,12 +4,15 @@ Imports System.Text
 
 Public Class CDMRMS_Instructor_Login
 
+
+
     ' FORM LOAD - START
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DatabaseConnection()
         Registration_Panel.Hide()
     End Sub
     ' FORM LOAD - END
+
 
 
     ' DATABASE CONNECTION - START
@@ -34,6 +37,7 @@ Public Class CDMRMS_Instructor_Login
     ' DATABASE CONNECTION - END
 
 
+
     ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
         ' Create a new instance of SHA256
@@ -52,6 +56,7 @@ Public Class CDMRMS_Instructor_Login
 
     End Function
     ' PASSWORD HASHING - END
+
 
 
     ' REGISTRATION - START
@@ -157,6 +162,7 @@ Public Class CDMRMS_Instructor_Login
     ' REGISTRATION - END
 
 
+
     ' LOGIN - START
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
@@ -169,13 +175,16 @@ Public Class CDMRMS_Instructor_Login
         ElseIf String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Then
             MsgBox("Please fill in all neded information.", MessageBoxIcon.Warning)
         Else
-            Dim isValidLogin As Boolean = validateLogin(instructorID, email, password)
+            Dim isValidLogin As Boolean = ValidateLogin(instructorID, email, password)
 
             If isValidLogin Then
                 MsgBox("Login successful!.", MessageBoxIcon.Information)
                 LoginInstructorID_Input.Clear()
                 LoginEmail_Input.Clear()
                 LoginPassword_Input.Clear()
+
+                Instructor_Main.Show()
+                Me.Hide()
 
             Else
                 MsgBox("Login failed.", MessageBoxIcon.Error)
@@ -184,7 +193,8 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
 
-    Private Function validateLogin(instructorID As String, email As String, password As String) As String
+    ' Validate login information
+    Private Function ValidateLogin(instructorID As String, email As String, password As String) As String
 
         Dim hashedPassword As String = HashPassword(password)
         Dim isAuthenticated As Boolean = False
@@ -211,4 +221,7 @@ Public Class CDMRMS_Instructor_Login
         Registration_Panel.Hide()
     End Sub
     ' LOGIN - END
+
+
+
 End Class
