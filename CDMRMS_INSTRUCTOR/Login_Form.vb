@@ -4,8 +4,10 @@ Imports System.Text
 
 Public Class CDMRMS_Instructor_Login
 
+    ' FORM LOAD
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DatabaseConnection()
+        Registration_Panel.Hide()
     End Sub
 
     ' DATABASE CONNECTION
@@ -71,16 +73,20 @@ Public Class CDMRMS_Instructor_Login
 
             If ICS_RadioBtn.Checked Then
                 institute = ICS_RadioBtn.Text
+                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+
             ElseIf IOB_RadioBtn.Checked Then
                 institute = IOB_RadioBtn.Text
+                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+
             ElseIf ITE_RadioBtn.Checked Then
                 institute = ITE_RadioBtn.Text
+                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+
             ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
                 MsgBox("Please select your institute.", MessageBoxIcon.Warning)
 
             End If
-
-            InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
         End If
     End Sub
 
@@ -118,4 +124,13 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
 
+    Private Sub Register_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Register_Link.LinkClicked
+        Registration_Panel.Show()
+        Login_Panel.Hide()
+    End Sub
+
+    Private Sub Login_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Login_Link.LinkClicked
+        Login_Panel.Show()
+        Registration_Panel.Hide()
+    End Sub
 End Class

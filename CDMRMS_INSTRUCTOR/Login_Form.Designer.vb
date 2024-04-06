@@ -33,6 +33,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Institute_Label = New System.Windows.Forms.Label()
         Me.ICS_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
+        Me.Login_Link = New System.Windows.Forms.LinkLabel()
         Me.Registration_Label = New System.Windows.Forms.Label()
         Me.Register_Btn = New System.Windows.Forms.Button()
         Me.Password2_Label = New System.Windows.Forms.Label()
@@ -49,10 +50,23 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Label = New System.Windows.Forms.Label()
         Me.InstructorID_Input = New MetroFramework.Controls.MetroTextBox()
         Me.SystemTitle_PictureBox = New System.Windows.Forms.PictureBox()
+        Me.Login_Panel = New System.Windows.Forms.Panel()
+        Me.User_Logo = New System.Windows.Forms.PictureBox()
+        Me.LoginPassword_Label = New System.Windows.Forms.Label()
+        Me.LoginEmail_Label = New System.Windows.Forms.Label()
+        Me.LoginInstructorID_Label = New System.Windows.Forms.Label()
+        Me.LoginPassword_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.LoginEmail_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.LoginInstructorID_Input = New MetroFramework.Controls.MetroTextBox()
+        Me.Register_Link = New System.Windows.Forms.LinkLabel()
+        Me.Login_Label = New System.Windows.Forms.Label()
+        Me.Login_Btn = New System.Windows.Forms.Button()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
         Me.Institute_Panel.SuspendLayout()
         CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Login_Panel.SuspendLayout()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BG_Picture
@@ -219,6 +233,7 @@ Partial Class CDMRMS_Instructor_Login
         'Registration_Panel
         '
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Registration_Panel.Controls.Add(Me.Login_Link)
         Me.Registration_Panel.Controls.Add(Me.Registration_Label)
         Me.Registration_Panel.Controls.Add(Me.Register_Btn)
         Me.Registration_Panel.Controls.Add(Me.Password2_Label)
@@ -244,6 +259,22 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 830)
         Me.Registration_Panel.TabIndex = 1
         '
+        'Login_Link
+        '
+        Me.Login_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Link.AutoSize = True
+        Me.Login_Link.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Login_Link.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.Login_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Login_Link.Location = New System.Drawing.Point(52, 739)
+        Me.Login_Link.Name = "Login_Link"
+        Me.Login_Link.Size = New System.Drawing.Size(72, 20)
+        Me.Login_Link.TabIndex = 25
+        Me.Login_Link.TabStop = True
+        Me.Login_Link.Text = "Login >"
+        Me.Login_Link.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Login_Link.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        '
         'Registration_Label
         '
         Me.Registration_Label.AutoSize = True
@@ -254,6 +285,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Label.Size = New System.Drawing.Size(346, 81)
         Me.Registration_Label.TabIndex = 23
         Me.Registration_Label.Text = "Registration"
+        Me.Registration_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Register_Btn
         '
@@ -265,7 +297,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Register_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Register_Btn.ForeColor = System.Drawing.Color.Black
-        Me.Register_Btn.Location = New System.Drawing.Point(381, 629)
+        Me.Register_Btn.Location = New System.Drawing.Point(381, 656)
         Me.Register_Btn.Name = "Register_Btn"
         Me.Register_Btn.Size = New System.Drawing.Size(100, 40)
         Me.Register_Btn.TabIndex = 22
@@ -536,6 +568,209 @@ Partial Class CDMRMS_Instructor_Login
         Me.SystemTitle_PictureBox.TabIndex = 2
         Me.SystemTitle_PictureBox.TabStop = False
         '
+        'Login_Panel
+        '
+        Me.Login_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Login_Panel.Controls.Add(Me.User_Logo)
+        Me.Login_Panel.Controls.Add(Me.LoginPassword_Label)
+        Me.Login_Panel.Controls.Add(Me.LoginEmail_Label)
+        Me.Login_Panel.Controls.Add(Me.LoginInstructorID_Label)
+        Me.Login_Panel.Controls.Add(Me.LoginPassword_Input)
+        Me.Login_Panel.Controls.Add(Me.LoginEmail_Input)
+        Me.Login_Panel.Controls.Add(Me.LoginInstructorID_Input)
+        Me.Login_Panel.Controls.Add(Me.Register_Link)
+        Me.Login_Panel.Controls.Add(Me.Login_Label)
+        Me.Login_Panel.Controls.Add(Me.Login_Btn)
+        Me.Login_Panel.Location = New System.Drawing.Point(-3, 31)
+        Me.Login_Panel.Name = "Login_Panel"
+        Me.Login_Panel.Size = New System.Drawing.Size(546, 830)
+        Me.Login_Panel.TabIndex = 26
+        '
+        'User_Logo
+        '
+        Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.User_Logo.Image = CType(resources.GetObject("User_Logo.Image"), System.Drawing.Image)
+        Me.User_Logo.Location = New System.Drawing.Point(202, 148)
+        Me.User_Logo.Name = "User_Logo"
+        Me.User_Logo.Size = New System.Drawing.Size(140, 137)
+        Me.User_Logo.TabIndex = 32
+        Me.User_Logo.TabStop = False
+        Me.User_Logo.WaitOnLoad = True
+        '
+        'LoginPassword_Label
+        '
+        Me.LoginPassword_Label.AutoSize = True
+        Me.LoginPassword_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginPassword_Label.Location = New System.Drawing.Point(52, 473)
+        Me.LoginPassword_Label.Name = "LoginPassword_Label"
+        Me.LoginPassword_Label.Size = New System.Drawing.Size(83, 20)
+        Me.LoginPassword_Label.TabIndex = 31
+        Me.LoginPassword_Label.Text = "Password"
+        '
+        'LoginEmail_Label
+        '
+        Me.LoginEmail_Label.AutoSize = True
+        Me.LoginEmail_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginEmail_Label.Location = New System.Drawing.Point(52, 404)
+        Me.LoginEmail_Label.Name = "LoginEmail_Label"
+        Me.LoginEmail_Label.Size = New System.Drawing.Size(51, 20)
+        Me.LoginEmail_Label.TabIndex = 30
+        Me.LoginEmail_Label.Text = "Email"
+        '
+        'LoginInstructorID_Label
+        '
+        Me.LoginInstructorID_Label.AutoSize = True
+        Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginInstructorID_Label.Location = New System.Drawing.Point(52, 336)
+        Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
+        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(176, 20)
+        Me.LoginInstructorID_Label.TabIndex = 29
+        Me.LoginInstructorID_Label.Text = "Instructor's ID number"
+        '
+        'LoginPassword_Input
+        '
+        '
+        '
+        '
+        Me.LoginPassword_Input.CustomButton.Image = Nothing
+        Me.LoginPassword_Input.CustomButton.Location = New System.Drawing.Point(389, 2)
+        Me.LoginPassword_Input.CustomButton.Name = ""
+        Me.LoginPassword_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.LoginPassword_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.LoginPassword_Input.CustomButton.TabIndex = 1
+        Me.LoginPassword_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.LoginPassword_Input.CustomButton.UseSelectable = True
+        Me.LoginPassword_Input.CustomButton.Visible = False
+        Me.LoginPassword_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.LoginPassword_Input.Lines = New String(-1) {}
+        Me.LoginPassword_Input.Location = New System.Drawing.Point(56, 492)
+        Me.LoginPassword_Input.MaxLength = 32767
+        Me.LoginPassword_Input.Name = "LoginPassword_Input"
+        Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginPassword_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.LoginPassword_Input.SelectedText = ""
+        Me.LoginPassword_Input.SelectionLength = 0
+        Me.LoginPassword_Input.SelectionStart = 0
+        Me.LoginPassword_Input.ShortcutsEnabled = True
+        Me.LoginPassword_Input.Size = New System.Drawing.Size(427, 40)
+        Me.LoginPassword_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.LoginPassword_Input.TabIndex = 28
+        Me.LoginPassword_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.LoginPassword_Input.UseSelectable = True
+        Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'LoginEmail_Input
+        '
+        '
+        '
+        '
+        Me.LoginEmail_Input.CustomButton.Image = Nothing
+        Me.LoginEmail_Input.CustomButton.Location = New System.Drawing.Point(389, 2)
+        Me.LoginEmail_Input.CustomButton.Name = ""
+        Me.LoginEmail_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.LoginEmail_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.LoginEmail_Input.CustomButton.TabIndex = 1
+        Me.LoginEmail_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.LoginEmail_Input.CustomButton.UseSelectable = True
+        Me.LoginEmail_Input.CustomButton.Visible = False
+        Me.LoginEmail_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.LoginEmail_Input.Lines = New String(-1) {}
+        Me.LoginEmail_Input.Location = New System.Drawing.Point(56, 423)
+        Me.LoginEmail_Input.MaxLength = 32767
+        Me.LoginEmail_Input.Name = "LoginEmail_Input"
+        Me.LoginEmail_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginEmail_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.LoginEmail_Input.SelectedText = ""
+        Me.LoginEmail_Input.SelectionLength = 0
+        Me.LoginEmail_Input.SelectionStart = 0
+        Me.LoginEmail_Input.ShortcutsEnabled = True
+        Me.LoginEmail_Input.Size = New System.Drawing.Size(427, 40)
+        Me.LoginEmail_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.LoginEmail_Input.TabIndex = 27
+        Me.LoginEmail_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.LoginEmail_Input.UseSelectable = True
+        Me.LoginEmail_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.LoginEmail_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'LoginInstructorID_Input
+        '
+        '
+        '
+        '
+        Me.LoginInstructorID_Input.CustomButton.Image = Nothing
+        Me.LoginInstructorID_Input.CustomButton.Location = New System.Drawing.Point(389, 2)
+        Me.LoginInstructorID_Input.CustomButton.Name = ""
+        Me.LoginInstructorID_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
+        Me.LoginInstructorID_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.LoginInstructorID_Input.CustomButton.TabIndex = 1
+        Me.LoginInstructorID_Input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.LoginInstructorID_Input.CustomButton.UseSelectable = True
+        Me.LoginInstructorID_Input.CustomButton.Visible = False
+        Me.LoginInstructorID_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
+        Me.LoginInstructorID_Input.Lines = New String(-1) {}
+        Me.LoginInstructorID_Input.Location = New System.Drawing.Point(56, 355)
+        Me.LoginInstructorID_Input.MaxLength = 32767
+        Me.LoginInstructorID_Input.Name = "LoginInstructorID_Input"
+        Me.LoginInstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginInstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.LoginInstructorID_Input.SelectedText = ""
+        Me.LoginInstructorID_Input.SelectionLength = 0
+        Me.LoginInstructorID_Input.SelectionStart = 0
+        Me.LoginInstructorID_Input.ShortcutsEnabled = True
+        Me.LoginInstructorID_Input.Size = New System.Drawing.Size(427, 40)
+        Me.LoginInstructorID_Input.Style = MetroFramework.MetroColorStyle.Green
+        Me.LoginInstructorID_Input.TabIndex = 26
+        Me.LoginInstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.LoginInstructorID_Input.UseSelectable = True
+        Me.LoginInstructorID_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.LoginInstructorID_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'Register_Link
+        '
+        Me.Register_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Link.AutoSize = True
+        Me.Register_Link.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Register_Link.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.Register_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Register_Link.Location = New System.Drawing.Point(52, 739)
+        Me.Register_Link.Name = "Register_Link"
+        Me.Register_Link.Size = New System.Drawing.Size(97, 20)
+        Me.Register_Link.TabIndex = 25
+        Me.Register_Link.TabStop = True
+        Me.Register_Link.Text = "Register >"
+        Me.Register_Link.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Register_Link.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        '
+        'Login_Label
+        '
+        Me.Login_Label.AutoSize = True
+        Me.Login_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Login_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Login_Label.Location = New System.Drawing.Point(181, 28)
+        Me.Login_Label.Name = "Login_Label"
+        Me.Login_Label.Size = New System.Drawing.Size(176, 81)
+        Me.Login_Label.TabIndex = 23
+        Me.Login_Label.Text = "Login"
+        Me.Login_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Login_Btn
+        '
+        Me.Login_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Login_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Login_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Login_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Login_Btn.ForeColor = System.Drawing.Color.Black
+        Me.Login_Btn.Location = New System.Drawing.Point(383, 588)
+        Me.Login_Btn.Name = "Login_Btn"
+        Me.Login_Btn.Size = New System.Drawing.Size(100, 40)
+        Me.Login_Btn.TabIndex = 22
+        Me.Login_Btn.Text = "Login"
+        Me.Login_Btn.UseVisualStyleBackColor = False
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -543,6 +778,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.ClientSize = New System.Drawing.Size(1700, 860)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
+        Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Registration_Panel)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1700, 860)
@@ -558,6 +794,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Institute_Panel.ResumeLayout(False)
         Me.Institute_Panel.PerformLayout()
         CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Login_Panel.ResumeLayout(False)
+        Me.Login_Panel.PerformLayout()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -588,4 +827,16 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents Register_Btn As Button
     Friend WithEvents Registration_Label As Label
     Friend WithEvents SystemTitle_PictureBox As PictureBox
+    Friend WithEvents Login_Link As LinkLabel
+    Friend WithEvents Login_Panel As Panel
+    Friend WithEvents LoginPassword_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents LoginEmail_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents LoginInstructorID_Input As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Register_Link As LinkLabel
+    Friend WithEvents Login_Label As Label
+    Friend WithEvents Login_Btn As Button
+    Friend WithEvents LoginPassword_Label As Label
+    Friend WithEvents LoginEmail_Label As Label
+    Friend WithEvents LoginInstructorID_Label As Label
+    Friend WithEvents User_Logo As PictureBox
 End Class
