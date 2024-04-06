@@ -265,6 +265,4 @@ Public Class CDMRMS_Instructor_Login
     End Sub
 
     ' LOGIN - END
-
-
 End Class

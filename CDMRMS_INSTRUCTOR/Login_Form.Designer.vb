@@ -95,7 +95,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.FN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.FN_Input.Lines = New String(-1) {}
         Me.FN_Input.Location = New System.Drawing.Point(55, 152)
-        Me.FN_Input.MaxLength = 32767
+        Me.FN_Input.MaxLength = 30
         Me.FN_Input.Name = "FN_Input"
         Me.FN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.FN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -128,7 +128,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.MN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.MN_Input.Lines = New String(-1) {}
         Me.MN_Input.Location = New System.Drawing.Point(199, 152)
-        Me.MN_Input.MaxLength = 32767
+        Me.MN_Input.MaxLength = 30
         Me.MN_Input.Name = "MN_Input"
         Me.MN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.MN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -161,7 +161,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LN_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.LN_Input.Lines = New String(-1) {}
         Me.LN_Input.Location = New System.Drawing.Point(343, 152)
-        Me.LN_Input.MaxLength = 32767
+        Me.LN_Input.MaxLength = 30
         Me.LN_Input.Name = "LN_Input"
         Me.LN_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.LN_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -331,9 +331,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password2_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.Password2_Input.Lines = New String(-1) {}
         Me.Password2_Input.Location = New System.Drawing.Point(55, 562)
-        Me.Password2_Input.MaxLength = 32767
+        Me.Password2_Input.MaxLength = 30
         Me.Password2_Input.Name = "Password2_Input"
         Me.Password2_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.Password2_Input.PromptText = "Re-enter password"
         Me.Password2_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Password2_Input.SelectedText = ""
         Me.Password2_Input.SelectionLength = 0
@@ -345,8 +346,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password2_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Password2_Input.UseSelectable = True
         Me.Password2_Input.UseSystemPasswordChar = True
-        Me.Password2_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.Password2_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Password2_Input.WaterMark = "Re-enter password"
+        Me.Password2_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.Password2_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Password_Label
         '
@@ -375,9 +377,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.Password_Input.Lines = New String(-1) {}
         Me.Password_Input.Location = New System.Drawing.Point(55, 492)
-        Me.Password_Input.MaxLength = 32767
+        Me.Password_Input.MaxLength = 30
         Me.Password_Input.Name = "Password_Input"
         Me.Password_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.Password_Input.PromptText = "Enter password"
         Me.Password_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Password_Input.SelectedText = ""
         Me.Password_Input.SelectionLength = 0
@@ -389,8 +392,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Password_Input.UseSelectable = True
         Me.Password_Input.UseSystemPasswordChar = True
-        Me.Password_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.Password_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Password_Input.WaterMark = "Enter password"
+        Me.Password_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.Password_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Contact_Label
         '
@@ -419,9 +423,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.Contact_Input.Lines = New String(-1) {}
         Me.Contact_Input.Location = New System.Drawing.Point(55, 423)
-        Me.Contact_Input.MaxLength = 32767
+        Me.Contact_Input.MaxLength = 11
         Me.Contact_Input.Name = "Contact_Input"
         Me.Contact_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Contact_Input.PromptText = "Enter contact number"
         Me.Contact_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Contact_Input.SelectedText = ""
         Me.Contact_Input.SelectionLength = 0
@@ -432,8 +437,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input.TabIndex = 16
         Me.Contact_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Contact_Input.UseSelectable = True
-        Me.Contact_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.Contact_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Contact_Input.WaterMark = "Enter contact number"
+        Me.Contact_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.Contact_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Email_Label
         '
@@ -462,9 +468,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Input.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.Email_Input.Lines = New String(-1) {}
         Me.Email_Input.Location = New System.Drawing.Point(55, 355)
-        Me.Email_Input.MaxLength = 32767
+        Me.Email_Input.MaxLength = 50
         Me.Email_Input.Name = "Email_Input"
         Me.Email_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Email_Input.PromptText = "Enter email address"
         Me.Email_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Email_Input.SelectedText = ""
         Me.Email_Input.SelectionLength = 0
@@ -475,8 +482,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Input.TabIndex = 14
         Me.Email_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Email_Input.UseSelectable = True
-        Me.Email_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.Email_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.Email_Input.WaterMark = "Enter email address"
+        Me.Email_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.Email_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Institute_Panel
         '
@@ -545,6 +553,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Input.MaxLength = 8
         Me.InstructorID_Input.Name = "InstructorID_Input"
         Me.InstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.InstructorID_Input.PromptText = "XX-XXXXX"
         Me.InstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.InstructorID_Input.SelectedText = ""
         Me.InstructorID_Input.SelectionLength = 0
@@ -555,8 +564,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Input.TabIndex = 7
         Me.InstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.InstructorID_Input.UseSelectable = True
-        Me.InstructorID_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.InstructorID_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.InstructorID_Input.WaterMark = "XX-XXXXX"
+        Me.InstructorID_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.InstructorID_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'SystemTitle_PictureBox
         '
@@ -647,6 +657,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.MaxLength = 50
         Me.LoginPassword_Input.Name = "LoginPassword_Input"
         Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.LoginPassword_Input.PromptText = "Enter password"
         Me.LoginPassword_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginPassword_Input.SelectedText = ""
         Me.LoginPassword_Input.SelectionLength = 0
@@ -658,8 +669,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginPassword_Input.UseSelectable = True
         Me.LoginPassword_Input.UseSystemPasswordChar = True
-        Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.LoginPassword_Input.WaterMark = "Enter password"
+        Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'LoginEmail_Input
         '
@@ -681,6 +693,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginEmail_Input.MaxLength = 50
         Me.LoginEmail_Input.Name = "LoginEmail_Input"
         Me.LoginEmail_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginEmail_Input.PromptText = "Enter email address"
         Me.LoginEmail_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginEmail_Input.SelectedText = ""
         Me.LoginEmail_Input.SelectionLength = 0
@@ -691,8 +704,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginEmail_Input.TabIndex = 27
         Me.LoginEmail_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginEmail_Input.UseSelectable = True
-        Me.LoginEmail_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.LoginEmail_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.LoginEmail_Input.WaterMark = "Enter email address"
+        Me.LoginEmail_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.LoginEmail_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'LoginInstructorID_Input
         '
@@ -714,6 +728,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Input.MaxLength = 8
         Me.LoginInstructorID_Input.Name = "LoginInstructorID_Input"
         Me.LoginInstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.LoginInstructorID_Input.PromptText = "XX-XXXXX"
         Me.LoginInstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginInstructorID_Input.SelectedText = ""
         Me.LoginInstructorID_Input.SelectionLength = 0
@@ -724,8 +739,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Input.TabIndex = 26
         Me.LoginInstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginInstructorID_Input.UseSelectable = True
-        Me.LoginInstructorID_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.LoginInstructorID_Input.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.LoginInstructorID_Input.WaterMark = "XX-XXXXX"
+        Me.LoginInstructorID_Input.WaterMarkColor = System.Drawing.Color.Silver
+        Me.LoginInstructorID_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Register_Link
         '
@@ -779,8 +795,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.ClientSize = New System.Drawing.Size(1700, 860)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
-        Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Registration_Panel)
+        Me.Controls.Add(Me.Login_Panel)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1700, 860)
         Me.MinimizeBox = False
