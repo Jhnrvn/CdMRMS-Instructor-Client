@@ -2,8 +2,19 @@
 Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Text.RegularExpressions
 
 Public Class CDMRMS_Instructor_Login
+
+
+    ' FORM LOAD - START
+    Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        DatabaseConnection()
+        Registration_Panel.Hide()
+
+    End Sub
+    ' FORM LOAD - END
 
 
     ' DATABASE CONNECTION - START
@@ -11,6 +22,7 @@ Public Class CDMRMS_Instructor_Login
     Private Shared connection As New MySqlConnection(ConnectionString)
 
     Private Sub DatabaseConnection()
+
         Try
             connection.Open()
 
@@ -20,16 +32,20 @@ Public Class CDMRMS_Instructor_Login
             connection.Close()
 
         End Try
+
     End Sub
 
     Public Shared Function GetConnection() As MySqlConnection
+
         Return connection
+
     End Function
     ' DATABASE CONNECTION - END
 
 
     ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
+
         ' Create a new instance of SHA256
         Using SHA256 As SHA256 = SHA256.Create()
             ' ComputeHash - returns byte array
@@ -40,6 +56,7 @@ Public Class CDMRMS_Instructor_Login
             For i As Integer = 0 To bytes.Length - 1
                 builder.Append(bytes(i).ToString("x2"))
             Next
+
             Return builder.ToString()
 
         End Using
@@ -62,36 +79,66 @@ Public Class CDMRMS_Instructor_Login
         Dim password As String = Password_Input.Text.Trim
         Dim password2 As String = Password2_Input.Text.Trim
 
+
         ' Check if all needed information are fill-out
         If String.IsNullOrEmpty(firstName) And String.IsNullOrEmpty(middleName) And String.IsNullOrEmpty(lastName) And String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(contact) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) And String.IsNullOrEmpty(password2) Then
             MsgBox("Please enter all needed information", MessageBoxIcon.Warning)
+
         ElseIf String.IsNullOrEmpty(firstName) Or String.IsNullOrEmpty(middleName) Or String.IsNullOrEmpty(lastName) Or String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(contact) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Or String.IsNullOrEmpty(password2) Then
             MsgBox("Please fill all missing information", MessageBoxIcon.Warning)
-        ElseIf password <> password2 Then
-            MsgBox("Password does'nt match.", MessageBoxIcon.Information)
-        Else
 
-            If ICS_RadioBtn.Checked Then
-                institute = ICS_RadioBtn.Text
-                If Not IsDataExists(instructorID) Then
-                    InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+        ElseIf ValidateInstructorID(instructorID) Then
+
+            If ValidateEmailAddress(email) Then
+
+                If ValidatePhilippinePhoneNumber(contact) Then
+
+                    If password <> password2 Then
+                        MsgBox("Password does'nt match.", MessageBoxIcon.Information)
+
+                    Else
+                        If ICS_RadioBtn.Checked Then
+                            institute = ICS_RadioBtn.Text
+                            If Not IsDataExists(instructorID) Then
+                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                            Else
+                                MsgBox("Data already exists in the database.")
+                            End If
+
+                        ElseIf IOB_RadioBtn.Checked Then
+                            institute = IOB_RadioBtn.Text
+                            If Not IsDataExists(instructorID) Then
+                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                            Else
+                                MsgBox("Data already exists in the database.")
+                            End If
+
+                        ElseIf ITE_RadioBtn.Checked Then
+                            institute = ITE_RadioBtn.Text
+                            If Not IsDataExists(instructorID) Then
+                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                            Else
+                                MsgBox("Data already exists in the database.")
+                            End If
+
+                        ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
+                            MsgBox("Please select your institute.", MessageBoxIcon.Warning)
+
+                        End If
+                    End If
                 Else
-                    MsgBox("Data already exists in the database.")
+                    MsgBox("Invalid Phone number")
+
                 End If
-
-            ElseIf IOB_RadioBtn.Checked Then
-                institute = IOB_RadioBtn.Text
-                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
-
-            ElseIf ITE_RadioBtn.Checked Then
-                institute = ITE_RadioBtn.Text
-                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
-
-            ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
-                MsgBox("Please select your institute.", MessageBoxIcon.Warning)
+            Else
+                MsgBox("Invalid Email address")
 
             End If
+        Else
+            MsgBox("Invalid Instructor ID")
+
         End If
+
     End Sub
 
     ' Only accept number and dash
@@ -107,6 +154,36 @@ Public Class CDMRMS_Instructor_Login
 
         End If
     End Sub
+
+    ' Validate instructor ID number format
+    Private Function ValidateInstructorID(instructorID As String) As String
+
+        Dim pattern As String = "^\d{2}-\d{5}$"
+
+        Dim regex As New Regex(pattern)
+        Return regex.IsMatch(instructorID)
+
+    End Function
+
+    ' Validate Email address format
+    Private Function ValidateEmailAddress(email As String) As String
+
+        Dim pattern As String = "^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
+
+        Dim regex As New Regex(pattern)
+        Return regex.IsMatch(email)
+
+    End Function
+
+    ' Validate Philippine cellphone number format
+    Private Function ValidatePhilippinePhoneNumber(contact As String) As String
+
+        Dim pattern As String = "^(09\d{2})[- ]?(\d{7})$"
+
+        Dim regex As New Regex(pattern)
+        Return regex.IsMatch(contact)
+
+    End Function
 
     ' Check if the data is already existing in database
     Private Function IsDataExists(instructorID As String) As Boolean
@@ -145,6 +222,7 @@ Public Class CDMRMS_Instructor_Login
                     command.Parameters.AddWithValue("@contact", contact)
                     command.Parameters.AddWithValue("@password", hashedPassword)
 
+
                     connection.Open()
                     Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
                     MsgBox("Register Successfully!.", MessageBoxIcon.Information)
@@ -178,8 +256,10 @@ Public Class CDMRMS_Instructor_Login
     End Sub
 
     Private Sub Register_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Register_Link.LinkClicked
+
         Login_Panel.Hide()
         Registration_Panel.Show()
+
     End Sub
     ' REGISTRATION - END
 
@@ -193,8 +273,10 @@ Public Class CDMRMS_Instructor_Login
 
         If String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) Then
             MsgBox("login invalid.", MessageBoxIcon.Warning)
+
         ElseIf String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Then
             MsgBox("Please fill in all neded information.", MessageBoxIcon.Warning)
+
         Else
             Dim isValidLogin As Boolean = ValidateLogin(instructorID, email, password)
 
@@ -258,41 +340,23 @@ Public Class CDMRMS_Instructor_Login
     ' LOGIN - END
 
 
-    ' FORM LOAD - START
-    Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DatabaseConnection()
-        Registration_Panel.Hide()
-
-        ' tooltips with controls - Login - Start
-        loginTooltip.SetToolTip(LoginInstructorID_Input, "this is shit!")
-        loginTooltip.SetToolTip(LoginEmail_Input, "")
-        loginTooltip.SetToolTip(LoginPassword_Input, "")
-        loginTooltip.SetToolTip(Login_Btn, "shit")
-
-
-        AddHandler LoginInstructorID_Input.MouseHover, AddressOf Control_MouseHover
-        AddHandler LoginEmail_Input.MouseHover, AddressOf Control_MouseHover
-        AddHandler LoginPassword_Input.MouseHover, AddressOf Control_MouseHover
-        AddHandler Login_Btn.MouseHover, AddressOf Control_MouseHover
-
-
-    End Sub
-    ' FORM LOAD - END
-
-
     ' TOOLTIPS FOR LOGIN AND REGISTRAR INPUTS - START
-    Private Sub Control_MouseHover(sender As Object, e As EventArgs)
-
-        Dim control As Control = DirectCast(sender, Control)
-
-        Select Case control.Name
-            Case "LoginInstructorID_Input"
-                loginTooltip.SetToolTip(control, "this is shit!")
-            Case "Login_Btn"
-                loginTooltip.SetToolTip(control, "shit")
-
-        End Select
-
+    Private Sub RegToolTip_Label1_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label1.MouseHover
+        Tooltip.ToolTipTitle = "Instructor's ID Number"
+        Tooltip.SetToolTip(RegToolTip_Label1, "" & vbCrLf & " * It only accept Numbers & Dash (1 only). " & vbCrLf & "   Sample Input: 23-12345" & vbCrLf & vbCrLf & " * Other Characters Are Invalid." & vbCrLf & " ")
     End Sub
+
+    Private Sub RegToolTip_Label2_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label2.MouseHover
+        Tooltip.ToolTipTitle = "Email Address"
+        Tooltip.SetToolTip(RegToolTip_Label2, "" & vbCrLf & " * Enter your email address in the format: " & vbCrLf & "   name@example.com" & vbCrLf & " ")
+    End Sub
+
+    Private Sub RegToolTip_Label3_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label3.MouseHover
+        Tooltip.ToolTipTitle = "Contact Number"
+        Tooltip.SetToolTip(RegToolTip_Label3, " " & vbCrLf & " * Please enter a valid contact number.   " & vbCrLf & "   (e.g., 09XXXXXXXXX)." & vbCrLf & " ")
+    End Sub
+
     ' TOOLTIPS FOR LOGIN AND REGISTRAT INPUTS - END
+
+
 End Class

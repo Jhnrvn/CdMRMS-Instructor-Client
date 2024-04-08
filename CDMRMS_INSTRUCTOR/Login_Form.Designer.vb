@@ -34,6 +34,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Institute_Label = New System.Windows.Forms.Label()
         Me.ICS_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
+        Me.RegToolTip_Label1 = New System.Windows.Forms.Label()
+        Me.RegToolTip_Label2 = New System.Windows.Forms.Label()
+        Me.RegToolTip_Label3 = New System.Windows.Forms.Label()
         Me.Login_Link = New System.Windows.Forms.LinkLabel()
         Me.Registration_Label = New System.Windows.Forms.Label()
         Me.Register_Btn = New System.Windows.Forms.Button()
@@ -62,7 +65,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link = New System.Windows.Forms.LinkLabel()
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
-        Me.loginTooltip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Tooltip = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
         Me.Institute_Panel.SuspendLayout()
@@ -236,6 +239,9 @@ Partial Class CDMRMS_Instructor_Login
         'Registration_Panel
         '
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label1)
+        Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label2)
+        Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label3)
         Me.Registration_Panel.Controls.Add(Me.Login_Link)
         Me.Registration_Panel.Controls.Add(Me.Registration_Label)
         Me.Registration_Panel.Controls.Add(Me.Register_Btn)
@@ -261,6 +267,48 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Name = "Registration_Panel"
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Registration_Panel.TabIndex = 1
+        '
+        'RegToolTip_Label1
+        '
+        Me.RegToolTip_Label1.AutoSize = True
+        Me.RegToolTip_Label1.BackColor = System.Drawing.Color.Transparent
+        Me.RegToolTip_Label1.Cursor = System.Windows.Forms.Cursors.Help
+        Me.RegToolTip_Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RegToolTip_Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RegToolTip_Label1.ForeColor = System.Drawing.Color.Red
+        Me.RegToolTip_Label1.Location = New System.Drawing.Point(452, 208)
+        Me.RegToolTip_Label1.Name = "RegToolTip_Label1"
+        Me.RegToolTip_Label1.Size = New System.Drawing.Size(19, 20)
+        Me.RegToolTip_Label1.TabIndex = 29
+        Me.RegToolTip_Label1.Text = "?"
+        '
+        'RegToolTip_Label2
+        '
+        Me.RegToolTip_Label2.AutoSize = True
+        Me.RegToolTip_Label2.BackColor = System.Drawing.Color.Transparent
+        Me.RegToolTip_Label2.Cursor = System.Windows.Forms.Cursors.Help
+        Me.RegToolTip_Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RegToolTip_Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RegToolTip_Label2.ForeColor = System.Drawing.Color.Red
+        Me.RegToolTip_Label2.Location = New System.Drawing.Point(452, 343)
+        Me.RegToolTip_Label2.Name = "RegToolTip_Label2"
+        Me.RegToolTip_Label2.Size = New System.Drawing.Size(19, 20)
+        Me.RegToolTip_Label2.TabIndex = 28
+        Me.RegToolTip_Label2.Text = "?"
+        '
+        'RegToolTip_Label3
+        '
+        Me.RegToolTip_Label3.AutoSize = True
+        Me.RegToolTip_Label3.BackColor = System.Drawing.Color.Transparent
+        Me.RegToolTip_Label3.Cursor = System.Windows.Forms.Cursors.Help
+        Me.RegToolTip_Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RegToolTip_Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RegToolTip_Label3.ForeColor = System.Drawing.Color.Red
+        Me.RegToolTip_Label3.Location = New System.Drawing.Point(452, 411)
+        Me.RegToolTip_Label3.Name = "RegToolTip_Label3"
+        Me.RegToolTip_Label3.Size = New System.Drawing.Size(19, 20)
+        Me.RegToolTip_Label3.TabIndex = 27
+        Me.RegToolTip_Label3.Text = "?"
         '
         'Login_Link
         '
@@ -444,9 +492,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email_Label.Location = New System.Drawing.Point(51, 336)
         Me.Email_Label.Name = "Email_Label"
-        Me.Email_Label.Size = New System.Drawing.Size(51, 20)
+        Me.Email_Label.Size = New System.Drawing.Size(118, 20)
         Me.Email_Label.TabIndex = 15
-        Me.Email_Label.Text = "Email"
+        Me.Email_Label.Text = "Email Address"
         '
         'Email_Input
         '
@@ -521,6 +569,7 @@ Partial Class CDMRMS_Instructor_Login
         'InstructorID_Label
         '
         Me.InstructorID_Label.AutoSize = True
+        Me.InstructorID_Label.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InstructorID_Label.Location = New System.Drawing.Point(51, 200)
         Me.InstructorID_Label.Name = "InstructorID_Label"
@@ -603,6 +652,7 @@ Partial Class CDMRMS_Instructor_Login
         'LoginPassword_Label
         '
         Me.LoginPassword_Label.AutoSize = True
+        Me.LoginPassword_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginPassword_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginPassword_Label.Location = New System.Drawing.Point(52, 473)
         Me.LoginPassword_Label.Name = "LoginPassword_Label"
@@ -613,6 +663,7 @@ Partial Class CDMRMS_Instructor_Login
         'LoginEmail_Label
         '
         Me.LoginEmail_Label.AutoSize = True
+        Me.LoginEmail_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginEmail_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginEmail_Label.Location = New System.Drawing.Point(52, 404)
         Me.LoginEmail_Label.Name = "LoginEmail_Label"
@@ -623,6 +674,7 @@ Partial Class CDMRMS_Instructor_Login
         'LoginInstructorID_Label
         '
         Me.LoginInstructorID_Label.AutoSize = True
+        Me.LoginInstructorID_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginInstructorID_Label.Location = New System.Drawing.Point(52, 336)
         Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
@@ -660,7 +712,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.TabIndex = 28
         Me.LoginPassword_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginPassword_Input.UseSelectable = True
-        Me.LoginPassword_Input.UseSystemPasswordChar = True
         Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -775,10 +826,14 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Btn.Text = "Login"
         Me.Login_Btn.UseVisualStyleBackColor = False
         '
-        'loginTooltip
+        'Tooltip
         '
-        Me.loginTooltip.AutomaticDelay = 100
-        Me.loginTooltip.IsBalloon = True
+        Me.Tooltip.AutomaticDelay = 100
+        Me.Tooltip.AutoPopDelay = 20000
+        Me.Tooltip.InitialDelay = 10
+        Me.Tooltip.IsBalloon = True
+        Me.Tooltip.ReshowDelay = 20
+        Me.Tooltip.ShowAlways = True
         '
         'CDMRMS_Instructor_Login
         '
@@ -846,7 +901,10 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents Login_Btn As Button
     Friend WithEvents LoginPassword_Label As Label
     Friend WithEvents LoginEmail_Label As Label
-    Friend WithEvents LoginInstructorID_Label As Label
     Friend WithEvents User_Logo As PictureBox
-    Friend WithEvents loginTooltip As ToolTip
+    Friend WithEvents Tooltip As ToolTip
+    Friend WithEvents LoginInstructorID_Label As Label
+    Friend WithEvents RegToolTip_Label3 As Label
+    Friend WithEvents RegToolTip_Label2 As Label
+    Friend WithEvents RegToolTip_Label1 As Label
 End Class
