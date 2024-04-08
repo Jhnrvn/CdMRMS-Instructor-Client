@@ -71,10 +71,11 @@ Partial Class CDMRMS_Instructor_Login
         '
         'BG_Picture
         '
+        Me.BG_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BG_Picture.Image = CType(resources.GetObject("BG_Picture.Image"), System.Drawing.Image)
         Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
         Me.BG_Picture.Name = "BG_Picture"
-        Me.BG_Picture.Size = New System.Drawing.Size(1160, 830)
+        Me.BG_Picture.Size = New System.Drawing.Size(1160, 850)
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
@@ -256,7 +257,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Controls.Add(Me.FN_Input)
         Me.Registration_Panel.Location = New System.Drawing.Point(-1, 31)
         Me.Registration_Panel.Name = "Registration_Panel"
-        Me.Registration_Panel.Size = New System.Drawing.Size(546, 830)
+        Me.Registration_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Registration_Panel.TabIndex = 1
         '
         'Login_Link
@@ -334,7 +335,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password2_Input.MaxLength = 30
         Me.Password2_Input.Name = "Password2_Input"
         Me.Password2_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.Password2_Input.PromptText = "Re-enter password"
         Me.Password2_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Password2_Input.SelectedText = ""
         Me.Password2_Input.SelectionLength = 0
@@ -346,7 +346,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password2_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Password2_Input.UseSelectable = True
         Me.Password2_Input.UseSystemPasswordChar = True
-        Me.Password2_Input.WaterMark = "Re-enter password"
         Me.Password2_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.Password2_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -380,7 +379,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password_Input.MaxLength = 30
         Me.Password_Input.Name = "Password_Input"
         Me.Password_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.Password_Input.PromptText = "Enter password"
         Me.Password_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Password_Input.SelectedText = ""
         Me.Password_Input.SelectionLength = 0
@@ -392,7 +390,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Password_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Password_Input.UseSelectable = True
         Me.Password_Input.UseSystemPasswordChar = True
-        Me.Password_Input.WaterMark = "Enter password"
         Me.Password_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.Password_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -426,7 +423,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input.MaxLength = 11
         Me.Contact_Input.Name = "Contact_Input"
         Me.Contact_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Contact_Input.PromptText = "Enter contact number"
         Me.Contact_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Contact_Input.SelectedText = ""
         Me.Contact_Input.SelectionLength = 0
@@ -437,7 +433,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input.TabIndex = 16
         Me.Contact_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Contact_Input.UseSelectable = True
-        Me.Contact_Input.WaterMark = "Enter contact number"
         Me.Contact_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.Contact_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -471,7 +466,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Input.MaxLength = 50
         Me.Email_Input.Name = "Email_Input"
         Me.Email_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Email_Input.PromptText = "Enter email address"
         Me.Email_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.Email_Input.SelectedText = ""
         Me.Email_Input.SelectionLength = 0
@@ -482,7 +476,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Input.TabIndex = 14
         Me.Email_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Email_Input.UseSelectable = True
-        Me.Email_Input.WaterMark = "Enter email address"
         Me.Email_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.Email_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -553,7 +546,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Input.MaxLength = 8
         Me.InstructorID_Input.Name = "InstructorID_Input"
         Me.InstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.InstructorID_Input.PromptText = "XX-XXXXX"
         Me.InstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.InstructorID_Input.SelectedText = ""
         Me.InstructorID_Input.SelectionLength = 0
@@ -564,16 +556,15 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Input.TabIndex = 7
         Me.InstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.InstructorID_Input.UseSelectable = True
-        Me.InstructorID_Input.WaterMark = "XX-XXXXX"
         Me.InstructorID_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.InstructorID_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'SystemTitle_PictureBox
         '
         Me.SystemTitle_PictureBox.Image = CType(resources.GetObject("SystemTitle_PictureBox.Image"), System.Drawing.Image)
-        Me.SystemTitle_PictureBox.Location = New System.Drawing.Point(665, 139)
+        Me.SystemTitle_PictureBox.Location = New System.Drawing.Point(607, 146)
         Me.SystemTitle_PictureBox.Name = "SystemTitle_PictureBox"
-        Me.SystemTitle_PictureBox.Size = New System.Drawing.Size(931, 603)
+        Me.SystemTitle_PictureBox.Size = New System.Drawing.Size(870, 603)
         Me.SystemTitle_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.SystemTitle_PictureBox.TabIndex = 2
         Me.SystemTitle_PictureBox.TabStop = False
@@ -593,7 +584,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Panel.Controls.Add(Me.Login_Btn)
         Me.Login_Panel.Location = New System.Drawing.Point(-3, 31)
         Me.Login_Panel.Name = "Login_Panel"
-        Me.Login_Panel.Size = New System.Drawing.Size(546, 830)
+        Me.Login_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Login_Panel.TabIndex = 26
         '
         'User_Logo
@@ -657,7 +648,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.MaxLength = 50
         Me.LoginPassword_Input.Name = "LoginPassword_Input"
         Me.LoginPassword_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.LoginPassword_Input.PromptText = "Enter password"
         Me.LoginPassword_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginPassword_Input.SelectedText = ""
         Me.LoginPassword_Input.SelectionLength = 0
@@ -669,7 +659,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginPassword_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginPassword_Input.UseSelectable = True
         Me.LoginPassword_Input.UseSystemPasswordChar = True
-        Me.LoginPassword_Input.WaterMark = "Enter password"
         Me.LoginPassword_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.LoginPassword_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -693,7 +682,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginEmail_Input.MaxLength = 50
         Me.LoginEmail_Input.Name = "LoginEmail_Input"
         Me.LoginEmail_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.LoginEmail_Input.PromptText = "Enter email address"
         Me.LoginEmail_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginEmail_Input.SelectedText = ""
         Me.LoginEmail_Input.SelectionLength = 0
@@ -704,7 +692,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginEmail_Input.TabIndex = 27
         Me.LoginEmail_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginEmail_Input.UseSelectable = True
-        Me.LoginEmail_Input.WaterMark = "Enter email address"
         Me.LoginEmail_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.LoginEmail_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -728,7 +715,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Input.MaxLength = 8
         Me.LoginInstructorID_Input.Name = "LoginInstructorID_Input"
         Me.LoginInstructorID_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.LoginInstructorID_Input.PromptText = "XX-XXXXX"
         Me.LoginInstructorID_Input.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.LoginInstructorID_Input.SelectedText = ""
         Me.LoginInstructorID_Input.SelectionLength = 0
@@ -739,7 +725,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Input.TabIndex = 26
         Me.LoginInstructorID_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LoginInstructorID_Input.UseSelectable = True
-        Me.LoginInstructorID_Input.WaterMark = "XX-XXXXX"
         Me.LoginInstructorID_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.LoginInstructorID_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -792,15 +777,13 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1700, 860)
+        Me.ClientSize = New System.Drawing.Size(1550, 870)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
         Me.Controls.Add(Me.Registration_Panel)
         Me.Controls.Add(Me.Login_Panel)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1700, 860)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(1700, 860)
         Me.Name = "CDMRMS_Instructor_Login"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
