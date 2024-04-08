@@ -22,6 +22,7 @@ Partial Class CDMRMS_Instructor_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.BG_Picture = New System.Windows.Forms.PictureBox()
         Me.FN_Input = New MetroFramework.Controls.MetroTextBox()
@@ -61,6 +62,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link = New System.Windows.Forms.LinkLabel()
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
+        Me.loginTooltip = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
         Me.Institute_Panel.SuspendLayout()
@@ -75,7 +77,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.BG_Picture.Image = CType(resources.GetObject("BG_Picture.Image"), System.Drawing.Image)
         Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
         Me.BG_Picture.Name = "BG_Picture"
-        Me.BG_Picture.Size = New System.Drawing.Size(1160, 850)
+        Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
@@ -773,6 +775,11 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Btn.Text = "Login"
         Me.Login_Btn.UseVisualStyleBackColor = False
         '
+        'loginTooltip
+        '
+        Me.loginTooltip.AutomaticDelay = 100
+        Me.loginTooltip.IsBalloon = True
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -780,9 +787,11 @@ Partial Class CDMRMS_Instructor_Login
         Me.ClientSize = New System.Drawing.Size(1550, 870)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
-        Me.Controls.Add(Me.Registration_Panel)
         Me.Controls.Add(Me.Login_Panel)
+        Me.Controls.Add(Me.Registration_Panel)
+        Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1550, 870)
         Me.MinimizeBox = False
         Me.Name = "CDMRMS_Instructor_Login"
         Me.Resizable = False
@@ -839,4 +848,5 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents LoginEmail_Label As Label
     Friend WithEvents LoginInstructorID_Label As Label
     Friend WithEvents User_Logo As PictureBox
+    Friend WithEvents loginTooltip As ToolTip
 End Class

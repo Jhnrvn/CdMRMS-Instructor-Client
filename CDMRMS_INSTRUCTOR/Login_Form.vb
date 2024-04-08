@@ -6,14 +6,6 @@ Imports System.Text
 Public Class CDMRMS_Instructor_Login
 
 
-    ' FORM LOAD - START
-    Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DatabaseConnection()
-        Registration_Panel.Hide()
-    End Sub
-    ' FORM LOAD - END
-
-
     ' DATABASE CONNECTION - START
     Private Shared ConnectionString As String = "server=localhost; port=3306; database=cdmregistrarmanagementsystem; uid=root; password=;"
     Private Shared connection As New MySqlConnection(ConnectionString)
@@ -186,8 +178,8 @@ Public Class CDMRMS_Instructor_Login
     End Sub
 
     Private Sub Register_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Register_Link.LinkClicked
-        Registration_Panel.Show()
         Login_Panel.Hide()
+        Registration_Panel.Show()
     End Sub
     ' REGISTRATION - END
 
@@ -260,9 +252,47 @@ Public Class CDMRMS_Instructor_Login
     End Function
 
     Private Sub Login_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Login_Link.LinkClicked
-        Login_Panel.Show()
         Registration_Panel.Hide()
+        Login_Panel.Show()
     End Sub
-
     ' LOGIN - END
+
+
+    ' FORM LOAD - START
+    Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DatabaseConnection()
+        Registration_Panel.Hide()
+
+        ' tooltips with controls - Login - Start
+        loginTooltip.SetToolTip(LoginInstructorID_Input, "this is shit!")
+        loginTooltip.SetToolTip(LoginEmail_Input, "")
+        loginTooltip.SetToolTip(LoginPassword_Input, "")
+        loginTooltip.SetToolTip(Login_Btn, "shit")
+
+
+        AddHandler LoginInstructorID_Input.MouseHover, AddressOf Control_MouseHover
+        AddHandler LoginEmail_Input.MouseHover, AddressOf Control_MouseHover
+        AddHandler LoginPassword_Input.MouseHover, AddressOf Control_MouseHover
+        AddHandler Login_Btn.MouseHover, AddressOf Control_MouseHover
+
+
+    End Sub
+    ' FORM LOAD - END
+
+
+    ' TOOLTIPS FOR LOGIN AND REGISTRAR INPUTS - START
+    Private Sub Control_MouseHover(sender As Object, e As EventArgs)
+
+        Dim control As Control = DirectCast(sender, Control)
+
+        Select Case control.Name
+            Case "LoginInstructorID_Input"
+                loginTooltip.SetToolTip(control, "this is shit!")
+            Case "Login_Btn"
+                loginTooltip.SetToolTip(control, "shit")
+
+        End Select
+
+    End Sub
+    ' TOOLTIPS FOR LOGIN AND REGISTRAT INPUTS - END
 End Class
