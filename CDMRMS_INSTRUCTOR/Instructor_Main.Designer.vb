@@ -30,6 +30,7 @@ Partial Class Instructor_Main
         Me.StudentGrade_Btn = New System.Windows.Forms.Button()
         Me.MyProfile_Btn = New System.Windows.Forms.Button()
         Me.Menu_Btn = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CDM_Logo = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Dropdown_Timer = New System.Windows.Forms.Timer(Me.components)
@@ -38,17 +39,17 @@ Partial Class Instructor_Main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Login_Btn = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Birthday_Label = New System.Windows.Forms.Label()
         Me.MetroTextBox7 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CN_Label = New System.Windows.Forms.Label()
+        Me.Email_ = New System.Windows.Forms.Label()
+        Me.Sex_Label = New System.Windows.Forms.Label()
         Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.InstructorID_Label = New System.Windows.Forms.Label()
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.LoginInstructorID_Label = New System.Windows.Forms.Label()
+        Me.MN_Label = New System.Windows.Forms.Label()
+        Me.LN_Label = New System.Windows.Forms.Label()
+        Me.FN_Label = New System.Windows.Forms.Label()
         Me.MetroTextBox5 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTextBox4 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
@@ -56,15 +57,14 @@ Partial Class Instructor_Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MetroTextBox6 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTextBox8 = New MetroFramework.Controls.MetroTextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyProfile_Panel.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -154,6 +154,16 @@ Partial Class Instructor_Main
         Me.Menu_Btn.Text = "MENU"
         Me.Menu_Btn.UseVisualStyleBackColor = True
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(23, 79)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(164, 125)
+        Me.PictureBox2.TabIndex = 52
+        Me.PictureBox2.TabStop = False
+        '
         'CDM_Logo
         '
         Me.CDM_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -210,18 +220,18 @@ Partial Class Instructor_Main
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.Window
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.LN_Label)
         Me.Panel4.Controls.Add(Me.Login_Btn)
-        Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Controls.Add(Me.Birthday_Label)
         Me.Panel4.Controls.Add(Me.MetroTextBox7)
-        Me.Panel4.Controls.Add(Me.Label8)
-        Me.Panel4.Controls.Add(Me.Label7)
-        Me.Panel4.Controls.Add(Me.Label6)
+        Me.Panel4.Controls.Add(Me.CN_Label)
+        Me.Panel4.Controls.Add(Me.Email_)
+        Me.Panel4.Controls.Add(Me.Sex_Label)
         Me.Panel4.Controls.Add(Me.MetroTextBox2)
-        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.InstructorID_Label)
         Me.Panel4.Controls.Add(Me.MetroTextBox1)
-        Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Controls.Add(Me.LoginInstructorID_Label)
+        Me.Panel4.Controls.Add(Me.MN_Label)
+        Me.Panel4.Controls.Add(Me.FN_Label)
         Me.Panel4.Controls.Add(Me.MetroTextBox5)
         Me.Panel4.Controls.Add(Me.MetroTextBox4)
         Me.Panel4.Controls.Add(Me.MetroTextBox3)
@@ -251,16 +261,16 @@ Partial Class Instructor_Main
         Me.Login_Btn.Text = "Save Changes"
         Me.Login_Btn.UseVisualStyleBackColor = False
         '
-        'Label9
+        'Birthday_Label
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(673, 222)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(71, 20)
-        Me.Label9.TabIndex = 49
-        Me.Label9.Text = "Birthday"
+        Me.Birthday_Label.AutoSize = True
+        Me.Birthday_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Birthday_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthday_Label.Location = New System.Drawing.Point(673, 222)
+        Me.Birthday_Label.Name = "Birthday_Label"
+        Me.Birthday_Label.Size = New System.Drawing.Size(71, 20)
+        Me.Birthday_Label.TabIndex = 49
+        Me.Birthday_Label.Text = "Birthday"
         '
         'MetroTextBox7
         '
@@ -296,38 +306,38 @@ Partial Class Instructor_Main
         Me.MetroTextBox7.WaterMarkColor = System.Drawing.Color.Silver
         Me.MetroTextBox7.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Label8
+        'CN_Label
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(473, 222)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 20)
-        Me.Label8.TabIndex = 46
-        Me.Label8.Text = "Contact Number"
+        Me.CN_Label.AutoSize = True
+        Me.CN_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CN_Label.Location = New System.Drawing.Point(473, 222)
+        Me.CN_Label.Name = "CN_Label"
+        Me.CN_Label.Size = New System.Drawing.Size(131, 20)
+        Me.CN_Label.TabIndex = 46
+        Me.CN_Label.Text = "Contact Number"
         '
-        'Label7
+        'Email_
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(272, 295)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(118, 20)
-        Me.Label7.TabIndex = 44
-        Me.Label7.Text = "Email Address"
+        Me.Email_.AutoSize = True
+        Me.Email_.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Email_.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Email_.Location = New System.Drawing.Point(272, 295)
+        Me.Email_.Name = "Email_"
+        Me.Email_.Size = New System.Drawing.Size(118, 20)
+        Me.Email_.TabIndex = 44
+        Me.Email_.Text = "Email Address"
         '
-        'Label6
+        'Sex_Label
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(272, 222)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(37, 20)
-        Me.Label6.TabIndex = 42
-        Me.Label6.Text = "Sex"
+        Me.Sex_Label.AutoSize = True
+        Me.Sex_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Sex_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Sex_Label.Location = New System.Drawing.Point(272, 222)
+        Me.Sex_Label.Name = "Sex_Label"
+        Me.Sex_Label.Size = New System.Drawing.Size(37, 20)
+        Me.Sex_Label.TabIndex = 42
+        Me.Sex_Label.Text = "Sex"
         '
         'MetroTextBox2
         '
@@ -363,16 +373,16 @@ Partial Class Instructor_Main
         Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.Silver
         Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Label5
+        'InstructorID_Label
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(272, 77)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 20)
-        Me.Label5.TabIndex = 41
-        Me.Label5.Text = "Instructor ID"
+        Me.InstructorID_Label.AutoSize = True
+        Me.InstructorID_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InstructorID_Label.Location = New System.Drawing.Point(272, 77)
+        Me.InstructorID_Label.Name = "InstructorID_Label"
+        Me.InstructorID_Label.Size = New System.Drawing.Size(102, 20)
+        Me.InstructorID_Label.TabIndex = 41
+        Me.InstructorID_Label.Text = "Instructor ID"
         '
         'MetroTextBox1
         '
@@ -408,38 +418,38 @@ Partial Class Instructor_Main
         Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.Silver
         Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Label3
+        'MN_Label
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(472, 149)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 20)
-        Me.Label3.TabIndex = 33
-        Me.Label3.Text = "Middle Name"
+        Me.MN_Label.AutoSize = True
+        Me.MN_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.MN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MN_Label.Location = New System.Drawing.Point(472, 149)
+        Me.MN_Label.Name = "MN_Label"
+        Me.MN_Label.Size = New System.Drawing.Size(107, 20)
+        Me.MN_Label.TabIndex = 33
+        Me.MN_Label.Text = "Middle Name"
         '
-        'Label4
+        'LN_Label
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(673, 149)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 20)
-        Me.Label4.TabIndex = 35
-        Me.Label4.Text = "Last Name"
+        Me.LN_Label.AutoSize = True
+        Me.LN_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LN_Label.Location = New System.Drawing.Point(673, 149)
+        Me.LN_Label.Name = "LN_Label"
+        Me.LN_Label.Size = New System.Drawing.Size(91, 20)
+        Me.LN_Label.TabIndex = 35
+        Me.LN_Label.Text = "Last Name"
         '
-        'LoginInstructorID_Label
+        'FN_Label
         '
-        Me.LoginInstructorID_Label.AutoSize = True
-        Me.LoginInstructorID_Label.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginInstructorID_Label.Location = New System.Drawing.Point(272, 149)
-        Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
-        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(92, 20)
-        Me.LoginInstructorID_Label.TabIndex = 31
-        Me.LoginInstructorID_Label.Text = "First Name"
+        Me.FN_Label.AutoSize = True
+        Me.FN_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.FN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FN_Label.Location = New System.Drawing.Point(272, 149)
+        Me.FN_Label.Name = "FN_Label"
+        Me.FN_Label.Size = New System.Drawing.Size(92, 20)
+        Me.FN_Label.TabIndex = 31
+        Me.FN_Label.Text = "First Name"
         '
         'MetroTextBox5
         '
@@ -632,16 +642,6 @@ Partial Class Instructor_Main
         Me.MetroTextBox8.WaterMarkColor = System.Drawing.Color.Silver
         Me.MetroTextBox8.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(23, 79)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(164, 125)
-        Me.PictureBox2.TabIndex = 52
-        Me.PictureBox2.TabStop = False
-        '
         'Instructor_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -661,6 +661,7 @@ Partial Class Instructor_Main
         Me.Style = MetroFramework.MetroColorStyle.White
         Me.Panel1.ResumeLayout(False)
         Me.Dropdown_Panel.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MyProfile_Panel.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
@@ -668,7 +669,6 @@ Partial Class Instructor_Main
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -688,21 +688,21 @@ Partial Class Instructor_Main
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents LoginInstructorID_Label As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents MN_Label As Label
+    Friend WithEvents FN_Label As Label
+    Friend WithEvents LN_Label As Label
     Friend WithEvents MetroTextBox4 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroTextBox3 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroTextBox1 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroTextBox5 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label8 As Label
+    Friend WithEvents CN_Label As Label
     Friend WithEvents MetroTextBox7 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents Email_ As Label
     Friend WithEvents MetroTextBox6 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Sex_Label As Label
     Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents InstructorID_Label As Label
+    Friend WithEvents Birthday_Label As Label
     Friend WithEvents MetroTextBox8 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Login_Btn As Button
     Friend WithEvents PictureBox2 As PictureBox
