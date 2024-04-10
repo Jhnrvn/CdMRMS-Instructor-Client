@@ -34,6 +34,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.Sex_Label = New System.Windows.Forms.Label()
         Me.Male_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
+        Me.Birthday_Label = New System.Windows.Forms.Label()
+        Me.Birthdate_Picker = New System.Windows.Forms.DateTimePicker()
         Me.RegToolTip_Label1 = New System.Windows.Forms.Label()
         Me.RegToolTip_Label2 = New System.Windows.Forms.Label()
         Me.RegToolTip_Label3 = New System.Windows.Forms.Label()
@@ -65,8 +67,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
         Me.Tooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Birthdate_Picker = New System.Windows.Forms.DateTimePicker()
-        Me.Birthday_Label = New System.Windows.Forms.Label()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
         Me.Sex_Panel.SuspendLayout()
@@ -271,6 +271,29 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Registration_Panel.TabIndex = 1
         '
+        'Birthday_Label
+        '
+        Me.Birthday_Label.AutoSize = True
+        Me.Birthday_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthday_Label.Location = New System.Drawing.Point(267, 404)
+        Me.Birthday_Label.Name = "Birthday_Label"
+        Me.Birthday_Label.Size = New System.Drawing.Size(71, 20)
+        Me.Birthday_Label.TabIndex = 31
+        Me.Birthday_Label.Text = "Birthday"
+        '
+        'Birthdate_Picker
+        '
+        Me.Birthdate_Picker.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthdate_Picker.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Birthdate_Picker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.Birthdate_Picker.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthdate_Picker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Birthdate_Picker.Location = New System.Drawing.Point(271, 423)
+        Me.Birthdate_Picker.MaximumSize = New System.Drawing.Size(210, 40)
+        Me.Birthdate_Picker.Name = "Birthdate_Picker"
+        Me.Birthdate_Picker.Size = New System.Drawing.Size(210, 38)
+        Me.Birthdate_Picker.TabIndex = 30
+        '
         'RegToolTip_Label1
         '
         Me.RegToolTip_Label1.AutoSize = True
@@ -307,7 +330,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label3.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label3.Location = New System.Drawing.Point(241, 413)
+        Me.RegToolTip_Label3.Location = New System.Drawing.Point(236, 408)
         Me.RegToolTip_Label3.Name = "RegToolTip_Label3"
         Me.RegToolTip_Label3.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label3.TabIndex = 27
@@ -823,28 +846,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Tooltip.IsBalloon = True
         Me.Tooltip.ReshowDelay = 20
         Me.Tooltip.ShowAlways = True
-        '
-        'Birthdate_Picker
-        '
-        Me.Birthdate_Picker.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Birthdate_Picker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.Birthdate_Picker.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Birthdate_Picker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Birthdate_Picker.Location = New System.Drawing.Point(271, 423)
-        Me.Birthdate_Picker.MaximumSize = New System.Drawing.Size(210, 40)
-        Me.Birthdate_Picker.Name = "Birthdate_Picker"
-        Me.Birthdate_Picker.Size = New System.Drawing.Size(210, 38)
-        Me.Birthdate_Picker.TabIndex = 30
-        '
-        'Birthday_Label
-        '
-        Me.Birthday_Label.AutoSize = True
-        Me.Birthday_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Birthday_Label.Location = New System.Drawing.Point(267, 404)
-        Me.Birthday_Label.Name = "Birthday_Label"
-        Me.Birthday_Label.Size = New System.Drawing.Size(71, 20)
-        Me.Birthday_Label.TabIndex = 31
-        Me.Birthday_Label.Text = "Birthday"
         '
         'CDMRMS_Instructor_Login
         '

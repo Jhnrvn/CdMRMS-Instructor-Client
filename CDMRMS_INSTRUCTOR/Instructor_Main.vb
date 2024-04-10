@@ -42,4 +42,8 @@
     Private Sub MyProfile_Btn_Click(sender As Object, e As EventArgs) Handles MyProfile_Btn.Click
         MyProfile_Panel.Show()
     End Sub
+
+    Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
+        MyProfile_Panel.Hide()
+    End Sub
 End Class
