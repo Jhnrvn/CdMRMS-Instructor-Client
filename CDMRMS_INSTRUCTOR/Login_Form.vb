@@ -76,7 +76,7 @@ Public Class CDMRMS_Instructor_Login
         Dim sex As String
         Dim email As String = Email_Input.Text.Trim
         Dim contact As String = Contact_Input.Text.Trim
-        Dim birthday As DateTime = Birthdate_Picker.Value
+        Dim birthday As Date = Birthdate_Picker.Value.Date
         Dim password As String = Password_Input.Text.Trim
         Dim password2 As String = Password2_Input.Text.Trim
 
@@ -194,7 +194,7 @@ Public Class CDMRMS_Instructor_Login
     End Function
 
     ' Insertion of validated Data to database
-    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, sex As String, email As String, contact As String, birthday As DateTime, password As String)
+    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, sex As String, email As String, contact As String, birthday As Date, password As String)
 
         Dim hashedPassword As String = HashPassword(password)
 
@@ -278,7 +278,12 @@ Public Class CDMRMS_Instructor_Login
                 LoginEmail_Input.Clear()
                 LoginPassword_Input.Clear()
 
-                Instructor_Main.Show()
+                ' Send data to main form
+                Dim valueToPass As String = instructorID
+                Dim main As New Instructor_Main()
+                main.PassedValue = valueToPass
+
+                main.Show()
                 Me.Hide()
 
             Else

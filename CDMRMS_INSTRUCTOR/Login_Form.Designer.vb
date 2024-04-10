@@ -856,6 +856,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Controls.Add(Me.BG_Picture)
         Me.Controls.Add(Me.Registration_Panel)
         Me.Controls.Add(Me.Login_Panel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
