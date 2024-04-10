@@ -73,9 +73,10 @@ Public Class CDMRMS_Instructor_Login
         Dim middleName As String = MN_Input.Text.Trim
         Dim lastName As String = LN_Input.Text.Trim
         Dim instructorID As String = InstructorID_Input.Text.Trim
-        Dim institute As String
+        Dim sex As String
         Dim email As String = Email_Input.Text.Trim
         Dim contact As String = Contact_Input.Text.Trim
+        Dim birthday As DateTime = Birthdate_Picker.Value
         Dim password As String = Password_Input.Text.Trim
         Dim password2 As String = Password2_Input.Text.Trim
 
@@ -97,31 +98,23 @@ Public Class CDMRMS_Instructor_Login
                         MsgBox("Password does'nt match.", MessageBoxIcon.Information)
 
                     Else
-                        If ICS_RadioBtn.Checked Then
-                            institute = ICS_RadioBtn.Text
+                        If Male_RadioBtn.Checked Then
+                            sex = Male_RadioBtn.Text
                             If Not IsDataExists(instructorID) Then
-                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                                InsertRegistrationData(firstName, middleName, lastName, instructorID, sex, email, contact, birthday, password)
                             Else
                                 MsgBox("Data already exists in the database.")
                             End If
 
-                        ElseIf IOB_RadioBtn.Checked Then
-                            institute = IOB_RadioBtn.Text
+                        ElseIf Female_RadioBtn.Checked Then
+                            sex = Female_RadioBtn.Text
                             If Not IsDataExists(instructorID) Then
-                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
+                                InsertRegistrationData(firstName, middleName, lastName, instructorID, sex, email, contact, birthday, password)
                             Else
                                 MsgBox("Data already exists in the database.")
                             End If
 
-                        ElseIf ITE_RadioBtn.Checked Then
-                            institute = ITE_RadioBtn.Text
-                            If Not IsDataExists(instructorID) Then
-                                InsertRegistrationData(firstName, middleName, lastName, instructorID, institute, email, contact, password)
-                            Else
-                                MsgBox("Data already exists in the database.")
-                            End If
-
-                        ElseIf Not ICS_RadioBtn.Checked Or Not IOB_RadioBtn.Checked Or Not ITE_RadioBtn.Checked Then
+                        ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
                             MsgBox("Please select your institute.", MessageBoxIcon.Warning)
 
                         End If
@@ -201,12 +194,12 @@ Public Class CDMRMS_Instructor_Login
     End Function
 
     ' Insertion of validated Data to database
-    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, institute As String, email As String, contact As String, password As String)
+    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, sex As String, email As String, contact As String, birthday As DateTime, password As String)
 
         Dim hashedPassword As String = HashPassword(password)
 
         ' Insert Data to database
-        Dim query As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @institute, @email, @contact, @password) "
+        Dim query As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `sex`, `email`, `contact#`, `birthday`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @sex, @email, @contact, @birthday, @password) "
 
         Try
             Using connection As New MySqlConnection(ConnectionString)
@@ -217,9 +210,10 @@ Public Class CDMRMS_Instructor_Login
                     command.Parameters.AddWithValue("@middlename", middleName)
                     command.Parameters.AddWithValue("@lastname", lastName)
                     command.Parameters.AddWithValue("@instructorid", instructorID)
-                    command.Parameters.AddWithValue("@institute", institute)
+                    command.Parameters.AddWithValue("@sex", sex)
                     command.Parameters.AddWithValue("@email", email)
                     command.Parameters.AddWithValue("@contact", contact)
+                    command.Parameters.AddWithValue("@birthday", birthday)
                     command.Parameters.AddWithValue("@password", hashedPassword)
 
 
@@ -235,12 +229,10 @@ Public Class CDMRMS_Instructor_Login
                     MN_Input.Clear()
                     LN_Input.Clear()
                     InstructorID_Input.Clear()
-                    If ICS_RadioBtn.Checked Then
-                        ICS_RadioBtn.Checked = False
-                    ElseIf IOB_RadioBtn.Checked Then
-                        IOB_RadioBtn.Checked = False
-                    ElseIf ITE_RadioBtn.Checked Then
-                        ITE_RadioBtn.Checked = False
+                    If Male_RadioBtn.Checked Then
+                        Male_RadioBtn.Checked = False
+                    ElseIf Female_RadioBtn.Checked Then
+                        Female_RadioBtn.Checked = False
                     End If
                     Email_Input.Clear()
                     Contact_Input.Clear()

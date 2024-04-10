@@ -31,8 +31,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.FN_Label = New System.Windows.Forms.Label()
         Me.MN_Label = New System.Windows.Forms.Label()
         Me.LN_Label = New System.Windows.Forms.Label()
-        Me.Institute_Label = New System.Windows.Forms.Label()
-        Me.ICS_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
+        Me.Sex_Label = New System.Windows.Forms.Label()
+        Me.Male_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
         Me.RegToolTip_Label1 = New System.Windows.Forms.Label()
         Me.RegToolTip_Label2 = New System.Windows.Forms.Label()
@@ -48,9 +48,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input = New MetroFramework.Controls.MetroTextBox()
         Me.Email_Label = New System.Windows.Forms.Label()
         Me.Email_Input = New MetroFramework.Controls.MetroTextBox()
-        Me.Institute_Panel = New System.Windows.Forms.Panel()
-        Me.IOB_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
-        Me.ITE_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
+        Me.Sex_Panel = New System.Windows.Forms.Panel()
+        Me.Female_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.InstructorID_Label = New System.Windows.Forms.Label()
         Me.InstructorID_Input = New MetroFramework.Controls.MetroTextBox()
         Me.SystemTitle_PictureBox = New System.Windows.Forms.PictureBox()
@@ -66,9 +65,11 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
         Me.Tooltip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Birthdate_Picker = New System.Windows.Forms.DateTimePicker()
+        Me.Birthday_Label = New System.Windows.Forms.Label()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Registration_Panel.SuspendLayout()
-        Me.Institute_Panel.SuspendLayout()
+        Me.Sex_Panel.SuspendLayout()
         CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Login_Panel.SuspendLayout()
         CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,32 +214,34 @@ Partial Class CDMRMS_Instructor_Login
         Me.LN_Label.TabIndex = 6
         Me.LN_Label.Text = "Last Name"
         '
-        'Institute_Label
+        'Sex_Label
         '
-        Me.Institute_Label.AutoSize = True
-        Me.Institute_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Institute_Label.Location = New System.Drawing.Point(51, 267)
-        Me.Institute_Label.Name = "Institute_Label"
-        Me.Institute_Label.Size = New System.Drawing.Size(68, 20)
-        Me.Institute_Label.TabIndex = 9
-        Me.Institute_Label.Text = "Institute"
+        Me.Sex_Label.AutoSize = True
+        Me.Sex_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Sex_Label.Location = New System.Drawing.Point(51, 267)
+        Me.Sex_Label.Name = "Sex_Label"
+        Me.Sex_Label.Size = New System.Drawing.Size(37, 20)
+        Me.Sex_Label.TabIndex = 9
+        Me.Sex_Label.Text = "Sex"
         '
-        'ICS_RadioBtn
+        'Male_RadioBtn
         '
-        Me.ICS_RadioBtn.AutoSize = True
-        Me.ICS_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ICS_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.ICS_RadioBtn.Location = New System.Drawing.Point(39, 8)
-        Me.ICS_RadioBtn.Name = "ICS_RadioBtn"
-        Me.ICS_RadioBtn.Size = New System.Drawing.Size(46, 20)
-        Me.ICS_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
-        Me.ICS_RadioBtn.TabIndex = 10
-        Me.ICS_RadioBtn.Text = "ICS"
-        Me.ICS_RadioBtn.UseSelectable = True
+        Me.Male_RadioBtn.AutoSize = True
+        Me.Male_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Male_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.Male_RadioBtn.Location = New System.Drawing.Point(85, 8)
+        Me.Male_RadioBtn.Name = "Male_RadioBtn"
+        Me.Male_RadioBtn.Size = New System.Drawing.Size(58, 20)
+        Me.Male_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
+        Me.Male_RadioBtn.TabIndex = 10
+        Me.Male_RadioBtn.Text = "Male"
+        Me.Male_RadioBtn.UseSelectable = True
         '
         'Registration_Panel
         '
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Registration_Panel.Controls.Add(Me.Birthday_Label)
+        Me.Registration_Panel.Controls.Add(Me.Birthdate_Picker)
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label1)
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label2)
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label3)
@@ -253,8 +256,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Controls.Add(Me.Contact_Input)
         Me.Registration_Panel.Controls.Add(Me.Email_Label)
         Me.Registration_Panel.Controls.Add(Me.Email_Input)
-        Me.Registration_Panel.Controls.Add(Me.Institute_Label)
-        Me.Registration_Panel.Controls.Add(Me.Institute_Panel)
+        Me.Registration_Panel.Controls.Add(Me.Sex_Label)
+        Me.Registration_Panel.Controls.Add(Me.Sex_Panel)
         Me.Registration_Panel.Controls.Add(Me.InstructorID_Label)
         Me.Registration_Panel.Controls.Add(Me.InstructorID_Input)
         Me.Registration_Panel.Controls.Add(Me.LN_Label)
@@ -304,7 +307,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label3.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label3.Location = New System.Drawing.Point(452, 411)
+        Me.RegToolTip_Label3.Location = New System.Drawing.Point(241, 413)
         Me.RegToolTip_Label3.Name = "RegToolTip_Label3"
         Me.RegToolTip_Label3.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label3.TabIndex = 27
@@ -459,7 +462,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         '
         Me.Contact_Input.CustomButton.Image = Nothing
-        Me.Contact_Input.CustomButton.Location = New System.Drawing.Point(388, 2)
+        Me.Contact_Input.CustomButton.Location = New System.Drawing.Point(172, 2)
         Me.Contact_Input.CustomButton.Name = ""
         Me.Contact_Input.CustomButton.Size = New System.Drawing.Size(35, 35)
         Me.Contact_Input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
@@ -478,7 +481,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Contact_Input.SelectionLength = 0
         Me.Contact_Input.SelectionStart = 0
         Me.Contact_Input.ShortcutsEnabled = True
-        Me.Contact_Input.Size = New System.Drawing.Size(426, 40)
+        Me.Contact_Input.Size = New System.Drawing.Size(210, 40)
         Me.Contact_Input.Style = MetroFramework.MetroColorStyle.Green
         Me.Contact_Input.TabIndex = 16
         Me.Contact_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -529,42 +532,28 @@ Partial Class CDMRMS_Instructor_Login
         Me.Email_Input.WaterMarkColor = System.Drawing.Color.Silver
         Me.Email_Input.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Institute_Panel
+        'Sex_Panel
         '
-        Me.Institute_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Institute_Panel.Controls.Add(Me.ICS_RadioBtn)
-        Me.Institute_Panel.Controls.Add(Me.IOB_RadioBtn)
-        Me.Institute_Panel.Controls.Add(Me.ITE_RadioBtn)
-        Me.Institute_Panel.Location = New System.Drawing.Point(55, 286)
-        Me.Institute_Panel.Name = "Institute_Panel"
-        Me.Institute_Panel.Size = New System.Drawing.Size(426, 40)
-        Me.Institute_Panel.TabIndex = 13
+        Me.Sex_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Sex_Panel.Controls.Add(Me.Male_RadioBtn)
+        Me.Sex_Panel.Controls.Add(Me.Female_RadioBtn)
+        Me.Sex_Panel.Location = New System.Drawing.Point(55, 286)
+        Me.Sex_Panel.Name = "Sex_Panel"
+        Me.Sex_Panel.Size = New System.Drawing.Size(426, 40)
+        Me.Sex_Panel.TabIndex = 13
         '
-        'IOB_RadioBtn
+        'Female_RadioBtn
         '
-        Me.IOB_RadioBtn.AutoSize = True
-        Me.IOB_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IOB_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.IOB_RadioBtn.Location = New System.Drawing.Point(182, 8)
-        Me.IOB_RadioBtn.Name = "IOB_RadioBtn"
-        Me.IOB_RadioBtn.Size = New System.Drawing.Size(49, 20)
-        Me.IOB_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
-        Me.IOB_RadioBtn.TabIndex = 11
-        Me.IOB_RadioBtn.Text = "IOB"
-        Me.IOB_RadioBtn.UseSelectable = True
-        '
-        'ITE_RadioBtn
-        '
-        Me.ITE_RadioBtn.AutoSize = True
-        Me.ITE_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITE_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.ITE_RadioBtn.Location = New System.Drawing.Point(325, 8)
-        Me.ITE_RadioBtn.Name = "ITE_RadioBtn"
-        Me.ITE_RadioBtn.Size = New System.Drawing.Size(45, 20)
-        Me.ITE_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
-        Me.ITE_RadioBtn.TabIndex = 12
-        Me.ITE_RadioBtn.Text = "ITE"
-        Me.ITE_RadioBtn.UseSelectable = True
+        Me.Female_RadioBtn.AutoSize = True
+        Me.Female_RadioBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Female_RadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.Female_RadioBtn.Location = New System.Drawing.Point(250, 8)
+        Me.Female_RadioBtn.Name = "Female_RadioBtn"
+        Me.Female_RadioBtn.Size = New System.Drawing.Size(73, 20)
+        Me.Female_RadioBtn.Style = MetroFramework.MetroColorStyle.Green
+        Me.Female_RadioBtn.TabIndex = 11
+        Me.Female_RadioBtn.Text = "Female"
+        Me.Female_RadioBtn.UseSelectable = True
         '
         'InstructorID_Label
         '
@@ -835,6 +824,28 @@ Partial Class CDMRMS_Instructor_Login
         Me.Tooltip.ReshowDelay = 20
         Me.Tooltip.ShowAlways = True
         '
+        'Birthdate_Picker
+        '
+        Me.Birthdate_Picker.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthdate_Picker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.Birthdate_Picker.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthdate_Picker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Birthdate_Picker.Location = New System.Drawing.Point(271, 423)
+        Me.Birthdate_Picker.MaximumSize = New System.Drawing.Size(210, 40)
+        Me.Birthdate_Picker.Name = "Birthdate_Picker"
+        Me.Birthdate_Picker.Size = New System.Drawing.Size(210, 38)
+        Me.Birthdate_Picker.TabIndex = 30
+        '
+        'Birthday_Label
+        '
+        Me.Birthday_Label.AutoSize = True
+        Me.Birthday_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Birthday_Label.Location = New System.Drawing.Point(267, 404)
+        Me.Birthday_Label.Name = "Birthday_Label"
+        Me.Birthday_Label.Size = New System.Drawing.Size(71, 20)
+        Me.Birthday_Label.TabIndex = 31
+        Me.Birthday_Label.Text = "Birthday"
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -842,8 +853,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.ClientSize = New System.Drawing.Size(1550, 870)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
-        Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Registration_Panel)
+        Me.Controls.Add(Me.Login_Panel)
         Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
@@ -855,8 +866,8 @@ Partial Class CDMRMS_Instructor_Login
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Registration_Panel.ResumeLayout(False)
         Me.Registration_Panel.PerformLayout()
-        Me.Institute_Panel.ResumeLayout(False)
-        Me.Institute_Panel.PerformLayout()
+        Me.Sex_Panel.ResumeLayout(False)
+        Me.Sex_Panel.PerformLayout()
         CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Login_Panel.ResumeLayout(False)
         Me.Login_Panel.PerformLayout()
@@ -872,12 +883,11 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents FN_Label As Label
     Friend WithEvents MN_Label As Label
     Friend WithEvents LN_Label As Label
-    Friend WithEvents Institute_Label As Label
-    Friend WithEvents ICS_RadioBtn As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents Sex_Label As Label
+    Friend WithEvents Male_RadioBtn As MetroFramework.Controls.MetroRadioButton
     Friend WithEvents Registration_Panel As Panel
-    Friend WithEvents ITE_RadioBtn As MetroFramework.Controls.MetroRadioButton
-    Friend WithEvents IOB_RadioBtn As MetroFramework.Controls.MetroRadioButton
-    Friend WithEvents Institute_Panel As Panel
+    Friend WithEvents Female_RadioBtn As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents Sex_Panel As Panel
     Friend WithEvents InstructorID_Label As Label
     Friend WithEvents InstructorID_Input As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Email_Label As Label
@@ -907,4 +917,6 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents RegToolTip_Label3 As Label
     Friend WithEvents RegToolTip_Label2 As Label
     Friend WithEvents RegToolTip_Label1 As Label
+    Friend WithEvents Birthdate_Picker As DateTimePicker
+    Friend WithEvents Birthday_Label As Label
 End Class
