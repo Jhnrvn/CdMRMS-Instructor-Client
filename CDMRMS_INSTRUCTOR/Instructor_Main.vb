@@ -2,6 +2,9 @@
 
 Public Class Instructor_Main
 
+
+
+
     ' FORM LOAD - START
     Private Sub Instructor_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dropdown_Panel.Size = Dropdown_Panel.MinimumSize
@@ -11,6 +14,8 @@ Public Class Instructor_Main
 
     End Sub
     ' FORM LOAD - END
+
+
 
 
     ' DATABASE CONNECTION - START
@@ -37,6 +42,8 @@ Public Class Instructor_Main
 
     End Function
     ' DATABASE CONNECTION - END
+
+
 
 
     ' DROP-DOWN ANIMATION - START
@@ -70,6 +77,9 @@ Public Class Instructor_Main
 
     End Sub
     ' DROP-DOWN ANIMATION - END
+
+
+
 
     ' MY PROFILE - START
     Public Property PassedValue As String
@@ -120,7 +130,30 @@ Public Class Instructor_Main
     End Sub
     ' MY PROFILE - END
 
+
+
+
+    ' STUDENT GRADE - START
     Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
         MyProfile_Panel.Hide()
     End Sub
+    ' STUDENT GRADE - END
+
+
+
+
+    ' LOGOUT - START
+    Private Sub Logout_Btn_Click(sender As Object, e As EventArgs) Handles Logout_Btn.Click
+        Dim choice As DialogResult = MsgBox("Are you sure?", MessageBoxButtons.OKCancel)
+
+        If choice = DialogResult.OK Then
+            Me.Hide()
+            CDMRMS_Instructor_Login.Show()
+        End If
+    End Sub
+    ' LOGOUT - END
+
+
+
+
 End Class

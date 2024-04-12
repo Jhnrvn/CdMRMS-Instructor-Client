@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2024 at 05:00 AM
+-- Generation Time: Apr 12, 2024 at 05:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,9 +33,10 @@ CREATE TABLE `instructors` (
   `middlename` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `instructorid` varchar(100) NOT NULL,
-  `institute` varchar(100) NOT NULL,
+  `sex` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `contact#` varchar(100) NOT NULL,
+  `birthday` date NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,10 +44,9 @@ CREATE TABLE `instructors` (
 -- Dumping data for table `instructors`
 --
 
-INSERT INTO `instructors` (`id`, `firstname`, `middlename`, `lastname`, `instructorid`, `institute`, `email`, `contact#`, `password`) VALUES
-(1, 'a', 'a', 'a', 'a', 'ICS', 'a', 'a', 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb'),
-(2, 'john Irvin', 'Chavez', 'Geanga', '22-00396', 'ICS', 'johnirvingeanga@gmail.com', '09683061658', '1ccfcf91ada666aa453d6c8c6a07ba021b0f996acacd0bf52ff54baab3cea40e'),
-(3, 'a', 'a', 'a', 'a', 'ICS', 'a', 'a', 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb');
+INSERT INTO `instructors` (`id`, `firstname`, `middlename`, `lastname`, `instructorid`, `sex`, `email`, `contact#`, `birthday`, `password`) VALUES
+(1, 'john irvin', 'chavez', 'geanga', '22-22222', 'Male', 'johnirvingeanga@gmail.com', '09683061658', '2003-06-30', '938db8c9f82c8cb58d3f3ef4fd250036a48d26a712753d2fde5abd03a85cabf4'),
+(2, 'reymark', 'A', 'Hintapan', '11-11111', 'Male', 'sample@gmail.com', '09222222222', '2024-04-12', '4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +66,7 @@ ALTER TABLE `instructors`
 -- AUTO_INCREMENT for table `instructors`
 --
 ALTER TABLE `instructors`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

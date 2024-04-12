@@ -7,6 +7,8 @@ Imports System.Text.RegularExpressions
 Public Class CDMRMS_Instructor_Login
 
 
+
+
     ' FORM LOAD - START
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -15,6 +17,8 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
     ' FORM LOAD - END
+
+
 
 
     ' DATABASE CONNECTION - START
@@ -43,6 +47,8 @@ Public Class CDMRMS_Instructor_Login
     ' DATABASE CONNECTION - END
 
 
+
+
     ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
 
@@ -63,6 +69,8 @@ Public Class CDMRMS_Instructor_Login
 
     End Function
     ' PASSWORD HASHING - END
+
+
 
 
     ' REGISTRATION - START
@@ -256,6 +264,8 @@ Public Class CDMRMS_Instructor_Login
     ' REGISTRATION - END
 
 
+
+
     ' LOGIN - START
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
@@ -280,8 +290,9 @@ Public Class CDMRMS_Instructor_Login
 
                 ' Send data to main form
                 Dim valueToPass As String = instructorID
-                Dim main As New Instructor_Main()
-                main.PassedValue = valueToPass
+                Dim main As New Instructor_Main With {
+                    .PassedValue = valueToPass
+                    }
 
                 main.Show()
                 Me.Hide()
@@ -337,6 +348,8 @@ Public Class CDMRMS_Instructor_Login
     ' LOGIN - END
 
 
+
+
     ' TOOLTIPS FOR LOGIN AND REGISTRAR INPUTS - START
     Private Sub RegToolTip_Label1_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label1.MouseHover
         Tooltip.ToolTipTitle = "Instructor's ID Number"
@@ -354,6 +367,8 @@ Public Class CDMRMS_Instructor_Login
     End Sub
 
     ' TOOLTIPS FOR LOGIN AND REGISTRAT INPUTS - END
+
+
 
 
 End Class

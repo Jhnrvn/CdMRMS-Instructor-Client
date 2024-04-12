@@ -38,6 +38,7 @@ Partial Class Instructor_Main
         Me.CH_Panel = New System.Windows.Forms.Panel()
         Me.CH_Label = New System.Windows.Forms.Label()
         Me.Profile_Panel = New System.Windows.Forms.Panel()
+        Me.LN_Label = New System.Windows.Forms.Label()
         Me.Save_Btn = New System.Windows.Forms.Button()
         Me.Birthday_Label = New System.Windows.Forms.Label()
         Me.Birthday_TB = New MetroFramework.Controls.MetroTextBox()
@@ -48,7 +49,6 @@ Partial Class Instructor_Main
         Me.InstructorID_Label = New System.Windows.Forms.Label()
         Me.LN_TB = New MetroFramework.Controls.MetroTextBox()
         Me.MN_Label = New System.Windows.Forms.Label()
-        Me.LN_Label = New System.Windows.Forms.Label()
         Me.FN_Label = New System.Windows.Forms.Label()
         Me.MN_TB = New MetroFramework.Controls.MetroTextBox()
         Me.FN_TB = New MetroFramework.Controls.MetroTextBox()
@@ -57,7 +57,7 @@ Partial Class Instructor_Main
         Me.Profile_Label = New System.Windows.Forms.Label()
         Me.CN_TB = New MetroFramework.Controls.MetroTextBox()
         Me.Email_TB = New MetroFramework.Controls.MetroTextBox()
-        Me.SystemTitle_PictureBox = New System.Windows.Forms.PictureBox()
+        Me.Welcome_BG = New System.Windows.Forms.PictureBox()
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +66,7 @@ Partial Class Instructor_Main
         Me.CH_Panel.SuspendLayout()
         Me.Profile_Panel.SuspendLayout()
         CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GreenSide_Panel
@@ -160,7 +160,7 @@ Partial Class Instructor_Main
         '
         Me.CMDRMS_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CMDRMS_PicBox.Image = CType(resources.GetObject("CMDRMS_PicBox.Image"), System.Drawing.Image)
-        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 79)
+        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 686)
         Me.CMDRMS_PicBox.Name = "CMDRMS_PicBox"
         Me.CMDRMS_PicBox.Size = New System.Drawing.Size(164, 125)
         Me.CMDRMS_PicBox.TabIndex = 52
@@ -203,9 +203,9 @@ Partial Class Instructor_Main
         Me.CH_Panel.BackColor = System.Drawing.Color.White
         Me.CH_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CH_Panel.Controls.Add(Me.CH_Label)
-        Me.CH_Panel.Location = New System.Drawing.Point(911, 5)
+        Me.CH_Panel.Location = New System.Drawing.Point(912, 5)
         Me.CH_Panel.Name = "CH_Panel"
-        Me.CH_Panel.Size = New System.Drawing.Size(413, 555)
+        Me.CH_Panel.Size = New System.Drawing.Size(414, 555)
         Me.CH_Panel.TabIndex = 1
         '
         'CH_Label
@@ -245,6 +245,17 @@ Partial Class Instructor_Main
         Me.Profile_Panel.Name = "Profile_Panel"
         Me.Profile_Panel.Size = New System.Drawing.Size(902, 555)
         Me.Profile_Panel.TabIndex = 0
+        '
+        'LN_Label
+        '
+        Me.LN_Label.AutoSize = True
+        Me.LN_Label.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LN_Label.Location = New System.Drawing.Point(673, 161)
+        Me.LN_Label.Name = "LN_Label"
+        Me.LN_Label.Size = New System.Drawing.Size(91, 20)
+        Me.LN_Label.TabIndex = 35
+        Me.LN_Label.Text = "Last Name"
         '
         'Save_Btn
         '
@@ -430,17 +441,6 @@ Partial Class Instructor_Main
         Me.MN_Label.Size = New System.Drawing.Size(107, 20)
         Me.MN_Label.TabIndex = 33
         Me.MN_Label.Text = "Middle Name"
-        '
-        'LN_Label
-        '
-        Me.LN_Label.AutoSize = True
-        Me.LN_Label.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LN_Label.Location = New System.Drawing.Point(673, 161)
-        Me.LN_Label.Name = "LN_Label"
-        Me.LN_Label.Size = New System.Drawing.Size(91, 20)
-        Me.LN_Label.TabIndex = 35
-        Me.LN_Label.Text = "Last Name"
         '
         'FN_Label
         '
@@ -644,15 +644,15 @@ Partial Class Instructor_Main
         Me.Email_TB.WaterMarkColor = System.Drawing.Color.Silver
         Me.Email_TB.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'SystemTitle_PictureBox
+        'Welcome_BG
         '
-        Me.SystemTitle_PictureBox.Image = CType(resources.GetObject("SystemTitle_PictureBox.Image"), System.Drawing.Image)
-        Me.SystemTitle_PictureBox.Location = New System.Drawing.Point(272, 118)
-        Me.SystemTitle_PictureBox.Name = "SystemTitle_PictureBox"
-        Me.SystemTitle_PictureBox.Size = New System.Drawing.Size(1208, 599)
-        Me.SystemTitle_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.SystemTitle_PictureBox.TabIndex = 4
-        Me.SystemTitle_PictureBox.TabStop = False
+        Me.Welcome_BG.Image = CType(resources.GetObject("Welcome_BG.Image"), System.Drawing.Image)
+        Me.Welcome_BG.Location = New System.Drawing.Point(272, 118)
+        Me.Welcome_BG.Name = "Welcome_BG"
+        Me.Welcome_BG.Size = New System.Drawing.Size(1208, 599)
+        Me.Welcome_BG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Welcome_BG.TabIndex = 4
+        Me.Welcome_BG.TabStop = False
         '
         'Instructor_Main
         '
@@ -660,10 +660,11 @@ Partial Class Instructor_Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1550, 870)
+        Me.ControlBox = False
         Me.Controls.Add(Me.MyProfile_Panel)
         Me.Controls.Add(Me.GreenSide_Panel)
         Me.Controls.Add(Me.GreenUpper_Panel)
-        Me.Controls.Add(Me.SystemTitle_PictureBox)
+        Me.Controls.Add(Me.Welcome_BG)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
@@ -683,7 +684,7 @@ Partial Class Instructor_Main
         Me.Profile_Panel.ResumeLayout(False)
         Me.Profile_Panel.PerformLayout()
         CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -721,5 +722,5 @@ Partial Class Instructor_Main
     Friend WithEvents Email_TB As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Save_Btn As Button
     Friend WithEvents CMDRMS_PicBox As PictureBox
-    Friend WithEvents SystemTitle_PictureBox As PictureBox
+    Friend WithEvents Welcome_BG As PictureBox
 End Class
