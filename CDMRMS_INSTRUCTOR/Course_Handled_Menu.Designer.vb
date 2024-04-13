@@ -43,8 +43,19 @@ Partial Class Course_Handled_Menu
         Me.IOBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Course_Value = New System.Windows.Forms.Label()
+        Me.Sem_Value = New System.Windows.Forms.Label()
+        Me.Yr_Value = New System.Windows.Forms.Label()
+        Me.Program_Value = New System.Windows.Forms.Label()
+        Me.Institute_Value = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.Ok = New System.Windows.Forms.Button()
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
-        Me.Save_Btn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GreenUpper_Panel.SuspendLayout()
@@ -62,7 +73,7 @@ Partial Class Course_Handled_Menu
         '
         Me.BSIT.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Bsit1stYr, Me.Bsit2ndYr, Me.Bsit3rdYr, Me.Bsit4thYr})
         Me.BSIT.Name = "BSIT"
-        Me.BSIT.Size = New System.Drawing.Size(149, 26)
+        Me.BSIT.Size = New System.Drawing.Size(224, 26)
         Me.BSIT.Text = "BSIT"
         '
         'Bsit1stYr
@@ -154,7 +165,7 @@ Partial Class Course_Handled_Menu
         'BSCPE
         '
         Me.BSCPE.Name = "BSCPE"
-        Me.BSCPE.Size = New System.Drawing.Size(149, 26)
+        Me.BSCPE.Size = New System.Drawing.Size(224, 26)
         Me.BSCPE.Text = "BSCPE"
         '
         'MenuStrip1
@@ -187,11 +198,151 @@ Partial Class Course_Handled_Menu
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Save_Btn)
-        Me.Panel1.Location = New System.Drawing.Point(455, 47)
+        Me.Panel1.Controls.Add(Me.Course_Value)
+        Me.Panel1.Controls.Add(Me.Sem_Value)
+        Me.Panel1.Controls.Add(Me.Yr_Value)
+        Me.Panel1.Controls.Add(Me.Program_Value)
+        Me.Panel1.Controls.Add(Me.Institute_Value)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Cancel)
+        Me.Panel1.Controls.Add(Me.Ok)
+        Me.Panel1.Location = New System.Drawing.Point(455, 69)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(325, 349)
+        Me.Panel1.Size = New System.Drawing.Size(325, 327)
         Me.Panel1.TabIndex = 56
+        '
+        'Course_Value
+        '
+        Me.Course_Value.AutoSize = True
+        Me.Course_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Course_Value.Location = New System.Drawing.Point(114, 203)
+        Me.Course_Value.Name = "Course_Value"
+        Me.Course_Value.Size = New System.Drawing.Size(0, 20)
+        Me.Course_Value.TabIndex = 65
+        '
+        'Sem_Value
+        '
+        Me.Sem_Value.AutoSize = True
+        Me.Sem_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Sem_Value.Location = New System.Drawing.Point(114, 157)
+        Me.Sem_Value.Name = "Sem_Value"
+        Me.Sem_Value.Size = New System.Drawing.Size(0, 20)
+        Me.Sem_Value.TabIndex = 64
+        '
+        'Yr_Value
+        '
+        Me.Yr_Value.AutoSize = True
+        Me.Yr_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Yr_Value.Location = New System.Drawing.Point(115, 118)
+        Me.Yr_Value.Name = "Yr_Value"
+        Me.Yr_Value.Size = New System.Drawing.Size(0, 20)
+        Me.Yr_Value.TabIndex = 63
+        '
+        'Program_Value
+        '
+        Me.Program_Value.AutoSize = True
+        Me.Program_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Program_Value.Location = New System.Drawing.Point(115, 70)
+        Me.Program_Value.Name = "Program_Value"
+        Me.Program_Value.Size = New System.Drawing.Size(0, 20)
+        Me.Program_Value.TabIndex = 62
+        '
+        'Institute_Value
+        '
+        Me.Institute_Value.AutoSize = True
+        Me.Institute_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Institute_Value.Location = New System.Drawing.Point(114, 33)
+        Me.Institute_Value.Name = "Institute_Value"
+        Me.Institute_Value.Size = New System.Drawing.Size(0, 20)
+        Me.Institute_Value.TabIndex = 61
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(15, 203)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(68, 20)
+        Me.Label5.TabIndex = 60
+        Me.Label5.Text = "Course:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(15, 157)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 20)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Semester:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(15, 118)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(93, 20)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "Year Level:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 70)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 20)
+        Me.Label2.TabIndex = 57
+        Me.Label2.Text = "Program:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "Institute:"
+        '
+        'Cancel
+        '
+        Me.Cancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.ForeColor = System.Drawing.Color.Black
+        Me.Cancel.Location = New System.Drawing.Point(119, 266)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(90, 40)
+        Me.Cancel.TabIndex = 55
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = False
+        '
+        'Ok
+        '
+        Me.Ok.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Ok.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Ok.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Ok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Ok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Ok.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ok.ForeColor = System.Drawing.Color.Black
+        Me.Ok.Location = New System.Drawing.Point(215, 266)
+        Me.Ok.Name = "Ok"
+        Me.Ok.Size = New System.Drawing.Size(90, 40)
+        Me.Ok.TabIndex = 54
+        Me.Ok.Text = "Ok"
+        Me.Ok.UseVisualStyleBackColor = False
         '
         'GreenUpper_Panel
         '
@@ -201,23 +352,6 @@ Partial Class Course_Handled_Menu
         Me.GreenUpper_Panel.Name = "GreenUpper_Panel"
         Me.GreenUpper_Panel.Size = New System.Drawing.Size(805, 423)
         Me.GreenUpper_Panel.TabIndex = 57
-        '
-        'Save_Btn
-        '
-        Me.Save_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Save_Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Save_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Save_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.Save_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Save_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Save_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Save_Btn.ForeColor = System.Drawing.Color.Black
-        Me.Save_Btn.Location = New System.Drawing.Point(159, 288)
-        Me.Save_Btn.Name = "Save_Btn"
-        Me.Save_Btn.Size = New System.Drawing.Size(147, 40)
-        Me.Save_Btn.TabIndex = 52
-        Me.Save_Btn.Text = "Save Changes"
-        Me.Save_Btn.UseVisualStyleBackColor = False
         '
         'Course_Handled_Menu
         '
@@ -237,6 +371,7 @@ Partial Class Course_Handled_Menu
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.GreenUpper_Panel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -265,5 +400,16 @@ Partial Class Course_Handled_Menu
     Friend WithEvents PE1 As ToolStripMenuItem
     Friend WithEvents NSTP1 As ToolStripMenuItem
     Friend WithEvents Bsit1stYr2ndSem As ToolStripMenuItem
-    Friend WithEvents Save_Btn As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Cancel As Button
+    Friend WithEvents Ok As Button
+    Friend WithEvents Course_Value As Label
+    Friend WithEvents Sem_Value As Label
+    Friend WithEvents Yr_Value As Label
+    Friend WithEvents Program_Value As Label
+    Friend WithEvents Institute_Value As Label
 End Class
