@@ -22,26 +22,6 @@ Partial Class Course_Handled_Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ICS = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BSIT = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Bsit1stYr = New System.Windows.Forms.ToolStripMenuItem()
-        Me.bsit1stYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ITCOMP = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PROG1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GE2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GEMATH = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GE1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GEFIL1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PE1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NSTP1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Bsit1stYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Bsit2ndYr = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Bsit3rdYr = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Bsit4thYr = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BSCPE = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.IOBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Course_Value = New System.Windows.Forms.Label()
         Me.Sem_Value = New System.Windows.Forms.Label()
@@ -56,143 +36,26 @@ Partial Class Course_Handled_Menu
         Me.Cancel = New System.Windows.Forms.Button()
         Me.Ok = New System.Windows.Forms.Button()
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
-        Me.MenuStrip1.SuspendLayout()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ICS = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BSIT = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BSCPE = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT1stYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT2ndYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT3rdYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT4thYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StSemesterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NdSemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StSemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NdSemToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NdSemToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StSemToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NdSemToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.GreenUpper_Panel.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ICS
-        '
-        Me.ICS.AutoSize = False
-        Me.ICS.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BSIT, Me.BSCPE})
-        Me.ICS.Name = "ICS"
-        Me.ICS.Size = New System.Drawing.Size(60, 24)
-        Me.ICS.Text = "ICS"
-        '
-        'BSIT
-        '
-        Me.BSIT.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Bsit1stYr, Me.Bsit2ndYr, Me.Bsit3rdYr, Me.Bsit4thYr})
-        Me.BSIT.Name = "BSIT"
-        Me.BSIT.Size = New System.Drawing.Size(224, 26)
-        Me.BSIT.Text = "BSIT"
-        '
-        'Bsit1stYr
-        '
-        Me.Bsit1stYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.bsit1stYr1stSem, Me.Bsit1stYr2ndSem})
-        Me.Bsit1stYr.Name = "Bsit1stYr"
-        Me.Bsit1stYr.Size = New System.Drawing.Size(144, 26)
-        Me.Bsit1stYr.Text = "1st Yr."
-        '
-        'bsit1stYr1stSem
-        '
-        Me.bsit1stYr1stSem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ITCOMP, Me.PROG1, Me.GE2, Me.GEMATH, Me.GE1, Me.GEFIL1, Me.PE1, Me.NSTP1})
-        Me.bsit1stYr1stSem.Name = "bsit1stYr1stSem"
-        Me.bsit1stYr1stSem.Size = New System.Drawing.Size(196, 26)
-        Me.bsit1stYr1stSem.Text = "1st Semester"
-        '
-        'ITCOMP
-        '
-        Me.ITCOMP.Name = "ITCOMP"
-        Me.ITCOMP.Size = New System.Drawing.Size(169, 26)
-        Me.ITCOMP.Text = "ITCOMP"
-        '
-        'PROG1
-        '
-        Me.PROG1.Name = "PROG1"
-        Me.PROG1.Size = New System.Drawing.Size(169, 26)
-        Me.PROG1.Text = "PROG1"
-        '
-        'GE2
-        '
-        Me.GE2.Name = "GE2"
-        Me.GE2.Size = New System.Drawing.Size(169, 26)
-        Me.GE2.Text = "GE 2"
-        '
-        'GEMATH
-        '
-        Me.GEMATH.Name = "GEMATH"
-        Me.GEMATH.Size = New System.Drawing.Size(169, 26)
-        Me.GEMATH.Text = "GE MATH"
-        '
-        'GE1
-        '
-        Me.GE1.Name = "GE1"
-        Me.GE1.Size = New System.Drawing.Size(169, 26)
-        Me.GE1.Text = "GE 1"
-        '
-        'GEFIL1
-        '
-        Me.GEFIL1.Name = "GEFIL1"
-        Me.GEFIL1.Size = New System.Drawing.Size(169, 26)
-        Me.GEFIL1.Text = "GE FIL"
-        '
-        'PE1
-        '
-        Me.PE1.Name = "PE1"
-        Me.PE1.Size = New System.Drawing.Size(169, 26)
-        Me.PE1.Text = "PE 1"
-        '
-        'NSTP1
-        '
-        Me.NSTP1.Name = "NSTP1"
-        Me.NSTP1.Size = New System.Drawing.Size(169, 26)
-        Me.NSTP1.Text = "NSTP1"
-        '
-        'Bsit1stYr2ndSem
-        '
-        Me.Bsit1stYr2ndSem.Name = "Bsit1stYr2ndSem"
-        Me.Bsit1stYr2ndSem.Size = New System.Drawing.Size(196, 26)
-        Me.Bsit1stYr2ndSem.Text = "2nd Semester"
-        '
-        'Bsit2ndYr
-        '
-        Me.Bsit2ndYr.Name = "Bsit2ndYr"
-        Me.Bsit2ndYr.Size = New System.Drawing.Size(144, 26)
-        Me.Bsit2ndYr.Text = "2nd Yr."
-        '
-        'Bsit3rdYr
-        '
-        Me.Bsit3rdYr.Name = "Bsit3rdYr"
-        Me.Bsit3rdYr.Size = New System.Drawing.Size(144, 26)
-        Me.Bsit3rdYr.Text = "3rd Yr."
-        '
-        'Bsit4thYr
-        '
-        Me.Bsit4thYr.Name = "Bsit4thYr"
-        Me.Bsit4thYr.Size = New System.Drawing.Size(144, 26)
-        Me.Bsit4thYr.Text = "4th Yr."
-        '
-        'BSCPE
-        '
-        Me.BSCPE.Name = "BSCPE"
-        Me.BSCPE.Size = New System.Drawing.Size(224, 26)
-        Me.BSCPE.Text = "BSCPE"
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ICS, Me.IOBToolStripMenuItem, Me.ITEToolStripMenuItem})
-        Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        Me.MenuStrip1.Location = New System.Drawing.Point(19, 44)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(168, 28)
-        Me.MenuStrip1.TabIndex = 55
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'IOBToolStripMenuItem
-        '
-        Me.IOBToolStripMenuItem.Name = "IOBToolStripMenuItem"
-        Me.IOBToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
-        Me.IOBToolStripMenuItem.Text = "IOB"
-        '
-        'ITEToolStripMenuItem
-        '
-        Me.ITEToolStripMenuItem.Name = "ITEToolStripMenuItem"
-        Me.ITEToolStripMenuItem.Size = New System.Drawing.Size(48, 24)
-        Me.ITEToolStripMenuItem.Text = "ITE"
         '
         'Panel1
         '
@@ -237,7 +100,7 @@ Partial Class Course_Handled_Menu
         '
         Me.Yr_Value.AutoSize = True
         Me.Yr_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Yr_Value.Location = New System.Drawing.Point(115, 118)
+        Me.Yr_Value.Location = New System.Drawing.Point(115, 115)
         Me.Yr_Value.Name = "Yr_Value"
         Me.Yr_Value.Size = New System.Drawing.Size(0, 20)
         Me.Yr_Value.TabIndex = 63
@@ -284,7 +147,7 @@ Partial Class Course_Handled_Menu
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 118)
+        Me.Label3.Location = New System.Drawing.Point(15, 115)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 20)
         Me.Label3.TabIndex = 58
@@ -348,10 +211,118 @@ Partial Class Course_Handled_Menu
         '
         Me.GreenUpper_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.GreenUpper_Panel.Controls.Add(Me.Panel1)
+        Me.GreenUpper_Panel.Controls.Add(Me.MenuStrip1)
         Me.GreenUpper_Panel.Location = New System.Drawing.Point(-3, 31)
         Me.GreenUpper_Panel.Name = "GreenUpper_Panel"
         Me.GreenUpper_Panel.Size = New System.Drawing.Size(805, 423)
         Me.GreenUpper_Panel.TabIndex = 57
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ICS})
+        Me.MenuStrip1.Location = New System.Drawing.Point(23, 20)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(52, 28)
+        Me.MenuStrip1.TabIndex = 57
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ICS
+        '
+        Me.ICS.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BSIT, Me.BSCPE})
+        Me.ICS.Name = "ICS"
+        Me.ICS.Size = New System.Drawing.Size(44, 24)
+        Me.ICS.Text = "ICS"
+        '
+        'BSIT
+        '
+        Me.BSIT.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT1stYr, Me.IT2ndYr, Me.IT3rdYr, Me.IT4thYr})
+        Me.BSIT.Name = "BSIT"
+        Me.BSIT.Size = New System.Drawing.Size(224, 26)
+        Me.BSIT.Text = "BSIT"
+        '
+        'BSCPE
+        '
+        Me.BSCPE.Name = "BSCPE"
+        Me.BSCPE.Size = New System.Drawing.Size(224, 26)
+        Me.BSCPE.Text = "BSCPE"
+        '
+        'IT1stYr
+        '
+        Me.IT1stYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemesterToolStripMenuItem, Me.NdSemToolStripMenuItem})
+        Me.IT1stYr.Name = "IT1stYr"
+        Me.IT1stYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT1stYr.Text = "1st Yr."
+        '
+        'IT2ndYr
+        '
+        Me.IT2ndYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemToolStripMenuItem, Me.NdSemToolStripMenuItem1})
+        Me.IT2ndYr.Name = "IT2ndYr"
+        Me.IT2ndYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT2ndYr.Text = "2nd Yr."
+        '
+        'IT3rdYr
+        '
+        Me.IT3rdYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSToolStripMenuItem, Me.NdSemToolStripMenuItem2})
+        Me.IT3rdYr.Name = "IT3rdYr"
+        Me.IT3rdYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT3rdYr.Text = "3rd Yr."
+        '
+        'IT4thYr
+        '
+        Me.IT4thYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemToolStripMenuItem1, Me.NdSemToolStripMenuItem3})
+        Me.IT4thYr.Name = "IT4thYr"
+        Me.IT4thYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT4thYr.Text = "4th Yr."
+        '
+        'StSemesterToolStripMenuItem
+        '
+        Me.StSemesterToolStripMenuItem.Name = "StSemesterToolStripMenuItem"
+        Me.StSemesterToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StSemesterToolStripMenuItem.Text = "1st Sem"
+        '
+        'NdSemToolStripMenuItem
+        '
+        Me.NdSemToolStripMenuItem.Name = "NdSemToolStripMenuItem"
+        Me.NdSemToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.NdSemToolStripMenuItem.Text = "2nd Sem"
+        '
+        'StSemToolStripMenuItem
+        '
+        Me.StSemToolStripMenuItem.Name = "StSemToolStripMenuItem"
+        Me.StSemToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StSemToolStripMenuItem.Text = "1st Sem"
+        '
+        'NdSemToolStripMenuItem1
+        '
+        Me.NdSemToolStripMenuItem1.Name = "NdSemToolStripMenuItem1"
+        Me.NdSemToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.NdSemToolStripMenuItem1.Text = "2nd Sem"
+        '
+        'StSToolStripMenuItem
+        '
+        Me.StSToolStripMenuItem.Name = "StSToolStripMenuItem"
+        Me.StSToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StSToolStripMenuItem.Text = "1st Sem"
+        '
+        'NdSemToolStripMenuItem2
+        '
+        Me.NdSemToolStripMenuItem2.Name = "NdSemToolStripMenuItem2"
+        Me.NdSemToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
+        Me.NdSemToolStripMenuItem2.Text = "2nd Sem"
+        '
+        'StSemToolStripMenuItem1
+        '
+        Me.StSemToolStripMenuItem1.Name = "StSemToolStripMenuItem1"
+        Me.StSemToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.StSemToolStripMenuItem1.Text = "1st Sem"
+        '
+        'NdSemToolStripMenuItem3
+        '
+        Me.NdSemToolStripMenuItem3.Name = "NdSemToolStripMenuItem3"
+        Me.NdSemToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
+        Me.NdSemToolStripMenuItem3.Text = "2nd Sem"
         '
         'Course_Handled_Menu
         '
@@ -359,47 +330,24 @@ Partial Class Course_Handled_Menu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GreenUpper_Panel)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Course_Handled_Menu"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.Style = MetroFramework.MetroColorStyle.White
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GreenUpper_Panel.ResumeLayout(False)
+        Me.GreenUpper_Panel.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ICS As ToolStripMenuItem
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents IOBToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ITEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GreenUpper_Panel As Panel
-    Friend WithEvents BSIT As ToolStripMenuItem
-    Friend WithEvents Bsit1stYr As ToolStripMenuItem
-    Friend WithEvents Bsit2ndYr As ToolStripMenuItem
-    Friend WithEvents Bsit3rdYr As ToolStripMenuItem
-    Friend WithEvents Bsit4thYr As ToolStripMenuItem
-    Friend WithEvents BSCPE As ToolStripMenuItem
-    Friend WithEvents bsit1stYr1stSem As ToolStripMenuItem
-    Friend WithEvents ITCOMP As ToolStripMenuItem
-    Friend WithEvents PROG1 As ToolStripMenuItem
-    Friend WithEvents GE2 As ToolStripMenuItem
-    Friend WithEvents GEMATH As ToolStripMenuItem
-    Friend WithEvents GE1 As ToolStripMenuItem
-    Friend WithEvents GEFIL1 As ToolStripMenuItem
-    Friend WithEvents PE1 As ToolStripMenuItem
-    Friend WithEvents NSTP1 As ToolStripMenuItem
-    Friend WithEvents Bsit1stYr2ndSem As ToolStripMenuItem
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -412,4 +360,20 @@ Partial Class Course_Handled_Menu
     Friend WithEvents Yr_Value As Label
     Friend WithEvents Program_Value As Label
     Friend WithEvents Institute_Value As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ICS As ToolStripMenuItem
+    Friend WithEvents BSIT As ToolStripMenuItem
+    Friend WithEvents BSCPE As ToolStripMenuItem
+    Friend WithEvents IT1stYr As ToolStripMenuItem
+    Friend WithEvents IT2ndYr As ToolStripMenuItem
+    Friend WithEvents IT3rdYr As ToolStripMenuItem
+    Friend WithEvents IT4thYr As ToolStripMenuItem
+    Friend WithEvents StSemesterToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NdSemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StSemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NdSemToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents StSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NdSemToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents StSemToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents NdSemToolStripMenuItem3 As ToolStripMenuItem
 End Class
