@@ -1,7 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 
-
-
 Public Class Instructor_Main
 
 
@@ -13,7 +11,6 @@ Public Class Instructor_Main
 
         MyProfile_Panel.Hide()
         DisplayInfo()
-
     End Sub
     ' FORM LOAD - END
 
@@ -126,17 +123,25 @@ Public Class Instructor_Main
                 End Try
             End Using
         End Using
+        connection.Close()
+
 
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub SetValue(institute As String, program As String, year As String, semester As String, course As String)
+        Institute_Tbox.Text = institute
+        Program_Tbox.Text = program
+        Year_Tbox.Text = year
+        Sem_Tbox.Text = semester
+        Course_Tbox.Text = course
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Choose_Btn.Click
         Course_Handled_Menu.Show()
     End Sub
     ' MY PROFILE - END
-
-
-
 
     ' STUDENT GRADE - START
     Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
@@ -156,7 +161,6 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
-
     ' LOGOUT - END
 
 

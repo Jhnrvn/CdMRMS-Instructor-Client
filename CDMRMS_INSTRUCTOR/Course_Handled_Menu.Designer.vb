@@ -39,19 +39,27 @@ Partial Class Course_Handled_Menu
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ICS = New System.Windows.Forms.ToolStripMenuItem()
         Me.BSIT = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BSCPE = New System.Windows.Forms.ToolStripMenuItem()
         Me.IT1stYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT1stYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_ITCOMP = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_PROG1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GE2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GEMATH = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GE1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GEFIL1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_PE1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_NSTP1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT1stYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IT2ndYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT2ndYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT2ndYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IT3rdYr = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT3rdYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT3rdYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IT4thYr = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StSemesterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NdSemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StSemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NdSemToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NdSemToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StSemToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NdSemToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT4thYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT4thYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BSCPE = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.GreenUpper_Panel.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -82,94 +90,99 @@ Partial Class Course_Handled_Menu
         '
         Me.Course_Value.AutoSize = True
         Me.Course_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Course_Value.Location = New System.Drawing.Point(114, 203)
+        Me.Course_Value.Location = New System.Drawing.Point(183, 207)
         Me.Course_Value.Name = "Course_Value"
         Me.Course_Value.Size = New System.Drawing.Size(0, 20)
         Me.Course_Value.TabIndex = 65
+        Me.Course_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Sem_Value
         '
         Me.Sem_Value.AutoSize = True
         Me.Sem_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sem_Value.Location = New System.Drawing.Point(114, 157)
+        Me.Sem_Value.Location = New System.Drawing.Point(183, 161)
         Me.Sem_Value.Name = "Sem_Value"
         Me.Sem_Value.Size = New System.Drawing.Size(0, 20)
         Me.Sem_Value.TabIndex = 64
+        Me.Sem_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Yr_Value
         '
         Me.Yr_Value.AutoSize = True
         Me.Yr_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Yr_Value.Location = New System.Drawing.Point(115, 115)
+        Me.Yr_Value.Location = New System.Drawing.Point(183, 119)
         Me.Yr_Value.Name = "Yr_Value"
         Me.Yr_Value.Size = New System.Drawing.Size(0, 20)
         Me.Yr_Value.TabIndex = 63
+        Me.Yr_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Program_Value
         '
         Me.Program_Value.AutoSize = True
         Me.Program_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Program_Value.Location = New System.Drawing.Point(115, 70)
+        Me.Program_Value.Location = New System.Drawing.Point(183, 74)
         Me.Program_Value.Name = "Program_Value"
         Me.Program_Value.Size = New System.Drawing.Size(0, 20)
         Me.Program_Value.TabIndex = 62
+        Me.Program_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Institute_Value
         '
         Me.Institute_Value.AutoSize = True
         Me.Institute_Value.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Institute_Value.Location = New System.Drawing.Point(114, 33)
+        Me.Institute_Value.Location = New System.Drawing.Point(183, 37)
         Me.Institute_Value.Name = "Institute_Value"
         Me.Institute_Value.Size = New System.Drawing.Size(0, 20)
         Me.Institute_Value.TabIndex = 61
+        Me.Institute_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(15, 203)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(51, 207)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 20)
+        Me.Label5.Size = New System.Drawing.Size(75, 20)
         Me.Label5.TabIndex = 60
         Me.Label5.Text = "Course:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(15, 157)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(51, 161)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 20)
+        Me.Label4.Size = New System.Drawing.Size(95, 20)
         Me.Label4.TabIndex = 59
         Me.Label4.Text = "Semester:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 115)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(51, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 20)
+        Me.Label3.Size = New System.Drawing.Size(104, 20)
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "Year Level:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(15, 70)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(51, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 20)
+        Me.Label2.Size = New System.Drawing.Size(86, 20)
         Me.Label2.TabIndex = 57
         Me.Label2.Text = "Program:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 33)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(51, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "Institute:"
         '
@@ -242,87 +255,136 @@ Partial Class Course_Handled_Menu
         Me.BSIT.Size = New System.Drawing.Size(224, 26)
         Me.BSIT.Text = "BSIT"
         '
+        'IT1stYr
+        '
+        Me.IT1stYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT1stYr1stSem, Me.IT1stYr2ndSem})
+        Me.IT1stYr.Name = "IT1stYr"
+        Me.IT1stYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT1stYr.Text = "1st Yr."
+        '
+        'IT1stYr1stSem
+        '
+        Me.IT1stYr1stSem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT_ITCOMP, Me.IT_PROG1, Me.IT_GE2, Me.IT_GEMATH, Me.IT_GE1, Me.IT_GEFIL1, Me.IT_PE1, Me.IT_NSTP1})
+        Me.IT1stYr1stSem.Name = "IT1stYr1stSem"
+        Me.IT1stYr1stSem.Size = New System.Drawing.Size(224, 26)
+        Me.IT1stYr1stSem.Text = "1st Sem"
+        '
+        'IT_ITCOMP
+        '
+        Me.IT_ITCOMP.Name = "IT_ITCOMP"
+        Me.IT_ITCOMP.Size = New System.Drawing.Size(224, 26)
+        Me.IT_ITCOMP.Text = "ITCOMP"
+        '
+        'IT_PROG1
+        '
+        Me.IT_PROG1.Name = "IT_PROG1"
+        Me.IT_PROG1.Size = New System.Drawing.Size(224, 26)
+        Me.IT_PROG1.Text = "PROG 1"
+        '
+        'IT_GE2
+        '
+        Me.IT_GE2.Name = "IT_GE2"
+        Me.IT_GE2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GE2.Text = "GE 2"
+        '
+        'IT_GEMATH
+        '
+        Me.IT_GEMATH.Name = "IT_GEMATH"
+        Me.IT_GEMATH.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GEMATH.Text = "GE MATH"
+        '
+        'IT_GE1
+        '
+        Me.IT_GE1.Name = "IT_GE1"
+        Me.IT_GE1.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GE1.Text = "GE 1"
+        '
+        'IT_GEFIL1
+        '
+        Me.IT_GEFIL1.Name = "IT_GEFIL1"
+        Me.IT_GEFIL1.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GEFIL1.Text = "GE FIL 1"
+        '
+        'IT_PE1
+        '
+        Me.IT_PE1.Name = "IT_PE1"
+        Me.IT_PE1.Size = New System.Drawing.Size(224, 26)
+        Me.IT_PE1.Text = "PE 1"
+        '
+        'IT_NSTP1
+        '
+        Me.IT_NSTP1.Name = "IT_NSTP1"
+        Me.IT_NSTP1.Size = New System.Drawing.Size(224, 26)
+        Me.IT_NSTP1.Text = "NSTP 1"
+        '
+        'IT1stYr2ndSem
+        '
+        Me.IT1stYr2ndSem.Name = "IT1stYr2ndSem"
+        Me.IT1stYr2ndSem.Size = New System.Drawing.Size(224, 26)
+        Me.IT1stYr2ndSem.Text = "2nd Sem"
+        '
+        'IT2ndYr
+        '
+        Me.IT2ndYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT2ndYr1stSem, Me.IT2ndYr2ndSem})
+        Me.IT2ndYr.Name = "IT2ndYr"
+        Me.IT2ndYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT2ndYr.Text = "2nd Yr."
+        '
+        'IT2ndYr1stSem
+        '
+        Me.IT2ndYr1stSem.Name = "IT2ndYr1stSem"
+        Me.IT2ndYr1stSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT2ndYr1stSem.Text = "1st Sem"
+        '
+        'IT2ndYr2ndSem
+        '
+        Me.IT2ndYr2ndSem.Name = "IT2ndYr2ndSem"
+        Me.IT2ndYr2ndSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT2ndYr2ndSem.Text = "2nd Sem"
+        '
+        'IT3rdYr
+        '
+        Me.IT3rdYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT3rdYr1stSem, Me.IT3rdYr2ndSem})
+        Me.IT3rdYr.Name = "IT3rdYr"
+        Me.IT3rdYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT3rdYr.Text = "3rd Yr."
+        '
+        'IT3rdYr1stSem
+        '
+        Me.IT3rdYr1stSem.Name = "IT3rdYr1stSem"
+        Me.IT3rdYr1stSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT3rdYr1stSem.Text = "1st Sem"
+        '
+        'IT3rdYr2ndSem
+        '
+        Me.IT3rdYr2ndSem.Name = "IT3rdYr2ndSem"
+        Me.IT3rdYr2ndSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT3rdYr2ndSem.Text = "2nd Sem"
+        '
+        'IT4thYr
+        '
+        Me.IT4thYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT4thYr1stSem, Me.IT4thYr2ndSem})
+        Me.IT4thYr.Name = "IT4thYr"
+        Me.IT4thYr.Size = New System.Drawing.Size(224, 26)
+        Me.IT4thYr.Text = "4th Yr."
+        '
+        'IT4thYr1stSem
+        '
+        Me.IT4thYr1stSem.Name = "IT4thYr1stSem"
+        Me.IT4thYr1stSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT4thYr1stSem.Text = "1st Sem"
+        '
+        'IT4thYr2ndSem
+        '
+        Me.IT4thYr2ndSem.Name = "IT4thYr2ndSem"
+        Me.IT4thYr2ndSem.Size = New System.Drawing.Size(150, 26)
+        Me.IT4thYr2ndSem.Text = "2nd Sem"
+        '
         'BSCPE
         '
         Me.BSCPE.Name = "BSCPE"
         Me.BSCPE.Size = New System.Drawing.Size(224, 26)
         Me.BSCPE.Text = "BSCPE"
-        '
-        'IT1stYr
-        '
-        Me.IT1stYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemesterToolStripMenuItem, Me.NdSemToolStripMenuItem})
-        Me.IT1stYr.Name = "IT1stYr"
-        Me.IT1stYr.Size = New System.Drawing.Size(224, 26)
-        Me.IT1stYr.Text = "1st Yr."
-        '
-        'IT2ndYr
-        '
-        Me.IT2ndYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemToolStripMenuItem, Me.NdSemToolStripMenuItem1})
-        Me.IT2ndYr.Name = "IT2ndYr"
-        Me.IT2ndYr.Size = New System.Drawing.Size(224, 26)
-        Me.IT2ndYr.Text = "2nd Yr."
-        '
-        'IT3rdYr
-        '
-        Me.IT3rdYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSToolStripMenuItem, Me.NdSemToolStripMenuItem2})
-        Me.IT3rdYr.Name = "IT3rdYr"
-        Me.IT3rdYr.Size = New System.Drawing.Size(224, 26)
-        Me.IT3rdYr.Text = "3rd Yr."
-        '
-        'IT4thYr
-        '
-        Me.IT4thYr.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StSemToolStripMenuItem1, Me.NdSemToolStripMenuItem3})
-        Me.IT4thYr.Name = "IT4thYr"
-        Me.IT4thYr.Size = New System.Drawing.Size(224, 26)
-        Me.IT4thYr.Text = "4th Yr."
-        '
-        'StSemesterToolStripMenuItem
-        '
-        Me.StSemesterToolStripMenuItem.Name = "StSemesterToolStripMenuItem"
-        Me.StSemesterToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.StSemesterToolStripMenuItem.Text = "1st Sem"
-        '
-        'NdSemToolStripMenuItem
-        '
-        Me.NdSemToolStripMenuItem.Name = "NdSemToolStripMenuItem"
-        Me.NdSemToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.NdSemToolStripMenuItem.Text = "2nd Sem"
-        '
-        'StSemToolStripMenuItem
-        '
-        Me.StSemToolStripMenuItem.Name = "StSemToolStripMenuItem"
-        Me.StSemToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.StSemToolStripMenuItem.Text = "1st Sem"
-        '
-        'NdSemToolStripMenuItem1
-        '
-        Me.NdSemToolStripMenuItem1.Name = "NdSemToolStripMenuItem1"
-        Me.NdSemToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.NdSemToolStripMenuItem1.Text = "2nd Sem"
-        '
-        'StSToolStripMenuItem
-        '
-        Me.StSToolStripMenuItem.Name = "StSToolStripMenuItem"
-        Me.StSToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.StSToolStripMenuItem.Text = "1st Sem"
-        '
-        'NdSemToolStripMenuItem2
-        '
-        Me.NdSemToolStripMenuItem2.Name = "NdSemToolStripMenuItem2"
-        Me.NdSemToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
-        Me.NdSemToolStripMenuItem2.Text = "2nd Sem"
-        '
-        'StSemToolStripMenuItem1
-        '
-        Me.StSemToolStripMenuItem1.Name = "StSemToolStripMenuItem1"
-        Me.StSemToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.StSemToolStripMenuItem1.Text = "1st Sem"
-        '
-        'NdSemToolStripMenuItem3
-        '
-        Me.NdSemToolStripMenuItem3.Name = "NdSemToolStripMenuItem3"
-        Me.NdSemToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
-        Me.NdSemToolStripMenuItem3.Text = "2nd Sem"
         '
         'Course_Handled_Menu
         '
@@ -368,12 +430,20 @@ Partial Class Course_Handled_Menu
     Friend WithEvents IT2ndYr As ToolStripMenuItem
     Friend WithEvents IT3rdYr As ToolStripMenuItem
     Friend WithEvents IT4thYr As ToolStripMenuItem
-    Friend WithEvents StSemesterToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NdSemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StSemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NdSemToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents StSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NdSemToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents StSemToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents NdSemToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents IT1stYr1stSem As ToolStripMenuItem
+    Friend WithEvents IT1stYr2ndSem As ToolStripMenuItem
+    Friend WithEvents IT2ndYr1stSem As ToolStripMenuItem
+    Friend WithEvents IT2ndYr2ndSem As ToolStripMenuItem
+    Friend WithEvents IT3rdYr1stSem As ToolStripMenuItem
+    Friend WithEvents IT3rdYr2ndSem As ToolStripMenuItem
+    Friend WithEvents IT4thYr1stSem As ToolStripMenuItem
+    Friend WithEvents IT4thYr2ndSem As ToolStripMenuItem
+    Friend WithEvents IT_ITCOMP As ToolStripMenuItem
+    Friend WithEvents IT_PROG1 As ToolStripMenuItem
+    Friend WithEvents IT_GE2 As ToolStripMenuItem
+    Friend WithEvents IT_GEMATH As ToolStripMenuItem
+    Friend WithEvents IT_GE1 As ToolStripMenuItem
+    Friend WithEvents IT_GEFIL1 As ToolStripMenuItem
+    Friend WithEvents IT_PE1 As ToolStripMenuItem
+    Friend WithEvents IT_NSTP1 As ToolStripMenuItem
 End Class
