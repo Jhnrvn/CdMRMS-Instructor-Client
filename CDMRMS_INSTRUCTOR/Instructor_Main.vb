@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
+
+
 Public Class Instructor_Main
 
 
@@ -115,8 +117,7 @@ Public Class Instructor_Main
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
 
-                        Else
-                            MsgBox("error: no data found!")
+
                         End If
                     End Using
 
@@ -127,6 +128,10 @@ Public Class Instructor_Main
         End Using
 
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Course_Handled_Menu.Show()
     End Sub
     ' MY PROFILE - END
 
@@ -151,6 +156,8 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
+
+
     ' LOGOUT - END
 
 
