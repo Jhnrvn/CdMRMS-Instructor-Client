@@ -60,6 +60,14 @@ Partial Class Course_Handled_Menu
         Me.IT4thYr1stSem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IT4thYr2ndSem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BSCPE = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_DISCRETE = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_PROG2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GE3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_HUM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GEFIL2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_GEEL2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_PE2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IT_NSTP2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.GreenUpper_Panel.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -237,7 +245,7 @@ Partial Class Course_Handled_Menu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ICS})
         Me.MenuStrip1.Location = New System.Drawing.Point(23, 20)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(52, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(204, 30)
         Me.MenuStrip1.TabIndex = 57
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -245,7 +253,7 @@ Partial Class Course_Handled_Menu
         '
         Me.ICS.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BSIT, Me.BSCPE})
         Me.ICS.Name = "ICS"
-        Me.ICS.Size = New System.Drawing.Size(44, 24)
+        Me.ICS.Size = New System.Drawing.Size(44, 26)
         Me.ICS.Text = "ICS"
         '
         'BSIT
@@ -319,6 +327,7 @@ Partial Class Course_Handled_Menu
         '
         'IT1stYr2ndSem
         '
+        Me.IT1stYr2ndSem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IT_DISCRETE, Me.IT_PROG2, Me.IT_GE3, Me.IT_HUM, Me.IT_GEFIL2, Me.IT_GEEL2, Me.IT_PE2, Me.IT_NSTP2})
         Me.IT1stYr2ndSem.Name = "IT1stYr2ndSem"
         Me.IT1stYr2ndSem.Size = New System.Drawing.Size(224, 26)
         Me.IT1stYr2ndSem.Text = "2nd Sem"
@@ -386,6 +395,54 @@ Partial Class Course_Handled_Menu
         Me.BSCPE.Size = New System.Drawing.Size(224, 26)
         Me.BSCPE.Text = "BSCPE"
         '
+        'IT_DISCRETE
+        '
+        Me.IT_DISCRETE.Name = "IT_DISCRETE"
+        Me.IT_DISCRETE.Size = New System.Drawing.Size(224, 26)
+        Me.IT_DISCRETE.Text = "DISCRETE"
+        '
+        'IT_PROG2
+        '
+        Me.IT_PROG2.Name = "IT_PROG2"
+        Me.IT_PROG2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_PROG2.Text = "PROG 2"
+        '
+        'IT_GE3
+        '
+        Me.IT_GE3.Name = "IT_GE3"
+        Me.IT_GE3.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GE3.Text = "GE 3"
+        '
+        'IT_HUM
+        '
+        Me.IT_HUM.Name = "IT_HUM"
+        Me.IT_HUM.Size = New System.Drawing.Size(224, 26)
+        Me.IT_HUM.Text = "HUM"
+        '
+        'IT_GEFIL2
+        '
+        Me.IT_GEFIL2.Name = "IT_GEFIL2"
+        Me.IT_GEFIL2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GEFIL2.Text = "GE FIL 2"
+        '
+        'IT_GEEL2
+        '
+        Me.IT_GEEL2.Name = "IT_GEEL2"
+        Me.IT_GEEL2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_GEEL2.Text = "GEEL 2"
+        '
+        'IT_PE2
+        '
+        Me.IT_PE2.Name = "IT_PE2"
+        Me.IT_PE2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_PE2.Text = "PE 2"
+        '
+        'IT_NSTP2
+        '
+        Me.IT_NSTP2.Name = "IT_NSTP2"
+        Me.IT_NSTP2.Size = New System.Drawing.Size(224, 26)
+        Me.IT_NSTP2.Text = "NSTP 2"
+        '
         'Course_Handled_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -446,4 +503,12 @@ Partial Class Course_Handled_Menu
     Friend WithEvents IT_GEFIL1 As ToolStripMenuItem
     Friend WithEvents IT_PE1 As ToolStripMenuItem
     Friend WithEvents IT_NSTP1 As ToolStripMenuItem
+    Friend WithEvents IT_DISCRETE As ToolStripMenuItem
+    Friend WithEvents IT_PROG2 As ToolStripMenuItem
+    Friend WithEvents IT_GE3 As ToolStripMenuItem
+    Friend WithEvents IT_HUM As ToolStripMenuItem
+    Friend WithEvents IT_GEFIL2 As ToolStripMenuItem
+    Friend WithEvents IT_GEEL2 As ToolStripMenuItem
+    Friend WithEvents IT_PE2 As ToolStripMenuItem
+    Friend WithEvents IT_NSTP2 As ToolStripMenuItem
 End Class
