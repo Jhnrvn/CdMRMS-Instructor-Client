@@ -217,9 +217,9 @@ Partial Class Instructor_Main
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Location = New System.Drawing.Point(4, 518)
+        Me.Panel1.Location = New System.Drawing.Point(4, 520)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1322, 233)
+        Me.Panel1.Size = New System.Drawing.Size(1322, 255)
         Me.Panel1.TabIndex = 2
         '
         'CourseReq_Panel
