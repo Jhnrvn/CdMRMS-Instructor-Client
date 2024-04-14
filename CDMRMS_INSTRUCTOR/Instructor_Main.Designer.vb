@@ -51,6 +51,7 @@ Partial Class Instructor_Main
         Me.Choose_Btn = New System.Windows.Forms.Button()
         Me.CourseReq_Label = New System.Windows.Forms.Label()
         Me.Profile_Panel = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LN_Label = New System.Windows.Forms.Label()
         Me.Save_Btn = New System.Windows.Forms.Button()
         Me.Birthday_Label = New System.Windows.Forms.Label()
@@ -516,6 +517,7 @@ Partial Class Instructor_Main
         '
         Me.Profile_Panel.BackColor = System.Drawing.SystemColors.Window
         Me.Profile_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Profile_Panel.Controls.Add(Me.Button1)
         Me.Profile_Panel.Controls.Add(Me.LN_Label)
         Me.Profile_Panel.Controls.Add(Me.Save_Btn)
         Me.Profile_Panel.Controls.Add(Me.Birthday_Label)
@@ -540,6 +542,23 @@ Partial Class Instructor_Main
         Me.Profile_Panel.Size = New System.Drawing.Size(902, 509)
         Me.Profile_Panel.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(580, 435)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(143, 40)
+        Me.Button1.TabIndex = 52
+        Me.Button1.Text = "Request"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'LN_Label
         '
         Me.LN_Label.AutoSize = True
@@ -561,9 +580,9 @@ Partial Class Instructor_Main
         Me.Save_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Save_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Save_Btn.ForeColor = System.Drawing.Color.Black
-        Me.Save_Btn.Location = New System.Drawing.Point(725, 435)
+        Me.Save_Btn.Location = New System.Drawing.Point(729, 435)
         Me.Save_Btn.Name = "Save_Btn"
-        Me.Save_Btn.Size = New System.Drawing.Size(147, 40)
+        Me.Save_Btn.Size = New System.Drawing.Size(143, 40)
         Me.Save_Btn.TabIndex = 51
         Me.Save_Btn.Text = "Save Changes"
         Me.Save_Btn.UseVisualStyleBackColor = False
@@ -1029,4 +1048,5 @@ Partial Class Instructor_Main
     Friend WithEvents Label1 As Label
     Friend WithEvents Institute As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
 End Class

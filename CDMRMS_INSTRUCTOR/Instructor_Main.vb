@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-
+Imports System.IO
+Imports System.IO.Pipes
+Imports System.Text
 Public Class Instructor_Main
 
 
@@ -137,6 +139,10 @@ Public Class Instructor_Main
         Course_Tbox.Text = course
     End Sub
 
+    Private Sub Send_Btn_Click(sender As Object, e As EventArgs) Handles Send_Btn.Click
+
+    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Choose_Btn.Click
         Course_Handled_Menu.Show()
@@ -161,6 +167,8 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
+
+
     ' LOGOUT - END
 
 
