@@ -123,7 +123,7 @@ Public Class CDMRMS_Instructor_Login
                             End If
 
                         ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
-                            MsgBox("Please select your institute.", MessageBoxIcon.Warning)
+                            MsgBox("Please select your Gender.", MessageBoxIcon.Warning)
 
                         End If
                     End If
@@ -145,12 +145,8 @@ Public Class CDMRMS_Instructor_Login
     ' Only accept number and dash
     Private Sub InstructorID_Input_KeyPress(sender As Object, e As KeyPressEventArgs) Handles InstructorID_Input.KeyPress
 
-        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "-"c Then
-            If Not Char.IsControl(e.KeyChar) Then
-                e.Handled = True
 
-            End If
-        ElseIf e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
+        If e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
             e.Handled = True
 
         End If
@@ -159,7 +155,7 @@ Public Class CDMRMS_Instructor_Login
     ' Validate instructor ID number format
     Private Function ValidateInstructorID(instructorID As String) As String
 
-        Dim pattern As String = "^\d{2}-\d{5}$"
+        Dim pattern As String = "^CDM-\d{3,4}$"
 
         Dim regex As New Regex(pattern)
         Return regex.IsMatch(instructorID)
@@ -307,12 +303,7 @@ Public Class CDMRMS_Instructor_Login
     ' Only accept number and dash
     Private Sub LoginInstructorID_Input_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LoginInstructorID_Input.KeyPress
 
-        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "-"c Then
-            If Not Char.IsControl(e.KeyChar) Then
-                e.Handled = True
-
-            End If
-        ElseIf e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
+        If e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
             e.Handled = True
 
         End If
@@ -353,7 +344,7 @@ Public Class CDMRMS_Instructor_Login
     ' TOOLTIPS FOR LOGIN AND REGISTRAR INPUTS - START
     Private Sub RegToolTip_Label1_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label1.MouseHover
         Tooltip.ToolTipTitle = "Instructor's ID Number"
-        Tooltip.SetToolTip(RegToolTip_Label1, "" & vbCrLf & " * It only accept Numbers & Dash (1 only). " & vbCrLf & "   Sample Input: 23-12345" & vbCrLf & vbCrLf & " * Other Characters Are Invalid." & vbCrLf & " ")
+        Tooltip.SetToolTip(RegToolTip_Label1, "" & vbCrLf & " * It only accept 'CDM', Dash (1 only), And Numbers. " & vbCrLf & "   Sample Input: CDM-XXXX" & vbCrLf & vbCrLf & " * Other Characters Are Invalid." & vbCrLf & " ")
     End Sub
 
     Private Sub RegToolTip_Label2_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label2.MouseHover
