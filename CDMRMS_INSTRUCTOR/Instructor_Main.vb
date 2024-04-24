@@ -1,7 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.IO
-Imports System.IO.Pipes
-Imports System.Text
 Public Class Instructor_Main
 
 

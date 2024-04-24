@@ -7,8 +7,6 @@ Imports System.Text.RegularExpressions
 Public Class CDMRMS_Instructor_Login
 
 
-
-
     ' FORM LOAD - START
     Private Sub CDMRMS_Instructor_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -17,8 +15,6 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
     ' FORM LOAD - END
-
-
 
 
     ' DATABASE CONNECTION - START
@@ -47,8 +43,6 @@ Public Class CDMRMS_Instructor_Login
     ' DATABASE CONNECTION - END
 
 
-
-
     ' PASSWORD HASHING - START
     Private Function HashPassword(password As String) As String
 
@@ -71,8 +65,6 @@ Public Class CDMRMS_Instructor_Login
     ' PASSWORD HASHING - END
 
 
-
-
     ' REGISTRATION - START
     Private Sub Register_Btn_Click(sender As Object, e As EventArgs) Handles Register_Btn.Click
 
@@ -81,19 +73,18 @@ Public Class CDMRMS_Instructor_Login
         Dim middleName As String = MN_Input.Text.Trim
         Dim lastName As String = LN_Input.Text.Trim
         Dim instructorID As String = InstructorID_Input.Text.Trim
-        Dim sex As String
+        Dim gender As String
         Dim email As String = Email_Input.Text.Trim
         Dim contact As String = Contact_Input.Text.Trim
         Dim birthday As Date = Birthdate_Picker.Value.Date
         Dim password As String = Password_Input.Text.Trim
         Dim password2 As String = Password2_Input.Text.Trim
 
-
         ' Check if all needed information are fill-out
-        If String.IsNullOrEmpty(firstName) And String.IsNullOrEmpty(middleName) And String.IsNullOrEmpty(lastName) And String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(contact) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) And String.IsNullOrEmpty(password2) Then
+        If String.IsNullOrEmpty(firstName) And String.IsNullOrEmpty(lastName) And String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(contact) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) And String.IsNullOrEmpty(password2) Then
             MsgBox("Please enter all needed information", MessageBoxIcon.Warning)
 
-        ElseIf String.IsNullOrEmpty(firstName) Or String.IsNullOrEmpty(middleName) Or String.IsNullOrEmpty(lastName) Or String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(contact) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Or String.IsNullOrEmpty(password2) Then
+        ElseIf String.IsNullOrEmpty(firstName) Or String.IsNullOrEmpty(lastName) Or String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(contact) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Or String.IsNullOrEmpty(password2) Then
             MsgBox("Please fill all missing information", MessageBoxIcon.Warning)
 
         ElseIf ValidateInstructorID(instructorID) Then
@@ -106,24 +97,29 @@ Public Class CDMRMS_Instructor_Login
                         MsgBox("Password does'nt match.", MessageBoxIcon.Information)
 
                     Else
-                        If Male_RadioBtn.Checked Then
-                            sex = Male_RadioBtn.Text
-                            If Not IsDataExists(instructorID) Then
-                                InsertRegistrationData(firstName, middleName, lastName, instructorID, sex, email, contact, birthday, password)
-                            Else
-                                MsgBox("Data already exists in the database.")
-                            End If
+                        If String.IsNullOrEmpty(middleName) Then
+                            middleName = "N/A"
 
-                        ElseIf Female_RadioBtn.Checked Then
-                            sex = Female_RadioBtn.Text
-                            If Not IsDataExists(instructorID) Then
-                                InsertRegistrationData(firstName, middleName, lastName, instructorID, sex, email, contact, birthday, password)
-                            Else
-                                MsgBox("Data already exists in the database.")
-                            End If
+                            If Male_RadioBtn.Checked Then
+                                gender = Male_RadioBtn.Text
+                                If Not IsDataExists(instructorID) Then
+                                    InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+                                Else
+                                    MsgBox("Data already exists in the database.")
+                                End If
 
-                        ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
-                            MsgBox("Please select your Gender.", MessageBoxIcon.Warning)
+                            ElseIf Female_RadioBtn.Checked Then
+                                gender = Female_RadioBtn.Text
+                                If Not IsDataExists(instructorID) Then
+                                    InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+                                Else
+                                    MsgBox("Data already exists in the database.")
+                                End If
+
+                            ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
+                                MsgBox("Please select your Gender.", MessageBoxIcon.Warning)
+
+                            End If
 
                         End If
                     End If
@@ -198,12 +194,12 @@ Public Class CDMRMS_Instructor_Login
     End Function
 
     ' Insertion of validated Data to database
-    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, sex As String, email As String, contact As String, birthday As Date, password As String)
+    Private Sub InsertRegistrationData(firstName As String, middleName As String, lastName As String, instructorID As String, gender As String, email As String, contact As String, birthday As Date, password As String)
 
         Dim hashedPassword As String = HashPassword(password)
 
         ' Insert Data to database
-        Dim query As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `sex`, `email`, `contact#`, `birthday`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @sex, @email, @contact, @birthday, @password) "
+        Dim query As String = "INSERT INTO `instructors`(`firstname`, `middlename`, `lastname`, `instructorid`, `gender`, `email`, `contact#`, `birthday`, `password`) VALUES (@firstname, @middlename, @lastname, @instructorid, @gender, @email, @contact, @birthday, @password) "
 
         Try
             Using connection As New MySqlConnection(ConnectionString)
@@ -214,7 +210,7 @@ Public Class CDMRMS_Instructor_Login
                     command.Parameters.AddWithValue("@middlename", middleName)
                     command.Parameters.AddWithValue("@lastname", lastName)
                     command.Parameters.AddWithValue("@instructorid", instructorID)
-                    command.Parameters.AddWithValue("@sex", sex)
+                    command.Parameters.AddWithValue("@gender", gender)
                     command.Parameters.AddWithValue("@email", email)
                     command.Parameters.AddWithValue("@contact", contact)
                     command.Parameters.AddWithValue("@birthday", birthday)
@@ -258,8 +254,6 @@ Public Class CDMRMS_Instructor_Login
 
     End Sub
     ' REGISTRATION - END
-
-
 
 
     ' LOGIN - START
@@ -339,9 +333,7 @@ Public Class CDMRMS_Instructor_Login
     ' LOGIN - END
 
 
-
-
-    ' TOOLTIPS FOR LOGIN AND REGISTRAR INPUTS - START
+    ' TOOLTIPS FOR LOGIN AND REGISTRATION INPUTS - START
     Private Sub RegToolTip_Label1_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label1.MouseHover
         Tooltip.ToolTipTitle = "Instructor's ID Number"
         Tooltip.SetToolTip(RegToolTip_Label1, "" & vbCrLf & " * It only accept 'CDM', Dash (1 only), And Numbers. " & vbCrLf & "   Sample Input: CDM-XXXX" & vbCrLf & vbCrLf & " * Other Characters Are Invalid." & vbCrLf & " ")
@@ -357,7 +349,7 @@ Public Class CDMRMS_Instructor_Login
         Tooltip.SetToolTip(RegToolTip_Label3, " " & vbCrLf & " * Please enter a valid contact number.   " & vbCrLf & "   (e.g., 09XXXXXXXXX)." & vbCrLf & " ")
     End Sub
 
-    ' TOOLTIPS FOR LOGIN AND REGISTRAT INPUTS - END
+    ' TOOLTIPS FOR LOGIN AND REGISTRATION INPUTS - END
 
 
 
