@@ -9,6 +9,7 @@ Public Class Instructor_Main
         Dropdown_Panel.Size = Dropdown_Panel.MinimumSize
 
         MyProfile_Panel.Hide()
+        StudentGrade_Panel.Hide()
         DisplayInfo()
     End Sub
     ' FORM LOAD - END
@@ -59,6 +60,7 @@ Public Class Instructor_Main
         Else
 
             MyProfile_Panel.Hide()
+            StudentGrade_Panel.Hide()
 
             Dropdown_Panel.Height -= 10
             If Dropdown_Panel.Size = Dropdown_Panel.MinimumSize Then
@@ -83,7 +85,7 @@ Public Class Instructor_Main
     Public Property PassedValue As String
     Private Sub MyProfile_Btn_Click(sender As Object, e As EventArgs) Handles MyProfile_Btn.Click
         MyProfile_Panel.Show()
-
+        StudentGrade_Panel.Hide()
     End Sub
 
     Private Sub DisplayInfo()
@@ -108,7 +110,7 @@ Public Class Instructor_Main
                             FN_TB.Text = reader("firstname").ToString()
                             MN_TB.Text = reader("middlename").ToString()
                             LN_TB.Text = reader("lastname").ToString()
-                            Sex_TB.Text = reader("sex").ToString()
+                            Sex_TB.Text = reader("gender").ToString()
                             CN_TB.Text = reader("contact#").ToString()
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
@@ -148,6 +150,7 @@ Public Class Instructor_Main
 
     ' STUDENT GRADE - START
     Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
+        StudentGrade_Panel.Show()
         MyProfile_Panel.Hide()
     End Sub
     ' STUDENT GRADE - END
