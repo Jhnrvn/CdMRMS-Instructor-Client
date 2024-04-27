@@ -918,7 +918,7 @@ Partial Class Instructor_Main
         Me.ProfilePic_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ProfilePic_PicBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ProfilePic_PicBox.Image = CType(resources.GetObject("ProfilePic_PicBox.Image"), System.Drawing.Image)
-        Me.ProfilePic_PicBox.Location = New System.Drawing.Point(31, 69)
+        Me.ProfilePic_PicBox.Location = New System.Drawing.Point(31, 83)
         Me.ProfilePic_PicBox.Name = "ProfilePic_PicBox"
         Me.ProfilePic_PicBox.Size = New System.Drawing.Size(212, 200)
         Me.ProfilePic_PicBox.TabIndex = 1
