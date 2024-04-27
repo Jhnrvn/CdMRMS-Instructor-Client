@@ -366,7 +366,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Register_Btn
         '
-        Me.Register_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Btn.BackColor = System.Drawing.Color.Yellow
         Me.Register_Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Register_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Register_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
@@ -823,7 +823,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Login_Btn
         '
-        Me.Login_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Btn.BackColor = System.Drawing.Color.Yellow
         Me.Login_Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Login_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Login_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
