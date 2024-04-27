@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
+
+
 Public Class Instructor_Main
-
-
 
 
     ' FORM LOAD - START
@@ -13,8 +13,6 @@ Public Class Instructor_Main
         DisplayInfo()
     End Sub
     ' FORM LOAD - END
-
-
 
 
     ' DATABASE CONNECTION - START
@@ -41,8 +39,6 @@ Public Class Instructor_Main
 
     End Function
     ' DATABASE CONNECTION - END
-
-
 
 
     ' DROP-DOWN ANIMATION - START
@@ -77,8 +73,6 @@ Public Class Instructor_Main
 
     End Sub
     ' DROP-DOWN ANIMATION - END
-
-
 
 
     ' MY PROFILE - START
@@ -126,8 +120,6 @@ Public Class Instructor_Main
         End Using
         connection.Close()
 
-
-
     End Sub
 
     Public Sub SetValue(institute As String, program As String, year As String, semester As String, course As String)
@@ -156,8 +148,6 @@ Public Class Instructor_Main
     ' STUDENT GRADE - END
 
 
-
-
     ' LOGOUT - START
     Private Sub Logout_Btn_Click(sender As Object, e As EventArgs) Handles Logout_Btn.Click
         Dim choice As DialogResult = MsgBox("Are you sure?", MessageBoxButtons.OKCancel)
@@ -168,10 +158,7 @@ Public Class Instructor_Main
         End If
     End Sub
 
-
     ' LOGOUT - END
-
-
 
 
 End Class

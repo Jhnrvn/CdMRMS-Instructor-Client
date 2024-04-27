@@ -985,7 +985,7 @@ Partial Class Instructor_Main
         Me.Welcome_BG.Image = CType(resources.GetObject("Welcome_BG.Image"), System.Drawing.Image)
         Me.Welcome_BG.Location = New System.Drawing.Point(272, 118)
         Me.Welcome_BG.Name = "Welcome_BG"
-        Me.Welcome_BG.Size = New System.Drawing.Size(1208, 599)
+        Me.Welcome_BG.Size = New System.Drawing.Size(1208, 742)
         Me.Welcome_BG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Welcome_BG.TabIndex = 4
         Me.Welcome_BG.TabStop = False
