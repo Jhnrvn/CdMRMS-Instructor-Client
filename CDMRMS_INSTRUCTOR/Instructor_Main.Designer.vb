@@ -32,6 +32,7 @@ Partial Class Instructor_Main
         Me.Menu_Btn = New System.Windows.Forms.Button()
         Me.CMDRMS_PicBox = New System.Windows.Forms.PictureBox()
         Me.CDM_Logo = New System.Windows.Forms.PictureBox()
+        Me.InstructorLogo = New System.Windows.Forms.PictureBox()
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
         Me.Dropdown_Timer = New System.Windows.Forms.Timer(Me.components)
         Me.MyProfile_Panel = New System.Windows.Forms.Panel()
@@ -95,6 +96,7 @@ Partial Class Instructor_Main
         Me.Dropdown_Panel.SuspendLayout()
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InstructorLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyProfile_Panel.SuspendLayout()
         Me.CourseReq_Panel.SuspendLayout()
         Me.Profile_Panel.SuspendLayout()
@@ -112,6 +114,7 @@ Partial Class Instructor_Main
         Me.GreenSide_Panel.Controls.Add(Me.Dropdown_Panel)
         Me.GreenSide_Panel.Controls.Add(Me.CMDRMS_PicBox)
         Me.GreenSide_Panel.Controls.Add(Me.CDM_Logo)
+        Me.GreenSide_Panel.Controls.Add(Me.InstructorLogo)
         Me.GreenSide_Panel.Location = New System.Drawing.Point(-1, 31)
         Me.GreenSide_Panel.Name = "GreenSide_Panel"
         Me.GreenSide_Panel.Size = New System.Drawing.Size(220, 842)
@@ -141,9 +144,11 @@ Partial Class Instructor_Main
         Me.Logout_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Logout_Btn.Location = New System.Drawing.Point(0, 158)
         Me.Logout_Btn.Name = "Logout_Btn"
+        Me.Logout_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.Logout_Btn.Size = New System.Drawing.Size(216, 50)
         Me.Logout_Btn.TabIndex = 4
         Me.Logout_Btn.Text = "Log Out"
+        Me.Logout_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Logout_Btn.UseVisualStyleBackColor = False
         '
         'StudentGrade_Btn
@@ -156,9 +161,11 @@ Partial Class Instructor_Main
         Me.StudentGrade_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StudentGrade_Btn.Location = New System.Drawing.Point(0, 108)
         Me.StudentGrade_Btn.Name = "StudentGrade_Btn"
+        Me.StudentGrade_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.StudentGrade_Btn.Size = New System.Drawing.Size(216, 50)
         Me.StudentGrade_Btn.TabIndex = 3
         Me.StudentGrade_Btn.Text = "Student Grade"
+        Me.StudentGrade_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StudentGrade_Btn.UseVisualStyleBackColor = False
         '
         'MyProfile_Btn
@@ -171,9 +178,11 @@ Partial Class Instructor_Main
         Me.MyProfile_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MyProfile_Btn.Location = New System.Drawing.Point(0, 58)
         Me.MyProfile_Btn.Name = "MyProfile_Btn"
+        Me.MyProfile_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.MyProfile_Btn.Size = New System.Drawing.Size(216, 50)
         Me.MyProfile_Btn.TabIndex = 2
         Me.MyProfile_Btn.Text = "My Account"
+        Me.MyProfile_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.MyProfile_Btn.UseVisualStyleBackColor = False
         '
         'Menu_Btn
@@ -185,9 +194,12 @@ Partial Class Instructor_Main
         Me.Menu_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.Menu_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.Menu_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Menu_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Menu_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Menu_Btn.Image = CType(resources.GetObject("Menu_Btn.Image"), System.Drawing.Image)
+        Me.Menu_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Menu_Btn.Location = New System.Drawing.Point(0, 0)
         Me.Menu_Btn.Name = "Menu_Btn"
+        Me.Menu_Btn.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
         Me.Menu_Btn.Size = New System.Drawing.Size(216, 58)
         Me.Menu_Btn.TabIndex = 1
         Me.Menu_Btn.Text = "MENU"
@@ -212,6 +224,16 @@ Partial Class Instructor_Main
         Me.CDM_Logo.Size = New System.Drawing.Size(175, 500)
         Me.CDM_Logo.TabIndex = 3
         Me.CDM_Logo.TabStop = False
+        '
+        'InstructorLogo
+        '
+        Me.InstructorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.InstructorLogo.Image = CType(resources.GetObject("InstructorLogo.Image"), System.Drawing.Image)
+        Me.InstructorLogo.Location = New System.Drawing.Point(28, 82)
+        Me.InstructorLogo.Name = "InstructorLogo"
+        Me.InstructorLogo.Size = New System.Drawing.Size(164, 125)
+        Me.InstructorLogo.TabIndex = 55
+        Me.InstructorLogo.TabStop = False
         '
         'GreenUpper_Panel
         '
@@ -1339,10 +1361,10 @@ Partial Class Instructor_Main
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1550, 870)
         Me.Controls.Add(Me.MyProfile_Panel)
-        Me.Controls.Add(Me.GreenSide_Panel)
         Me.Controls.Add(Me.GreenUpper_Panel)
         Me.Controls.Add(Me.StudentGrade_Panel)
         Me.Controls.Add(Me.Welcome_BG)
+        Me.Controls.Add(Me.GreenSide_Panel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
@@ -1356,6 +1378,7 @@ Partial Class Instructor_Main
         Me.Dropdown_Panel.ResumeLayout(False)
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InstructorLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MyProfile_Panel.ResumeLayout(False)
         Me.CourseReq_Panel.ResumeLayout(False)
         Me.CourseReq_Panel.PerformLayout()
@@ -1440,4 +1463,5 @@ Partial Class Instructor_Main
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents InstructorLogo As PictureBox
 End Class

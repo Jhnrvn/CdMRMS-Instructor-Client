@@ -46,6 +46,7 @@ Public Class Instructor_Main
     Private Sub Dropdown_Timer_Tick(sender As Object, e As EventArgs) Handles Dropdown_Timer.Tick
         If MenuCollapsed Then
 
+            Menu_Btn.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Arrow_Down.png")
             Dropdown_Panel.Height += 10
             If Dropdown_Panel.Size = Dropdown_Panel.MaximumSize Then
 
@@ -57,7 +58,7 @@ Public Class Instructor_Main
 
             MyProfile_Panel.Hide()
             StudentGrade_Panel.Hide()
-
+            Menu_Btn.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Arrow_Right.png")
             Dropdown_Panel.Height -= 10
             If Dropdown_Panel.Size = Dropdown_Panel.MinimumSize Then
 
