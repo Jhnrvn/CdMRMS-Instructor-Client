@@ -258,6 +258,7 @@ Public Class CDMRMS_Instructor_Login
 
 
     ' LOGIN - START
+
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
         Dim instructorID As String = LoginInstructorID_Input.Text.Trim
@@ -328,8 +329,10 @@ Public Class CDMRMS_Instructor_Login
     End Function
 
     Private Sub Login_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Login_Link.LinkClicked
+
         Registration_Panel.Hide()
         Login_Panel.Show()
+
     End Sub
     ' LOGIN - END
 
@@ -350,9 +353,11 @@ Public Class CDMRMS_Instructor_Login
         Tooltip.SetToolTip(RegToolTip_Label3, " " & vbCrLf & " * Please enter a valid contact number.   " & vbCrLf & "   (e.g., 09XXXXXXXXX)." & vbCrLf & " ")
     End Sub
 
+    Private Sub RegToolTip_Label4_MouseHover(sender As Object, e As EventArgs) Handles RegToolTip_Label4.MouseHover
+        Tooltip.ToolTipTitle = "Middle Name"
+        Tooltip.SetToolTip(RegToolTip_Label4, " " & vbCrLf & " * Leave it blank if not applicable." & vbCrLf & " ")
+    End Sub
     ' TOOLTIPS FOR LOGIN AND REGISTRATION INPUTS - END
-
-
 
 
 End Class

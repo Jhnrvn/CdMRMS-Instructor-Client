@@ -34,6 +34,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Sex_Label = New System.Windows.Forms.Label()
         Me.Male_RadioBtn = New MetroFramework.Controls.MetroRadioButton()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
+        Me.RegToolTip_Label4 = New System.Windows.Forms.Label()
         Me.Birthday_Label = New System.Windows.Forms.Label()
         Me.Birthdate_Picker = New System.Windows.Forms.DateTimePicker()
         Me.RegToolTip_Label1 = New System.Windows.Forms.Label()
@@ -240,6 +241,7 @@ Partial Class CDMRMS_Instructor_Login
         'Registration_Panel
         '
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label4)
         Me.Registration_Panel.Controls.Add(Me.Birthday_Label)
         Me.Registration_Panel.Controls.Add(Me.Birthdate_Picker)
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label1)
@@ -270,6 +272,20 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Name = "Registration_Panel"
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Registration_Panel.TabIndex = 1
+        '
+        'RegToolTip_Label4
+        '
+        Me.RegToolTip_Label4.AutoSize = True
+        Me.RegToolTip_Label4.BackColor = System.Drawing.Color.Transparent
+        Me.RegToolTip_Label4.Cursor = System.Windows.Forms.Cursors.Help
+        Me.RegToolTip_Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RegToolTip_Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RegToolTip_Label4.ForeColor = System.Drawing.Color.Red
+        Me.RegToolTip_Label4.Location = New System.Drawing.Point(308, 136)
+        Me.RegToolTip_Label4.Name = "RegToolTip_Label4"
+        Me.RegToolTip_Label4.Size = New System.Drawing.Size(19, 20)
+        Me.RegToolTip_Label4.TabIndex = 32
+        Me.RegToolTip_Label4.Text = "?"
         '
         'Birthday_Label
         '
@@ -302,7 +318,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label1.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label1.Location = New System.Drawing.Point(452, 208)
+        Me.RegToolTip_Label1.Location = New System.Drawing.Point(452, 203)
         Me.RegToolTip_Label1.Name = "RegToolTip_Label1"
         Me.RegToolTip_Label1.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label1.TabIndex = 29
@@ -316,7 +332,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label2.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label2.Location = New System.Drawing.Point(452, 343)
+        Me.RegToolTip_Label2.Location = New System.Drawing.Point(452, 338)
         Me.RegToolTip_Label2.Name = "RegToolTip_Label2"
         Me.RegToolTip_Label2.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label2.TabIndex = 28
@@ -330,7 +346,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label3.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label3.Location = New System.Drawing.Point(236, 408)
+        Me.RegToolTip_Label3.Location = New System.Drawing.Point(236, 403)
         Me.RegToolTip_Label3.Name = "RegToolTip_Label3"
         Me.RegToolTip_Label3.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label3.TabIndex = 27
@@ -921,4 +937,5 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents RegToolTip_Label1 As Label
     Friend WithEvents Birthdate_Picker As DateTimePicker
     Friend WithEvents Birthday_Label As Label
+    Friend WithEvents RegToolTip_Label4 As Label
 End Class

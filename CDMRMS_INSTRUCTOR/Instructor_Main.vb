@@ -110,7 +110,6 @@ Public Class Instructor_Main
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
 
-
                         End If
                     End Using
 
