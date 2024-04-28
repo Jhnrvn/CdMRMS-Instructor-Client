@@ -105,6 +105,7 @@ Public Class CDMRMS_Instructor_Login
                                 gender = Male_RadioBtn.Text
                                 If Not IsDataExists(instructorID) Then
                                     InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+
                                 Else
                                     MsgBox("Data already exists in the database.")
                                 End If
@@ -113,6 +114,7 @@ Public Class CDMRMS_Instructor_Login
                                 gender = Female_RadioBtn.Text
                                 If Not IsDataExists(instructorID) Then
                                     InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+
                                 Else
                                     MsgBox("Data already exists in the database.")
                                 End If
@@ -247,6 +249,8 @@ Public Class CDMRMS_Instructor_Login
         End Try
 
     End Sub
+
+
 
     Private Sub Register_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Register_Link.LinkClicked
 
