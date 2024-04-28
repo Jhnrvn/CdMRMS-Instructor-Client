@@ -24,6 +24,9 @@ Partial Class Instructor_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instructor_Main))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GreenSide_Panel = New System.Windows.Forms.Panel()
         Me.Dropdown_Panel = New System.Windows.Forms.Panel()
         Me.Logout_Btn = New System.Windows.Forms.Button()
@@ -76,22 +79,14 @@ Partial Class Instructor_Main
         Me.StudentGrade_Panel = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox3 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox4 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox5 = New MetroFramework.Controls.MetroTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.MetroComboBox1 = New MetroFramework.Controls.MetroComboBox()
+        Me.AssignedCourseTable = New System.Windows.Forms.DataGridView()
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,7 +100,7 @@ Partial Class Instructor_Main
         Me.StudentGrade_Panel.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GreenSide_Panel
@@ -142,9 +137,11 @@ Partial Class Instructor_Main
         Me.Logout_Btn.FlatAppearance.BorderSize = 0
         Me.Logout_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Logout_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Logout_Btn.Image = CType(resources.GetObject("Logout_Btn.Image"), System.Drawing.Image)
+        Me.Logout_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Logout_Btn.Location = New System.Drawing.Point(0, 158)
         Me.Logout_Btn.Name = "Logout_Btn"
-        Me.Logout_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.Logout_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 3, 0)
         Me.Logout_Btn.Size = New System.Drawing.Size(216, 50)
         Me.Logout_Btn.TabIndex = 4
         Me.Logout_Btn.Text = "Log Out"
@@ -1036,65 +1033,13 @@ Partial Class Instructor_Main
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Controls.Add(Me.Label7)
-        Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Controls.Add(Me.MetroTextBox1)
-        Me.Panel4.Controls.Add(Me.MetroTextBox2)
-        Me.Panel4.Controls.Add(Me.MetroTextBox3)
-        Me.Panel4.Controls.Add(Me.MetroTextBox4)
-        Me.Panel4.Controls.Add(Me.MetroTextBox5)
+        Me.Panel4.Controls.Add(Me.MetroComboBox1)
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Location = New System.Drawing.Point(912, 5)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(414, 509)
         Me.Panel4.TabIndex = 1
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(20, 355)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 20)
-        Me.Label5.TabIndex = 60
-        Me.Label5.Text = "Course"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(20, 282)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 20)
-        Me.Label6.TabIndex = 59
-        Me.Label6.Text = "Semester"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 209)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 20)
-        Me.Label7.TabIndex = 58
-        Me.Label7.Text = "Year Level"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(20, 136)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(134, 20)
-        Me.Label8.TabIndex = 52
-        Me.Label8.Text = "College Program"
         '
         'Label9
         '
@@ -1106,176 +1051,6 @@ Partial Class Instructor_Main
         Me.Label9.Size = New System.Drawing.Size(59, 20)
         Me.Label9.TabIndex = 52
         Me.Label9.Text = "Label9"
-        '
-        'MetroTextBox1
-        '
-        '
-        '
-        '
-        Me.MetroTextBox1.CustomButton.Image = Nothing
-        Me.MetroTextBox1.CustomButton.Location = New System.Drawing.Point(323, 2)
-        Me.MetroTextBox1.CustomButton.Name = ""
-        Me.MetroTextBox1.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox1.CustomButton.TabIndex = 1
-        Me.MetroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox1.CustomButton.UseSelectable = True
-        Me.MetroTextBox1.CustomButton.Visible = False
-        Me.MetroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox1.Lines = New String(-1) {}
-        Me.MetroTextBox1.Location = New System.Drawing.Point(24, 374)
-        Me.MetroTextBox1.MaxLength = 50
-        Me.MetroTextBox1.Name = "MetroTextBox1"
-        Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox1.ReadOnly = True
-        Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox1.SelectedText = ""
-        Me.MetroTextBox1.SelectionLength = 0
-        Me.MetroTextBox1.SelectionStart = 0
-        Me.MetroTextBox1.ShortcutsEnabled = True
-        Me.MetroTextBox1.Size = New System.Drawing.Size(361, 40)
-        Me.MetroTextBox1.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox1.TabIndex = 57
-        Me.MetroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox1.UseSelectable = True
-        Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.Silver
-        Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'MetroTextBox2
-        '
-        '
-        '
-        '
-        Me.MetroTextBox2.CustomButton.Image = Nothing
-        Me.MetroTextBox2.CustomButton.Location = New System.Drawing.Point(323, 2)
-        Me.MetroTextBox2.CustomButton.Name = ""
-        Me.MetroTextBox2.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox2.CustomButton.TabIndex = 1
-        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox2.CustomButton.UseSelectable = True
-        Me.MetroTextBox2.CustomButton.Visible = False
-        Me.MetroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox2.Lines = New String(-1) {}
-        Me.MetroTextBox2.Location = New System.Drawing.Point(24, 301)
-        Me.MetroTextBox2.MaxLength = 50
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox2.ReadOnly = True
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox2.SelectedText = ""
-        Me.MetroTextBox2.SelectionLength = 0
-        Me.MetroTextBox2.SelectionStart = 0
-        Me.MetroTextBox2.ShortcutsEnabled = True
-        Me.MetroTextBox2.Size = New System.Drawing.Size(361, 40)
-        Me.MetroTextBox2.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox2.TabIndex = 56
-        Me.MetroTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox2.UseSelectable = True
-        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.Silver
-        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'MetroTextBox3
-        '
-        '
-        '
-        '
-        Me.MetroTextBox3.CustomButton.Image = Nothing
-        Me.MetroTextBox3.CustomButton.Location = New System.Drawing.Point(323, 2)
-        Me.MetroTextBox3.CustomButton.Name = ""
-        Me.MetroTextBox3.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox3.CustomButton.TabIndex = 1
-        Me.MetroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox3.CustomButton.UseSelectable = True
-        Me.MetroTextBox3.CustomButton.Visible = False
-        Me.MetroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox3.Lines = New String(-1) {}
-        Me.MetroTextBox3.Location = New System.Drawing.Point(24, 228)
-        Me.MetroTextBox3.MaxLength = 50
-        Me.MetroTextBox3.Name = "MetroTextBox3"
-        Me.MetroTextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox3.ReadOnly = True
-        Me.MetroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox3.SelectedText = ""
-        Me.MetroTextBox3.SelectionLength = 0
-        Me.MetroTextBox3.SelectionStart = 0
-        Me.MetroTextBox3.ShortcutsEnabled = True
-        Me.MetroTextBox3.Size = New System.Drawing.Size(361, 40)
-        Me.MetroTextBox3.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox3.TabIndex = 55
-        Me.MetroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox3.UseSelectable = True
-        Me.MetroTextBox3.WaterMarkColor = System.Drawing.Color.Silver
-        Me.MetroTextBox3.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'MetroTextBox4
-        '
-        '
-        '
-        '
-        Me.MetroTextBox4.CustomButton.Image = Nothing
-        Me.MetroTextBox4.CustomButton.Location = New System.Drawing.Point(323, 2)
-        Me.MetroTextBox4.CustomButton.Name = ""
-        Me.MetroTextBox4.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox4.CustomButton.TabIndex = 1
-        Me.MetroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox4.CustomButton.UseSelectable = True
-        Me.MetroTextBox4.CustomButton.Visible = False
-        Me.MetroTextBox4.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox4.Lines = New String(-1) {}
-        Me.MetroTextBox4.Location = New System.Drawing.Point(24, 155)
-        Me.MetroTextBox4.MaxLength = 50
-        Me.MetroTextBox4.Name = "MetroTextBox4"
-        Me.MetroTextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox4.ReadOnly = True
-        Me.MetroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox4.SelectedText = ""
-        Me.MetroTextBox4.SelectionLength = 0
-        Me.MetroTextBox4.SelectionStart = 0
-        Me.MetroTextBox4.ShortcutsEnabled = True
-        Me.MetroTextBox4.Size = New System.Drawing.Size(361, 40)
-        Me.MetroTextBox4.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox4.TabIndex = 54
-        Me.MetroTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox4.UseSelectable = True
-        Me.MetroTextBox4.WaterMarkColor = System.Drawing.Color.Silver
-        Me.MetroTextBox4.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'MetroTextBox5
-        '
-        '
-        '
-        '
-        Me.MetroTextBox5.CustomButton.Image = Nothing
-        Me.MetroTextBox5.CustomButton.Location = New System.Drawing.Point(323, 2)
-        Me.MetroTextBox5.CustomButton.Name = ""
-        Me.MetroTextBox5.CustomButton.Size = New System.Drawing.Size(35, 35)
-        Me.MetroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox5.CustomButton.TabIndex = 1
-        Me.MetroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox5.CustomButton.UseSelectable = True
-        Me.MetroTextBox5.CustomButton.Visible = False
-        Me.MetroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Tall
-        Me.MetroTextBox5.Lines = New String(-1) {}
-        Me.MetroTextBox5.Location = New System.Drawing.Point(24, 83)
-        Me.MetroTextBox5.MaxLength = 50
-        Me.MetroTextBox5.Name = "MetroTextBox5"
-        Me.MetroTextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox5.ReadOnly = True
-        Me.MetroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox5.SelectedText = ""
-        Me.MetroTextBox5.SelectionLength = 0
-        Me.MetroTextBox5.SelectionStart = 0
-        Me.MetroTextBox5.ShortcutsEnabled = True
-        Me.MetroTextBox5.Size = New System.Drawing.Size(361, 40)
-        Me.MetroTextBox5.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroTextBox5.TabIndex = 52
-        Me.MetroTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox5.UseSelectable = True
-        Me.MetroTextBox5.WaterMarkColor = System.Drawing.Color.Silver
-        Me.MetroTextBox5.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label10
         '
@@ -1291,7 +1066,7 @@ Partial Class Instructor_Main
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Window
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.DataGridView1)
+        Me.Panel5.Controls.Add(Me.AssignedCourseTable)
         Me.Panel5.Controls.Add(Me.Button2)
         Me.Panel5.Controls.Add(Me.Button3)
         Me.Panel5.Controls.Add(Me.Label19)
@@ -1300,19 +1075,9 @@ Partial Class Instructor_Main
         Me.Panel5.Size = New System.Drawing.Size(902, 509)
         Me.Panel5.TabIndex = 0
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(31, 52)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(841, 362)
-        Me.DataGridView1.TabIndex = 55
-        '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.Yellow
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
@@ -1320,16 +1085,16 @@ Partial Class Instructor_Main
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(782, 435)
+        Me.Button2.Location = New System.Drawing.Point(759, 435)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 40)
+        Me.Button2.Size = New System.Drawing.Size(113, 40)
         Me.Button2.TabIndex = 54
-        Me.Button2.Text = "Insert"
+        Me.Button2.Text = "Submit"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Button3.BackColor = System.Drawing.Color.Yellow
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
@@ -1337,9 +1102,9 @@ Partial Class Instructor_Main
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(644, 435)
+        Me.Button3.Location = New System.Drawing.Point(640, 435)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(132, 40)
+        Me.Button3.Size = New System.Drawing.Size(113, 40)
         Me.Button3.TabIndex = 53
         Me.Button3.Text = "Request"
         Me.Button3.UseVisualStyleBackColor = False
@@ -1354,17 +1119,70 @@ Partial Class Instructor_Main
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Student Grade"
         '
+        'MetroComboBox1
+        '
+        Me.MetroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Tall
+        Me.MetroComboBox1.FormattingEnabled = True
+        Me.MetroComboBox1.ItemHeight = 29
+        Me.MetroComboBox1.Location = New System.Drawing.Point(20, 83)
+        Me.MetroComboBox1.Name = "MetroComboBox1"
+        Me.MetroComboBox1.Size = New System.Drawing.Size(361, 35)
+        Me.MetroComboBox1.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroComboBox1.TabIndex = 53
+        Me.MetroComboBox1.UseSelectable = True
+        Me.MetroComboBox1.UseStyleColors = True
+        '
+        'AssignedCourseTable
+        '
+        Me.AssignedCourseTable.AllowUserToResizeColumns = False
+        Me.AssignedCourseTable.AllowUserToResizeRows = False
+        Me.AssignedCourseTable.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bernard MT Condensed", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedCourseTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.AssignedCourseTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AssignedCourseTable.DefaultCellStyle = DataGridViewCellStyle2
+        Me.AssignedCourseTable.GridColor = System.Drawing.Color.Black
+        Me.AssignedCourseTable.Location = New System.Drawing.Point(31, 83)
+        Me.AssignedCourseTable.Name = "AssignedCourseTable"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedCourseTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.AssignedCourseTable.RowHeadersVisible = False
+        Me.AssignedCourseTable.RowHeadersWidth = 51
+        Me.AssignedCourseTable.RowTemplate.Height = 24
+        Me.AssignedCourseTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.AssignedCourseTable.Size = New System.Drawing.Size(841, 292)
+        Me.AssignedCourseTable.TabIndex = 60
+        '
         'Instructor_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1550, 870)
-        Me.Controls.Add(Me.MyProfile_Panel)
         Me.Controls.Add(Me.GreenUpper_Panel)
         Me.Controls.Add(Me.StudentGrade_Panel)
-        Me.Controls.Add(Me.Welcome_BG)
         Me.Controls.Add(Me.GreenSide_Panel)
+        Me.Controls.Add(Me.MyProfile_Panel)
+        Me.Controls.Add(Me.Welcome_BG)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
@@ -1391,7 +1209,7 @@ Partial Class Instructor_Main
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1447,21 +1265,13 @@ Partial Class Instructor_Main
     Friend WithEvents StudentGrade_Panel As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents MetroTextBox1 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox3 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox4 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox5 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label19 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents InstructorLogo As PictureBox
+    Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents AssignedCourseTable As DataGridView
 End Class
