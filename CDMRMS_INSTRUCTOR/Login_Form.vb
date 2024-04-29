@@ -121,9 +121,7 @@ Public Class CDMRMS_Instructor_Login
 
                             ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
                                 MsgBox("Please select your Gender.", MessageBoxIcon.Warning)
-
                             End If
-
                         End If
                     End If
                 Else
@@ -144,11 +142,11 @@ Public Class CDMRMS_Instructor_Login
     ' Only accept number and dash
     Private Sub InstructorID_Input_KeyPress(sender As Object, e As KeyPressEventArgs) Handles InstructorID_Input.KeyPress
 
-
         If e.KeyChar = "-"c AndAlso DirectCast(sender, MetroTextBox).Text.Contains("-") Then
             e.Handled = True
 
         End If
+
     End Sub
 
     ' Validate instructor ID number format
@@ -244,8 +242,11 @@ Public Class CDMRMS_Instructor_Login
 
                 End Using
             End Using
+
         Catch ex As Exception
+
             MsgBox("Error: " & ex.Message)
+
         End Try
 
     End Sub
@@ -294,7 +295,9 @@ Public Class CDMRMS_Instructor_Login
                 Me.Hide()
 
             Else
+
                 MsgBox("Login failed.", MessageBoxIcon.Error)
+
             End If
         End If
 
@@ -326,8 +329,10 @@ Public Class CDMRMS_Instructor_Login
                 connection.Open()
                 Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
                 isAuthenticated = count > 0
+
             End Using
         End Using
+
         Return isAuthenticated
 
     End Function
