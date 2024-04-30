@@ -122,22 +122,14 @@ Public Class Instructor_Main
 
     End Sub
 
-    Public Sub SetValue(institute As String, program As String, year As String, semester As String, course As String)
-        Institute_Tbox.Text = institute
-        Program_Tbox.Text = program
-        Year_Tbox.Text = year
-        Sem_Tbox.Text = semester
-        Course_Tbox.Text = course
-    End Sub
 
-    Private Sub Send_Btn_Click(sender As Object, e As EventArgs) Handles Send_Btn.Click
+
+    Private Sub Send_Btn_Click(sender As Object, e As EventArgs)
 
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Choose_Btn.Click
-        Course_Handled_Menu.Show()
-    End Sub
+
     ' MY PROFILE - END
 
     ' STUDENT GRADE - START
@@ -157,6 +149,9 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
+
+
+
 
 
 
