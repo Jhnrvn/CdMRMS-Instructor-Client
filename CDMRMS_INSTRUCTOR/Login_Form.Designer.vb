@@ -759,7 +759,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.RegToolTip_Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RegToolTip_Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegToolTip_Label3.ForeColor = System.Drawing.Color.Red
-        Me.RegToolTip_Label3.Location = New System.Drawing.Point(236, 403)
+        Me.RegToolTip_Label3.Location = New System.Drawing.Point(236, 406)
         Me.RegToolTip_Label3.Name = "RegToolTip_Label3"
         Me.RegToolTip_Label3.Size = New System.Drawing.Size(19, 20)
         Me.RegToolTip_Label3.TabIndex = 27
@@ -873,8 +873,8 @@ Partial Class CDMRMS_Instructor_Login
         Me.ClientSize = New System.Drawing.Size(1550, 870)
         Me.Controls.Add(Me.SystemTitle_PictureBox)
         Me.Controls.Add(Me.BG_Picture)
-        Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Registration_Panel)
+        Me.Controls.Add(Me.Login_Panel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
