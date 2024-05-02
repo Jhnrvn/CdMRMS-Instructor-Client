@@ -11,6 +11,9 @@ Public Class Instructor_Main
         MyProfile_Panel.Hide()
         StudentGrade_Panel.Hide()
         DisplayInfo()
+
+        Dim id As String = "cdm-1111"
+        AssignedCourse(id)
     End Sub
     ' FORM LOAD - END
 
@@ -110,6 +113,7 @@ Public Class Instructor_Main
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
 
+
                         End If
                     End Using
 
@@ -127,17 +131,67 @@ Public Class Instructor_Main
     Private Sub Send_Btn_Click(sender As Object, e As EventArgs)
 
     End Sub
-
-
-
     ' MY PROFILE - END
+
+
 
     ' STUDENT GRADE - START
     Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
+
         StudentGrade_Panel.Show()
         MyProfile_Panel.Hide()
+
     End Sub
+
+    ' Assigned Course Table on Instructors Information  
+    Private Sub AssignedCourse(id)
+
+        ' Display Assigned Course
+        Dim CourseQuery As String = "SELECT `course` FROM `assignedcourse` WHERE instructor_id = @instructorid"
+        Using connection As New MySqlConnection(ConnectionString)
+            connection.Open()
+
+            Using CourseCommand As New MySqlCommand(CourseQuery, connection)
+                CourseCommand.Parameters.AddWithValue("@instructorid", id)
+                Dim dataTable As New DataTable()
+                dataTable.Load(CourseCommand.ExecuteReader())
+
+                AssignedCourseTable.DataSource = dataTable
+                AssignedCourseTable.Columns("course").Width = 201
+
+            End Using
+
+        End Using
+
+    End Sub
+
+    ' Will show the section handled by the instructor when you click the course from the course table on the Instructor Information
+    Private Sub AssignedCourseTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedCourseTable.CellClick
+        If e.RowIndex >= 0 Then
+
+            Dim selectedRow As DataGridViewRow = AssignedCourseTable.Rows(e.RowIndex)
+            Dim course As String = selectedRow.Cells("course").Value.ToString()
+
+            Dim sectionQuery As String = "SELECT * FROM assignedcourse WHERE course = @course"
+            Dim sectionAdapter As New MySqlDataAdapter(sectionQuery, connection)
+            sectionAdapter.SelectCommand.Parameters.AddWithValue("@course", course)
+            Dim dataTable As New DataTable()
+            AssignedSectionTable.RowTemplate.Height = 82
+            sectionAdapter.Fill(dataTable)
+
+            AssignedSectionTable.DataSource = dataTable
+            AssignedSectionTable.Columns("id").Visible = False
+            AssignedSectionTable.Columns("instructor_id").Visible = False
+            AssignedSectionTable.Columns("Instructor").Visible = False
+            AssignedSectionTable.Columns("course").Visible = False
+
+
+
+        End If
+    End Sub
+
     ' STUDENT GRADE - END
+
 
 
     ' LOGOUT - START
@@ -149,13 +203,10 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
-
-
-
-
-
-
     ' LOGOUT - END
+
+
+
 
 
 End Class
