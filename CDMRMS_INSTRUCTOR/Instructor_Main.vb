@@ -166,15 +166,16 @@ Public Class Instructor_Main
     End Sub
 
     ' Will show the section handled by the instructor when you click the course from the course table on the Instructor Information
+    Dim courseValue As String
     Private Sub AssignedCourseTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedCourseTable.CellClick
         If e.RowIndex >= 0 Then
 
             Dim selectedRow As DataGridViewRow = AssignedCourseTable.Rows(e.RowIndex)
-            Dim course As String = selectedRow.Cells("course").Value.ToString()
+            courseValue = selectedRow.Cells("course").Value.ToString()
 
             Dim sectionQuery As String = "SELECT * FROM assignedcourse WHERE course = @course"
             Dim sectionAdapter As New MySqlDataAdapter(sectionQuery, connection)
-            sectionAdapter.SelectCommand.Parameters.AddWithValue("@course", course)
+            sectionAdapter.SelectCommand.Parameters.AddWithValue("@course", courseValue)
             Dim dataTable As New DataTable()
             AssignedSectionTable.RowTemplate.Height = 82
             sectionAdapter.Fill(dataTable)
@@ -185,8 +186,42 @@ Public Class Instructor_Main
             AssignedSectionTable.Columns("Instructor").Visible = False
             AssignedSectionTable.Columns("course").Visible = False
 
+        End If
+    End Sub
 
 
+    Dim sectionValue As String
+    Private Sub AssignedSectionTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedSectionTable.CellClick
+
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+
+            Dim selectedCell As DataGridViewCell = AssignedSectionTable.Rows(e.RowIndex).Cells(e.ColumnIndex)
+            sectionValue = selectedCell.Value.ToString()
+
+
+        End If
+
+    End Sub
+
+
+    ' View student list button
+    Private Sub ViewStudentList_Click(sender As Object, e As EventArgs) Handles ViewStudentList.Click
+
+        Dim Program As String = CollegeProgramSelector.Text
+        Dim Course As String = courseValue
+        Dim Section As String = sectionValue
+
+        If String.IsNullOrEmpty(Program) And String.IsNullOrEmpty(Course) And String.IsNullOrEmpty(Section) Then
+
+            MsgBox("error")
+        ElseIf String.IsNullOrEmpty(Program) Or String.IsNullOrEmpty(Course) Or String.IsNullOrEmpty(Section) Then
+            MsgBox("error too")
+        Else
+            If Program = "BSIT" Then
+
+
+
+            End If
         End If
     End Sub
 
@@ -203,6 +238,8 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
+
+
     ' LOGOUT - END
 
 
