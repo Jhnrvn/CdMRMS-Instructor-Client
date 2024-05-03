@@ -219,6 +219,56 @@ Public Class Instructor_Main
         Else
             If Program = "BSIT" Then
 
+                Try
+                    connection.Open()
+
+                    Dim SelectQuery As String = ""
+
+                    If Course = "ITCOMP" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `ITCOMP` FROM bsit"
+
+                    ElseIf Course = "PROG 1" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `PROG 1` FROM bsit"
+
+                    ElseIf Course = "GE 2" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE 2` FROM bsit"
+
+                    ElseIf Course = "GE MATH" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE MATH` FROM bsit"
+
+                    ElseIf Course = "GE 1" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE 1` FROM bsit"
+
+                    ElseIf Course = "GE FIL 1" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE FIL 1` FROM bsit"
+
+                    ElseIf Course = "PE 1" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `PE 1` FROM bsit"
+
+                    ElseIf Course = "NSTP 1" Then
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `NSTP 1` FROM bsit"
+
+                    End If
+
+
+                    Dim command As New MySqlCommand(selectQuery, connection)
+
+
+                    Dim datatable As New DataTable()
+                    Using adapter As New MySqlDataAdapter(command)
+
+                        adapter.Fill(datatable)
+                        StudentlistTable.DataSource = datatable
+                        StudentlistTable.Columns("Student Name").Width = 200
+
+                    End Using
+
+
+                Catch ex As Exception
+                    MessageBox.Show("Error fetching data: " & ex.Message)
+                Finally
+                    connection.Close()
+                End Try
 
 
             End If
