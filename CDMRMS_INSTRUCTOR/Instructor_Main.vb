@@ -21,6 +21,8 @@ Public Class Instructor_Main
     ' DATABASE CONNECTION - START
     Private Shared ConnectionString As String = "server=localhost; port=3306; database=cdmregistrarmanagementsystem; uid=root; password=;"
     Private Shared connection As New MySqlConnection(ConnectionString)
+    Dim adapter As New MySqlDataAdapter()
+    Dim dataTable As New DataTable()
 
     Private Sub DatabaseConnection()
 
@@ -198,94 +200,186 @@ Public Class Instructor_Main
             Dim selectedCell As DataGridViewCell = AssignedSectionTable.Rows(e.RowIndex).Cells(e.ColumnIndex)
             sectionValue = selectedCell.Value.ToString()
 
-
         End If
 
     End Sub
 
 
     ' View student list button
-    Private Sub ViewStudentList_Click(sender As Object, e As EventArgs) Handles ViewStudentList.Click
 
-        Dim Program As String = CollegeProgramSelector.Text
-        Dim Course As String = courseValue
-        Dim Section As String = sectionValue
+    Dim Program As String
+    Dim Course As String
+    Dim Section As String
+
+    Private Sub ViewStudentList_Click(sender As Object, e As EventArgs) Handles ViewStudentList.Click
+        dataTable.Clear()
+        Program = CollegeProgramSelector.Text.Trim
+        Course = courseValue
+        Section = sectionValue
 
         If String.IsNullOrEmpty(Program) And String.IsNullOrEmpty(Course) And String.IsNullOrEmpty(Section) Then
 
             MsgBox("error")
         ElseIf String.IsNullOrEmpty(Program) Or String.IsNullOrEmpty(Course) Or String.IsNullOrEmpty(Section) Then
             MsgBox("error too")
+
+        ElseIf Program = "BSIT" Then
+            GradeInsertionTable(Course)
+            SortSection(Section)
         Else
-            If Program = "BSIT" Then
+            MsgBox("error")
 
-                Try
-                    connection.Open()
-
-                    Dim SelectQuery As String = ""
-
-                    If Course = "ITCOMP" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ITCOMP` FROM bsit"
-
-                    ElseIf Course = "PROG 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PROG 1` FROM bsit"
-
-                    ElseIf Course = "GE 2" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 2` FROM bsit"
-
-                    ElseIf Course = "GE MATH" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE MATH` FROM bsit"
-
-                    ElseIf Course = "GE 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 1` FROM bsit"
-
-                    ElseIf Course = "GE FIL 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE FIL 1` FROM bsit"
-
-                    ElseIf Course = "PE 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PE 1` FROM bsit"
-
-                    ElseIf Course = "NSTP 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `NSTP 1` FROM bsit"
-
-                    End If
-
-
-                    Dim command As New MySqlCommand(selectQuery, connection)
-
-
-                    Dim datatable As New DataTable()
-                    Using adapter As New MySqlDataAdapter(command)
-
-                        adapter.Fill(datatable)
-                        StudentlistTable.ColumnHeadersHeight = 200
-
-                        StudentlistTable.RowTemplate.Height = 30
-                        StudentlistTable.DataSource = datatable
-                        StudentlistTable.Columns("Student ID").Width = 150
-                        StudentlistTable.Columns("Student Name").Width = 271
-                        StudentlistTable.Columns("Section").Width = 150
-
-
-                        StudentlistTable.Columns("Student ID").ReadOnly = True
-                        StudentlistTable.Columns("Student Name").ReadOnly = True
-                        StudentlistTable.Columns("Section").ReadOnly = True
-
-
-                    End Using
-
-
-                Catch ex As Exception
-                    MessageBox.Show("Error fetching data: " & ex.Message)
-                Finally
-                    connection.Close()
-                End Try
-
-
-            End If
         End If
 
     End Sub
+
+    Private Sub GradeInsertionTable(Course)
+        Try
+            connection.Open()
+
+            Dim SelectQuery As String = ""
+
+            ' BSIT First Year 1st Semester Courses
+            If Course = "ITCOMP" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ITCOMP` FROM bsit"
+
+            ElseIf Course = "PROG 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PROG 1` FROM bsit"
+
+            ElseIf Course = "GE 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 2` FROM bsit"
+
+            ElseIf Course = "GE MATH" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE MATH` FROM bsit"
+
+            ElseIf Course = "GE 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 1` FROM bsit"
+
+            ElseIf Course = "GE FIL 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE FIL 1` FROM bsit"
+
+            ElseIf Course = "PE 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PE 1` FROM bsit"
+
+            ElseIf Course = "NSTP 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `NSTP 1` FROM bsit"
+
+            End If
+
+            ' BSIT First Year 2nd Semester Courses
+            If Course = "DISCRETE" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `DISCRETE` FROM bsit"
+
+            ElseIf Course = "PROG 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PROG 2` FROM bsit"
+
+            ElseIf Course = "GE 3" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 3` FROM bsit"
+
+            ElseIf Course = "HUM" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `HUM` FROM bsit"
+
+            ElseIf Course = "GE FIL 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE FIL 2` FROM bsit"
+
+            ElseIf Course = "GEEL 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GEEL 2` FROM bsit"
+
+            ElseIf Course = "PE 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PE 2` FROM bsit"
+
+            ElseIf Course = "NSTP 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `NSTP 2` FROM bsit"
+
+            End If
+
+            Dim command As New MySqlCommand(SelectQuery, connection)
+
+            Dim datatable As New DataTable()
+            Using adapter As New MySqlDataAdapter(command)
+
+                adapter.Fill(datatable)
+                StudentlistTable.ColumnHeadersHeight = 200
+
+                StudentlistTable.RowTemplate.Height = 30
+                StudentlistTable.DataSource = datatable
+                StudentlistTable.Columns("Student ID").Width = 150
+                StudentlistTable.Columns("Student Name").Width = 271
+                StudentlistTable.Columns("Section").Width = 150
+
+
+                ' Disable editing all cells under these columns
+                StudentlistTable.Columns("Student ID").ReadOnly = True
+                StudentlistTable.Columns("Student Name").ReadOnly = True
+                StudentlistTable.Columns("Section").ReadOnly = True
+
+            End Using
+
+
+        Catch ex As Exception
+            MessageBox.Show("Error fetching data: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
+    ' Sort Student list according to sections
+    Private Sub SortSection(Section)
+
+        Dim searchTerm As String = Section
+        If searchTerm <> "" Then
+            Try
+                connection.Open()
+
+                Dim query As String = "SELECT * FROM bsit WHERE Section LIKE @searchTerm "
+                Dim command As New MySqlCommand(query, connection)
+
+                command.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
+
+
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dataTable)
+                StudentlistTable.DataSource = dataTable
+            Catch ex As Exception
+                MessageBox.Show("Error searching data: " & ex.Message)
+            Finally
+                connection.Close()
+
+            End Try
+        End If
+    End Sub
+
+
+    Private Sub SaveData()
+
+        Dim builder As New MySqlCommandBuilder(adapter)
+        adapter.Update(dataTable)
+
+    End Sub
+
+    ' Submit Grade
+    Private Sub SubmitGrade_Btn_Click(sender As Object, e As EventArgs) Handles SubmitGrade_Btn.Click
+
+        Dim choice As DialogResult = MsgBox("Are you sure you want to submit?", MessageBoxButtons.OKCancel)
+
+        If choice = DialogResult.OK Then
+
+            SaveData()
+            dataTable.Clear()
+            GradeInsertionTable(Course)
+            SortSection(Section)
+            StudentlistTable.Enabled = False
+
+        ElseIf choice = DialogResult.Cancel Then
+
+            dataTable.Clear()
+            GradeInsertionTable(Course)
+            SortSection(Section)
+
+        End If
+
+    End Sub
+
 
     ' STUDENT GRADE - END
 
@@ -303,9 +397,5 @@ Public Class Instructor_Main
 
 
     ' LOGOUT - END
-
-
-
-
 
 End Class
