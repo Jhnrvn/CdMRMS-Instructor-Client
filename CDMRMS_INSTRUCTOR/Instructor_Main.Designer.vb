@@ -35,6 +35,7 @@ Partial Class Instructor_Main
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GreenSide_Panel = New System.Windows.Forms.Panel()
         Me.Dropdown_Panel = New System.Windows.Forms.Panel()
         Me.Logout_Btn = New System.Windows.Forms.Button()
@@ -86,10 +87,10 @@ Partial Class Instructor_Main
         Me.Clear_Btn = New System.Windows.Forms.Button()
         Me.Search_Label = New System.Windows.Forms.Label()
         Me.StudentSearch = New MetroFramework.Controls.MetroTextBox()
-        Me.StudentlistTable = New System.Windows.Forms.DataGridView()
         Me.SubmitGrade_Btn = New System.Windows.Forms.Button()
         Me.EditGrade_Btn = New System.Windows.Forms.Button()
         Me.StudentGrade_Label = New System.Windows.Forms.Label()
+        Me.StudentlistTable = New System.Windows.Forms.DataGridView()
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -950,10 +951,10 @@ Partial Class Instructor_Main
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel5.Controls.Add(Me.StudentlistTable)
         Me.Panel5.Controls.Add(Me.Clear_Btn)
         Me.Panel5.Controls.Add(Me.Search_Label)
         Me.Panel5.Controls.Add(Me.StudentSearch)
-        Me.Panel5.Controls.Add(Me.StudentlistTable)
         Me.Panel5.Controls.Add(Me.SubmitGrade_Btn)
         Me.Panel5.Controls.Add(Me.EditGrade_Btn)
         Me.Panel5.Controls.Add(Me.StudentGrade_Label)
@@ -1023,47 +1024,6 @@ Partial Class Instructor_Main
         Me.StudentSearch.WaterMarkColor = System.Drawing.Color.Silver
         Me.StudentSearch.WaterMarkFont = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'StudentlistTable
-        '
-        Me.StudentlistTable.AllowUserToResizeColumns = False
-        Me.StudentlistTable.AllowUserToResizeRows = False
-        Me.StudentlistTable.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bernard MT Condensed", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.StudentlistTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle10
-        Me.StudentlistTable.GridColor = System.Drawing.Color.Black
-        Me.StudentlistTable.Location = New System.Drawing.Point(44, 52)
-        Me.StudentlistTable.Name = "StudentlistTable"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.StudentlistTable.RowHeadersVisible = False
-        Me.StudentlistTable.RowHeadersWidth = 51
-        Me.StudentlistTable.RowTemplate.Height = 24
-        Me.StudentlistTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.StudentlistTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.StudentlistTable.Size = New System.Drawing.Size(899, 473)
-        Me.StudentlistTable.TabIndex = 60
-        '
         'SubmitGrade_Btn
         '
         Me.SubmitGrade_Btn.BackColor = System.Drawing.Color.Yellow
@@ -1107,6 +1067,50 @@ Partial Class Instructor_Main
         Me.StudentGrade_Label.Size = New System.Drawing.Size(200, 40)
         Me.StudentGrade_Label.TabIndex = 0
         Me.StudentGrade_Label.Text = "Student Grade"
+        '
+        'StudentlistTable
+        '
+        Me.StudentlistTable.AllowUserToResizeColumns = False
+        Me.StudentlistTable.AllowUserToResizeRows = False
+        Me.StudentlistTable.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bernard MT Condensed", 14.0!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.StudentlistTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StudentlistTable.Cursor = System.Windows.Forms.Cursors.Default
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle10
+        Me.StudentlistTable.GridColor = System.Drawing.Color.Black
+        Me.StudentlistTable.Location = New System.Drawing.Point(44, 52)
+        Me.StudentlistTable.Name = "StudentlistTable"
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.StudentlistTable.RowHeadersVisible = False
+        Me.StudentlistTable.RowHeadersWidth = 51
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentlistTable.RowsDefaultCellStyle = DataGridViewCellStyle12
+        Me.StudentlistTable.RowTemplate.Height = 24
+        Me.StudentlistTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.StudentlistTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.StudentlistTable.Size = New System.Drawing.Size(899, 473)
+        Me.StudentlistTable.TabIndex = 65
         '
         'Instructor_Main
         '
@@ -1193,7 +1197,6 @@ Partial Class Instructor_Main
     Friend WithEvents EditGrade_Btn As Button
     Friend WithEvents SubmitGrade_Btn As Button
     Friend WithEvents InstructorLogo As PictureBox
-    Friend WithEvents StudentlistTable As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents ChangeGradeReq_Btn As Button
     Friend WithEvents AssignedCourseTable As DataGridView
@@ -1206,4 +1209,5 @@ Partial Class Instructor_Main
     Friend WithEvents StudentSearch As MetroFramework.Controls.MetroTextBox
     Friend WithEvents CollegeProgramSelector As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents StudentlistTable As DataGridView
 End Class

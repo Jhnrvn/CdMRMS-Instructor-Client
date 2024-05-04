@@ -225,28 +225,28 @@ Public Class Instructor_Main
                     Dim SelectQuery As String = ""
 
                     If Course = "ITCOMP" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `ITCOMP` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ITCOMP` FROM bsit"
 
                     ElseIf Course = "PROG 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `PROG 1` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PROG 1` FROM bsit"
 
                     ElseIf Course = "GE 2" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE 2` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 2` FROM bsit"
 
                     ElseIf Course = "GE MATH" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE MATH` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE MATH` FROM bsit"
 
                     ElseIf Course = "GE 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE 1` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE 1` FROM bsit"
 
                     ElseIf Course = "GE FIL 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `GE FIL 1` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `GE FIL 1` FROM bsit"
 
                     ElseIf Course = "PE 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `PE 1` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `PE 1` FROM bsit"
 
                     ElseIf Course = "NSTP 1" Then
-                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Program`, `NSTP 1` FROM bsit"
+                        SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `NSTP 1` FROM bsit"
 
                     End If
 
@@ -258,8 +258,19 @@ Public Class Instructor_Main
                     Using adapter As New MySqlDataAdapter(command)
 
                         adapter.Fill(datatable)
+                        StudentlistTable.ColumnHeadersHeight = 200
+
+                        StudentlistTable.RowTemplate.Height = 30
                         StudentlistTable.DataSource = datatable
-                        StudentlistTable.Columns("Student Name").Width = 200
+                        StudentlistTable.Columns("Student ID").Width = 150
+                        StudentlistTable.Columns("Student Name").Width = 271
+                        StudentlistTable.Columns("Section").Width = 150
+
+
+                        StudentlistTable.Columns("Student ID").ReadOnly = True
+                        StudentlistTable.Columns("Student Name").ReadOnly = True
+                        StudentlistTable.Columns("Section").ReadOnly = True
+
 
                     End Using
 
@@ -273,6 +284,7 @@ Public Class Instructor_Main
 
             End If
         End If
+
     End Sub
 
     ' STUDENT GRADE - END
