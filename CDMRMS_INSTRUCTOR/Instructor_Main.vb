@@ -349,6 +349,22 @@ Public Class Instructor_Main
         End If
     End Sub
 
+    Private Sub StudentListTable_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles StudentlistTable.KeyDown
+
+        ' Intercept Tab key
+        If e.KeyCode = Keys.Tab Then
+            e.Handled = True
+            Return
+        End If
+
+        ' Intercept arrow keys
+        If e.KeyCode = Keys.Up OrElse e.KeyCode = Keys.Down OrElse e.KeyCode = Keys.Left OrElse e.KeyCode = Keys.Right Then
+            e.Handled = True
+            Return
+        End If
+
+    End Sub
+
 
     Private Sub SaveData()
 
@@ -368,7 +384,7 @@ Public Class Instructor_Main
             dataTable.Clear()
             GradeInsertionTable(Course)
             SortSection(Section)
-            StudentlistTable.Enabled = False
+
 
         ElseIf choice = DialogResult.Cancel Then
 
@@ -380,9 +396,7 @@ Public Class Instructor_Main
 
     End Sub
 
-
     ' STUDENT GRADE - END
-
 
 
     ' LOGOUT - START
