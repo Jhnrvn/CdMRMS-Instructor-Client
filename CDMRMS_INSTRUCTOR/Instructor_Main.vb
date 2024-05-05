@@ -81,13 +81,15 @@ Public Class Instructor_Main
     ' DROP-DOWN ANIMATION - END
 
 
-    ' MY PROFILE - START
+
+    ' MY ACCOUNT - START
     Public Property PassedValue As String
     Private Sub MyProfile_Btn_Click(sender As Object, e As EventArgs) Handles MyProfile_Btn.Click
         MyProfile_Panel.Show()
         StudentGrade_Panel.Hide()
     End Sub
 
+    ' Display Necessary Information of selected instructor
     Private Sub DisplayInfo()
 
         Dim query As String = "SELECT * FROM `instructors` WHERE instructorid = @instructorid"
@@ -106,6 +108,7 @@ Public Class Instructor_Main
 
                             Dim dateOnly As Date = Convert.ToDateTime(reader("birthday"))
 
+                            ' Instructor Information 
                             InstructorsID_TB.Text = reader("instructorid").ToString()
                             FN_TB.Text = reader("firstname").ToString()
                             MN_TB.Text = reader("middlename").ToString()
@@ -114,7 +117,6 @@ Public Class Instructor_Main
                             CN_TB.Text = reader("contact#").ToString()
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
-
 
                         End If
                     End Using
@@ -127,13 +129,7 @@ Public Class Instructor_Main
         connection.Close()
 
     End Sub
-
-
-
-    Private Sub Send_Btn_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    ' MY PROFILE - END
+    ' MY ACCOUNT - END
 
 
 
@@ -192,6 +188,7 @@ Public Class Instructor_Main
     End Sub
 
 
+    ' Assigned the value of selected cell in Assigned Section Table in Instructor Panel
     Dim sectionValue As String
     Private Sub AssignedSectionTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedSectionTable.CellClick
 
@@ -205,13 +202,14 @@ Public Class Instructor_Main
     End Sub
 
 
-    ' View student list button
-
+    ' Variable declaration for Grade Insertion
     Dim Program As String
     Dim Course As String
     Dim Section As String
 
+    ' View student list button
     Private Sub ViewStudentList_Click(sender As Object, e As EventArgs) Handles ViewStudentList.Click
+
         dataTable.Clear()
         Program = CollegeProgramSelector.Text.Trim
         Course = courseValue
@@ -219,20 +217,19 @@ Public Class Instructor_Main
 
         If String.IsNullOrEmpty(Program) And String.IsNullOrEmpty(Course) And String.IsNullOrEmpty(Section) Then
 
-            MsgBox("error")
+            MsgBox("No Input.", MessageBoxIcon.Error)
         ElseIf String.IsNullOrEmpty(Program) Or String.IsNullOrEmpty(Course) Or String.IsNullOrEmpty(Section) Then
-            MsgBox("error too")
+            MsgBox("Please, Select Necessary Information.", MessageBoxIcon.Warning)
 
         ElseIf Program = "BSIT" Then
             GradeInsertionTable(Course)
             SortSection(Section)
-        Else
-            MsgBox("error")
-
         End If
 
     End Sub
 
+
+    ' Queries to show courses that only handled by instructor 
     Private Sub GradeInsertionTable(Course)
         Try
             connection.Open()
@@ -308,18 +305,19 @@ Public Class Instructor_Main
                 StudentlistTable.Columns("Section").Width = 150
 
 
-                ' Disable editing all cells under these columns
+                ' Disable editing to all cells under these columns
                 StudentlistTable.Columns("Student ID").ReadOnly = True
                 StudentlistTable.Columns("Student Name").ReadOnly = True
                 StudentlistTable.Columns("Section").ReadOnly = True
 
             End Using
 
-
         Catch ex As Exception
             MessageBox.Show("Error fetching data: " & ex.Message)
+
         Finally
             connection.Close()
+
         End Try
     End Sub
 
@@ -349,6 +347,8 @@ Public Class Instructor_Main
         End If
     End Sub
 
+
+    ' Suppress TAB and Arrow keys
     Private Sub StudentListTable_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles StudentlistTable.KeyDown
 
         ' Intercept Tab key
@@ -365,7 +365,7 @@ Public Class Instructor_Main
 
     End Sub
 
-
+    ' Save the changes mmade by the instructor (Inserting Grade to Table)
     Private Sub SaveData()
 
         Dim builder As New MySqlCommandBuilder(adapter)
@@ -373,8 +373,8 @@ Public Class Instructor_Main
 
     End Sub
 
-    ' Submit Grade
-    Private Sub SubmitGrade_Btn_Click(sender As Object, e As EventArgs) Handles SubmitGrade_Btn.Click
+    ' Save Grade
+    Private Sub SaveGrade_Btn_Click(sender As Object, e As EventArgs) Handles SaveGrade_Btn.Click
 
         Dim choice As DialogResult = MsgBox("Are you sure you want to submit?", MessageBoxButtons.OKCancel)
 
@@ -396,6 +396,13 @@ Public Class Instructor_Main
 
     End Sub
 
+
+    Private Sub LockIn_Btn_Click(sender As Object, e As EventArgs) Handles LockIn_Btn.Click
+
+        StudentlistTable.Enabled = False
+
+    End Sub
+
     ' STUDENT GRADE - END
 
 
@@ -408,8 +415,6 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
-
-
     ' LOGOUT - END
 
 End Class
