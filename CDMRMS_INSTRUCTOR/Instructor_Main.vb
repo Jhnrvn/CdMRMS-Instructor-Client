@@ -13,8 +13,8 @@ Public Class Instructor_Main
         StudentGrade_Panel.Hide()
         DisplayInfo()
 
-        Dim id As String = "cdm-1111"
-        AssignedCourse(id)
+
+        AssignedCourse(PassedValue)
 
         LockInStatusCheck()
     End Sub
@@ -145,7 +145,7 @@ Public Class Instructor_Main
     End Sub
 
     ' Assigned Course Table on Instructors Information  
-    Private Sub AssignedCourse(id)
+    Private Sub AssignedCourse(PassedValue)
 
         ' Display Assigned Course
         Dim CourseQuery As String = "SELECT `course` FROM `assignedcourse` WHERE instructor_id = @instructorid"
@@ -153,7 +153,7 @@ Public Class Instructor_Main
             connection.Open()
 
             Using CourseCommand As New MySqlCommand(CourseQuery, connection)
-                CourseCommand.Parameters.AddWithValue("@instructorid", id)
+                CourseCommand.Parameters.AddWithValue("@instructorid", PassedValue)
                 Dim dataTable As New DataTable()
                 dataTable.Load(CourseCommand.ExecuteReader())
 
@@ -401,7 +401,7 @@ Public Class Instructor_Main
 
     ' Lock-in Button
     Private Sub LockIn_Btn_Click(sender As Object, e As EventArgs) Handles LockIn_Btn.Click
-        Dim userid As String = "CDM-1111"
+        Dim InstructorID As String = InstructorsID_TB.Text
         Dim status As Boolean = False
         StudentlistTable.Enabled = status
 
@@ -412,7 +412,7 @@ Public Class Instructor_Main
 
             Using command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@status", status)
-                command.Parameters.AddWithValue("@instructorid", userid)
+                command.Parameters.AddWithValue("@instructorid", InstructorID)
                 command.ExecuteNonQuery()
 
                 MsgBox("Grade is already Lock-in.")
@@ -465,8 +465,46 @@ Public Class Instructor_Main
 
     ' Changing Grade Request Button
     Private Sub ChangeGradeReq_Btn_Click(sender As Object, e As EventArgs) Handles ChangeGradeReq_Btn.Click
-        Me.Enabled = False
-        RequestUpdateGrade.Show()
+
+        Dim firstName As String = FN_TB.Text
+        Dim lastName As String = LN_TB.Text
+        Dim instructorID As String = InstructorsID_TB.Text
+
+        Dim choice As DialogResult = MsgBox("INSTRUCTOR NAME: " + lastName & ", " & firstName & vbCrLf & vbCrLf & "INSTRUCTOR ID: " & instructorID & vbCrLf & vbCrLf & vbCrLf & vbCrLf & "SEND REQUEST?", MessageBoxButtons.YesNo)
+
+        Dim fullname As String = lastName + ", " + firstName
+
+        If choice = DialogResult.Yes Then
+
+            Dim query As String = "INSERT INTO `request`( `Instructor ID`, `Instructor Name` ) VALUES ( @instructorid, @instructorName )"
+
+
+            Try
+
+
+                Using connection As New MySqlConnection(ConnectionString)
+                    Using command As New MySqlCommand(query, connection)
+
+                        connection.Open()
+                        command.Parameters.AddWithValue("@instructorid", instructorID)
+                        command.Parameters.AddWithValue("@instructorName", fullname)
+
+
+                        command.ExecuteNonQuery()
+
+                        MsgBox("REQUEST SENT")
+                    End Using
+                End Using
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                connection.Close()
+            End Try
+
+
+
+        End If
+
     End Sub
 
     ' STUDENT GRADE - END
