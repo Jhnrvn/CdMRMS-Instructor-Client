@@ -114,6 +114,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RequestUpdateGrade.Designer.vb">
+      <DependentUpon>RequestUpdateGrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestUpdateGrade.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Instructor_Main.resx">
@@ -127,6 +133,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestUpdateGrade.resx">
+      <DependentUpon>RequestUpdateGrade.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

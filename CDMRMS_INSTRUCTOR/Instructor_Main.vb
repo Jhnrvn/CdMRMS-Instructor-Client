@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Security.AccessControl
+Imports MySql.Data.MySqlClient
 
 
 Public Class Instructor_Main
@@ -14,6 +15,8 @@ Public Class Instructor_Main
 
         Dim id As String = "cdm-1111"
         AssignedCourse(id)
+
+        LockInStatusCheck()
     End Sub
     ' FORM LOAD - END
 
@@ -373,7 +376,7 @@ Public Class Instructor_Main
 
     End Sub
 
-    ' Save Grade
+    ' Save Grade Button
     Private Sub SaveGrade_Btn_Click(sender As Object, e As EventArgs) Handles SaveGrade_Btn.Click
 
         Dim choice As DialogResult = MsgBox("Are you sure you want to submit?", MessageBoxButtons.OKCancel)
@@ -396,11 +399,74 @@ Public Class Instructor_Main
 
     End Sub
 
-
+    ' Lock-in Button
     Private Sub LockIn_Btn_Click(sender As Object, e As EventArgs) Handles LockIn_Btn.Click
+        Dim userid As String = "CDM-1111"
+        Dim status As Boolean = False
+        StudentlistTable.Enabled = status
 
-        StudentlistTable.Enabled = False
+        Dim query As String = " UPDATE instructors SET Status = @status WHERE instructorid = @instructorid "
 
+        Try
+            connection.Open()
+
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@status", status)
+                command.Parameters.AddWithValue("@instructorid", userid)
+                command.ExecuteNonQuery()
+
+                MsgBox("Grade is already Lock-in.")
+
+            End Using
+
+        Catch ex As Exception
+
+            MsgBox("error" & ex.Message)
+
+        Finally
+            connection.Close()
+
+        End Try
+    End Sub
+
+
+    ' Check Status if the Instructor already Lock-in Grade
+    Private Sub LockInStatusCheck()
+        Dim query As String = "SELECT Status FROM instructors WHERE instructorid = @instructorid"
+        Dim userid As String = "CDM-1111"
+        Try
+            connection.Open()
+
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@instructorid", userid)
+                Dim result As Object = command.ExecuteScalar()
+
+                If result IsNot DBNull.Value Then
+                    Dim status As Boolean = Convert.ToBoolean(result)
+                    If status Then
+
+                        StudentlistTable.Enabled = True
+
+                    Else
+
+                        StudentlistTable.Enabled = False
+                    End If
+                End If
+            End Using
+
+        Catch ex As Exception
+
+        Finally
+            connection.Close()
+
+        End Try
+
+    End Sub
+
+    ' Changing Grade Request Button
+    Private Sub ChangeGradeReq_Btn_Click(sender As Object, e As EventArgs) Handles ChangeGradeReq_Btn.Click
+        Me.Enabled = False
+        RequestUpdateGrade.Show()
     End Sub
 
     ' STUDENT GRADE - END
@@ -415,6 +481,8 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
+
+
     ' LOGOUT - END
 
 End Class
