@@ -1,5 +1,4 @@
-﻿Imports System.Security.AccessControl
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 
 Public Class Instructor_Main
@@ -19,6 +18,8 @@ Public Class Instructor_Main
 
         AutoRefresher_Timer.Interval = 10000
         AutoRefresher_Timer.Start()
+
+        InstructorsID_TB.Height = 100
     End Sub
     ' FORM LOAD - END
 
@@ -122,6 +123,14 @@ Public Class Instructor_Main
                             CN_TB.Text = reader("contact#").ToString()
                             Birthday_TB.Text = dateOnly.ToString("MM-dd-yyyy")
                             Email_TB.Text = reader("email").ToString()
+
+                            If Sex_TB.Text = "Male" Then
+                                ProfilePic_PicBox.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Male.png")
+
+                            ElseIf Sex_TB.Text = "Female" Then
+
+                                ProfilePic_PicBox.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Female.png")
+                            End If
 
                         End If
                     End Using
@@ -368,7 +377,14 @@ Public Class Instructor_Main
             Return
         End If
 
+        ' This prevents the Table from handling the key
+        If e.KeyCode = Keys.Home OrElse e.KeyCode = Keys.End OrElse e.KeyCode = Keys.PageUp OrElse e.KeyCode = Keys.PageDown Then
+
+            e.Handled = True
+
+        End If
     End Sub
+
 
     ' Save the changes mmade by the instructor (Inserting Grade to Table)
     Private Sub SaveData()
@@ -377,6 +393,7 @@ Public Class Instructor_Main
         adapter.Update(dataTable)
 
     End Sub
+
 
     ' Save Grade Button
     Private Sub SaveGrade_Btn_Click(sender As Object, e As EventArgs) Handles SaveGrade_Btn.Click
