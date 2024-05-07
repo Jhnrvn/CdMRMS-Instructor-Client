@@ -13,10 +13,12 @@ Public Class Instructor_Main
         StudentGrade_Panel.Hide()
         DisplayInfo()
 
-
         AssignedCourse(PassedValue)
 
         LockInStatusCheck()
+
+        AutoRefresher_Timer.Interval = 10000
+        AutoRefresher_Timer.Start()
     End Sub
     ' FORM LOAD - END
 
@@ -416,7 +418,9 @@ Public Class Instructor_Main
                 command.ExecuteNonQuery()
 
                 MsgBox("Grade is already Lock-in.")
-
+                LockIn_Btn.Enabled = False
+                SaveGrade_Btn.Enabled = False
+                LockInStatusCheck()
             End Using
 
         Catch ex As Exception
@@ -427,13 +431,15 @@ Public Class Instructor_Main
             connection.Close()
 
         End Try
+
+        LockInStatusCheck()
     End Sub
 
 
     ' Check Status if the Instructor already Lock-in Grade
     Private Sub LockInStatusCheck()
         Dim query As String = "SELECT Status FROM instructors WHERE instructorid = @instructorid"
-        Dim userid As String = "CDM-1111"
+        Dim userid As String = InstructorsID_TB.Text
         Try
             connection.Open()
 
@@ -446,10 +452,30 @@ Public Class Instructor_Main
                     If status Then
 
                         StudentlistTable.Enabled = True
+                        LockIn_Btn.Enabled = True
+                        SaveGrade_Btn.Enabled = True
 
+                        ChangeGradeReq_Btn.Enabled = False
+
+                        Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Unlocked Icon.png")
+                        LockStatus_Label.Text = "THE TABLE IS UNLOCKED"
+                        LockInstruction_Label.Text = "You are now able to insert grades " & vbCrLf & "into the table."
+
+                        StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.Yellow
                     Else
 
                         StudentlistTable.Enabled = False
+                        LockIn_Btn.Enabled = False
+                        SaveGrade_Btn.Enabled = False
+
+                        ChangeGradeReq_Btn.Enabled = True
+
+                        Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Locked Icon.png")
+                        LockStatus_Label.Text = "THE TABLE IS LOCKED"
+                        LockInstruction_Label.Text = "Send a request to the admin in order " & vbCrLf & "to be able to insert grades."
+
+                        StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.White
+
                     End If
                 End If
             End Using
@@ -462,6 +488,13 @@ Public Class Instructor_Main
         End Try
 
     End Sub
+
+
+    ' Reload Every 10 seconds to check if the admin already approved the request
+    Private Sub AutoRefresher_Timer_Tick(sender As Object, e As EventArgs) Handles AutoRefresher_Timer.Tick
+        LockInStatusCheck()
+    End Sub
+
 
     ' Changing Grade Request Button
     Private Sub ChangeGradeReq_Btn_Click(sender As Object, e As EventArgs) Handles ChangeGradeReq_Btn.Click
@@ -476,36 +509,52 @@ Public Class Instructor_Main
 
         If choice = DialogResult.Yes Then
 
-            Dim query As String = "INSERT INTO `request`( `Instructor ID`, `Instructor Name` ) VALUES ( @instructorid, @instructorName )"
+            If Not IsDataExists(instructorID) Then
+
+                Dim query As String = "INSERT INTO `request`( `Instructor ID`, `Instructor Name` ) VALUES ( @instructorid, @instructorName )"
+
+                Try
+
+                    Using connection As New MySqlConnection(ConnectionString)
+                        Using command As New MySqlCommand(query, connection)
+
+                            connection.Open()
+                            command.Parameters.AddWithValue("@instructorid", instructorID)
+                            command.Parameters.AddWithValue("@instructorName", fullname)
 
 
-            Try
+                            command.ExecuteNonQuery()
 
-
-                Using connection As New MySqlConnection(ConnectionString)
-                    Using command As New MySqlCommand(query, connection)
-
-                        connection.Open()
-                        command.Parameters.AddWithValue("@instructorid", instructorID)
-                        command.Parameters.AddWithValue("@instructorName", fullname)
-
-
-                        command.ExecuteNonQuery()
-
-                        MsgBox("REQUEST SENT")
+                            MsgBox("REQUEST SENT", MessageBoxIcon.Information)
+                        End Using
                     End Using
-                End Using
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            Finally
-                connection.Close()
-            End Try
-
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                Finally
+                    connection.Close()
+                End Try
+            Else
+                MsgBox(" " & vbCrLf & "You already sent a request." & vbCrLf & vbCrLf & vbCrLf & " ", MessageBoxIcon.Warning)
+            End If
 
 
         End If
 
     End Sub
+
+    Private Function IsDataExists(instructorID As String) As Boolean
+
+        Dim query As String = "SELECT COUNT(*) FROM `request` WHERE `instructor ID` = @instructorID"
+        Dim command As New MySqlCommand(query, connection)
+        command.Parameters.AddWithValue("@instructorID", instructorID)
+
+        connection.Open()
+        Dim count As String = CInt(command.ExecuteScalar())
+        connection.Close()
+
+        Return count > 0
+
+    End Function
 
     ' STUDENT GRADE - END
 
@@ -515,12 +564,10 @@ Public Class Instructor_Main
         Dim choice As DialogResult = MsgBox("Are you sure?", MessageBoxButtons.OKCancel)
 
         If choice = DialogResult.OK Then
-            Me.Hide()
+            Me.Close()
             CDMRMS_Instructor_Login.Show()
         End If
     End Sub
-
-
     ' LOGOUT - END
 
 End Class
