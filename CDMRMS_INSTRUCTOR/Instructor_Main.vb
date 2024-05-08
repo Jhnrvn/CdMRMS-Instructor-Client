@@ -236,21 +236,24 @@ Public Class Instructor_Main
             MsgBox("Please, Select Necessary Information.", MessageBoxIcon.Warning)
 
         ElseIf Program = "BSIT" Then
-            GradeInsertionTable(Course)
+            BSITGradeInsertionTable(Course)
             SortSection(Section)
+
+        ElseIf Program = "BSCPE" Then
+
         End If
 
     End Sub
 
 
     ' Queries to show courses that only handled by instructor 
-    Private Sub GradeInsertionTable(Course)
+    Private Sub BSITGradeInsertionTable(Course)
         Try
             connection.Open()
 
             Dim SelectQuery As String = ""
 
-            ' BSIT First Year 1st Semester Courses
+            ' BSIT 1st Year 1st Semester Courses
             If Course = "ITCOMP" Then
                 SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ITCOMP` FROM bsit"
 
@@ -277,7 +280,7 @@ Public Class Instructor_Main
 
             End If
 
-            ' BSIT First Year 2nd Semester Courses
+            ' BSIT 1st Year 2nd Semester Courses
             If Course = "DISCRETE" Then
                 SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `DISCRETE` FROM bsit"
 
@@ -303,6 +306,121 @@ Public Class Instructor_Main
                 SelectQuery = "SELECT `Student ID`,`Student Name`, `Section`, `NSTP 2` FROM bsit"
 
             End If
+
+            ' BSIT 2nd Year 1st Semester Courses
+            If Course = "PROG 3" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `PROG 3` FROM bsit"
+
+            ElseIf Course = "ELECT 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ELECT 1` FROM bsit"
+
+            ElseIf Course = "GE 4" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `GE 4` FROM bsit"
+
+            ElseIf Course = "GE 12" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `GE 12` FROM bsit"
+
+            ElseIf Course = "SIA 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `SIA 1` FROM bsit"
+
+            ElseIf Course = "SP" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `SP` FROM bsit"
+
+            ElseIf Course = "GE SCI" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `GE SCI` FROM bsit"
+
+            ElseIf Course = "PE 3" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `PE 3` FROM bsit"
+
+            End If
+
+            ' BSIT 2nd Year 2nd Semester Courses
+            If Course = "ACSS" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ACSS` FROM bsit"
+
+            ElseIf Course = "ELECT 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ELECT 2` FROM bsit"
+
+            ElseIf Course = "NET 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `NET 1` FROM bsit"
+
+            ElseIf Course = "GE 5" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `GE 5` FROM bsit"
+
+            ElseIf Course = "FUDBS" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `FUDBS` FROM bsit"
+
+            ElseIf Course = "SSD" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `SSD` FROM bsit"
+
+            ElseIf Course = "IPTECH" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `IPTECH` FROM bsit"
+
+            ElseIf Course = "PE 4" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `PE 4` FROM bsit"
+
+            End If
+
+            ' BSIT  3rd Year 1st Semester Courses
+            If Course = "NET 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `NET 2` FROM bsit"
+
+            ElseIf Course = "IM 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `IM 1` FROM bsit"
+
+            ElseIf Course = "APPSDEV 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `APPSDEV 1` FROM bsit"
+
+            ElseIf Course = "OS" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `OS` FROM bsit"
+
+            ElseIf Course = "IAS 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `IAS 1` FROM bsit"
+
+            ElseIf Course = "HCI" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `HCI` FROM bsit"
+
+            ElseIf Course = "ADBS" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ADBS` FROM bsit"
+
+            ElseIf Course = "ELECT 3" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ELECT 3` FROM bsit"
+
+            End If
+
+            ' BSIT  3rd Year 2nd Semester Courses
+            If Course = "GE RIZAL" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `GE RIZAL` FROM bsit"
+
+            ElseIf Course = "IM 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `IM 2` FROM bsit"
+
+            ElseIf Course = "QM" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `QM` FROM bsit"
+
+            ElseIf Course = "SA" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `SA` FROM bsit"
+
+            ElseIf Course = "IAS 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `IAS 2` FROM bsit"
+
+            ElseIf Course = "CAPSTONE 1" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `CAPSTONE 1` FROM bsit"
+
+            ElseIf Course = "ELECT 4" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `ELECT 4` FROM bsit"
+
+            End If
+
+            ' BSIT  4th Year 1st & 2nd Semester Courses
+            If Course = "CAPSTONE 2" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `CAPSTONE 1` FROM bsit"
+
+            ElseIf Course = "PRACTICUM" Then
+                SelectQuery = "SELECT `Student ID`,`Student Name`,`Section`, `PRACTICUM` FROM bsit"
+
+            End If
+
 
 
 
@@ -407,13 +525,13 @@ Public Class Instructor_Main
 
             SaveData()
             dataTable.Clear()
-            GradeInsertionTable(Course)
+            BSITGradeInsertionTable(Course)
             SortSection(Section)
 
         ElseIf choice = DialogResult.Cancel Then
 
             dataTable.Clear()
-            GradeInsertionTable(Course)
+            BSITGradeInsertionTable(Course)
             SortSection(Section)
 
         End If
