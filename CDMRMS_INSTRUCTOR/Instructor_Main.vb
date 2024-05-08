@@ -304,6 +304,9 @@ Public Class Instructor_Main
 
             End If
 
+
+
+
             Dim command As New MySqlCommand(SelectQuery, connection)
 
             Dim datatable As New DataTable()
@@ -407,7 +410,6 @@ Public Class Instructor_Main
             GradeInsertionTable(Course)
             SortSection(Section)
 
-
         ElseIf choice = DialogResult.Cancel Then
 
             dataTable.Clear()
@@ -477,6 +479,7 @@ Public Class Instructor_Main
                         Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Unlocked Icon.png")
                         LockStatus_Label.Text = "THE TABLE IS UNLOCKED"
                         LockInstruction_Label.Text = "You are now able to insert grades " & vbCrLf & "into the table."
+                        ButtonStatus_Label.Text = ""
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.Yellow
                     Else
@@ -490,6 +493,7 @@ Public Class Instructor_Main
                         Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Locked Icon.png")
                         LockStatus_Label.Text = "THE TABLE IS LOCKED"
                         LockInstruction_Label.Text = "Send a request to the admin in order " & vbCrLf & "to be able to insert grades."
+                        ButtonStatus_Label.Text = "Buttons are disabled *"
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.White
 
@@ -539,7 +543,6 @@ Public Class Instructor_Main
                             command.Parameters.AddWithValue("@instructorid", instructorID)
                             command.Parameters.AddWithValue("@instructorName", fullname)
 
-
                             command.ExecuteNonQuery()
 
                             MsgBox("REQUEST SENT", MessageBoxIcon.Information)
@@ -578,11 +581,14 @@ Public Class Instructor_Main
 
     ' LOGOUT - START
     Private Sub Logout_Btn_Click(sender As Object, e As EventArgs) Handles Logout_Btn.Click
+
         Dim choice As DialogResult = MsgBox("Are you sure?", MessageBoxButtons.OKCancel)
 
         If choice = DialogResult.OK Then
+
             Me.Close()
             CDMRMS_Instructor_Login.Show()
+
         End If
     End Sub
     ' LOGOUT - END

@@ -145,9 +145,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginInstructorID_Label.Location = New System.Drawing.Point(52, 404)
         Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
-        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(176, 20)
+        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(145, 20)
         Me.LoginInstructorID_Label.TabIndex = 29
-        Me.LoginInstructorID_Label.Text = "Instructor's ID number"
+        Me.LoginInstructorID_Label.Text = "Instructor's ID No."
         '
         'LoginPassword_Input
         '
@@ -372,7 +372,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.MN_Input.ShortcutsEnabled = True
         Me.MN_Input.Size = New System.Drawing.Size(138, 40)
         Me.MN_Input.Style = MetroFramework.MetroColorStyle.Yellow
-        Me.MN_Input.TabIndex = 2
+        Me.MN_Input.TabIndex = 3
         Me.MN_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.MN_Input.UseSelectable = True
         Me.MN_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -405,7 +405,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.LN_Input.ShortcutsEnabled = True
         Me.LN_Input.Size = New System.Drawing.Size(138, 40)
         Me.LN_Input.Style = MetroFramework.MetroColorStyle.Yellow
-        Me.LN_Input.TabIndex = 3
+        Me.LN_Input.TabIndex = 2
         Me.LN_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.LN_Input.UseSelectable = True
         Me.LN_Input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -481,9 +481,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InstructorID_Label.Location = New System.Drawing.Point(51, 200)
         Me.InstructorID_Label.Name = "InstructorID_Label"
-        Me.InstructorID_Label.Size = New System.Drawing.Size(179, 20)
+        Me.InstructorID_Label.Size = New System.Drawing.Size(145, 20)
         Me.InstructorID_Label.TabIndex = 8
-        Me.InstructorID_Label.Text = "Instructor's ID Number"
+        Me.InstructorID_Label.Text = "Instructor's ID No."
         '
         'Sex_Panel
         '
