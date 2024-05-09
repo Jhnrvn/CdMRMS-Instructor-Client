@@ -422,9 +422,6 @@ Public Class Instructor_Main
             End If
 
 
-
-
-
             Dim command As New MySqlCommand(SelectQuery, connection)
 
             Dim datatable As New DataTable()
