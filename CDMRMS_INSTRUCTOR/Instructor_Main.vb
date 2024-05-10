@@ -16,7 +16,7 @@ Public Class Instructor_Main
 
         LockInStatusCheck()
 
-        AutoRefresher_Timer.Interval = 10000
+        AutoRefresher_Timer.Interval = 5000
         AutoRefresher_Timer.Start()
 
         InstructorsID_TB.Height = 100

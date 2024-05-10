@@ -69,6 +69,7 @@ Public Class CDMRMS_Instructor_Login
     ' REGISTRATION - START
     Private Sub Register_Btn_Click(sender As Object, e As EventArgs) Handles Register_Btn.Click
 
+
         ' Variable declaration for registration
         Dim firstName As String = FN_Input.Text.Trim
         Dim middleName As String = MN_Input.Text.Trim
@@ -101,6 +102,29 @@ Public Class CDMRMS_Instructor_Login
                         If String.IsNullOrEmpty(middleName) Then
                             middleName = "N/A"
 
+                            If Male_RadioBtn.Checked Then
+                                gender = Male_RadioBtn.Text
+                                If Not IsDataExists(instructorID) Then
+                                    InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+
+                                Else
+                                    MsgBox("Data already exists in the database.")
+                                End If
+
+                            ElseIf Female_RadioBtn.Checked Then
+                                gender = Female_RadioBtn.Text
+                                If Not IsDataExists(instructorID) Then
+                                    InsertRegistrationData(firstName, middleName, lastName, instructorID, gender, email, contact, birthday, password)
+
+                                Else
+                                    MsgBox("Data already exists in the database.")
+                                End If
+
+                            ElseIf Not Male_RadioBtn.Checked Or Not Female_RadioBtn.Checked Then
+                                MsgBox("Please select your Gender.", MessageBoxIcon.Warning)
+                            End If
+
+                        Else
                             If Male_RadioBtn.Checked Then
                                 gender = Male_RadioBtn.Text
                                 If Not IsDataExists(instructorID) Then
@@ -266,9 +290,9 @@ Public Class CDMRMS_Instructor_Login
 
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
-        LoginInstructorID_Input.Text = "CDM-1111"
-        LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
-        LoginPassword_Input.Text = "01"
+        'LoginInstructorID_Input.Text = "CDM-1111"
+        'LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
+        'LoginPassword_Input.Text = "01"
 
         Dim instructorID As String = LoginInstructorID_Input.Text.Trim
         Dim email As String = LoginEmail_Input.Text.Trim
