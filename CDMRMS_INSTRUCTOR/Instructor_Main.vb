@@ -465,7 +465,6 @@ Public Class Instructor_Main
     ' Reload Every 10 seconds to check if the admin already approved the request
     Private Sub AutoRefresher_Timer_Tick(sender As Object, e As EventArgs) Handles AutoRefresher_Timer.Tick
         LockInStatusCheck()
-        AssignedCourse(PassedValue)
     End Sub
 
 
@@ -542,6 +541,10 @@ Public Class Instructor_Main
             CDMRMS_Instructor_Login.Show()
 
         End If
+    End Sub
+
+    Private Sub Refresh_Btn_Click(sender As Object, e As EventArgs) Handles Refresh_Btn.Click
+        AssignedCourse(PassedValue)
     End Sub
 
 
