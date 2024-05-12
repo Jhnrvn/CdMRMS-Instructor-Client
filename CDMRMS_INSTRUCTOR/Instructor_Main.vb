@@ -143,6 +143,10 @@ Public Class Instructor_Main
         connection.Close()
 
     End Sub
+
+    Private Sub Save_Btn_Click(sender As Object, e As EventArgs) Handles Save_Btn.Click
+
+    End Sub
     ' MY ACCOUNT - END
 
 
@@ -424,9 +428,9 @@ Public Class Instructor_Main
                         ChangeGradeReq_Btn.Enabled = False
 
                         Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Unlocked Icon.png")
-                        LockStatus_Label.Text = "THE TABLE IS UNLOCKED"
-                        LockInstruction_Label.Text = "You are now able to insert grades " & vbCrLf & "into the table."
-                        ButtonStatus_Label.Text = ""
+                        LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " UNLOCKED"
+                        LockInstruction_Label.Text = "You are now able to" & vbCrLf & "insert grades into the " & vbCrLf & "table."
+
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.Yellow
                     Else
@@ -438,9 +442,9 @@ Public Class Instructor_Main
                         ChangeGradeReq_Btn.Enabled = True
 
                         Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Locked Icon.png")
-                        LockStatus_Label.Text = "THE TABLE IS LOCKED"
-                        LockInstruction_Label.Text = "Send a request to the admin in order " & vbCrLf & "to be able to insert grades."
-                        ButtonStatus_Label.Text = "Buttons are disabled *"
+                        LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " LOCKED"
+                        LockInstruction_Label.Text = "Send a request to the " & vbCrLf & " admin in order to be " & vbCrLf & " able to insert grades."
+
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.White
 
@@ -539,6 +543,10 @@ Public Class Instructor_Main
 
         End If
     End Sub
+
+
+
+
     ' LOGOUT - END
 
 End Class

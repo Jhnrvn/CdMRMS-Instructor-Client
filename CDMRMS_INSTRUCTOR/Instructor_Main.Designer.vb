@@ -77,23 +77,23 @@ Partial Class Instructor_Main
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ChangeGradeReq_Btn = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.CollegeProgramSelector = New MetroFramework.Controls.MetroComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Section_Label = New System.Windows.Forms.Label()
-        Me.AssignedSectionTable = New System.Windows.Forms.DataGridView()
-        Me.ViewStudentList = New System.Windows.Forms.Button()
-        Me.AssignedCourseTable = New System.Windows.Forms.DataGridView()
-        Me.Course_Label = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.ButtonStatus_Label = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.LockInstruction_Label = New System.Windows.Forms.Label()
-        Me.LockStatus_Label = New System.Windows.Forms.Label()
         Me.Lock_Img = New System.Windows.Forms.PictureBox()
-        Me.StudentlistTable = New System.Windows.Forms.DataGridView()
-        Me.LockIn_Btn = New System.Windows.Forms.Button()
+        Me.LockStatus_Label = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.SaveGrade_Btn = New System.Windows.Forms.Button()
+        Me.StudentlistTable = New System.Windows.Forms.DataGridView()
+        Me.AssignedCourseTable = New System.Windows.Forms.DataGridView()
+        Me.LockIn_Btn = New System.Windows.Forms.Button()
         Me.StudentGrade_Label = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Course_Label = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.AssignedSectionTable = New System.Windows.Forms.DataGridView()
+        Me.ViewStudentList = New System.Windows.Forms.Button()
+        Me.CollegeProgramSelector = New MetroFramework.Controls.MetroComboBox()
+        Me.Section_Label = New System.Windows.Forms.Label()
         Me.AutoRefresher_Timer = New System.Windows.Forms.Timer(Me.components)
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
@@ -109,12 +109,13 @@ Partial Class Instructor_Main
         Me.StudentGrade_Panel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
         CType(Me.StudentlistTable, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
+        CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GreenSide_Panel
@@ -628,87 +629,112 @@ Partial Class Instructor_Main
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.Controls.Add(Me.CollegeProgramSelector)
-        Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Controls.Add(Me.Section_Label)
-        Me.Panel4.Controls.Add(Me.AssignedSectionTable)
-        Me.Panel4.Controls.Add(Me.ViewStudentList)
-        Me.Panel4.Controls.Add(Me.AssignedCourseTable)
-        Me.Panel4.Controls.Add(Me.Course_Label)
+        Me.Panel4.Controls.Add(Me.Panel6)
         Me.Panel4.Location = New System.Drawing.Point(1001, 5)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(324, 586)
         Me.Panel4.TabIndex = 1
         '
-        'CollegeProgramSelector
+        'Panel6
         '
-        Me.CollegeProgramSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.CollegeProgramSelector.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CollegeProgramSelector.FontSize = MetroFramework.MetroComboBoxSize.Tall
-        Me.CollegeProgramSelector.FontWeight = MetroFramework.MetroComboBoxWeight.Bold
-        Me.CollegeProgramSelector.ForeColor = System.Drawing.Color.Black
-        Me.CollegeProgramSelector.FormattingEnabled = True
-        Me.CollegeProgramSelector.ItemHeight = 29
-        Me.CollegeProgramSelector.Items.AddRange(New Object() {"BSIT", "BSCPE"})
-        Me.CollegeProgramSelector.Location = New System.Drawing.Point(26, 53)
-        Me.CollegeProgramSelector.Name = "CollegeProgramSelector"
-        Me.CollegeProgramSelector.Size = New System.Drawing.Size(271, 35)
-        Me.CollegeProgramSelector.TabIndex = 66
-        Me.CollegeProgramSelector.UseCustomForeColor = True
-        Me.CollegeProgramSelector.UseSelectable = True
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.LockInstruction_Label)
+        Me.Panel6.Controls.Add(Me.Lock_Img)
+        Me.Panel6.Controls.Add(Me.LockStatus_Label)
+        Me.Panel6.Location = New System.Drawing.Point(42, 52)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(245, 482)
+        Me.Panel6.TabIndex = 66
         '
-        'Label1
+        'LockInstruction_Label
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bernard MT Condensed", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(14, 10)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(232, 40)
-        Me.Label1.TabIndex = 78
-        Me.Label1.Text = "College Program"
+        Me.LockInstruction_Label.AutoSize = True
+        Me.LockInstruction_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LockInstruction_Label.Location = New System.Drawing.Point(25, 345)
+        Me.LockInstruction_Label.Name = "LockInstruction_Label"
+        Me.LockInstruction_Label.Size = New System.Drawing.Size(158, 22)
+        Me.LockInstruction_Label.TabIndex = 2
+        Me.LockInstruction_Label.Text = "ASDASDASDASD"
         '
-        'Section_Label
+        'Lock_Img
         '
-        Me.Section_Label.AutoSize = True
-        Me.Section_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Section_Label.Location = New System.Drawing.Point(14, 316)
-        Me.Section_Label.Name = "Section_Label"
-        Me.Section_Label.Size = New System.Drawing.Size(119, 40)
-        Me.Section_Label.TabIndex = 76
-        Me.Section_Label.Text = "Sections"
+        Me.Lock_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Lock_Img.Location = New System.Drawing.Point(52, 152)
+        Me.Lock_Img.Name = "Lock_Img"
+        Me.Lock_Img.Size = New System.Drawing.Size(144, 126)
+        Me.Lock_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Lock_Img.TabIndex = 0
+        Me.Lock_Img.TabStop = False
         '
-        'AssignedSectionTable
+        'LockStatus_Label
         '
-        Me.AssignedSectionTable.AllowUserToAddRows = False
-        Me.AssignedSectionTable.AllowUserToDeleteRows = False
-        Me.AssignedSectionTable.AllowUserToResizeColumns = False
-        Me.AssignedSectionTable.AllowUserToResizeRows = False
-        Me.AssignedSectionTable.BackgroundColor = System.Drawing.Color.White
-        Me.AssignedSectionTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.LockStatus_Label.AutoSize = True
+        Me.LockStatus_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LockStatus_Label.Location = New System.Drawing.Point(17, 40)
+        Me.LockStatus_Label.Name = "LockStatus_Label"
+        Me.LockStatus_Label.Size = New System.Drawing.Size(230, 29)
+        Me.LockStatus_Label.TabIndex = 1
+        Me.LockStatus_Label.Text = "ASFAFSADADASD"
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel5.Controls.Add(Me.SaveGrade_Btn)
+        Me.Panel5.Controls.Add(Me.StudentlistTable)
+        Me.Panel5.Controls.Add(Me.AssignedCourseTable)
+        Me.Panel5.Controls.Add(Me.LockIn_Btn)
+        Me.Panel5.Controls.Add(Me.StudentGrade_Label)
+        Me.Panel5.Controls.Add(Me.Panel8)
+        Me.Panel5.Location = New System.Drawing.Point(4, 5)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(992, 770)
+        Me.Panel5.TabIndex = 0
+        '
+        'SaveGrade_Btn
+        '
+        Me.SaveGrade_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.SaveGrade_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SaveGrade_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.SaveGrade_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.SaveGrade_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SaveGrade_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveGrade_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveGrade_Btn.ForeColor = System.Drawing.Color.Black
+        Me.SaveGrade_Btn.Location = New System.Drawing.Point(853, 701)
+        Me.SaveGrade_Btn.Name = "SaveGrade_Btn"
+        Me.SaveGrade_Btn.Size = New System.Drawing.Size(90, 40)
+        Me.SaveGrade_Btn.TabIndex = 80
+        Me.SaveGrade_Btn.Text = "Save"
+        Me.SaveGrade_Btn.UseVisualStyleBackColor = False
+        '
+        'StudentlistTable
+        '
+        Me.StudentlistTable.AllowUserToAddRows = False
+        Me.StudentlistTable.AllowUserToResizeColumns = False
+        Me.StudentlistTable.AllowUserToResizeRows = False
+        Me.StudentlistTable.BackgroundColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bernard MT Condensed", 14.0!)
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.AssignedSectionTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AssignedSectionTable.ColumnHeadersVisible = False
-        Me.AssignedSectionTable.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.StudentlistTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StudentlistTable.Cursor = System.Windows.Forms.Cursors.Default
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.DefaultCellStyle = DataGridViewCellStyle2
-        Me.AssignedSectionTable.GridColor = System.Drawing.Color.Black
-        Me.AssignedSectionTable.Location = New System.Drawing.Point(26, 359)
-        Me.AssignedSectionTable.MultiSelect = False
-        Me.AssignedSectionTable.Name = "AssignedSectionTable"
-        Me.AssignedSectionTable.ReadOnly = True
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle2
+        Me.StudentlistTable.GridColor = System.Drawing.Color.Black
+        Me.StudentlistTable.Location = New System.Drawing.Point(44, 52)
+        Me.StudentlistTable.MultiSelect = False
+        Me.StudentlistTable.Name = "StudentlistTable"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -716,35 +742,16 @@ Partial Class Instructor_Main
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.AssignedSectionTable.RowHeadersVisible = False
-        Me.AssignedSectionTable.RowHeadersWidth = 51
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.AssignedSectionTable.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.AssignedSectionTable.RowTemplate.Height = 25
-        Me.AssignedSectionTable.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.AssignedSectionTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.AssignedSectionTable.Size = New System.Drawing.Size(271, 126)
-        Me.AssignedSectionTable.TabIndex = 75
-        '
-        'ViewStudentList
-        '
-        Me.ViewStudentList.BackColor = System.Drawing.Color.Yellow
-        Me.ViewStudentList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ViewStudentList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.ViewStudentList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.ViewStudentList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.ViewStudentList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ViewStudentList.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ViewStudentList.ForeColor = System.Drawing.Color.Black
-        Me.ViewStudentList.Location = New System.Drawing.Point(26, 515)
-        Me.ViewStudentList.Name = "ViewStudentList"
-        Me.ViewStudentList.Size = New System.Drawing.Size(90, 40)
-        Me.ViewStudentList.TabIndex = 74
-        Me.ViewStudentList.Text = "View"
-        Me.ViewStudentList.UseVisualStyleBackColor = False
+        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.StudentlistTable.RowHeadersVisible = False
+        Me.StudentlistTable.RowHeadersWidth = 51
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentlistTable.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.StudentlistTable.RowTemplate.Height = 24
+        Me.StudentlistTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.StudentlistTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.StudentlistTable.Size = New System.Drawing.Size(899, 396)
+        Me.StudentlistTable.TabIndex = 65
         '
         'AssignedCourseTable
         '
@@ -774,7 +781,7 @@ Partial Class Instructor_Main
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AssignedCourseTable.DefaultCellStyle = DataGridViewCellStyle6
         Me.AssignedCourseTable.GridColor = System.Drawing.Color.Black
-        Me.AssignedCourseTable.Location = New System.Drawing.Point(26, 158)
+        Me.AssignedCourseTable.Location = New System.Drawing.Point(356, 523)
         Me.AssignedCourseTable.MultiSelect = False
         Me.AssignedCourseTable.Name = "AssignedCourseTable"
         Me.AssignedCourseTable.ReadOnly = True
@@ -798,125 +805,6 @@ Partial Class Instructor_Main
         Me.AssignedCourseTable.Size = New System.Drawing.Size(271, 126)
         Me.AssignedCourseTable.TabIndex = 73
         '
-        'Course_Label
-        '
-        Me.Course_Label.AutoSize = True
-        Me.Course_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Course_Label.Location = New System.Drawing.Point(14, 115)
-        Me.Course_Label.Name = "Course_Label"
-        Me.Course_Label.Size = New System.Drawing.Size(102, 40)
-        Me.Course_Label.TabIndex = 1
-        Me.Course_Label.Text = "Course"
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel5.Controls.Add(Me.ButtonStatus_Label)
-        Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Controls.Add(Me.StudentlistTable)
-        Me.Panel5.Controls.Add(Me.LockIn_Btn)
-        Me.Panel5.Controls.Add(Me.SaveGrade_Btn)
-        Me.Panel5.Controls.Add(Me.StudentGrade_Label)
-        Me.Panel5.Location = New System.Drawing.Point(4, 5)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(992, 770)
-        Me.Panel5.TabIndex = 0
-        '
-        'ButtonStatus_Label
-        '
-        Me.ButtonStatus_Label.AutoSize = True
-        Me.ButtonStatus_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonStatus_Label.ForeColor = System.Drawing.Color.Red
-        Me.ButtonStatus_Label.Location = New System.Drawing.Point(617, 626)
-        Me.ButtonStatus_Label.Name = "ButtonStatus_Label"
-        Me.ButtonStatus_Label.Size = New System.Drawing.Size(0, 22)
-        Me.ButtonStatus_Label.TabIndex = 67
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.LockInstruction_Label)
-        Me.Panel6.Controls.Add(Me.LockStatus_Label)
-        Me.Panel6.Controls.Add(Me.Lock_Img)
-        Me.Panel6.Location = New System.Drawing.Point(45, 592)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(559, 159)
-        Me.Panel6.TabIndex = 66
-        '
-        'LockInstruction_Label
-        '
-        Me.LockInstruction_Label.AutoSize = True
-        Me.LockInstruction_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LockInstruction_Label.Location = New System.Drawing.Point(189, 70)
-        Me.LockInstruction_Label.Name = "LockInstruction_Label"
-        Me.LockInstruction_Label.Size = New System.Drawing.Size(0, 22)
-        Me.LockInstruction_Label.TabIndex = 2
-        '
-        'LockStatus_Label
-        '
-        Me.LockStatus_Label.AutoSize = True
-        Me.LockStatus_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LockStatus_Label.Location = New System.Drawing.Point(166, 29)
-        Me.LockStatus_Label.Name = "LockStatus_Label"
-        Me.LockStatus_Label.Size = New System.Drawing.Size(0, 29)
-        Me.LockStatus_Label.TabIndex = 1
-        '
-        'Lock_Img
-        '
-        Me.Lock_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Lock_Img.Location = New System.Drawing.Point(18, 16)
-        Me.Lock_Img.Name = "Lock_Img"
-        Me.Lock_Img.Size = New System.Drawing.Size(144, 126)
-        Me.Lock_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Lock_Img.TabIndex = 0
-        Me.Lock_Img.TabStop = False
-        '
-        'StudentlistTable
-        '
-        Me.StudentlistTable.AllowUserToAddRows = False
-        Me.StudentlistTable.AllowUserToResizeColumns = False
-        Me.StudentlistTable.AllowUserToResizeRows = False
-        Me.StudentlistTable.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bernard MT Condensed", 14.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.StudentlistTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentlistTable.Cursor = System.Windows.Forms.Cursors.Default
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle10
-        Me.StudentlistTable.GridColor = System.Drawing.Color.Black
-        Me.StudentlistTable.Location = New System.Drawing.Point(44, 52)
-        Me.StudentlistTable.MultiSelect = False
-        Me.StudentlistTable.Name = "StudentlistTable"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.StudentlistTable.RowHeadersVisible = False
-        Me.StudentlistTable.RowHeadersWidth = 51
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StudentlistTable.RowsDefaultCellStyle = DataGridViewCellStyle12
-        Me.StudentlistTable.RowTemplate.Height = 24
-        Me.StudentlistTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.StudentlistTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.StudentlistTable.Size = New System.Drawing.Size(899, 522)
-        Me.StudentlistTable.TabIndex = 65
-        '
         'LockIn_Btn
         '
         Me.LockIn_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -925,31 +813,14 @@ Partial Class Instructor_Main
         Me.LockIn_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LockIn_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LockIn_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LockIn_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LockIn_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LockIn_Btn.ForeColor = System.Drawing.Color.White
-        Me.LockIn_Btn.Location = New System.Drawing.Point(789, 662)
+        Me.LockIn_Btn.Location = New System.Drawing.Point(757, 701)
         Me.LockIn_Btn.Name = "LockIn_Btn"
-        Me.LockIn_Btn.Size = New System.Drawing.Size(154, 88)
+        Me.LockIn_Btn.Size = New System.Drawing.Size(90, 40)
         Me.LockIn_Btn.TabIndex = 64
         Me.LockIn_Btn.Text = "Lock In"
         Me.LockIn_Btn.UseVisualStyleBackColor = False
-        '
-        'SaveGrade_Btn
-        '
-        Me.SaveGrade_Btn.BackColor = System.Drawing.Color.Yellow
-        Me.SaveGrade_Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SaveGrade_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.SaveGrade_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.SaveGrade_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.SaveGrade_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SaveGrade_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SaveGrade_Btn.ForeColor = System.Drawing.Color.Black
-        Me.SaveGrade_Btn.Location = New System.Drawing.Point(619, 662)
-        Me.SaveGrade_Btn.Name = "SaveGrade_Btn"
-        Me.SaveGrade_Btn.Size = New System.Drawing.Size(154, 88)
-        Me.SaveGrade_Btn.TabIndex = 54
-        Me.SaveGrade_Btn.Text = "Save"
-        Me.SaveGrade_Btn.UseVisualStyleBackColor = False
         '
         'StudentGrade_Label
         '
@@ -961,6 +832,137 @@ Partial Class Instructor_Main
         Me.StudentGrade_Label.TabIndex = 0
         Me.StudentGrade_Label.Text = "Student Grade"
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Course_Label)
+        Me.Panel8.Controls.Add(Me.Label1)
+        Me.Panel8.Controls.Add(Me.AssignedSectionTable)
+        Me.Panel8.Controls.Add(Me.ViewStudentList)
+        Me.Panel8.Controls.Add(Me.CollegeProgramSelector)
+        Me.Panel8.Controls.Add(Me.Section_Label)
+        Me.Panel8.Location = New System.Drawing.Point(43, 474)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(900, 196)
+        Me.Panel8.TabIndex = 79
+        '
+        'Course_Label
+        '
+        Me.Course_Label.AutoSize = True
+        Me.Course_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Course_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Course_Label.Location = New System.Drawing.Point(307, 15)
+        Me.Course_Label.Name = "Course_Label"
+        Me.Course_Label.Size = New System.Drawing.Size(82, 31)
+        Me.Course_Label.TabIndex = 1
+        Me.Course_Label.Text = "Course"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Bernard MT Condensed", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(8, 15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(188, 31)
+        Me.Label1.TabIndex = 78
+        Me.Label1.Text = "College Program"
+        '
+        'AssignedSectionTable
+        '
+        Me.AssignedSectionTable.AllowUserToAddRows = False
+        Me.AssignedSectionTable.AllowUserToDeleteRows = False
+        Me.AssignedSectionTable.AllowUserToResizeColumns = False
+        Me.AssignedSectionTable.AllowUserToResizeRows = False
+        Me.AssignedSectionTable.BackgroundColor = System.Drawing.Color.White
+        Me.AssignedSectionTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.AssignedSectionTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AssignedSectionTable.ColumnHeadersVisible = False
+        Me.AssignedSectionTable.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.DefaultCellStyle = DataGridViewCellStyle10
+        Me.AssignedSectionTable.GridColor = System.Drawing.Color.Black
+        Me.AssignedSectionTable.Location = New System.Drawing.Point(612, 49)
+        Me.AssignedSectionTable.MultiSelect = False
+        Me.AssignedSectionTable.Name = "AssignedSectionTable"
+        Me.AssignedSectionTable.ReadOnly = True
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.AssignedSectionTable.RowHeadersVisible = False
+        Me.AssignedSectionTable.RowHeadersWidth = 51
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        Me.AssignedSectionTable.RowsDefaultCellStyle = DataGridViewCellStyle12
+        Me.AssignedSectionTable.RowTemplate.Height = 25
+        Me.AssignedSectionTable.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.AssignedSectionTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.AssignedSectionTable.Size = New System.Drawing.Size(271, 126)
+        Me.AssignedSectionTable.TabIndex = 75
+        '
+        'ViewStudentList
+        '
+        Me.ViewStudentList.BackColor = System.Drawing.Color.Yellow
+        Me.ViewStudentList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ViewStudentList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.ViewStudentList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.ViewStudentList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.ViewStudentList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ViewStudentList.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewStudentList.ForeColor = System.Drawing.Color.Black
+        Me.ViewStudentList.Location = New System.Drawing.Point(195, 135)
+        Me.ViewStudentList.Name = "ViewStudentList"
+        Me.ViewStudentList.Size = New System.Drawing.Size(90, 40)
+        Me.ViewStudentList.TabIndex = 74
+        Me.ViewStudentList.Text = "View"
+        Me.ViewStudentList.UseVisualStyleBackColor = False
+        '
+        'CollegeProgramSelector
+        '
+        Me.CollegeProgramSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.CollegeProgramSelector.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CollegeProgramSelector.FontSize = MetroFramework.MetroComboBoxSize.Tall
+        Me.CollegeProgramSelector.FontWeight = MetroFramework.MetroComboBoxWeight.Bold
+        Me.CollegeProgramSelector.ForeColor = System.Drawing.Color.Black
+        Me.CollegeProgramSelector.FormattingEnabled = True
+        Me.CollegeProgramSelector.ItemHeight = 29
+        Me.CollegeProgramSelector.Items.AddRange(New Object() {"BSIT", "BSCPE"})
+        Me.CollegeProgramSelector.Location = New System.Drawing.Point(14, 49)
+        Me.CollegeProgramSelector.Name = "CollegeProgramSelector"
+        Me.CollegeProgramSelector.Size = New System.Drawing.Size(271, 35)
+        Me.CollegeProgramSelector.TabIndex = 66
+        Me.CollegeProgramSelector.UseCustomForeColor = True
+        Me.CollegeProgramSelector.UseSelectable = True
+        '
+        'Section_Label
+        '
+        Me.Section_Label.AutoSize = True
+        Me.Section_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Section_Label.Location = New System.Drawing.Point(606, 15)
+        Me.Section_Label.Name = "Section_Label"
+        Me.Section_Label.Size = New System.Drawing.Size(94, 31)
+        Me.Section_Label.TabIndex = 76
+        Me.Section_Label.Text = "Sections"
+        '
         'AutoRefresher_Timer
         '
         '
@@ -970,8 +972,8 @@ Partial Class Instructor_Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1550, 870)
-        Me.Controls.Add(Me.StudentGrade_Panel)
         Me.Controls.Add(Me.MyProfile_Panel)
+        Me.Controls.Add(Me.StudentGrade_Panel)
         Me.Controls.Add(Me.GreenUpper_Panel)
         Me.Controls.Add(Me.GreenSide_Panel)
         Me.Controls.Add(Me.Welcome_BG)
@@ -1001,15 +1003,16 @@ Partial Class Instructor_Main
         Me.StudentGrade_Panel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         CType(Me.StudentlistTable, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1035,7 +1038,6 @@ Partial Class Instructor_Main
     Friend WithEvents Course_Label As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents StudentGrade_Label As Label
-    Friend WithEvents SaveGrade_Btn As Button
     Friend WithEvents InstructorLogo As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents ChangeGradeReq_Btn As Button
@@ -1072,5 +1074,6 @@ Partial Class Instructor_Main
     Friend WithEvents InstructorID_Label As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents ButtonStatus_Label As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents SaveGrade_Btn As Button
 End Class
