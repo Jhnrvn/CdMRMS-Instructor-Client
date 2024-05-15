@@ -44,7 +44,6 @@ Partial Class Instructor_Main
         Me.Menu_Btn = New System.Windows.Forms.Button()
         Me.CMDRMS_PicBox = New System.Windows.Forms.PictureBox()
         Me.CDM_Logo = New System.Windows.Forms.PictureBox()
-        Me.InstructorLogo = New System.Windows.Forms.PictureBox()
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
         Me.Dropdown_Timer = New System.Windows.Forms.Timer(Me.components)
         Me.MyProfile_Panel = New System.Windows.Forms.Panel()
@@ -96,11 +95,11 @@ Partial Class Instructor_Main
         Me.CollegeProgramSelector = New MetroFramework.Controls.MetroComboBox()
         Me.Section_Label = New System.Windows.Forms.Label()
         Me.AutoRefresher_Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.About_Btn = New System.Windows.Forms.Button()
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InstructorLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyProfile_Panel.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -125,7 +124,6 @@ Partial Class Instructor_Main
         Me.GreenSide_Panel.Controls.Add(Me.Dropdown_Panel)
         Me.GreenSide_Panel.Controls.Add(Me.CMDRMS_PicBox)
         Me.GreenSide_Panel.Controls.Add(Me.CDM_Logo)
-        Me.GreenSide_Panel.Controls.Add(Me.InstructorLogo)
         Me.GreenSide_Panel.Location = New System.Drawing.Point(-1, 31)
         Me.GreenSide_Panel.Name = "GreenSide_Panel"
         Me.GreenSide_Panel.Size = New System.Drawing.Size(220, 842)
@@ -134,15 +132,16 @@ Partial Class Instructor_Main
         'Dropdown_Panel
         '
         Me.Dropdown_Panel.BackColor = System.Drawing.Color.White
+        Me.Dropdown_Panel.Controls.Add(Me.About_Btn)
         Me.Dropdown_Panel.Controls.Add(Me.Logout_Btn)
         Me.Dropdown_Panel.Controls.Add(Me.StudentGrade_Btn)
         Me.Dropdown_Panel.Controls.Add(Me.MyProfile_Btn)
         Me.Dropdown_Panel.Controls.Add(Me.Menu_Btn)
         Me.Dropdown_Panel.Location = New System.Drawing.Point(2, 1)
-        Me.Dropdown_Panel.MaximumSize = New System.Drawing.Size(216, 208)
+        Me.Dropdown_Panel.MaximumSize = New System.Drawing.Size(216, 258)
         Me.Dropdown_Panel.MinimumSize = New System.Drawing.Size(216, 58)
         Me.Dropdown_Panel.Name = "Dropdown_Panel"
-        Me.Dropdown_Panel.Size = New System.Drawing.Size(216, 208)
+        Me.Dropdown_Panel.Size = New System.Drawing.Size(216, 258)
         Me.Dropdown_Panel.TabIndex = 1
         '
         'Logout_Btn
@@ -223,7 +222,7 @@ Partial Class Instructor_Main
         '
         Me.CMDRMS_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CMDRMS_PicBox.Image = CType(resources.GetObject("CMDRMS_PicBox.Image"), System.Drawing.Image)
-        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 686)
+        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 682)
         Me.CMDRMS_PicBox.Name = "CMDRMS_PicBox"
         Me.CMDRMS_PicBox.Size = New System.Drawing.Size(164, 125)
         Me.CMDRMS_PicBox.TabIndex = 52
@@ -233,21 +232,12 @@ Partial Class Instructor_Main
         '
         Me.CDM_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CDM_Logo.Image = CType(resources.GetObject("CDM_Logo.Image"), System.Drawing.Image)
-        Me.CDM_Logo.Location = New System.Drawing.Point(16, 198)
+        Me.CDM_Logo.Location = New System.Drawing.Point(21, 80)
         Me.CDM_Logo.Name = "CDM_Logo"
-        Me.CDM_Logo.Size = New System.Drawing.Size(175, 500)
+        Me.CDM_Logo.Size = New System.Drawing.Size(175, 606)
+        Me.CDM_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.CDM_Logo.TabIndex = 3
         Me.CDM_Logo.TabStop = False
-        '
-        'InstructorLogo
-        '
-        Me.InstructorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.InstructorLogo.Image = CType(resources.GetObject("InstructorLogo.Image"), System.Drawing.Image)
-        Me.InstructorLogo.Location = New System.Drawing.Point(28, 82)
-        Me.InstructorLogo.Name = "InstructorLogo"
-        Me.InstructorLogo.Size = New System.Drawing.Size(164, 125)
-        Me.InstructorLogo.TabIndex = 55
-        Me.InstructorLogo.TabStop = False
         '
         'GreenUpper_Panel
         '
@@ -983,6 +973,24 @@ Partial Class Instructor_Main
         'AutoRefresher_Timer
         '
         '
+        'About_Btn
+        '
+        Me.About_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.About_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.About_Btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.About_Btn.Enabled = False
+        Me.About_Btn.FlatAppearance.BorderSize = 0
+        Me.About_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.About_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.About_Btn.Location = New System.Drawing.Point(0, 208)
+        Me.About_Btn.Name = "About_Btn"
+        Me.About_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.About_Btn.Size = New System.Drawing.Size(216, 50)
+        Me.About_Btn.TabIndex = 6
+        Me.About_Btn.Text = "About"
+        Me.About_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.About_Btn.UseVisualStyleBackColor = False
+        '
         'Instructor_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1007,7 +1015,6 @@ Partial Class Instructor_Main
         Me.Dropdown_Panel.ResumeLayout(False)
         CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InstructorLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MyProfile_Panel.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -1055,7 +1062,6 @@ Partial Class Instructor_Main
     Friend WithEvents Course_Label As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents StudentGrade_Label As Label
-    Friend WithEvents InstructorLogo As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents ChangeGradeReq_Btn As Button
     Friend WithEvents AssignedCourseTable As DataGridView
@@ -1094,4 +1100,5 @@ Partial Class Instructor_Main
     Friend WithEvents Panel8 As Panel
     Friend WithEvents SaveGrade_Btn As Button
     Friend WithEvents Refresh_Btn As Button
+    Friend WithEvents About_Btn As Button
 End Class
