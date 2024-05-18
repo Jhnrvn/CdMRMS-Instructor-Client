@@ -16,7 +16,7 @@ Public Class Instructor_Main
 
         LockInStatusCheck()
 
-        AutoRefresher_Timer.Interval = 5000
+        AutoRefresher_Timer.Interval = 3000
         AutoRefresher_Timer.Start()
 
         InstructorsID_TB.Height = 100
@@ -463,7 +463,7 @@ Public Class Instructor_Main
     End Sub
 
 
-    ' Reload Every 10 seconds to check if the admin already approved the request
+    ' Reload Every 3 seconds to check if the admin already approved the request
     Private Sub AutoRefresher_Timer_Tick(sender As Object, e As EventArgs) Handles AutoRefresher_Timer.Tick
         LockInStatusCheck()
     End Sub
