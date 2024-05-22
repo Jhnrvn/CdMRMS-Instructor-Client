@@ -308,7 +308,7 @@ Public Class CDMRMS_Instructor_Login
             Dim isValidLogin As Boolean = ValidateLogin(instructorID, email, password)
 
             If isValidLogin Then
-                MsgBox("Login successful!.", MessageBoxIcon.Information)
+                MessageBox.Show("Login Successful!", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 LoginInstructorID_Input.Clear()
                 LoginEmail_Input.Clear()
                 LoginPassword_Input.Clear()
