@@ -548,8 +548,10 @@ Public Class Instructor_Main
         AssignedCourse(PassedValue)
     End Sub
 
+    Private Sub About_Btn_Click(sender As Object, e As EventArgs) Handles About_Btn.Click
+        About.Show()
 
-
+    End Sub
 
     ' LOGOUT - END
 
