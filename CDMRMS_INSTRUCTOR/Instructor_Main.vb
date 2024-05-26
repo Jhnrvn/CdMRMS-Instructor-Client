@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 
 
 Public Class Instructor_Main
@@ -145,8 +146,37 @@ Public Class Instructor_Main
     End Sub
 
     Private Sub Save_Btn_Click(sender As Object, e As EventArgs) Handles Save_Btn.Click
+        UpdateDetails(PassedValue)
+    End Sub
+
+    Private Sub UpdateDetails(PassedValue)
+
+        Dim firstname As String = FN_TB.Text.Trim
+        Dim lastname As String = LN_TB.Text.Trim
+        Dim middlename As String = MN_TB.Text.Trim
+        Dim sex As String = Sex_TB.Text.Trim
+        Dim number As String = CN_TB.Text.Trim
+
+        Dim updatequery As String = $"UPDATE `instructor` SET `firstname` = @firstname, `middlename` = @middlename, `lastname` = @lastname, `gender` = @sex, `contact#` = @number WHERE `instructorid` = `{PassedValue}`"
+        Try
+            connection.Open()
+            Dim command As New MySqlCommand(updatequery, connection)
+            command.Parameters.AddWithValue("@firstname", firstname)
+            command.Parameters.AddWithValue("@lastname", lastname)
+            command.Parameters.AddWithValue("@middlename", middlename)
+            command.Parameters.AddWithValue("@sex", sex)
+            command.Parameters.AddWithValue("@number", number)
+
+            command.ExecuteNonQuery()
+            MsgBox("success")
+
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
+
     ' MY ACCOUNT - END
 
 

@@ -24,7 +24,6 @@ Partial Class CDMRMS_Instructor_Login
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
-        Me.SystemTitle_PictureBox = New System.Windows.Forms.PictureBox()
         Me.Login_Panel = New System.Windows.Forms.Panel()
         Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
@@ -68,23 +67,14 @@ Partial Class CDMRMS_Instructor_Login
         Me.Birthday_Label = New System.Windows.Forms.Label()
         Me.RegToolTip_Label4 = New System.Windows.Forms.Label()
         Me.Registration_Panel = New System.Windows.Forms.Panel()
-        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Login_Panel.SuspendLayout()
         CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sex_Panel.SuspendLayout()
         Me.Registration_Panel.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'SystemTitle_PictureBox
-        '
-        Me.SystemTitle_PictureBox.Image = CType(resources.GetObject("SystemTitle_PictureBox.Image"), System.Drawing.Image)
-        Me.SystemTitle_PictureBox.Location = New System.Drawing.Point(607, 146)
-        Me.SystemTitle_PictureBox.Name = "SystemTitle_PictureBox"
-        Me.SystemTitle_PictureBox.Size = New System.Drawing.Size(870, 603)
-        Me.SystemTitle_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.SystemTitle_PictureBox.TabIndex = 2
-        Me.SystemTitle_PictureBox.TabStop = False
         '
         'Login_Panel
         '
@@ -309,6 +299,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
         Me.BG_Picture.Name = "BG_Picture"
         Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
+        Me.BG_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
@@ -832,7 +823,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Registration_Panel
         '
-        Me.Registration_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Registration_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label4)
         Me.Registration_Panel.Controls.Add(Me.Birthday_Label)
@@ -866,15 +857,35 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Registration_Panel.TabIndex = 1
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(-3, 31)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1557, 16)
+        Me.Panel1.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(721, 830)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(588, 20)
+        Me.Label1.TabIndex = 33
+        Me.Label1.Text = "Copyright © 2024, CDM  Registrar Management System, All Rights Reserved."
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1550, 870)
-        Me.Controls.Add(Me.SystemTitle_PictureBox)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BG_Picture)
-        Me.Controls.Add(Me.Registration_Panel)
         Me.Controls.Add(Me.Login_Panel)
+        Me.Controls.Add(Me.Registration_Panel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
@@ -884,7 +895,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
         Me.Style = MetroFramework.MetroColorStyle.White
-        CType(Me.SystemTitle_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Login_Panel.ResumeLayout(False)
         Me.Login_Panel.PerformLayout()
         CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -894,9 +904,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel.ResumeLayout(False)
         Me.Registration_Panel.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents SystemTitle_PictureBox As PictureBox
     Friend WithEvents Login_Panel As Panel
     Friend WithEvents LoginPassword_Input As MetroFramework.Controls.MetroTextBox
     Friend WithEvents LoginEmail_Input As MetroFramework.Controls.MetroTextBox
@@ -940,4 +950,6 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents Birthday_Label As Label
     Friend WithEvents RegToolTip_Label4 As Label
     Friend WithEvents Registration_Panel As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
 End Class

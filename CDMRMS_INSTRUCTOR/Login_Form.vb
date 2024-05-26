@@ -395,6 +395,9 @@ Public Class CDMRMS_Instructor_Login
         Tooltip.ToolTipTitle = "Middle Name"
         Tooltip.SetToolTip(RegToolTip_Label4, " " & vbCrLf & " * Leave it blank if not applicable." & vbCrLf & " ")
     End Sub
+
+
+
     ' TOOLTIPS FOR LOGIN AND REGISTRATION INPUTS - END
 
 
