@@ -148,7 +148,6 @@ Public Class Instructor_Main
     Private Sub Save_Btn_Click(sender As Object, e As EventArgs) Handles Save_Btn.Click
         UpdateDetails(PassedValue)
     End Sub
-
     Private Sub UpdateDetails(PassedValue)
 
         Dim firstname As String = FN_TB.Text.Trim
@@ -156,11 +155,13 @@ Public Class Instructor_Main
         Dim middlename As String = MN_TB.Text.Trim
         Dim sex As String = Sex_TB.Text.Trim
         Dim number As String = CN_TB.Text.Trim
+        Dim instructorid As String = PassedValue
 
-        Dim updatequery As String = $"UPDATE `instructor` SET `firstname` = @firstname, `middlename` = @middlename, `lastname` = @lastname, `gender` = @sex, `contact#` = @number WHERE `instructorid` = `{PassedValue}`"
+        Dim updatequery As String = "UPDATE `instructors` SET `firstname` = @firstname, `middlename` = @middlename, `lastname` = @lastname, `gender` = @sex, `contact#` = @number WHERE instructorid = @instructorid"
         Try
             connection.Open()
             Dim command As New MySqlCommand(updatequery, connection)
+            command.Parameters.AddWithValue("@instructorid", instructorid)
             command.Parameters.AddWithValue("@firstname", firstname)
             command.Parameters.AddWithValue("@lastname", lastname)
             command.Parameters.AddWithValue("@middlename", middlename)
@@ -172,7 +173,7 @@ Public Class Instructor_Main
 
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
 
     End Sub
