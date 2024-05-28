@@ -147,6 +147,7 @@ Public Class Instructor_Main
 
     Private Sub Save_Btn_Click(sender As Object, e As EventArgs) Handles Save_Btn.Click
         UpdateDetails(PassedValue)
+        DisplayInfo()
     End Sub
     Private Sub UpdateDetails(PassedValue)
 
