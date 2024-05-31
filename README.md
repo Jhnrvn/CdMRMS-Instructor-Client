@@ -1,1 +1,1 @@
-# CDMRMS_INSTRUCTOR
+CDMRMS: Colegio De Montalban Registrar Management System Admin Application
