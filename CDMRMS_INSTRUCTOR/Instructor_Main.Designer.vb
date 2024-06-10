@@ -22,31 +22,26 @@ Partial Class Instructor_Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instructor_Main))
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GreenSide_Panel = New System.Windows.Forms.Panel()
         Me.Dropdown_Panel = New System.Windows.Forms.Panel()
-        Me.Logout_Btn = New System.Windows.Forms.Button()
         Me.About_Btn = New System.Windows.Forms.Button()
         Me.StudentGrade_Btn = New System.Windows.Forms.Button()
         Me.MyProfile_Btn = New System.Windows.Forms.Button()
-        Me.Menu_Btn = New System.Windows.Forms.Button()
-        Me.CMDRMS_PicBox = New System.Windows.Forms.PictureBox()
-        Me.CDM_Logo = New System.Windows.Forms.PictureBox()
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
-        Me.Dropdown_Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.Dropdown_Timer = New System.Windows.Forms.Timer()
         Me.MyProfile_Panel = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -69,17 +64,13 @@ Partial Class Instructor_Main
         Me.Sex_TB = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Profile_Panel = New System.Windows.Forms.Panel()
-        Me.ProfilePic_PicBox = New System.Windows.Forms.PictureBox()
         Me.Profile_Label = New System.Windows.Forms.Label()
         Me.Save_Btn = New System.Windows.Forms.Button()
-        Me.Welcome_BG = New System.Windows.Forms.PictureBox()
         Me.StudentGrade_Panel = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ChangeGradeReq_Btn = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.LockInstruction_Label = New System.Windows.Forms.Label()
-        Me.Lock_Img = New System.Windows.Forms.PictureBox()
         Me.LockStatus_Label = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Refresh_Btn = New System.Windows.Forms.Button()
@@ -95,27 +86,35 @@ Partial Class Instructor_Main
         Me.ViewStudentList = New System.Windows.Forms.Button()
         Me.CollegeProgramSelector = New MetroFramework.Controls.MetroComboBox()
         Me.Section_Label = New System.Windows.Forms.Label()
-        Me.AutoRefresher_Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.AutoRefresher_Timer = New System.Windows.Forms.Timer()
+        Me.ChangeGradeReq_Btn = New System.Windows.Forms.Button()
+        Me.Lock_Img = New System.Windows.Forms.PictureBox()
+        Me.ProfilePic_PicBox = New System.Windows.Forms.PictureBox()
+        Me.Logout_Btn = New System.Windows.Forms.Button()
+        Me.Menu_Btn = New System.Windows.Forms.Button()
+        Me.CMDRMS_PicBox = New System.Windows.Forms.PictureBox()
+        Me.CDM_Logo = New System.Windows.Forms.PictureBox()
+        Me.Welcome_BG = New System.Windows.Forms.PictureBox()
         Me.GreenSide_Panel.SuspendLayout()
         Me.Dropdown_Panel.SuspendLayout()
-        CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyProfile_Panel.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Profile_Panel.SuspendLayout()
-        CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentGrade_Panel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.StudentlistTable, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AssignedCourseTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GreenSide_Panel
@@ -143,25 +142,6 @@ Partial Class Instructor_Main
         Me.Dropdown_Panel.Name = "Dropdown_Panel"
         Me.Dropdown_Panel.Size = New System.Drawing.Size(216, 258)
         Me.Dropdown_Panel.TabIndex = 1
-        '
-        'Logout_Btn
-        '
-        Me.Logout_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.Logout_Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Logout_Btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Logout_Btn.FlatAppearance.BorderSize = 0
-        Me.Logout_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Logout_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logout_Btn.Image = CType(resources.GetObject("Logout_Btn.Image"), System.Drawing.Image)
-        Me.Logout_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Logout_Btn.Location = New System.Drawing.Point(0, 208)
-        Me.Logout_Btn.Name = "Logout_Btn"
-        Me.Logout_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 3, 0)
-        Me.Logout_Btn.Size = New System.Drawing.Size(216, 50)
-        Me.Logout_Btn.TabIndex = 4
-        Me.Logout_Btn.Text = "Log Out"
-        Me.Logout_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Logout_Btn.UseVisualStyleBackColor = False
         '
         'About_Btn
         '
@@ -213,48 +193,6 @@ Partial Class Instructor_Main
         Me.MyProfile_Btn.Text = "My Account"
         Me.MyProfile_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.MyProfile_Btn.UseVisualStyleBackColor = False
-        '
-        'Menu_Btn
-        '
-        Me.Menu_Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Menu_Btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Menu_Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Menu_Btn.FlatAppearance.BorderSize = 0
-        Me.Menu_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.Menu_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.Menu_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Menu_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Menu_Btn.Image = CType(resources.GetObject("Menu_Btn.Image"), System.Drawing.Image)
-        Me.Menu_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Menu_Btn.Location = New System.Drawing.Point(0, 0)
-        Me.Menu_Btn.Name = "Menu_Btn"
-        Me.Menu_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 3, 0)
-        Me.Menu_Btn.Size = New System.Drawing.Size(216, 58)
-        Me.Menu_Btn.TabIndex = 1
-        Me.Menu_Btn.Text = "MENU"
-        Me.Menu_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Menu_Btn.UseVisualStyleBackColor = True
-        '
-        'CMDRMS_PicBox
-        '
-        Me.CMDRMS_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.CMDRMS_PicBox.Image = CType(resources.GetObject("CMDRMS_PicBox.Image"), System.Drawing.Image)
-        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 682)
-        Me.CMDRMS_PicBox.Name = "CMDRMS_PicBox"
-        Me.CMDRMS_PicBox.Size = New System.Drawing.Size(164, 125)
-        Me.CMDRMS_PicBox.TabIndex = 52
-        Me.CMDRMS_PicBox.TabStop = False
-        '
-        'CDM_Logo
-        '
-        Me.CDM_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.CDM_Logo.Image = CType(resources.GetObject("CDM_Logo.Image"), System.Drawing.Image)
-        Me.CDM_Logo.Location = New System.Drawing.Point(21, 80)
-        Me.CDM_Logo.Name = "CDM_Logo"
-        Me.CDM_Logo.Size = New System.Drawing.Size(175, 606)
-        Me.CDM_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.CDM_Logo.TabIndex = 3
-        Me.CDM_Logo.TabStop = False
         '
         'GreenUpper_Panel
         '
@@ -538,16 +476,6 @@ Partial Class Instructor_Main
         Me.Profile_Panel.Size = New System.Drawing.Size(432, 691)
         Me.Profile_Panel.TabIndex = 0
         '
-        'ProfilePic_PicBox
-        '
-        Me.ProfilePic_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ProfilePic_PicBox.Location = New System.Drawing.Point(61, 87)
-        Me.ProfilePic_PicBox.Name = "ProfilePic_PicBox"
-        Me.ProfilePic_PicBox.Size = New System.Drawing.Size(304, 269)
-        Me.ProfilePic_PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.ProfilePic_PicBox.TabIndex = 1
-        Me.ProfilePic_PicBox.TabStop = False
-        '
         'Profile_Label
         '
         Me.Profile_Label.AutoSize = True
@@ -575,16 +503,6 @@ Partial Class Instructor_Main
         Me.Save_Btn.Text = "Save"
         Me.Save_Btn.UseVisualStyleBackColor = False
         '
-        'Welcome_BG
-        '
-        Me.Welcome_BG.Image = CType(resources.GetObject("Welcome_BG.Image"), System.Drawing.Image)
-        Me.Welcome_BG.Location = New System.Drawing.Point(267, 137)
-        Me.Welcome_BG.Name = "Welcome_BG"
-        Me.Welcome_BG.Size = New System.Drawing.Size(1225, 742)
-        Me.Welcome_BG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Welcome_BG.TabIndex = 4
-        Me.Welcome_BG.TabStop = False
-        '
         'StudentGrade_Panel
         '
         Me.StudentGrade_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
@@ -604,27 +522,6 @@ Partial Class Instructor_Main
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(324, 181)
         Me.Panel2.TabIndex = 2
-        '
-        'ChangeGradeReq_Btn
-        '
-        Me.ChangeGradeReq_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ChangeGradeReq_Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ChangeGradeReq_Btn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ChangeGradeReq_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ChangeGradeReq_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ChangeGradeReq_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ChangeGradeReq_Btn.Font = New System.Drawing.Font("Bernard MT Condensed", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChangeGradeReq_Btn.ForeColor = System.Drawing.Color.White
-        Me.ChangeGradeReq_Btn.Image = CType(resources.GetObject("ChangeGradeReq_Btn.Image"), System.Drawing.Image)
-        Me.ChangeGradeReq_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ChangeGradeReq_Btn.Location = New System.Drawing.Point(4, 3)
-        Me.ChangeGradeReq_Btn.Name = "ChangeGradeReq_Btn"
-        Me.ChangeGradeReq_Btn.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.ChangeGradeReq_Btn.Size = New System.Drawing.Size(316, 174)
-        Me.ChangeGradeReq_Btn.TabIndex = 61
-        Me.ChangeGradeReq_Btn.Text = "Request" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Update" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Grades"
-        Me.ChangeGradeReq_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ChangeGradeReq_Btn.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -654,16 +551,6 @@ Partial Class Instructor_Main
         Me.LockInstruction_Label.Name = "LockInstruction_Label"
         Me.LockInstruction_Label.Size = New System.Drawing.Size(0, 22)
         Me.LockInstruction_Label.TabIndex = 2
-        '
-        'Lock_Img
-        '
-        Me.Lock_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Lock_Img.Location = New System.Drawing.Point(59, 153)
-        Me.Lock_Img.Name = "Lock_Img"
-        Me.Lock_Img.Size = New System.Drawing.Size(144, 126)
-        Me.Lock_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Lock_Img.TabIndex = 0
-        Me.Lock_Img.TabStop = False
         '
         'LockStatus_Label
         '
@@ -729,40 +616,40 @@ Partial Class Instructor_Main
         Me.StudentlistTable.AllowUserToResizeColumns = False
         Me.StudentlistTable.AllowUserToResizeRows = False
         Me.StudentlistTable.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Bernard MT Condensed", 14.0!)
-        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bernard MT Condensed", 14.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentlistTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.StudentlistTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StudentlistTable.Cursor = System.Windows.Forms.Cursors.Default
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StudentlistTable.DefaultCellStyle = DataGridViewCellStyle2
         Me.StudentlistTable.GridColor = System.Drawing.Color.Black
         Me.StudentlistTable.Location = New System.Drawing.Point(44, 52)
         Me.StudentlistTable.MultiSelect = False
         Me.StudentlistTable.Name = "StudentlistTable"
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.StudentlistTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.StudentlistTable.RowHeadersVisible = False
         Me.StudentlistTable.RowHeadersWidth = 51
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StudentlistTable.RowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentlistTable.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.StudentlistTable.RowTemplate.Height = 24
         Me.StudentlistTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.StudentlistTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
@@ -777,44 +664,44 @@ Partial Class Instructor_Main
         Me.AssignedCourseTable.AllowUserToResizeRows = False
         Me.AssignedCourseTable.BackgroundColor = System.Drawing.Color.White
         Me.AssignedCourseTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedCourseTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedCourseTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.AssignedCourseTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AssignedCourseTable.ColumnHeadersVisible = False
         Me.AssignedCourseTable.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AssignedCourseTable.DefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AssignedCourseTable.DefaultCellStyle = DataGridViewCellStyle6
         Me.AssignedCourseTable.GridColor = System.Drawing.Color.Black
         Me.AssignedCourseTable.Location = New System.Drawing.Point(356, 523)
         Me.AssignedCourseTable.MultiSelect = False
         Me.AssignedCourseTable.Name = "AssignedCourseTable"
         Me.AssignedCourseTable.ReadOnly = True
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedCourseTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedCourseTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.AssignedCourseTable.RowHeadersVisible = False
         Me.AssignedCourseTable.RowHeadersWidth = 51
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black
-        Me.AssignedCourseTable.RowsDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
+        Me.AssignedCourseTable.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.AssignedCourseTable.RowTemplate.Height = 25
         Me.AssignedCourseTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.AssignedCourseTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
@@ -891,44 +778,44 @@ Partial Class Instructor_Main
         Me.AssignedSectionTable.AllowUserToResizeRows = False
         Me.AssignedSectionTable.BackgroundColor = System.Drawing.Color.White
         Me.AssignedSectionTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bernard MT Condensed", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.AssignedSectionTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AssignedSectionTable.ColumnHeadersVisible = False
         Me.AssignedSectionTable.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.DefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.DefaultCellStyle = DataGridViewCellStyle10
         Me.AssignedSectionTable.GridColor = System.Drawing.Color.Black
         Me.AssignedSectionTable.Location = New System.Drawing.Point(612, 49)
         Me.AssignedSectionTable.MultiSelect = False
         Me.AssignedSectionTable.Name = "AssignedSectionTable"
         Me.AssignedSectionTable.ReadOnly = True
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AssignedSectionTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AssignedSectionTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.AssignedSectionTable.RowHeadersVisible = False
         Me.AssignedSectionTable.RowHeadersWidth = 51
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.Black
-        Me.AssignedSectionTable.RowsDefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        Me.AssignedSectionTable.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.AssignedSectionTable.RowTemplate.Height = 25
         Me.AssignedSectionTable.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.AssignedSectionTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
@@ -982,14 +869,126 @@ Partial Class Instructor_Main
         'AutoRefresher_Timer
         '
         '
+        'ChangeGradeReq_Btn
+        '
+        Me.ChangeGradeReq_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ChangeGradeReq_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ChangeGradeReq_Btn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.ChangeGradeReq_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ChangeGradeReq_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ChangeGradeReq_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChangeGradeReq_Btn.Font = New System.Drawing.Font("Bernard MT Condensed", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChangeGradeReq_Btn.ForeColor = System.Drawing.Color.White
+        Me.ChangeGradeReq_Btn.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Update_Grade_Button_Icon
+        Me.ChangeGradeReq_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ChangeGradeReq_Btn.Location = New System.Drawing.Point(4, 3)
+        Me.ChangeGradeReq_Btn.Name = "ChangeGradeReq_Btn"
+        Me.ChangeGradeReq_Btn.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.ChangeGradeReq_Btn.Size = New System.Drawing.Size(316, 174)
+        Me.ChangeGradeReq_Btn.TabIndex = 61
+        Me.ChangeGradeReq_Btn.Text = "Request" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Update" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Grades"
+        Me.ChangeGradeReq_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ChangeGradeReq_Btn.UseVisualStyleBackColor = False
+        '
+        'Lock_Img
+        '
+        Me.Lock_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Lock_Img.Location = New System.Drawing.Point(59, 153)
+        Me.Lock_Img.Name = "Lock_Img"
+        Me.Lock_Img.Size = New System.Drawing.Size(144, 126)
+        Me.Lock_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Lock_Img.TabIndex = 0
+        Me.Lock_Img.TabStop = False
+        '
+        'ProfilePic_PicBox
+        '
+        Me.ProfilePic_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ProfilePic_PicBox.Location = New System.Drawing.Point(61, 87)
+        Me.ProfilePic_PicBox.Name = "ProfilePic_PicBox"
+        Me.ProfilePic_PicBox.Size = New System.Drawing.Size(304, 269)
+        Me.ProfilePic_PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.ProfilePic_PicBox.TabIndex = 1
+        Me.ProfilePic_PicBox.TabStop = False
+        '
+        'Logout_Btn
+        '
+        Me.Logout_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Logout_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Logout_Btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Logout_Btn.FlatAppearance.BorderSize = 0
+        Me.Logout_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Logout_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Logout_Btn.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Logout_Icon
+        Me.Logout_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Logout_Btn.Location = New System.Drawing.Point(0, 208)
+        Me.Logout_Btn.Name = "Logout_Btn"
+        Me.Logout_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 3, 0)
+        Me.Logout_Btn.Size = New System.Drawing.Size(216, 50)
+        Me.Logout_Btn.TabIndex = 4
+        Me.Logout_Btn.Text = "Log Out"
+        Me.Logout_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Logout_Btn.UseVisualStyleBackColor = False
+        '
+        'Menu_Btn
+        '
+        Me.Menu_Btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Menu_Btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Menu_Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Menu_Btn.FlatAppearance.BorderSize = 0
+        Me.Menu_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Menu_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Menu_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Menu_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Menu_Btn.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Arrow_Right
+        Me.Menu_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Menu_Btn.Location = New System.Drawing.Point(0, 0)
+        Me.Menu_Btn.Name = "Menu_Btn"
+        Me.Menu_Btn.Padding = New System.Windows.Forms.Padding(15, 0, 3, 0)
+        Me.Menu_Btn.Size = New System.Drawing.Size(216, 58)
+        Me.Menu_Btn.TabIndex = 1
+        Me.Menu_Btn.Text = "MENU"
+        Me.Menu_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Menu_Btn.UseVisualStyleBackColor = True
+        '
+        'CMDRMS_PicBox
+        '
+        Me.CMDRMS_PicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.CMDRMS_PicBox.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.CdMRMS
+        Me.CMDRMS_PicBox.Location = New System.Drawing.Point(23, 682)
+        Me.CMDRMS_PicBox.Name = "CMDRMS_PicBox"
+        Me.CMDRMS_PicBox.Size = New System.Drawing.Size(164, 125)
+        Me.CMDRMS_PicBox.TabIndex = 52
+        Me.CMDRMS_PicBox.TabStop = False
+        '
+        'CDM_Logo
+        '
+        Me.CDM_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.CDM_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.new_logo
+        Me.CDM_Logo.Location = New System.Drawing.Point(21, 80)
+        Me.CDM_Logo.Name = "CDM_Logo"
+        Me.CDM_Logo.Size = New System.Drawing.Size(175, 606)
+        Me.CDM_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.CDM_Logo.TabIndex = 3
+        Me.CDM_Logo.TabStop = False
+        '
+        'Welcome_BG
+        '
+        Me.Welcome_BG.Image = CType(resources.GetObject("Welcome_BG.Image"), System.Drawing.Image)
+        Me.Welcome_BG.Location = New System.Drawing.Point(267, 137)
+        Me.Welcome_BG.Name = "Welcome_BG"
+        Me.Welcome_BG.Size = New System.Drawing.Size(1225, 742)
+        Me.Welcome_BG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Welcome_BG.TabIndex = 4
+        Me.Welcome_BG.TabStop = False
+        '
         'Instructor_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1550, 870)
-        Me.Controls.Add(Me.MyProfile_Panel)
         Me.Controls.Add(Me.StudentGrade_Panel)
+        Me.Controls.Add(Me.MyProfile_Panel)
         Me.Controls.Add(Me.GreenUpper_Panel)
         Me.Controls.Add(Me.GreenSide_Panel)
         Me.Controls.Add(Me.Welcome_BG)
@@ -1004,8 +1003,6 @@ Partial Class Instructor_Main
         Me.Style = MetroFramework.MetroColorStyle.White
         Me.GreenSide_Panel.ResumeLayout(False)
         Me.Dropdown_Panel.ResumeLayout(False)
-        CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MyProfile_Panel.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -1013,14 +1010,11 @@ Partial Class Instructor_Main
         Me.Panel7.PerformLayout()
         Me.Profile_Panel.ResumeLayout(False)
         Me.Profile_Panel.PerformLayout()
-        CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StudentGrade_Panel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.StudentlistTable, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1028,6 +1022,11 @@ Partial Class Instructor_Main
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.AssignedSectionTable, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Lock_Img, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProfilePic_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CMDRMS_PicBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CDM_Logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Welcome_BG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

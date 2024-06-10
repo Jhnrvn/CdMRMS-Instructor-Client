@@ -22,10 +22,8 @@ Partial Class CDMRMS_Instructor_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.Login_Panel = New System.Windows.Forms.Panel()
-        Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
         Me.LoginEmail_Label = New System.Windows.Forms.Label()
         Me.LoginInstructorID_Label = New System.Windows.Forms.Label()
@@ -35,8 +33,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link = New System.Windows.Forms.LinkLabel()
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
-        Me.Tooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.BG_Picture = New System.Windows.Forms.PictureBox()
+        Me.Tooltip = New System.Windows.Forms.ToolTip()
         Me.FN_Input = New MetroFramework.Controls.MetroTextBox()
         Me.MN_Input = New MetroFramework.Controls.MetroTextBox()
         Me.LN_Input = New MetroFramework.Controls.MetroTextBox()
@@ -69,11 +66,13 @@ Partial Class CDMRMS_Instructor_Login
         Me.Registration_Panel = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BG_Picture = New System.Windows.Forms.PictureBox()
+        Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.Login_Panel.SuspendLayout()
-        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sex_Panel.SuspendLayout()
         Me.Registration_Panel.SuspendLayout()
+        CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Login_Panel
@@ -94,17 +93,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Panel.Name = "Login_Panel"
         Me.Login_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Login_Panel.TabIndex = 26
-        '
-        'User_Logo
-        '
-        Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.User_Logo.Image = CType(resources.GetObject("User_Logo.Image"), System.Drawing.Image)
-        Me.User_Logo.Location = New System.Drawing.Point(100, 148)
-        Me.User_Logo.Name = "User_Logo"
-        Me.User_Logo.Size = New System.Drawing.Size(334, 242)
-        Me.User_Logo.TabIndex = 32
-        Me.User_Logo.TabStop = False
-        Me.User_Logo.WaitOnLoad = True
         '
         'LoginPassword_Label
         '
@@ -291,17 +279,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Tooltip.IsBalloon = True
         Me.Tooltip.ReshowDelay = 20
         Me.Tooltip.ShowAlways = True
-        '
-        'BG_Picture
-        '
-        Me.BG_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BG_Picture.Image = CType(resources.GetObject("BG_Picture.Image"), System.Drawing.Image)
-        Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
-        Me.BG_Picture.Name = "BG_Picture"
-        Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
-        Me.BG_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.BG_Picture.TabIndex = 0
-        Me.BG_Picture.TabStop = False
         '
         'FN_Input
         '
@@ -876,6 +853,28 @@ Partial Class CDMRMS_Instructor_Login
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Copyright © 2024, CDM  Registrar Management System, All Rights Reserved."
         '
+        'BG_Picture
+        '
+        Me.BG_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BG_Picture.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Login_Page
+        Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
+        Me.BG_Picture.Name = "BG_Picture"
+        Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
+        Me.BG_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.BG_Picture.TabIndex = 0
+        Me.BG_Picture.TabStop = False
+        '
+        'User_Logo
+        '
+        Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor_Image
+        Me.User_Logo.Location = New System.Drawing.Point(100, 148)
+        Me.User_Logo.Name = "User_Logo"
+        Me.User_Logo.Size = New System.Drawing.Size(334, 242)
+        Me.User_Logo.TabIndex = 32
+        Me.User_Logo.TabStop = False
+        Me.User_Logo.WaitOnLoad = True
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -897,12 +896,12 @@ Partial Class CDMRMS_Instructor_Login
         Me.Style = MetroFramework.MetroColorStyle.White
         Me.Login_Panel.ResumeLayout(False)
         Me.Login_Panel.PerformLayout()
-        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sex_Panel.ResumeLayout(False)
         Me.Sex_Panel.PerformLayout()
         Me.Registration_Panel.ResumeLayout(False)
         Me.Registration_Panel.PerformLayout()
+        CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

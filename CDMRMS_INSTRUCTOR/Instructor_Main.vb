@@ -58,7 +58,7 @@ Public Class Instructor_Main
     Private Sub Dropdown_Timer_Tick(sender As Object, e As EventArgs) Handles Dropdown_Timer.Tick
         If MenuCollapsed Then
 
-            Menu_Btn.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Arrow Down.png")
+            Menu_Btn.Image = My.Resources.Arrow_Down
             Dropdown_Panel.Height += 10
             If Dropdown_Panel.Size = Dropdown_Panel.MaximumSize Then
 
@@ -70,7 +70,7 @@ Public Class Instructor_Main
 
             MyProfile_Panel.Hide()
             StudentGrade_Panel.Hide()
-            Menu_Btn.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Arrow Right.png")
+            Menu_Btn.Image = My.Resources.Arrow_Right
             Dropdown_Panel.Height -= 10
             If Dropdown_Panel.Size = Dropdown_Panel.MinimumSize Then
 
@@ -126,11 +126,11 @@ Public Class Instructor_Main
                             Email_TB.Text = reader("email").ToString()
 
                             If Sex_TB.Text = "Male" Then
-                                ProfilePic_PicBox.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Male.png")
+                                ProfilePic_PicBox.Image = My.Resources.Male
 
                             ElseIf Sex_TB.Text = "Female" Then
 
-                                ProfilePic_PicBox.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Female.png")
+                                ProfilePic_PicBox.Image = My.Resources.Female
                             End If
 
                         End If
@@ -460,7 +460,7 @@ Public Class Instructor_Main
 
                         ChangeGradeReq_Btn.Enabled = False
 
-                        Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Unlocked Icon.png")
+                        Lock_Img.Image = My.Resources.Unlocked_Icon
                         LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " UNLOCKED"
                         LockInstruction_Label.Text = "You are now able to" & vbCrLf & "insert grades into the " & vbCrLf & "table."
 
@@ -474,7 +474,7 @@ Public Class Instructor_Main
 
                         ChangeGradeReq_Btn.Enabled = True
 
-                        Lock_Img.Image = Image.FromFile("D:\Development Projects\Visual Basic\CDM Registrar Management System\CDMRMS_INSTRUCTOR\Assets\Main\Locked Icon.png")
+                        Lock_Img.Image = My.Resources.Locked_Icon
                         LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " LOCKED"
                         LockInstruction_Label.Text = "Send a request to the " & vbCrLf & " admin in order to be " & vbCrLf & " able to insert grades."
 

@@ -290,9 +290,9 @@ Public Class CDMRMS_Instructor_Login
 
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
-        'LoginInstructorID_Input.Text = "CDM-1111"
-        'LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
-        'LoginPassword_Input.Text = "01"
+        LoginInstructorID_Input.Text = "CDM-1111"
+        LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
+        LoginPassword_Input.Text = "01"
 
         Dim instructorID As String = LoginInstructorID_Input.Text.Trim
         Dim email As String = LoginEmail_Input.Text.Trim

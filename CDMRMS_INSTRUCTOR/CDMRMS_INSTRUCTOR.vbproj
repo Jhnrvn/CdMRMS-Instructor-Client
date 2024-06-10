@@ -151,5 +151,44 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructor Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlocked Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update Grade Button Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
