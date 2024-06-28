@@ -25,6 +25,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.Login_Panel = New System.Windows.Forms.Panel()
+        Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
         Me.LoginEmail_Label = New System.Windows.Forms.Label()
         Me.LoginInstructorID_Label = New System.Windows.Forms.Label()
@@ -68,12 +69,11 @@ Partial Class CDMRMS_Instructor_Login
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BG_Picture = New System.Windows.Forms.PictureBox()
-        Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.Login_Panel.SuspendLayout()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sex_Panel.SuspendLayout()
         Me.Registration_Panel.SuspendLayout()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Login_Panel
@@ -94,6 +94,18 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Panel.Name = "Login_Panel"
         Me.Login_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Login_Panel.TabIndex = 26
+        '
+        'User_Logo
+        '
+        Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor___New
+        Me.User_Logo.Location = New System.Drawing.Point(87, 124)
+        Me.User_Logo.Name = "User_Logo"
+        Me.User_Logo.Size = New System.Drawing.Size(370, 271)
+        Me.User_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.User_Logo.TabIndex = 32
+        Me.User_Logo.TabStop = False
+        Me.User_Logo.WaitOnLoad = True
         '
         'LoginPassword_Label
         '
@@ -232,6 +244,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.Register_Link.AutoSize = True
         Me.Register_Link.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Register_Link.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Register_Link.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.Register_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Register_Link.Location = New System.Drawing.Point(52, 739)
@@ -870,18 +883,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
-        'User_Logo
-        '
-        Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor___New
-        Me.User_Logo.Location = New System.Drawing.Point(87, 124)
-        Me.User_Logo.Name = "User_Logo"
-        Me.User_Logo.Size = New System.Drawing.Size(370, 271)
-        Me.User_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.User_Logo.TabIndex = 32
-        Me.User_Logo.TabStop = False
-        Me.User_Logo.WaitOnLoad = True
-        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -903,12 +904,12 @@ Partial Class CDMRMS_Instructor_Login
         Me.Style = MetroFramework.MetroColorStyle.White
         Me.Login_Panel.ResumeLayout(False)
         Me.Login_Panel.PerformLayout()
+        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sex_Panel.ResumeLayout(False)
         Me.Sex_Panel.PerformLayout()
         Me.Registration_Panel.ResumeLayout(False)
         Me.Registration_Panel.PerformLayout()
         CType(Me.BG_Picture, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

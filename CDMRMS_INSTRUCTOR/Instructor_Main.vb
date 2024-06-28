@@ -11,10 +11,8 @@ Public Class Instructor_Main
         MyProfile_Panel.Hide()
         StudentGrade_Panel.Hide()
         DisplayInfo()
-
-        AssignedCourse(PassedValue)
-
         LockInStatusCheck()
+        CollegeProgram()
 
         AutoRefresher_Timer.Interval = 3000
         AutoRefresher_Timer.Start()
@@ -166,23 +164,45 @@ Public Class Instructor_Main
     End Sub
 
 
+    Private Sub CollegeProgram()
+        Dim query As String = "SELECT DISTINCT program FROM assignedcourse"
+        Dim commmand As New MySqlCommand(query, connection)
+
+        Try
+            connection.Open()
+
+            Dim reader As MySqlDataReader = commmand.ExecuteReader()
+            While reader.Read()
+                CollegeProgramSelector.Items.Add(reader.GetString("program"))
+
+            End While
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub CollegeProgramSelector_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CollegeProgramSelector.SelectedIndexChanged
+        AssignedCourse(PassedValue)
+
+    End Sub
 
     ' Assigned Course Table on Instructors Information  
     Private Sub AssignedCourse(PassedValue)
-
+        Dim program As String = CollegeProgramSelector.Text.Trim
         ' Display Assigned Course
-        Dim CourseQuery As String = "SELECT `course` FROM `assignedcourse` WHERE instructor_id = @instructorid"
+        Dim CourseQuery As String = "SELECT `course` FROM `assignedcourse` WHERE instructor_id = @instructorid AND program = @program"
         Using connection As New MySqlConnection(ConnectionString)
             connection.Open()
 
             Using CourseCommand As New MySqlCommand(CourseQuery, connection)
                 CourseCommand.Parameters.AddWithValue("@instructorid", PassedValue)
+                CourseCommand.Parameters.AddWithValue("@program", Program)
                 Using reader As MySqlDataReader = CourseCommand.ExecuteReader()
-
+                    CourseSelector.Items.Clear()
                     ' AssignedCourseTable.DataSource = dataTable
                     'AssignedCourseTable.Columns("course").Width = 201
                     While reader.Read()
-                        course_shuta.Items.Add(reader("course").ToString())
+                        CourseSelector.Items.Add(reader("course").ToString())
                     End While
 
 
@@ -191,8 +211,9 @@ Public Class Instructor_Main
         End Using
     End Sub
 
-    Private Sub course_shuta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles course_shuta.SelectedIndexChanged
-        courseValue = course_shuta.Text.Trim
+    Dim courseValue
+    Private Sub CourseSelector_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CourseSelector.SelectedIndexChanged
+        courseValue = CourseSelector.Text.Trim
         Dim instructorid As String = PassedValue
         Dim sectionQuery As String = "SELECT * FROM assignedcourse WHERE course = @course AND instructor_id = @instructorid"
 
@@ -200,19 +221,17 @@ Public Class Instructor_Main
 
         Try
             connection.Open()
-            section_shuta.Items.Clear()
+            SectionSelector.Items.Clear()
             Using CourseCommand As New MySqlCommand(sectionQuery, connection)
                 CourseCommand.Parameters.AddWithValue("@course", courseValue)
                 CourseCommand.Parameters.AddWithValue("@instructorid", instructorid)
                 Using reader As MySqlDataReader = CourseCommand.ExecuteReader()
 
-                    ' AssignedCourseTable.DataSource = dataTable
-                    'AssignedCourseTable.Columns("course").Width = 201
                     If reader.Read() Then
                         For i As Integer = 5 To reader.FieldCount - 1
                             Dim cellvalue As String = reader(i).ToString()
                             If Not String.IsNullOrWhiteSpace(cellvalue) Then
-                                section_shuta.Items.Add(cellvalue)
+                                SectionSelector.Items.Add(cellvalue)
                             End If
                         Next
                     End If
@@ -227,61 +246,17 @@ Public Class Instructor_Main
 
     End Sub
 
-
-
-
-    ' Will show the section handled by the instructor when you click the course from the course table on the Instructor Information
-    Dim courseValue As String
-    Private Sub AssignedCourseTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedCourseTable.CellClick
-        If e.RowIndex >= 0 Then
-
-            Dim selectedRow As DataGridViewRow = AssignedCourseTable.Rows(e.RowIndex)
-            courseValue = selectedRow.Cells("course").Value.ToString()
-
-            Dim sectionQuery As String = "SELECT * FROM assignedcourse WHERE course = @course"
-            Dim sectionAdapter As New MySqlDataAdapter(sectionQuery, connection)
-            sectionAdapter.SelectCommand.Parameters.AddWithValue("@course", courseValue)
-            Dim dataTable As New DataTable()
-            AssignedSectionTable.RowTemplate.Height = 82
-            sectionAdapter.Fill(dataTable)
-
-            AssignedSectionTable.DataSource = dataTable
-            AssignedSectionTable.Columns("id").Visible = False
-            AssignedSectionTable.Columns("instructor_id").Visible = False
-            AssignedSectionTable.Columns("Instructor").Visible = False
-            AssignedSectionTable.Columns("course").Visible = False
-            AssignedSectionTable.Columns("Program").Visible = False
-
-        End If
-    End Sub
-
-
-    ' Assigned the value of selected cell in Assigned Section Table in Instructor Panel
-    Dim sectionValue As String
-    Private Sub AssignedSectionTable_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles AssignedSectionTable.CellClick
-
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
-
-            Dim selectedCell As DataGridViewCell = AssignedSectionTable.Rows(e.RowIndex).Cells(e.ColumnIndex)
-            sectionValue = selectedCell.Value.ToString()
-
-        End If
-
-    End Sub
-
-
     ' Variable declaration for Grade Insertion
     Dim Program As String
     Dim Course As String
     Dim Section As String
 
-    ' View student list button
-    Private Sub ViewStudentList_Click(sender As Object, e As EventArgs) Handles ViewStudentList.Click
-
+    ' View Student list
+    Private Sub SectionSelector_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SectionSelector.SelectedIndexChanged
         dataTable.Clear()
         Program = CollegeProgramSelector.Text.Trim
-        Course = course_shuta.Text.Trim
-        Section = section_shuta.Text.Trim
+        Course = CourseSelector.Text.Trim
+        Section = SectionSelector.Text.Trim
 
         If String.IsNullOrEmpty(Program) And String.IsNullOrEmpty(Course) And String.IsNullOrEmpty(Section) Then
 
@@ -291,14 +266,13 @@ Public Class Instructor_Main
 
         ElseIf Program = "BSIT" Then
             BSITGradeInsertionTable(Course)
-            SortSection(Section)
+            SortSection_BSIT(Section)
 
         ElseIf Program = "BSCPE" Then
-
+            BSCPEGradeInsertionTable(Course)
+            SortSection_BSCPE(Section)
         End If
-
     End Sub
-
 
 
     ' Queries to show courses that only handled by instructor 
@@ -340,8 +314,44 @@ Public Class Instructor_Main
         End Try
     End Sub
 
+    Private Sub BSCPEGradeInsertionTable(Course)
+        Try
+            connection.Open()
+
+            Dim SelectQuery As String = $"SELECT `Student ID`,`Student Name`,`Section`, `{Course}` FROM bscpe"
+            Dim command As New MySqlCommand(SelectQuery, connection)
+
+            Dim datatable As New DataTable()
+            Using adapter As New MySqlDataAdapter(command)
+
+                adapter.Fill(datatable)
+                StudentlistTable.ColumnHeadersHeight = 200
+
+                StudentlistTable.RowTemplate.Height = 30
+                StudentlistTable.DataSource = datatable
+                StudentlistTable.Columns("Student ID").Width = 150
+                StudentlistTable.Columns("Student Name").Width = 271
+                StudentlistTable.Columns("Section").Width = 152
+
+
+                ' Disable editing to all cells under these columns
+                StudentlistTable.Columns("Student ID").ReadOnly = True
+                StudentlistTable.Columns("Student Name").ReadOnly = True
+                StudentlistTable.Columns("Section").ReadOnly = True
+
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Error fetching data: " & ex.Message)
+
+        Finally
+            connection.Close()
+
+        End Try
+    End Sub
+
     ' Sort Student list according to sections
-    Private Sub SortSection(Section)
+    Private Sub SortSection_BSIT(Section)
 
         Dim searchTerm As String = Section
         If searchTerm <> "" Then
@@ -365,6 +375,32 @@ Public Class Instructor_Main
             End Try
         End If
     End Sub
+
+    Private Sub SortSection_BSCPE(Section)
+
+        Dim searchTerm As String = Section
+        If searchTerm <> "" Then
+            Try
+                connection.Open()
+
+                Dim query As String = "SELECT * FROM bscpe WHERE Section LIKE @searchTerm "
+                Dim command As New MySqlCommand(query, connection)
+
+                command.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
+
+
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dataTable)
+                StudentlistTable.DataSource = dataTable
+            Catch ex As Exception
+                MessageBox.Show("Error searching data: " & ex.Message)
+            Finally
+                connection.Close()
+
+            End Try
+        End If
+    End Sub
+
 
 
     ' Suppress TAB and Arrow keys
@@ -410,13 +446,15 @@ Public Class Instructor_Main
             SaveData()
             dataTable.Clear()
             BSITGradeInsertionTable(Course)
-            SortSection(Section)
+            SortSection_BSIT(Section)
+            SortSection_BSCPE(Section)
 
         ElseIf choice = DialogResult.Cancel Then
 
             dataTable.Clear()
             BSITGradeInsertionTable(Course)
-            SortSection(Section)
+            SortSection_BSIT(Section)
+            SortSection_BSCPE(Section)
 
         End If
 
@@ -478,7 +516,7 @@ Public Class Instructor_Main
 
                         ChangeGradeReq_Btn.Enabled = False
 
-                        Lock_Img.Image = My.Resources.Unlocked_Icon
+
                         ' description for lock and unlock function
 
 
@@ -491,7 +529,7 @@ Public Class Instructor_Main
 
                         ChangeGradeReq_Btn.Enabled = True
 
-                        Lock_Img.Image = My.Resources.Locked_Icon
+
                         ' description for lock and unlock function
 
 
@@ -600,7 +638,6 @@ Public Class Instructor_Main
         About.Show()
 
     End Sub
-
 
 
 
