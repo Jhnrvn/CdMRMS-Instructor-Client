@@ -190,5 +190,17 @@
   <ItemGroup>
     <None Include="Resources\Arrow Right.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS Login Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructor - New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome BG New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome Background New.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

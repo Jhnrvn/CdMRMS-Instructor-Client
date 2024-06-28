@@ -7,7 +7,6 @@ Public Class Instructor_Main
 
     ' FORM LOAD - START
     Private Sub Instructor_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dropdown_Panel.Size = Dropdown_Panel.MinimumSize
 
         MyProfile_Panel.Hide()
         StudentGrade_Panel.Hide()
@@ -54,34 +53,9 @@ Public Class Instructor_Main
 
 
     ' DROP-DOWN ANIMATION - START
-    Dim MenuCollapsed As Boolean = True
-    Private Sub Dropdown_Timer_Tick(sender As Object, e As EventArgs) Handles Dropdown_Timer.Tick
-        If MenuCollapsed Then
 
-            Menu_Btn.Image = My.Resources.Arrow_Down
-            Dropdown_Panel.Height += 10
-            If Dropdown_Panel.Size = Dropdown_Panel.MaximumSize Then
 
-                Dropdown_Timer.Stop()
-                MenuCollapsed = False
-            End If
-
-        Else
-
-            MyProfile_Panel.Hide()
-            StudentGrade_Panel.Hide()
-            Menu_Btn.Image = My.Resources.Arrow_Right
-            Dropdown_Panel.Height -= 10
-            If Dropdown_Panel.Size = Dropdown_Panel.MinimumSize Then
-
-                Dropdown_Timer.Stop()
-                MenuCollapsed = True
-            End If
-
-        End If
-    End Sub
-
-    Private Sub Menu_Btn_Click(sender As Object, e As EventArgs) Handles Menu_Btn.Click
+    Private Sub Menu_Btn_Click(sender As Object, e As EventArgs)
         Dropdown_Timer.Start()
 
     End Sub
@@ -191,6 +165,8 @@ Public Class Instructor_Main
 
     End Sub
 
+
+
     ' Assigned Course Table on Instructors Information  
     Private Sub AssignedCourse(PassedValue)
 
@@ -201,17 +177,58 @@ Public Class Instructor_Main
 
             Using CourseCommand As New MySqlCommand(CourseQuery, connection)
                 CourseCommand.Parameters.AddWithValue("@instructorid", PassedValue)
-                Dim dataTable As New DataTable()
-                dataTable.Load(CourseCommand.ExecuteReader())
+                Using reader As MySqlDataReader = CourseCommand.ExecuteReader()
 
-                AssignedCourseTable.DataSource = dataTable
-                AssignedCourseTable.Columns("course").Width = 201
+                    ' AssignedCourseTable.DataSource = dataTable
+                    'AssignedCourseTable.Columns("course").Width = 201
+                    While reader.Read()
+                        course_shuta.Items.Add(reader("course").ToString())
+                    End While
 
+
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub course_shuta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles course_shuta.SelectedIndexChanged
+        courseValue = course_shuta.Text.Trim
+        Dim instructorid As String = PassedValue
+        Dim sectionQuery As String = "SELECT * FROM assignedcourse WHERE course = @course AND instructor_id = @instructorid"
+
+        Dim sectionAdapter As New MySqlDataAdapter(sectionQuery, connection)
+
+        Try
+            connection.Open()
+            section_shuta.Items.Clear()
+            Using CourseCommand As New MySqlCommand(sectionQuery, connection)
+                CourseCommand.Parameters.AddWithValue("@course", courseValue)
+                CourseCommand.Parameters.AddWithValue("@instructorid", instructorid)
+                Using reader As MySqlDataReader = CourseCommand.ExecuteReader()
+
+                    ' AssignedCourseTable.DataSource = dataTable
+                    'AssignedCourseTable.Columns("course").Width = 201
+                    If reader.Read() Then
+                        For i As Integer = 5 To reader.FieldCount - 1
+                            Dim cellvalue As String = reader(i).ToString()
+                            If Not String.IsNullOrWhiteSpace(cellvalue) Then
+                                section_shuta.Items.Add(cellvalue)
+                            End If
+                        Next
+                    End If
+
+                End Using
             End Using
 
-        End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        connection.Close()
 
     End Sub
+
+
+
 
     ' Will show the section handled by the instructor when you click the course from the course table on the Instructor Information
     Dim courseValue As String
@@ -263,8 +280,8 @@ Public Class Instructor_Main
 
         dataTable.Clear()
         Program = CollegeProgramSelector.Text.Trim
-        Course = courseValue
-        Section = sectionValue
+        Course = course_shuta.Text.Trim
+        Section = section_shuta.Text.Trim
 
         If String.IsNullOrEmpty(Program) And String.IsNullOrEmpty(Course) And String.IsNullOrEmpty(Section) Then
 
@@ -281,6 +298,7 @@ Public Class Instructor_Main
         End If
 
     End Sub
+
 
 
     ' Queries to show courses that only handled by instructor 
@@ -303,7 +321,7 @@ Public Class Instructor_Main
                 StudentlistTable.DataSource = datatable
                 StudentlistTable.Columns("Student ID").Width = 150
                 StudentlistTable.Columns("Student Name").Width = 271
-                StudentlistTable.Columns("Section").Width = 150
+                StudentlistTable.Columns("Section").Width = 152
 
 
                 ' Disable editing to all cells under these columns
@@ -461,11 +479,10 @@ Public Class Instructor_Main
                         ChangeGradeReq_Btn.Enabled = False
 
                         Lock_Img.Image = My.Resources.Unlocked_Icon
-                        LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " UNLOCKED"
-                        LockInstruction_Label.Text = "You are now able to" & vbCrLf & "insert grades into the " & vbCrLf & "table."
+                        ' description for lock and unlock function
 
 
-                        StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.Yellow
+                        StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(221, 232, 248)
                     Else
 
                         StudentlistTable.Enabled = False
@@ -475,8 +492,7 @@ Public Class Instructor_Main
                         ChangeGradeReq_Btn.Enabled = True
 
                         Lock_Img.Image = My.Resources.Locked_Icon
-                        LockStatus_Label.Text = "THE TABLE IS" & vbCrLf & " LOCKED"
-                        LockInstruction_Label.Text = "Send a request to the " & vbCrLf & " admin in order to be " & vbCrLf & " able to insert grades."
+                        ' description for lock and unlock function
 
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.White
@@ -580,10 +596,13 @@ Public Class Instructor_Main
         AssignedCourse(PassedValue)
     End Sub
 
-    Private Sub About_Btn_Click(sender As Object, e As EventArgs) Handles About_Btn.Click
+    Private Sub About_Btn_Click(sender As Object, e As EventArgs)
         About.Show()
 
     End Sub
+
+
+
 
     ' LOGOUT - END
 

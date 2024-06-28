@@ -22,6 +22,7 @@ Partial Class CDMRMS_Instructor_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.Login_Panel = New System.Windows.Forms.Panel()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
@@ -33,7 +34,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link = New System.Windows.Forms.LinkLabel()
         Me.Login_Label = New System.Windows.Forms.Label()
         Me.Login_Btn = New System.Windows.Forms.Button()
-        Me.Tooltip = New System.Windows.Forms.ToolTip()
+        Me.Tooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.FN_Input = New MetroFramework.Controls.MetroTextBox()
         Me.MN_Input = New MetroFramework.Controls.MetroTextBox()
         Me.LN_Input = New MetroFramework.Controls.MetroTextBox()
@@ -77,7 +78,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Login_Panel
         '
-        Me.Login_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.Login_Panel.BackColor = System.Drawing.Color.White
         Me.Login_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Login_Panel.Controls.Add(Me.User_Logo)
         Me.Login_Panel.Controls.Add(Me.LoginPassword_Label)
@@ -228,11 +229,11 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Register_Link
         '
-        Me.Register_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.Register_Link.AutoSize = True
         Me.Register_Link.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Register_Link.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.Register_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Register_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Register_Link.Location = New System.Drawing.Point(52, 739)
         Me.Register_Link.Name = "Register_Link"
         Me.Register_Link.Size = New System.Drawing.Size(97, 20)
@@ -246,7 +247,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.Login_Label.AutoSize = True
         Me.Login_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Login_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Login_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Login_Label.Location = New System.Drawing.Point(181, 28)
         Me.Login_Label.Name = "Login_Label"
         Me.Login_Label.Size = New System.Drawing.Size(176, 81)
@@ -256,11 +257,12 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Login_Btn
         '
-        Me.Login_Btn.BackColor = System.Drawing.Color.Yellow
+        Me.Login_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Login_Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Login_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Login_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.Login_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Btn.FlatAppearance.BorderSize = 0
+        Me.Login_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.Login_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.Login_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Login_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login_Btn.ForeColor = System.Drawing.Color.Black
@@ -676,11 +678,12 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Register_Btn
         '
-        Me.Register_Btn.BackColor = System.Drawing.Color.Yellow
+        Me.Register_Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Register_Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Register_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Register_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.Register_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Register_Btn.FlatAppearance.BorderSize = 0
+        Me.Register_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.Register_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.Register_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Register_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Register_Btn.ForeColor = System.Drawing.Color.Black
@@ -695,7 +698,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.Registration_Label.AutoSize = True
         Me.Registration_Label.Font = New System.Drawing.Font("Bernard MT Condensed", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Registration_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Registration_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Registration_Label.Location = New System.Drawing.Point(87, 28)
         Me.Registration_Label.Name = "Registration_Label"
         Me.Registration_Label.Size = New System.Drawing.Size(346, 81)
@@ -705,11 +708,11 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Login_Link
         '
-        Me.Login_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Login_Link.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.Login_Link.AutoSize = True
         Me.Login_Link.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login_Link.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.Login_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Login_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Login_Link.Location = New System.Drawing.Point(52, 739)
         Me.Login_Link.Name = "Login_Link"
         Me.Login_Link.Size = New System.Drawing.Size(72, 20)
@@ -800,7 +803,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Registration_Panel
         '
-        Me.Registration_Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(216, Byte), Integer))
+        Me.Registration_Panel.BackColor = System.Drawing.Color.White
         Me.Registration_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Registration_Panel.Controls.Add(Me.RegToolTip_Label4)
         Me.Registration_Panel.Controls.Add(Me.Birthday_Label)
@@ -836,7 +839,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Panel1.Location = New System.Drawing.Point(-3, 31)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1557, 16)
@@ -845,18 +848,21 @@ Partial Class CDMRMS_Instructor_Login
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(721, 830)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(717, 805)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(588, 20)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Copyright © 2024, CDM  Registrar Management System, All Rights Reserved."
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BG_Picture
         '
         Me.BG_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BG_Picture.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Login_Page
+        Me.BG_Picture.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.CdMRMS_Login_Background
         Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
         Me.BG_Picture.Name = "BG_Picture"
         Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
@@ -867,10 +873,11 @@ Partial Class CDMRMS_Instructor_Login
         'User_Logo
         '
         Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor_Image
-        Me.User_Logo.Location = New System.Drawing.Point(100, 148)
+        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor___New
+        Me.User_Logo.Location = New System.Drawing.Point(87, 124)
         Me.User_Logo.Name = "User_Logo"
-        Me.User_Logo.Size = New System.Drawing.Size(334, 242)
+        Me.User_Logo.Size = New System.Drawing.Size(370, 271)
+        Me.User_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.User_Logo.TabIndex = 32
         Me.User_Logo.TabStop = False
         Me.User_Logo.WaitOnLoad = True
