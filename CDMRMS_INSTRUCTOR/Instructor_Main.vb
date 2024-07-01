@@ -8,17 +8,33 @@ Public Class Instructor_Main
     ' FORM LOAD - START
     Private Sub Instructor_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Menu_Panel.Size = Menu_Panel.MinimumSize
+
         MyProfile_Panel.Hide()
         StudentGrade_Panel.Hide()
+
+        RememberMeValue()
         DisplayInfo()
         LockInStatusCheck()
-        CollegeProgram()
+        CollegeProgram(PassedValue)
+        DropdownUserInfo(userinfo)
 
         AutoRefresher_Timer.Interval = 3000
         AutoRefresher_Timer.Start()
 
         InstructorsID_TB.Height = 100
+        Me.Icon = My.Resources.CdMRMS1
+
+        CDMRMS_Instructor_Login.Hide()
+
     End Sub
+
+    Private Sub RememberMeValue()
+        If My.Settings.StaySignedIn Then
+            PassedValue = My.Settings.InstructorID
+        End If
+    End Sub
+
     ' FORM LOAD - END
 
 
@@ -49,24 +65,56 @@ Public Class Instructor_Main
     End Function
     ' DATABASE CONNECTION - END
 
+    ' Menu Dropdown Animation
+    Dim MenuCollapsed As Boolean = True
+    Private Sub Dropdown_Timer_Tick(sender As Object, e As EventArgs) Handles Dropdown_Timer.Tick
+        If MenuCollapsed Then
 
-    ' DROP-DOWN ANIMATION - START
+            ' Change image of Menu button to Arrow Down
+            Menu_Panel.Height += 10
+            If Menu_Panel.Size = Menu_Panel.MaximumSize Then
+
+                Dropdown_Timer.Stop()
+                MenuCollapsed = False
+
+            End If
+        Else
+
+            Menu_Panel.Height -= 10
+            If Menu_Panel.Size = Menu_Panel.MinimumSize Then
+
+                Dropdown_Timer.Stop()
+                MenuCollapsed = True
 
 
-    Private Sub Menu_Btn_Click(sender As Object, e As EventArgs)
+            End If
+        End If
+    End Sub
+
+    Private Sub Menu_Btn_Click(sender As Object, e As EventArgs) Handles Menu_Btn.Click
         Dropdown_Timer.Start()
 
     End Sub
-    ' DROP-DOWN ANIMATION - END
 
+    Dim userinfo As String
+    Public Sub DropdownUserInfo(userinfo)
+        DropdownUser_Info.Text = userinfo
+    End Sub
+
+
+    Private Sub Home_link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Home_link.LinkClicked
+        MyProfile_Panel.Hide()
+        StudentGrade_Panel.Hide()
+    End Sub
 
 
     ' MY ACCOUNT - START
     Public Property PassedValue As String
-    Private Sub MyProfile_Btn_Click(sender As Object, e As EventArgs) Handles MyProfile_Btn.Click
+    Private Sub Account_link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Account_link.LinkClicked
         MyProfile_Panel.Show()
         StudentGrade_Panel.Hide()
     End Sub
+
 
     ' Display Necessary Information of selected instructor
     Private Sub DisplayInfo()
@@ -98,13 +146,14 @@ Public Class Instructor_Main
                             Email_TB.Text = reader("email").ToString()
 
                             If Sex_TB.Text = "Male" Then
-                                ProfilePic_PicBox.Image = My.Resources.Male
+                                ProfilePic_PicBox.Image = My.Resources.Male_New
 
                             ElseIf Sex_TB.Text = "Female" Then
 
-                                ProfilePic_PicBox.Image = My.Resources.Female
+                                ProfilePic_PicBox.Image = My.Resources.Female_New
                             End If
-
+                            userinfo = FN_TB.Text & " " & LN_TB.Text
+                            DropdownUserInfo(userinfo)
                         End If
                     End Using
 
@@ -156,22 +205,22 @@ Public Class Instructor_Main
 
 
     ' STUDENT GRADE - START
-    Private Sub StudentGrade_Btn_Click(sender As Object, e As EventArgs) Handles StudentGrade_Btn.Click
 
+    Private Sub Grade_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Grade_Link.LinkClicked
         StudentGrade_Panel.Show()
         MyProfile_Panel.Hide()
-
     End Sub
 
 
-    Private Sub CollegeProgram()
-        Dim query As String = "SELECT DISTINCT program FROM assignedcourse"
-        Dim commmand As New MySqlCommand(query, connection)
-
+    Private Sub CollegeProgram(PassedValue)
+        Dim instructorId As String = PassedValue
+        Dim query As String = "SELECT DISTINCT program FROM assignedcourse WHERE instructor_id = @instructorId"
+        Dim command As New MySqlCommand(query, connection)
+        command.Parameters.AddWithValue("@instructorId", instructorId)
         Try
             connection.Open()
-
-            Dim reader As MySqlDataReader = commmand.ExecuteReader()
+            CollegeProgramSelector.Items.Clear()
+            Dim reader As MySqlDataReader = command.ExecuteReader()
             While reader.Read()
                 CollegeProgramSelector.Items.Add(reader.GetString("program"))
 
@@ -196,7 +245,7 @@ Public Class Instructor_Main
 
             Using CourseCommand As New MySqlCommand(CourseQuery, connection)
                 CourseCommand.Parameters.AddWithValue("@instructorid", PassedValue)
-                CourseCommand.Parameters.AddWithValue("@program", Program)
+                CourseCommand.Parameters.AddWithValue("@program", program)
                 Using reader As MySqlDataReader = CourseCommand.ExecuteReader()
                     CourseSelector.Items.Clear()
                     ' AssignedCourseTable.DataSource = dataTable
@@ -306,7 +355,7 @@ Public Class Instructor_Main
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error fetching data: " & ex.Message)
+            MessageBox.Show("Error fetching data : " & ex.Message)
 
         Finally
             connection.Close()
@@ -438,16 +487,28 @@ Public Class Instructor_Main
 
     ' Save Grade Button
     Private Sub SaveGrade_Btn_Click(sender As Object, e As EventArgs) Handles SaveGrade_Btn.Click
-
+        Dim collegeProgram As String = CollegeProgramSelector.Text.Trim
         Dim choice As DialogResult = MsgBox("Are you sure you want to submit?", MessageBoxButtons.OKCancel)
 
         If choice = DialogResult.OK Then
 
-            SaveData()
-            dataTable.Clear()
-            BSITGradeInsertionTable(Course)
-            SortSection_BSIT(Section)
-            SortSection_BSCPE(Section)
+            If collegeProgram = "BSIT" Then
+
+                SaveData()
+                dataTable.Clear()
+                BSITGradeInsertionTable(Course)
+                SortSection_BSIT(Section)
+
+            ElseIf collegeProgram = "BSCPE" Then
+
+                SaveData()
+                dataTable.Clear()
+                BSCPEGradeInsertionTable(Course)
+                SortSection_BSCPE(Section)
+
+            End If
+
+            MessageBox.Show("Grades are successfully inserted.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         ElseIf choice = DialogResult.Cancel Then
 
@@ -468,28 +529,38 @@ Public Class Instructor_Main
 
         Dim query As String = " UPDATE instructors SET Status = @status WHERE instructorid = @instructorid "
 
-        Try
-            connection.Open()
 
-            Using command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@status", status)
-                command.Parameters.AddWithValue("@instructorid", InstructorID)
-                command.ExecuteNonQuery()
+        Dim choice As DialogResult = MessageBox.Show("Are you sure you want to lock in the grades? Once locked, you will not be able to change the grades.", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
 
-                MsgBox("Grade is already Lock-in.")
-                LockIn_Btn.Enabled = False
-                SaveGrade_Btn.Enabled = False
-                LockInStatusCheck()
-            End Using
+        If choice = DialogResult.OK Then
+            Try
+                connection.Open()
 
-        Catch ex As Exception
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@status", status)
+                    command.Parameters.AddWithValue("@instructorid", InstructorID)
+                    command.ExecuteNonQuery()
 
-            MsgBox("error" & ex.Message)
+                    MessageBox.Show("Grades have been locked and can no longer be changed.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    LockIn_Btn.Enabled = False
+                    SaveGrade_Btn.Enabled = False
+                    LockInStatusCheck()
+                End Using
 
-        Finally
-            connection.Close()
+            Catch ex As Exception
 
-        End Try
+                MsgBox("error" & ex.Message)
+
+            Finally
+                connection.Close()
+
+            End Try
+
+        ElseIf choice = DialogResult.Cancel Then
+
+
+        End If
+
 
         LockInStatusCheck()
     End Sub
@@ -514,11 +585,10 @@ Public Class Instructor_Main
                         LockIn_Btn.Enabled = True
                         SaveGrade_Btn.Enabled = True
 
-                        ChangeGradeReq_Btn.Enabled = False
-
+                        ChangeGradeReq_Btn.Visible = False
 
                         ' description for lock and unlock function
-
+                        Table_Status.Text = "    Dear Instructors, please input the grades of" & vbCrLf & "the students. This will allow us to evaluate their" & vbCrLf & "performance accurately.Ensure all fields are" & vbCrLf & "filled out correctly before submission."
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(221, 232, 248)
                     Else
@@ -527,11 +597,10 @@ Public Class Instructor_Main
                         LockIn_Btn.Enabled = False
                         SaveGrade_Btn.Enabled = False
 
-                        ChangeGradeReq_Btn.Enabled = True
-
+                        ChangeGradeReq_Btn.Visible = True
 
                         ' description for lock and unlock function
-
+                        Table_Status.Text = "    Dear Instructors, please send a request to" & vbCrLf & "the administration to obtain permission for" & vbCrLf & "inputting grades."
 
                         StudentlistTable.RowsDefaultCellStyle.SelectionBackColor = Color.White
 
@@ -620,25 +689,46 @@ Public Class Instructor_Main
     ' LOGOUT - START
     Private Sub Logout_Btn_Click(sender As Object, e As EventArgs) Handles Logout_Btn.Click
 
-        Dim choice As DialogResult = MsgBox("Are you sure?", MessageBoxButtons.OKCancel)
+        Dim choice As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If choice = DialogResult.OK Then
 
             Me.Close()
             CDMRMS_Instructor_Login.Show()
 
+            My.Settings.StaySignedIn = False
+            My.Settings.InstructorID = ""
+
         End If
     End Sub
 
     Private Sub Refresh_Btn_Click(sender As Object, e As EventArgs) Handles Refresh_Btn.Click
+
+        CollegeProgram(PassedValue)
         AssignedCourse(PassedValue)
-    End Sub
-
-    Private Sub About_Btn_Click(sender As Object, e As EventArgs)
-        About.Show()
+        SectionSelector.Items.Clear()
+        dataTable.Clear()
 
     End Sub
 
+
+    Private Sub Home_link_MouseHover(sender As Object, e As EventArgs) Handles Home_link.MouseHover
+        Home_link.LinkColor = Color.FromArgb(255, 201, 48)
+    End Sub
+    Private Sub Account_link_MouseHover(sender As Object, e As EventArgs) Handles Account_link.MouseHover
+        Account_link.LinkColor = Color.FromArgb(255, 201, 48)
+    End Sub
+    Private Sub Grade_link_MouseHover(sender As Object, e As EventArgs) Handles Grade_Link.MouseHover
+
+        Grade_Link.LinkColor = Color.FromArgb(255, 201, 48)
+    End Sub
+
+    Private Sub Home_link_MouseLeave(sender As Object, e As EventArgs) Handles Home_link.MouseLeave, Account_link.MouseLeave, Grade_Link.MouseLeave
+        Home_link.LinkColor = Color.White
+        Account_link.LinkColor = Color.White
+        Grade_Link.LinkColor = Color.White
+
+    End Sub
 
 
     ' LOGOUT - END

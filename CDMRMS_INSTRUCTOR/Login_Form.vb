@@ -14,7 +14,15 @@ Public Class CDMRMS_Instructor_Login
         DatabaseConnection()
         Registration_Panel.Hide()
 
+        Me.Icon = My.Resources.CdMRMS1
+
     End Sub
+
+    Private Sub CDMRMS_Instructor_Login_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        RememberMe()
+    End Sub
+
+
     ' FORM LOAD - END
 
 
@@ -290,9 +298,9 @@ Public Class CDMRMS_Instructor_Login
 
     Private Sub Login_Btn_Click(sender As Object, e As EventArgs) Handles Login_Btn.Click
 
-        LoginInstructorID_Input.Text = "CDM-1111"
-        LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
-        LoginPassword_Input.Text = "01"
+        'LoginInstructorID_Input.Text = "CDM-1111"
+        'LoginEmail_Input.Text = "johnirvingeanga@gmail.com"
+        'LoginPassword_Input.Text = "01"
 
         Dim instructorID As String = LoginInstructorID_Input.Text.Trim
         Dim email As String = LoginEmail_Input.Text.Trim
@@ -308,10 +316,26 @@ Public Class CDMRMS_Instructor_Login
             Dim isValidLogin As Boolean = ValidateLogin(instructorID, email, password)
 
             If isValidLogin Then
-                MessageBox.Show("Login Successful!", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoginInstructorID_Input.Clear()
-                LoginEmail_Input.Clear()
-                LoginPassword_Input.Clear()
+                Dim choice As DialogResult = MessageBox.Show("Login Successful.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+                If choice = DialogResult.OK Then
+                    LoginInstructorID_Input.Clear()
+                    LoginEmail_Input.Clear()
+                    LoginPassword_Input.Clear()
+                End If
+
+                ' Stay Signed In 
+                If StaySignedIn.Checked Then
+                    My.Settings.StaySignedIn = True
+                    My.Settings.InstructorID = LoginInstructorID_Input.Text
+                    My.Settings.InstructorID = instructorID
+                Else
+                    My.Settings.StaySignedIn = False
+
+                End If
+                My.Settings.Save()
+
 
                 ' Send data to main form
                 Dim valueToPass As String = instructorID
@@ -319,9 +343,9 @@ Public Class CDMRMS_Instructor_Login
                     .PassedValue = valueToPass
                     }
 
+
                 main.Show()
                 Me.Hide()
-
 
             Else
 
@@ -366,12 +390,21 @@ Public Class CDMRMS_Instructor_Login
 
     End Function
 
+    Private Sub RememberMe()
+        If My.Settings.StaySignedIn Then
+            Instructor_Main.Show()
+
+        End If
+
+    End Sub
+
     Private Sub Login_Link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Login_Link.LinkClicked
 
         Registration_Panel.Hide()
         Login_Panel.Show()
 
     End Sub
+
     ' LOGIN - END
 
 
@@ -395,7 +428,6 @@ Public Class CDMRMS_Instructor_Login
         Tooltip.ToolTipTitle = "Middle Name"
         Tooltip.SetToolTip(RegToolTip_Label4, " " & vbCrLf & " * Leave it blank if not applicable." & vbCrLf & " ")
     End Sub
-
 
 
     ' TOOLTIPS FOR LOGIN AND REGISTRATION INPUTS - END

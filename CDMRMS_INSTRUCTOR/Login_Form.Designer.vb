@@ -23,7 +23,6 @@ Partial Class CDMRMS_Instructor_Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CDMRMS_Instructor_Login))
         Me.Login_Panel = New System.Windows.Forms.Panel()
         Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
@@ -69,6 +68,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BG_Picture = New System.Windows.Forms.PictureBox()
+        Me.StaySignedIn = New MetroFramework.Controls.MetroCheckBox()
         Me.Login_Panel.SuspendLayout()
         CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sex_Panel.SuspendLayout()
@@ -80,6 +80,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.Login_Panel.BackColor = System.Drawing.Color.White
         Me.Login_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Login_Panel.Controls.Add(Me.StaySignedIn)
         Me.Login_Panel.Controls.Add(Me.User_Logo)
         Me.Login_Panel.Controls.Add(Me.LoginPassword_Label)
         Me.Login_Panel.Controls.Add(Me.LoginEmail_Label)
@@ -136,9 +137,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginInstructorID_Label.Location = New System.Drawing.Point(52, 404)
         Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
-        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(145, 20)
+        Me.LoginInstructorID_Label.Size = New System.Drawing.Size(115, 20)
         Me.LoginInstructorID_Label.TabIndex = 29
-        Me.LoginInstructorID_Label.Text = "Instructor's ID No."
+        Me.LoginInstructorID_Label.Text = "Instructor's ID"
         '
         'LoginPassword_Input
         '
@@ -883,6 +884,18 @@ Partial Class CDMRMS_Instructor_Login
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
         '
+        'StaySignedIn
+        '
+        Me.StaySignedIn.AutoSize = True
+        Me.StaySignedIn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.StaySignedIn.Location = New System.Drawing.Point(56, 623)
+        Me.StaySignedIn.Name = "StaySignedIn"
+        Me.StaySignedIn.Size = New System.Drawing.Size(119, 20)
+        Me.StaySignedIn.Style = MetroFramework.MetroColorStyle.Yellow
+        Me.StaySignedIn.TabIndex = 33
+        Me.StaySignedIn.Text = "Stay Signed In"
+        Me.StaySignedIn.UseSelectable = True
+        '
         'CDMRMS_Instructor_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -893,11 +906,9 @@ Partial Class CDMRMS_Instructor_Login
         Me.Controls.Add(Me.BG_Picture)
         Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Registration_Panel)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(1550, 870)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
-        Me.MinimizeBox = False
         Me.Name = "CDMRMS_Instructor_Login"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
@@ -959,4 +970,5 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents Registration_Panel As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents StaySignedIn As MetroFramework.Controls.MetroCheckBox
 End Class

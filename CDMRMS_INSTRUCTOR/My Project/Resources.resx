@@ -127,11 +127,17 @@
   <data name="CdMRMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CdMRMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CdMRMS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CdMRMS.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CdMRMS_Login_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CdMRMS Login Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Female" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Female_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Female_New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Instructor_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Instructor Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +157,14 @@
   <data name="Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Male_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Male_New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="new_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Unlocked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unlocked Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Update_Grade_Button_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update Grade Button Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
