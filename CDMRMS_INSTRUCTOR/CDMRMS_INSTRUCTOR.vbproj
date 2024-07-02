@@ -130,9 +130,7 @@
     <Compile Include="Instructor_Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Login_Form.vb" />
     <Compile Include="Login_Form.Designer.vb">
       <DependentUpon>Login_Form.vb</DependentUpon>
       <SubType>Form</SubType>

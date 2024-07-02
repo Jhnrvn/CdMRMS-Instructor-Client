@@ -144,7 +144,6 @@ Partial Class CDMRMS_Instructor_Login
         'LoginPassword_Label
         '
         Me.LoginPassword_Label.AutoSize = True
-        Me.LoginPassword_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginPassword_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginPassword_Label.Location = New System.Drawing.Point(52, 544)
         Me.LoginPassword_Label.Name = "LoginPassword_Label"
@@ -155,7 +154,6 @@ Partial Class CDMRMS_Instructor_Login
         'LoginEmail_Label
         '
         Me.LoginEmail_Label.AutoSize = True
-        Me.LoginEmail_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginEmail_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginEmail_Label.Location = New System.Drawing.Point(52, 473)
         Me.LoginEmail_Label.Name = "LoginEmail_Label"
@@ -166,7 +164,6 @@ Partial Class CDMRMS_Instructor_Login
         'LoginInstructorID_Label
         '
         Me.LoginInstructorID_Label.AutoSize = True
-        Me.LoginInstructorID_Label.Cursor = System.Windows.Forms.Cursors.Default
         Me.LoginInstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginInstructorID_Label.Location = New System.Drawing.Point(52, 404)
         Me.LoginInstructorID_Label.Name = "LoginInstructorID_Label"
@@ -494,7 +491,6 @@ Partial Class CDMRMS_Instructor_Login
         'InstructorID_Label
         '
         Me.InstructorID_Label.AutoSize = True
-        Me.InstructorID_Label.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InstructorID_Label.Location = New System.Drawing.Point(51, 200)
         Me.InstructorID_Label.Name = "InstructorID_Label"
@@ -896,7 +892,6 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(717, 805)
