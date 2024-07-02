@@ -23,7 +23,7 @@ Public Class Instructor_Main
         AutoRefresher_Timer.Start()
 
         InstructorsID_TB.Height = 100
-        Me.Icon = My.Resources.CdMRMS1
+        Me.Icon = My.Resources.CdMRMS
 
         CDMRMS_Instructor_Login.Hide()
 
@@ -146,11 +146,11 @@ Public Class Instructor_Main
                             Email_TB.Text = reader("email").ToString()
 
                             If Sex_TB.Text = "Male" Then
-                                ProfilePic_PicBox.Image = My.Resources.Male_New
+                                ProfilePic_PicBox.Image = My.Resources.Male_Instructor
 
                             ElseIf Sex_TB.Text = "Female" Then
 
-                                ProfilePic_PicBox.Image = My.Resources.Female_New
+                                ProfilePic_PicBox.Image = My.Resources.Female_Instructor
                             End If
                             userinfo = FN_TB.Text & " " & LN_TB.Text
                             DropdownUserInfo(userinfo)

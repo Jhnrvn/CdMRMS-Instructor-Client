@@ -118,64 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Arrow_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arrow Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Arrow_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arrow Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CdMRMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CdMRMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CdMRMS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CdMRMS.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CdMRMS_Login_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CdMRMS Login Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CdMRMS_Intro_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CdMRMS Intro Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Female" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CdMRMS_Welcome_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CdMRMS Welcome Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Female_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Female_New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Female_Instructor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Female Instructor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Instructor_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Instructor Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instructor___New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instructor - New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Locked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Locked Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logout_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logout Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Male_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Male_New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Male_Instructor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Male Instructor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Update_Grade_Button_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update Grade Button Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Menu Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Welcome_Background_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Welcome Background New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Welcome_BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Welcome BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Welcome_BG_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Welcome BG New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

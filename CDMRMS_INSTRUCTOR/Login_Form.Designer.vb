@@ -24,6 +24,8 @@ Partial Class CDMRMS_Instructor_Login
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Login_Panel = New System.Windows.Forms.Panel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.StaySignedIn = New MetroFramework.Controls.MetroCheckBox()
         Me.User_Logo = New System.Windows.Forms.PictureBox()
         Me.LoginPassword_Label = New System.Windows.Forms.Label()
         Me.LoginEmail_Label = New System.Windows.Forms.Label()
@@ -68,7 +70,6 @@ Partial Class CDMRMS_Instructor_Login
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BG_Picture = New System.Windows.Forms.PictureBox()
-        Me.StaySignedIn = New MetroFramework.Controls.MetroCheckBox()
         Me.Login_Panel.SuspendLayout()
         CType(Me.User_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sex_Panel.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class CDMRMS_Instructor_Login
         '
         Me.Login_Panel.BackColor = System.Drawing.Color.White
         Me.Login_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Login_Panel.Controls.Add(Me.LinkLabel1)
         Me.Login_Panel.Controls.Add(Me.StaySignedIn)
         Me.Login_Panel.Controls.Add(Me.User_Logo)
         Me.Login_Panel.Controls.Add(Me.LoginPassword_Label)
@@ -96,10 +98,41 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Panel.Size = New System.Drawing.Size(546, 850)
         Me.Login_Panel.TabIndex = 26
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(306, 739)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(161, 20)
+        Me.LinkLabel1.TabIndex = 34
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Forgot Password?"
+        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
+        '
+        'StaySignedIn
+        '
+        Me.StaySignedIn.AutoSize = True
+        Me.StaySignedIn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.StaySignedIn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
+        Me.StaySignedIn.ForeColor = System.Drawing.Color.Black
+        Me.StaySignedIn.Location = New System.Drawing.Point(56, 623)
+        Me.StaySignedIn.Name = "StaySignedIn"
+        Me.StaySignedIn.Size = New System.Drawing.Size(119, 20)
+        Me.StaySignedIn.Style = MetroFramework.MetroColorStyle.Yellow
+        Me.StaySignedIn.TabIndex = 33
+        Me.StaySignedIn.Text = "Stay Signed In"
+        Me.StaySignedIn.UseSelectable = True
+        '
         'User_Logo
         '
         Me.User_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor___New
+        Me.User_Logo.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Instructor_Image
         Me.User_Logo.Location = New System.Drawing.Point(87, 124)
         Me.User_Logo.Name = "User_Logo"
         Me.User_Logo.Size = New System.Drawing.Size(370, 271)
@@ -250,10 +283,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Register_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Register_Link.Location = New System.Drawing.Point(52, 739)
         Me.Register_Link.Name = "Register_Link"
-        Me.Register_Link.Size = New System.Drawing.Size(97, 20)
+        Me.Register_Link.Size = New System.Drawing.Size(80, 20)
         Me.Register_Link.TabIndex = 25
         Me.Register_Link.TabStop = True
-        Me.Register_Link.Text = "Register >"
+        Me.Register_Link.Text = "Register"
         Me.Register_Link.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Register_Link.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
         '
@@ -729,10 +762,10 @@ Partial Class CDMRMS_Instructor_Login
         Me.Login_Link.LinkColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.Login_Link.Location = New System.Drawing.Point(52, 739)
         Me.Login_Link.Name = "Login_Link"
-        Me.Login_Link.Size = New System.Drawing.Size(72, 20)
+        Me.Login_Link.Size = New System.Drawing.Size(55, 20)
         Me.Login_Link.TabIndex = 25
         Me.Login_Link.TabStop = True
-        Me.Login_Link.Text = "Login >"
+        Me.Login_Link.Text = "Login"
         Me.Login_Link.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Login_Link.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(33, Byte), Integer))
         '
@@ -876,25 +909,13 @@ Partial Class CDMRMS_Instructor_Login
         'BG_Picture
         '
         Me.BG_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BG_Picture.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.CdMRMS_Login_Background
+        Me.BG_Picture.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.CdMRMS_Intro_Background
         Me.BG_Picture.Location = New System.Drawing.Point(540, 31)
         Me.BG_Picture.Name = "BG_Picture"
         Me.BG_Picture.Size = New System.Drawing.Size(1010, 850)
         Me.BG_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.BG_Picture.TabIndex = 0
         Me.BG_Picture.TabStop = False
-        '
-        'StaySignedIn
-        '
-        Me.StaySignedIn.AutoSize = True
-        Me.StaySignedIn.FontSize = MetroFramework.MetroCheckBoxSize.Medium
-        Me.StaySignedIn.Location = New System.Drawing.Point(56, 623)
-        Me.StaySignedIn.Name = "StaySignedIn"
-        Me.StaySignedIn.Size = New System.Drawing.Size(119, 20)
-        Me.StaySignedIn.Style = MetroFramework.MetroColorStyle.Yellow
-        Me.StaySignedIn.TabIndex = 33
-        Me.StaySignedIn.Text = "Stay Signed In"
-        Me.StaySignedIn.UseSelectable = True
         '
         'CDMRMS_Instructor_Login
         '
@@ -971,4 +992,5 @@ Partial Class CDMRMS_Instructor_Login
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents StaySignedIn As MetroFramework.Controls.MetroCheckBox
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

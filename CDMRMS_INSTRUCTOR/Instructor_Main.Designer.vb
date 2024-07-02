@@ -23,12 +23,12 @@ Partial Class Instructor_Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instructor_Main))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instructor_Main))
         Me.GreenUpper_Panel = New System.Windows.Forms.Panel()
         Me.Menu_Btn = New System.Windows.Forms.Button()
         Me.Grade_Link = New System.Windows.Forms.LinkLabel()
@@ -127,7 +127,7 @@ Partial Class Instructor_Main
         Me.Menu_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Menu_Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Menu_Btn.ForeColor = System.Drawing.Color.White
-        Me.Menu_Btn.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Menu_Icon
+        Me.Menu_Btn.Image = CType(resources.GetObject("Menu_Btn.Image"), System.Drawing.Image)
         Me.Menu_Btn.Location = New System.Drawing.Point(1492, 0)
         Me.Menu_Btn.Name = "Menu_Btn"
         Me.Menu_Btn.Size = New System.Drawing.Size(57, 60)
@@ -878,7 +878,7 @@ Partial Class Instructor_Main
         '
         'Welcome_BG
         '
-        Me.Welcome_BG.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.Welcome_Background_New
+        Me.Welcome_BG.Image = Global.CDMRMS_INSTRUCTOR.My.Resources.Resources.CdMRMS_Welcome_Background
         Me.Welcome_BG.Location = New System.Drawing.Point(161, 137)
         Me.Welcome_BG.Name = "Welcome_BG"
         Me.Welcome_BG.Size = New System.Drawing.Size(1225, 742)

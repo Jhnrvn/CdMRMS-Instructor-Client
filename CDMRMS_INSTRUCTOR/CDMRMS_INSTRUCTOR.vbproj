@@ -64,7 +64,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\CdMRMS.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>EF460B36A888138E170E8AD372C8783A5EB81852</ManifestCertificateThumbprint>
@@ -102,6 +103,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -188,9 +190,6 @@
     <None Include="Resources\Male.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Instructor Image.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Login Page.png" />
   </ItemGroup>
   <ItemGroup>
@@ -242,9 +241,6 @@
     <None Include="Resources\Male_New.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CdMRMS.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -255,6 +251,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructor Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female Instructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male Instructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS Intro Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CdMRMS Welcome Background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -14,7 +14,7 @@ Public Class CDMRMS_Instructor_Login
         DatabaseConnection()
         Registration_Panel.Hide()
 
-        Me.Icon = My.Resources.CdMRMS1
+        Me.Icon = My.Resources.CdMRMS
 
     End Sub
 
@@ -307,10 +307,10 @@ Public Class CDMRMS_Instructor_Login
         Dim password As String = LoginPassword_Input.Text.Trim
 
         If String.IsNullOrEmpty(instructorID) And String.IsNullOrEmpty(email) And String.IsNullOrEmpty(password) Then
-            MsgBox("login invalid.", MessageBoxIcon.Warning)
+            MessageBox.Show("All fields are mandatory. Please provide the necessary information to proceed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         ElseIf String.IsNullOrEmpty(instructorID) Or String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password) Then
-            MsgBox("Please fill in all neded information.", MessageBoxIcon.Warning)
+            MessageBox.Show("There are missing entries in the form. Please check and complete all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         Else
             Dim isValidLogin As Boolean = ValidateLogin(instructorID, email, password)
@@ -349,7 +349,7 @@ Public Class CDMRMS_Instructor_Login
 
             Else
 
-                MsgBox("Login failed.", MessageBoxIcon.Error)
+                MessageBox.Show("The username or password you entered is incorrect. Please check your credentials and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If
         End If
