@@ -130,7 +130,9 @@
     <Compile Include="Instructor_Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.vb" />
+    <Compile Include="Login_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login_Form.Designer.vb">
       <DependentUpon>Login_Form.vb</DependentUpon>
       <SubType>Form</SubType>
@@ -161,9 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -182,61 +184,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Female.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Male.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login Page.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Locked Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logout Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\new logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Unlocked Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Update Grade Button Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Welcome BG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CdMRMS.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Arrow Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Arrow Right.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\CdMRMS Login Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Instructor - New.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Welcome BG New.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Welcome Background New.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Menu_Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Female_New.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Male_New.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -257,19 +208,10 @@
     <None Include="Resources\Instructor Image.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CdMRMS Background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Female Instructor.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Male Instructor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Menu Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CdMRMS Intro Background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CdMRMS Welcome Background.png" />

@@ -254,7 +254,7 @@ Partial Class Instructor_Main
         Me.InstructorID_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InstructorID_Label.Location = New System.Drawing.Point(48, 364)
         Me.InstructorID_Label.Name = "InstructorID_Label"
-        Me.InstructorID_Label.Size = New System.Drawing.Size(108, 24)
+        Me.InstructorID_Label.Size = New System.Drawing.Size(106, 22)
         Me.InstructorID_Label.TabIndex = 73
         Me.InstructorID_Label.Text = "Instructor ID"
         '
@@ -273,7 +273,7 @@ Partial Class Instructor_Main
         Me.Birthday_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Birthday_Label.Location = New System.Drawing.Point(340, 637)
         Me.Birthday_Label.Name = "Birthday_Label"
-        Me.Birthday_Label.Size = New System.Drawing.Size(77, 24)
+        Me.Birthday_Label.Size = New System.Drawing.Size(76, 22)
         Me.Birthday_Label.TabIndex = 85
         Me.Birthday_Label.Text = "Birthday"
         '
@@ -295,7 +295,7 @@ Partial Class Instructor_Main
         Me.CN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CN_Label.Location = New System.Drawing.Point(48, 639)
         Me.CN_Label.Name = "CN_Label"
-        Me.CN_Label.Size = New System.Drawing.Size(147, 24)
+        Me.CN_Label.Size = New System.Drawing.Size(140, 22)
         Me.CN_Label.TabIndex = 82
         Me.CN_Label.Text = "Contact Number"
         '
@@ -317,7 +317,7 @@ Partial Class Instructor_Main
         Me.Email_.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email_.Location = New System.Drawing.Point(47, 572)
         Me.Email_.Name = "Email_"
-        Me.Email_.Size = New System.Drawing.Size(132, 24)
+        Me.Email_.Size = New System.Drawing.Size(125, 22)
         Me.Email_.TabIndex = 78
         Me.Email_.Text = "Email Address"
         '
@@ -345,7 +345,7 @@ Partial Class Instructor_Main
         Me.Sex_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Sex_Label.Location = New System.Drawing.Point(340, 503)
         Me.Sex_Label.Name = "Sex_Label"
-        Me.Sex_Label.Size = New System.Drawing.Size(43, 24)
+        Me.Sex_Label.Size = New System.Drawing.Size(41, 22)
         Me.Sex_Label.TabIndex = 75
         Me.Sex_Label.Text = "Sex"
         '
@@ -370,7 +370,7 @@ Partial Class Instructor_Main
         Me.MN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MN_Label.Location = New System.Drawing.Point(48, 505)
         Me.MN_Label.Name = "MN_Label"
-        Me.MN_Label.Size = New System.Drawing.Size(123, 24)
+        Me.MN_Label.Size = New System.Drawing.Size(114, 22)
         Me.MN_Label.TabIndex = 71
         Me.MN_Label.Text = "Middle Name"
         '
@@ -393,7 +393,7 @@ Partial Class Instructor_Main
         Me.FN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FN_Label.Location = New System.Drawing.Point(48, 436)
         Me.FN_Label.Name = "FN_Label"
-        Me.FN_Label.Size = New System.Drawing.Size(101, 24)
+        Me.FN_Label.Size = New System.Drawing.Size(97, 22)
         Me.FN_Label.TabIndex = 70
         Me.FN_Label.Text = "First Name"
         '
@@ -416,7 +416,7 @@ Partial Class Instructor_Main
         Me.LN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LN_Label.Location = New System.Drawing.Point(340, 434)
         Me.LN_Label.Name = "LN_Label"
-        Me.LN_Label.Size = New System.Drawing.Size(99, 24)
+        Me.LN_Label.Size = New System.Drawing.Size(96, 22)
         Me.LN_Label.TabIndex = 72
         Me.LN_Label.Text = "Last Name"
         '
@@ -781,6 +781,9 @@ Partial Class Instructor_Main
         Me.StudentGrade_Label.Size = New System.Drawing.Size(285, 38)
         Me.StudentGrade_Label.TabIndex = 0
         Me.StudentGrade_Label.Text = "STUDENTS LIST"
+        '
+        'AutoRefresher_Timer
+        '
         '
         'Panel6
         '
