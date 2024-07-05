@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 
 Public Class Instructor_Main
@@ -34,8 +33,8 @@ Public Class Instructor_Main
             PassedValue = My.Settings.InstructorID
         End If
     End Sub
-
     ' FORM LOAD - END
+
 
 
     ' DATABASE CONNECTION - START
@@ -71,7 +70,7 @@ Public Class Instructor_Main
         If MenuCollapsed Then
 
             ' Change image of Menu button to Arrow Down
-            Menu_Panel.Height += 10
+            Menu_Panel.Height += 15
             If Menu_Panel.Size = Menu_Panel.MaximumSize Then
 
                 Dropdown_Timer.Stop()
@@ -80,7 +79,7 @@ Public Class Instructor_Main
             End If
         Else
 
-            Menu_Panel.Height -= 10
+            Menu_Panel.Height -= 15
             If Menu_Panel.Size = Menu_Panel.MinimumSize Then
 
                 Dropdown_Timer.Stop()
@@ -345,7 +344,6 @@ Public Class Instructor_Main
                 StudentlistTable.Columns("Student ID").Width = 150
                 StudentlistTable.Columns("Student Name").Width = 271
                 StudentlistTable.Columns("Section").Width = 152
-
 
                 ' Disable editing to all cells under these columns
                 StudentlistTable.Columns("Student ID").ReadOnly = True
@@ -706,6 +704,7 @@ Public Class Instructor_Main
 
         CollegeProgram(PassedValue)
         AssignedCourse(PassedValue)
+        CourseSelector.Items.Clear()
         SectionSelector.Items.Clear()
         dataTable.Clear()
 
