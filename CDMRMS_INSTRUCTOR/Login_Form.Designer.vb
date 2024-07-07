@@ -927,7 +927,7 @@ Partial Class CDMRMS_Instructor_Login
         Me.MaximumSize = New System.Drawing.Size(1550, 870)
         Me.Name = "CDMRMS_Instructor_Login"
         Me.Resizable = False
-        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow
         Me.Style = MetroFramework.MetroColorStyle.White
         Me.Login_Panel.ResumeLayout(False)
         Me.Login_Panel.PerformLayout()

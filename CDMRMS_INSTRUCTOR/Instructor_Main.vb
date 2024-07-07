@@ -704,7 +704,6 @@ Public Class Instructor_Main
 
         CollegeProgram(PassedValue)
         AssignedCourse(PassedValue)
-        CourseSelector.Items.Clear()
         SectionSelector.Items.Clear()
         dataTable.Clear()
 
